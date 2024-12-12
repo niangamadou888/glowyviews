@@ -1,10 +1,10 @@
 const FAQIntro = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-16 bg-secondary/30 rounded-lg backdrop-blur-sm border border-primary/20">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow">
+    <section className="w-full max-w-6xl mx-auto px-6 py-24 bg-secondary/30 rounded-lg backdrop-blur-sm border border-primary/20">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow">
         Sezione F.A.Q.: rispondiamo insieme alle domande più comuni
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-6">
         <p className="text-muted-foreground leading-relaxed">
           Ancora dubbi o perplessità? Dai, non preoccuparti, visto che abbiamo preparato questa sezione F.A.Q. proprio per far luce in merito a quegli aspetti ancora un po' "oscuri" diciamo così.
         </p>

@@ -41,27 +41,27 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden" id="features">
+    <section className="py-32 px-6 relative overflow-hidden" id="features">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-glow">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow">
           I Nostri Servizi
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="p-6 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
-              <feature.icon className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+            <Card key={index} className="p-8 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
+              <feature.icon className="w-12 h-12 text-primary mb-6" />
+              <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </Card>
           ))}
         </div>
 
-        <Card className="mt-12 p-6 bg-destructive/10 border-destructive/20">
-          <div className="flex items-start gap-4">
-            <AlertTriangle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
+        <Card className="mt-16 p-8 bg-destructive/10 border-destructive/20">
+          <div className="flex items-start gap-6">
+            <AlertTriangle className="w-8 h-8 text-destructive flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold mb-2">AVVERTENZE</h3>
+              <h3 className="text-xl font-semibold mb-4">AVVERTENZE</h3>
               <p className="text-muted-foreground">
                 Per tracciare e verificare la consegna dell'ordine, sconsigliamo di effettuare acquisti presso altre agenzie per almeno 48 ore.
               </p>
