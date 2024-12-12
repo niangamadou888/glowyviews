@@ -1,15 +1,5 @@
 const FAQ = () => {
-  const sections = [
-    {
-      title: "Sezione F.A.Q.: rispondiamo insieme alle domande più comuni",
-      content: [
-        `Ancora dubbi o perplessità? Dai, non preoccuparti, visto che abbiamo preparato questa sezione F.A.Q. proprio per far luce in merito a quegli aspetti ancora un po' "oscuri" diciamo così.`,
-        `È vero, il Social Media Marketing è una disciplina che esiste già da diversi anni, ma i "non addetti ai lavori" potrebbero ignorare alcuni fattori che noi diamo già per scontato.`,
-        `Proprio per questo, abbiamo deciso di ricercare le domande più cliccate in rete, ma anche di mettere insieme quelle che ci arrivano più frequentemente da parte dei nostri clienti o da possibili interessati.`,
-        `In fin dei conti, non c'è nulla di difficile da comprendere, dal momento che parliamo di argomenti che sono alla portata di chiunque.`,
-        `Semplicemente, appaiono un po' più complessi e, proprio per questo, richiedono maggiore focus e attenzione per comprenderli, tutto qui.`
-      ]
-    },
+  const questions = [
     {
       title: "1. Dopo quanto vedrò le mie visualizzazioni YouTube salire?",
       content: [
@@ -125,17 +115,6 @@ const FAQ = () => {
         `Lo stesso, chiaramente, vale anche per le altre festività.`,
         `Per il resto, non c'è alcun problema, sei libero di comprare visualizzazioni YouTube ogni qualvolta tu ne abbia bisogno.`
       ]
-    },
-    {
-      title: "Considerazioni finali sul comprare Visualizzazioni YouTube",
-      content: [
-        `Comprare views YouTube è da considerarsi come una manovra di Social Media Marketing, il cui scopo è quello di "farsi prendere in considerazione" dai crawler della stessa piattaforma social.`,
-        `Infatti, questi tendono a premiare con più visibilità tutti quei canali che risultano già "movimentati", in termini di interazioni social ottenute (visualizzazioni incluse, ovviamente).`,
-        `Nonostante l'obiettivo di qualunque creator sia quello di ottenerle in modo genuino, comprare visualizzazioni YouTube può rivelarsi la mossa vincente per tutti quei canali aperti da poco e che, dunque, non hanno ancora un buon numero di interazioni, tali da suscitare l'interesse dei crawler.`,
-        `In conclusione, dunque, dove comprare Views YouTube italiane e reali in modo sicuro? Devi solo creare il tuo account personale e andare alla sezione dedicata. Per effettuare un acquisto, poi, devi solo scegliere il pacchetto che ritieni più idoneo alla tua situazione e agli obiettivi che vuoi raggiungere.`,
-        `Tutti gli ordini vengono elaborati "a mano" e, nello specifico, le visualizzazioni acquistate verranno conteggiate sul video di cui ci hai fornito l'URL in fase di ordine.`,
-        `Infine, sebbene sia una pratica perfettamente legale, comprare visualizzazioni YouTube è vietato dai termini e condizioni del social stesso. Quindi, "diluisci" nel tempo le views comprate, in modo che sembrino acquisite organicamente, come "risposta" del pubblico alla tua attività di creator.`
-      ]
     }
   ];
 
@@ -145,11 +124,11 @@ const FAQ = () => {
         Domande Frequenti
       </h2>
       <div className="space-y-12">
-        {sections.map((section, index) => (
+        {questions.map((question, index) => (
           <div key={index} className="bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20">
-            <h3 className="text-2xl font-semibold mb-6 text-primary">{section.title}</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-primary">{question.title}</h3>
             <div className="space-y-4">
-              {section.content.map((paragraph, pIndex) => (
+              {question.content.map((paragraph, pIndex) => (
                 <p key={pIndex} className="text-muted-foreground leading-relaxed">
                   {paragraph}
                 </p>
