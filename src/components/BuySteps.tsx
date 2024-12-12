@@ -51,7 +51,7 @@ const BuySteps = () => {
   }, []);
 
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-4 py-32 overflow-hidden">
+    <section className="relative w-full max-w-6xl mx-auto px-4 py-32 overflow-hidden reveal-on-scroll">
       {/* Background Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       
@@ -70,7 +70,7 @@ const BuySteps = () => {
             <motion.div
               key={index}
               ref={(el) => (stepsRef.current[index] = el)}
-              className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group"
+              className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
