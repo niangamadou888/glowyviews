@@ -125,7 +125,7 @@ const FAQ = () => {
       </h2>
       <div className="space-y-12">
         {questions.map((question, index) => (
-          <div key={index} className="bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20">
+          <div key={index} className="bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-glow  border-primary/20">
             <h3 className="text-2xl font-semibold mb-6 text-primary">{question.title}</h3>
             <div className="space-y-4">
               {question.content.map((paragraph, pIndex) => (
