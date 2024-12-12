@@ -1,6 +1,6 @@
 const FinalConsiderations = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto px-6 py-24 mb-24 bg-secondary/30 rounded-lg backdrop-blur-sm border border-primary/20">
+    <section className="w-full max-w-6xl mx-auto px-6 py-24 mb-24 glass-effect border-glow rounded-lg">
       <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow">
         Considerazioni finali sul comprare Visualizzazioni YouTube
       </h2>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import FAQ from "@/components/FAQ";
@@ -9,16 +10,51 @@ import BuySteps from "@/components/BuySteps";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    };
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    document.querySelectorAll(".reveal-on-scroll").forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="min-h-screen">
       <Navigation />
       <Hero />
-      <Features />
-      <WhyBuyViews />
-      <BuySteps />
-      <FAQIntro />
-      <FAQ />
-      <FinalConsiderations />
+      <div className="reveal-on-scroll">
+        <Features />
+      </div>
+      <div className="reveal-on-scroll">
+        <WhyBuyViews />
+      </div>
+      <div className="reveal-on-scroll">
+        <BuySteps />
+      </div>
+      <div className="reveal-on-scroll">
+        <FAQIntro />
+      </div>
+      <div className="reveal-on-scroll">
+        <FAQ />
+      </div>
+      <div className="reveal-on-scroll">
+        <FinalConsiderations />
+      </div>
       <Footer />
     </main>
   );
