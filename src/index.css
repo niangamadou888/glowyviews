@@ -34,6 +34,15 @@
 
     --radius: 0.5rem;
   }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 0.5rem theme('colors.primary.DEFAULT'));
+    }
+    50% {
+      filter: drop-shadow(0 0 1rem theme('colors.primary.DEFAULT'));
+    }
+  }
 }
 
 @layer base {
@@ -52,5 +61,9 @@
   
   .text-glow {
     text-shadow: 0 0 10px theme('colors.primary.DEFAULT');
+  }
+
+  .animate-glow {
+    animation: glow-pulse 2s ease-in-out infinite;
   }
 }
