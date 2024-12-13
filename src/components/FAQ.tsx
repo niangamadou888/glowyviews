@@ -120,16 +120,23 @@ const FAQ = () => {
 
   return (
     <section className="w-full max-w-6xl mx-auto px-4 py-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
         Domande Frequenti
       </h2>
       <div className="space-y-12">
         {questions.map((question, index) => (
-          <div key={index} className="bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-glow  border-primary/20">
-            <h3 className="text-2xl font-semibold mb-6 text-primary">{question.title}</h3>
+          <div 
+            key={index} 
+            className="bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
+              transition-all duration-300 hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]
+              group"
+          >
+            <h3 className="text-2xl font-semibold mb-6 text-primary group-hover:text-glow transition-all duration-300">
+              {question.title}
+            </h3>
             <div className="space-y-4">
               {question.content.map((paragraph, pIndex) => (
-                <p key={pIndex} className="text-muted-foreground leading-relaxed">
+                <p key={pIndex} className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
                   {paragraph}
                 </p>
               ))}

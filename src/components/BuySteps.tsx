@@ -75,8 +75,13 @@ const BuySteps = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
+              {/* Connecting Lines */}
+              {index < steps.length - 1 && (
+                <div className="absolute left-[20px] bottom-[-32px] w-[2px] h-[32px] bg-primary/50 glow" />
+              )}
+
               {/* Step Number */}
-              <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow">
+              <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10">
                 {index + 1}
               </div>
 
