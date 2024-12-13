@@ -26,11 +26,15 @@ const Hero = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto">
-          Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di SocialX offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili.
+        Se hai necessità di <strong> comprare visualizzazioni YouTube italiane e reali</strong>, sappi che sei nel posto giusto ma, prima di farlo, vorremmo che leggessi i nostri consigli.
         </p>
         
         <p className="text-lg md:text-xl text-muted-foreground mb-12">
-          Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
+        Infatti, è una pratica che – se condotta nel modo giusto – può dare ottime soddisfazioni in relazione alla <strong> crescita organica del tuo canale.</strong>
+        </p>
+
+        <p className="text-lg md:text-xl text-muted-foreground mb-12">
+        Nei paragrafi a seguire, dunque, troverai le indicazioni per far fruttare il tuo investimento sin da subito.
         </p>
 
         <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce">

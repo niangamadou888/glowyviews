@@ -37,6 +37,11 @@ const Features = () => {
       title: "CRESCITA ORGANICA A RISCHIO ZERO",
       description: "Comprare visualizzazioni YouTube su SocialX ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
       icon: TrendingUp
+    },
+    {
+      title: "PERCHE’ COMPRARE VISUALIZZAZIONI DI ALTA QUALITA’",
+      description: "Con le visualizzazioni YouTube di alta qualità nessuno noterà la tua strategia, nemmeno i tuoi reali follower.",
+      icon: Eye
     }
   ];
 
@@ -46,7 +51,9 @@ const Features = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow">
           I Nostri Servizi
         </h2>
-        
+        <p className="text-lg md:text-xl text-muted-foreground pb-6">
+          Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di SocialX offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="p-8 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">

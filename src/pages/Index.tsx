@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import WhyBuyViews from "@/components/WhyBuyViews";
 import BuySteps from "@/components/BuySteps";
 import Footer from "@/components/Footer";
+import OtherText from "@/components/OtherText";
 
 const Index = () => {
   useEffect(() => {
@@ -45,6 +46,9 @@ const Index = () => {
       </div>
       <div className="reveal-on-scroll">
         <BuySteps />
+      </div>
+      <div className="reveal-on-scroll">
+        <OtherText />
       </div>
       <div className="reveal-on-scroll">
         <FAQIntro />
