@@ -1,4 +1,8 @@
+import { useState, useEffect, useRef } from "react";
+
 const FAQ = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
   const questions = [
     {
       title: "1. Dopo quanto vedrò le mie visualizzazioni YouTube salire?",
@@ -118,23 +122,82 @@ const FAQ = () => {
     }
   ];
 
+  useEffect(() => {
+    const handleScroll = (event: WheelEvent) => {
+      if (!sectionRef.current) return;
+
+      // Prevent default scroll behavior
+      event.preventDefault();
+
+      // Determine scroll direction
+      if (event.deltaY > 0) {
+        // Scrolling down
+        setCurrentIndex(prev => 
+          prev < questions.length - 1 ? prev + 1 : prev
+        );
+      } else {
+        // Scrolling up
+        setCurrentIndex(prev => 
+          prev > 0 ? prev - 1 : prev
+        );
+      }
+    };
+
+    const section = sectionRef.current;
+    if (section) {
+      section.addEventListener('wheel', handleScroll, { passive: false });
+    }
+
+    return () => {
+      if (section) {
+        section.removeEventListener('wheel', handleScroll);
+      }
+    };
+  }, [questions.length]);
+
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow">
+    <section 
+      ref={sectionRef}
+      className="w-full max-w-6xl mx-auto px-4 py-16 min-h-screen flex flex-col items-center justify-center reveal-on-scroll"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow animate-glow">
         Domande Frequenti
       </h2>
-      <div className="space-y-12">
-        {questions.map((question, index) => (
-          <div key={index} className="bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-glow  border-primary/20">
-            <h3 className="text-2xl font-semibold mb-6 text-primary">{question.title}</h3>
-            <div className="space-y-4">
-              {question.content.map((paragraph, pIndex) => (
-                <p key={pIndex} className="text-muted-foreground leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+      <div 
+        className="relative w-full transition-all duration-500 ease-in-out"
+        style={{ height: '500px' }}
+      >
+        <div
+          key={currentIndex}
+          className="absolute top-0 left-0 w-full h-full bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-glow border-primary/20 reveal-on-scroll"
+        >
+          <h3 className="text-2xl font-semibold mb-6 text-primary text-glow">
+            {questions[currentIndex].title}
+          </h3>
+          <div className="space-y-4">
+            {questions[currentIndex].content.map((paragraph, pIndex) => (
+              <p 
+                key={pIndex} 
+                className="text-white leading-relaxed opacity-0 animate-[text-reveal_0.5s_ease-out_forwards]"
+                style={{ animationDelay: `${pIndex * 0.1}s` }}
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
+        </div>
+      </div>
+      <div className="mt-8 flex gap-2">
+        {questions.map((_, index) => (
+          <button
+            key={index}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'bg-primary scale-125 animate-glow' 
+                : 'bg-secondary'
+            }`}
+            onClick={() => setCurrentIndex(index)}
+          />
         ))}
       </div>
     </section>
