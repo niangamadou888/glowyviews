@@ -9,6 +9,7 @@ import WhyBuyViews from "@/components/WhyBuyViews";
 import BuySteps from "@/components/BuySteps";
 import Footer from "@/components/Footer";
 import OtherText from "@/components/OtherText";
+import FloatingButton from "@/components/FloatingButton";
 
 const Index = () => {
   useEffect(() => {
@@ -37,7 +38,9 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>
       <div className="reveal-on-scroll">
         <Features />
       </div>
@@ -59,6 +62,7 @@ const Index = () => {
       <div className="reveal-on-scroll">
         <FinalConsiderations />
       </div>
+      <FloatingButton />
       <Footer />
     </main>
   );

@@ -89,6 +89,18 @@
       box-shadow: 0 0 30px theme('colors.accent.DEFAULT');
     }
   }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px rgba(66, 153, 225, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(66, 153, 225, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(66, 153, 225, 0.5);
+    }
+  }
 }
 
 @layer base {
@@ -111,6 +123,10 @@
 
   .animate-glow {
     animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-glow-float {
+    animation: glow 2s infinite;
   }
 
   .reveal-on-scroll {
