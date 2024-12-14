@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 const steps = [
   {
     title: "Crea il tuo account",
-    description: "Registrati su SocialX per accedere a tutti i nostri servizi"
+    description: "Per prima cosa, crea la tua area personale iscrivendoti a SocialX e recati nella sezione in cui sono presenti le nostre offerte commerciali."
   },
   {
     title: "Scegli il pacchetto",
-    description: "Seleziona il numero di visualizzazioni che desideri acquistare"
+    description: "Successivamente, passa al vaglio tutti i pacchetti che ti proponiamo, in modo da individuare subito quello più in linea con le tue esigenze e con il tuo budget."
   },
   {
     title: "Inserisci l'URL",
-    description: "Fornisci il link del video YouTube in formato desktop"
+    description: "Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che selezionarlo e fornirci l'URL del video che vuoi “spingere”. Attenzione, però. Devi fornircelo in formato desktop (ossia “https://youtube.com/tuovideo) e NON in formato mobile (cioè “m.youtube.com/tuovideo”). Inoltre, il video deve essere pubblico e non presentare alcuna limitazione."
   },
   {
     title: "Effettua il pagamento",
-    description: "Scegli il metodo di pagamento che preferisci"
+    description: "A questo punto, procedi con il pagamento che puoi effettuare scegliendo tra diversi metodi: carte di debito/credito, bonifici ordinari e istantanei, PayPal e via dicendo."
   },
   {
     title: "Monitora i risultati",
-    description: "Osserva la crescita delle tue visualizzazioni"
+    description: "Infine, devi solo attendere che il nostro Staff elabori il tuo ordine e che lo “consegni” nel giro di pochissimi giorni lavorativi. In pratica, devi solo monitorare il contatore di views YouTube presente sul video di cui ci hai fornito l'URL."
   }
 ];
 
