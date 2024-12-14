@@ -10,6 +10,7 @@ import BuySteps from "@/components/BuySteps";
 import Footer from "@/components/Footer";
 import OtherText from "@/components/OtherText";
 import FloatingButton from "@/components/FloatingButton";
+import BackToTopButton from "@/components/BackToTopButton";
 
 const Index = () => {
   useEffect(() => {
@@ -63,6 +64,7 @@ const Index = () => {
         <FinalConsiderations />
       </div>
       <FloatingButton />
+      <BackToTopButton />
       <Footer />
     </main>
   );
