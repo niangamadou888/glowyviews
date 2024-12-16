@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import OtherText from "@/components/OtherText";
 import FloatingButton from "@/components/FloatingButton";
 import BackToTopButton from "@/components/BackToTopButton";
+import YouTubeViewsInfo from "@/components/YouTubeViewsInfo";
 
 const Index = () => {
   useEffect(() => {
@@ -47,6 +48,9 @@ const Index = () => {
       </div>
       <div className="reveal-on-scroll">
         <WhyBuyViews />
+      </div>
+      <div className="reveal-on-scroll">
+        <YouTubeViewsInfo />
       </div>
       <div className="reveal-on-scroll">
         <BuySteps />

@@ -6,7 +6,7 @@ const BuySteps = () => {
   const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "85% start"]
   });
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const BuySteps = () => {
           <motion.div
             className="absolute top-[60px] left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30 rounded-full"
             style={{
-              height: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]),
+              height: useTransform(scrollYProgress, [0, 0.85], ["0%", "100%"]),
               boxShadow: "0 0 20px var(--primary)",
             }}
           />
@@ -72,7 +72,7 @@ const BuySteps = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-4 -top-4 w-12 h-12 border-none bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               1
             </div>
             <div className="ml-8">
@@ -96,7 +96,7 @@ const BuySteps = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-4 -top-4 w-12 h-12 border-none bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               2
             </div>
             <div className="ml-8">
@@ -120,7 +120,7 @@ const BuySteps = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl border-none font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               3
             </div>
             <div className="ml-8">
@@ -141,7 +141,7 @@ const BuySteps = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse border-none">
               4
             </div>
             <div className="ml-8">
@@ -160,9 +160,9 @@ const BuySteps = () => {
             className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse border-none">
               5
             </div>
             <div className="ml-8">
