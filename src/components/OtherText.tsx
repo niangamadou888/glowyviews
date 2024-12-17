@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 
 const OtherText = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-16">
+    <section className="w-full max-w-7xl mx-auto px-4 py-16">
       <div className="space-y-24">
-        {/* Section 1 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,14 +14,10 @@ const OtherText = () => {
         >
           {/* Content Section */}
           <div className="flex-1">
-            <div className="relative overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#009246] via-[#ffffff] to-[#ce2b37] opacity-20" />
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-              <div className="relative p-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white drop-shadow-glow">
-                  Comprare Views YouTube: dopo quanto tempo arrivano?
-                </h2>
-                <p className="text-lg text-white/90 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+            Comprare Views YouTube: dopo quanto tempo arrivano?
+            </h2>
+            <p className="text-lg text-white/90 mb-4">
           Come già brevemente accennato, una volta <strong>comprate le visualizzazioni YouTube</strong>, queste “arrivano” sul tuo video nel giro di qualche giorno lavorativo. <br />
           </p>
           <p className="text-lg text-white/90 mb-4">
@@ -37,25 +32,21 @@ const OtherText = () => {
           Quindi, riassumendo, le nostre <strong>tempistiche di consegna variano sempre in base all'entità</strong> dell'ordine. <br />
           In ogni caso, per eventuali dubbi o perplessità legati all'acquisto, <strong>c'è sempre il nostro servizio assistenza clienti</strong> pronto a darti tutti i chiarimenti e specifiche che desideri. <br />
           </p>
-              </div>
-            </div>
           </div>
 
           {/* Image Section */}
           <div className="flex-1">
-            <div className="relative aspect-video rounded-xl overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#009246]/20 via-white/10 to-[#ce2b37]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative aspect-video rounded-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
                 src="YouTube-Thumbnail_1.webp"
-                alt="Comprare Views YouTube: dopo quanto tempo arrivano?"
+                alt="Tutti i vantaggi del comprare Visualizzazioni YouTube"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
           </div>
         </motion.div>
 
-        {/* Repeat similar structure for other sections */}
-        {/* Section 2 */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,15 +54,12 @@ const OtherText = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
         >
+          {/* Content Section */}
           <div className="flex-1 md:order-2">
-            <div className="relative overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#009246] via-[#ffffff] to-[#ce2b37] opacity-20" />
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-              <div className="relative p-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white drop-shadow-glow">
-                  Quanto costa comprare Visualizzazioni YouTube?
-                </h2>
-                <p className="text-lg text-white/90 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+            Quanto costa comprare Visualizzazioni YouTube?
+            </h2>
+            <p className="text-lg text-white/90 mb-4">
             Come hai già intuito, <strong>comprare views YouTube italiane e reali può avere un costo variabile</strong>, a seconda del pacchetto selezionato. <br />
             </p>
             <p className="text-lg text-white/90 mb-4">
@@ -93,25 +81,20 @@ const OtherText = () => {
             <p className="text-lg text-white/90">
             In caso, <strong>puoi sempre accordarti con il nostro Staff per una consegna “diluita”</strong> nel tempo, proprio evitare ciò di cui parliamo nel paragrafo successivo.
             </p>
-              </div>
-            </div>
           </div>
 
           {/* Image Section */}
           <div className="flex-1 md:order-1">
-            <div className="relative aspect-video rounded-xl overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#009246]/20 via-white/10 to-[#ce2b37]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative aspect-video rounded-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
                 src="cf948d2f-adf9-4327-889d-4606e6185e72.jpeg"
-                alt="Quanto costa comprare Visualizzazioni YouTube?"
+                alt="Per quali video si possono comprare Visualizzazioni YouTube?"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
           </div>
         </motion.div>
-
-        {/* Repeat for Section 3 and Section 4 */}
-
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -121,14 +104,10 @@ const OtherText = () => {
         >
           {/* Content Section */}
           <div className="flex-1">
-            <div className="relative overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#009246] via-[#ffffff] to-[#ce2b37] opacity-20" />
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-              <div className="relative p-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white drop-shadow-glow">
-                Comprare Views YouTube è legale?
-                </h2>
-                <p className="text-lg text-white/90 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+            Comprare Views YouTube è legale?
+            </h2>
+            <p className="text-lg text-white/90 mb-4">
             Sì, <strong>comprare visualizzazioni YouTube è sicuro</strong> perché è una pratica perfettamente legale sia in Italia, che negli altri paesi del mondo. <br />
             </p>
             <p className="text-lg text-white/90 mb-4">
@@ -152,17 +131,15 @@ const OtherText = () => {
             <p className="text-lg text-white/90">
             Insomma, sarebbe come dire ai crawler della piattaforma: <strong>“Ehi! Guarda che mi arrivano tante visualizzazioni perché carico ottimi contenuti e piaccio al pubblico!”.</strong>
             </p>
-              </div>
-            </div>
           </div>
 
           {/* Image Section */}
           <div className="flex-1">
-            <div className="relative aspect-video rounded-xl overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#009246]/20 via-white/10 to-[#ce2b37]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative aspect-video rounded-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
                 src="trueview.webp"
-                alt="Comprare Views YouTube: dopo quanto tempo arrivano?"
+                alt="Tutti i vantaggi del comprare Visualizzazioni YouTube"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
@@ -176,15 +153,12 @@ const OtherText = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
         >
+          {/* Content Section */}
           <div className="flex-1 md:order-2">
-            <div className="relative overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#009246] via-[#ffffff] to-[#ce2b37] opacity-20" />
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-              <div className="relative p-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white drop-shadow-glow">
-                Comprare Visualizzazioni YouTube: cosa non fare
-                </h2>
-                <p className="text-lg text-white/90 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+            Comprare Visualizzazioni YouTube: cosa non fare
+            </h2>
+            <p className="text-lg text-white/90 mb-4">
             Se hai deciso di <strong>comprare views YouTube</strong>, ricorda che l'unica cosa che non devi fare è proprio quella di esagerare.<br />
             </p>
             <p className="text-lg text-white/90 mb-4">
@@ -202,25 +176,25 @@ const OtherText = () => {
             <p className="text-lg text-white/90">
             A tal proposito, ti <strong>consigliamo pure di realizzare una sorta di “scaletta”</strong>, proprio per programmare l'erogazione delle interazioni, al fine di renderle più genuine possibili.
             </p>
-              </div>
-            </div>
           </div>
 
           {/* Image Section */}
           <div className="flex-1 md:order-1">
-            <div className="relative aspect-video rounded-xl overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#009246]/20 via-white/10 to-[#ce2b37]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative aspect-video rounded-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
                 src="Come-guadagnare-su-YouTube-Quello-che-devi-sapere.jpg"
-                alt="Quanto costa comprare Visualizzazioni YouTube?"
+                alt="Per quali video si possono comprare Visualizzazioni YouTube?"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
+
+
+
   );
 };
 
