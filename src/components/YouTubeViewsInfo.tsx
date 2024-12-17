@@ -13,7 +13,7 @@ const YouTubeViewsInfo = () => {
         >
           {/* Content Section */}
           <div className="flex-1">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary text-glow">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
               Tutti i vantaggi del comprare Visualizzazioni YouTube
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -66,7 +66,7 @@ const YouTubeViewsInfo = () => {
         >
           {/* Content Section */}
           <div className="flex-1 md:order-2">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary text-glow">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
               Per quali video si possono comprare Visualizzazioni YouTube?
             </h2>
             <p className="text-lg text-muted-foreground">

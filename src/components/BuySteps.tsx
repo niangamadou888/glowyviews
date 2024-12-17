@@ -53,11 +53,11 @@ const BuySteps = () => {
         <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step: <br />
           </p>
         {/* Vertical Progress Line */}
-        <div className="absolute left-[20px] top-0 bottom-0 w-1">
+        <div className="absolute left-[20px] top-[230px] bottom-[140px] w-1 z-10">
           <motion.div
-            className="absolute top-[60px] left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30 rounded-full"
+            className="absolute left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30 rounded-full"
             style={{
-              height: useTransform(scrollYProgress, [0, 0.85], ["0%", "100%"]),
+              height: useTransform(scrollYProgress, [0, 0.9], ["0%", "100%"]),
               boxShadow: "0 0 20px var(--primary)",
             }}
           />
@@ -125,7 +125,7 @@ const BuySteps = () => {
             </div>
             <div className="ml-8">
               <h3 className="text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
-              Inserisci l'URL
+                Inserisci l'URL
               </h3>
               <p className="text-lg text-muted-foreground">
               Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi “spingere”. Attenzione, però. Devi fornircelo in <strong>formato desktop (ossia “https://youtube.com/tuovideo) e NON in formato mobile (cioè “m.youtube.com/tuovideo”)</strong>. Inoltre, il video deve essere pubblico e non presentare alcuna limitazione.
