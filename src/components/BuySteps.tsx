@@ -6,7 +6,7 @@ const BuySteps = () => {
   const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "85% start"]
+    offset: ["start center", "end center"]
   });
 
   useEffect(() => {
@@ -49,37 +49,37 @@ const BuySteps = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-glow mb-24">
           Come comprare Visualizzazioni YouTube italiane e reali
         </h2>
-        <p className="text-lg text-muted-foreground leading-relaxed ml-10 mb-10">
+        <p className="text-lg text-muted-foreground leading-relaxed ml-4 md:ml-10 mb-10">
         <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step: <br />
           </p>
         {/* Vertical Progress Line */}
-        <div className="absolute left-[20px] top-[230px] bottom-[140px] w-1 z-10">
+        <div className="absolute left-[12px] md:left-[20px] top-[230px] bottom-[140px] w-[3px] md:w-1 z-10">
           <motion.div
             className="absolute left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30 rounded-full"
             style={{
-              height: useTransform(scrollYProgress, [0, 0.9], ["0%", "100%"]),
+              height: useTransform(scrollYProgress, [0, 0.7], ["0%", "100%"]),
               boxShadow: "0 0 20px var(--primary)",
             }}
           />
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-24 md:space-y-32">
           {/* Step 1 */}
           <motion.div
             ref={(el) => (stepsRef.current[0] = el)}
-            className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
+            className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 border-none bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 border-none bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               1
             </div>
-            <div className="ml-8">
-              <h3 className="text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
+            <div className="ml-4 md:ml-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
                 Crea il tuo account
               </h3>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Per prima cosa, <strong>crea la tua area personale iscrivendoti a SocialX</strong> e
                 recati nella sezione in cui sono presenti le nostre offerte
                 commerciali.
@@ -91,19 +91,19 @@ const BuySteps = () => {
           {/* Step 2 */}
           <motion.div
             ref={(el) => (stepsRef.current[1] = el)}
-            className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
+            className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 border-none bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 border-none bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               2
             </div>
-            <div className="ml-8">
-              <h3 className="text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
+            <div className="ml-4 md:ml-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
                 Scegli il pacchetto
               </h3>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Successivamente, <strong>passa al vaglio tutti i pacchetti che ti
                 proponiamo</strong>, in modo da individuare subito quello più in linea con
                 le tue esigenze e con il tuo budget.
@@ -115,19 +115,19 @@ const BuySteps = () => {
           {/* Step 3 */}
           <motion.div
             ref={(el) => (stepsRef.current[2] = el)}
-            className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
+            className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl border-none font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
+            <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 border-none bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               3
             </div>
-            <div className="ml-8">
-              <h3 className="text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
+            <div className="ml-4 md:ml-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
                 Inserisci l'URL
               </h3>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
               Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi “spingere”. Attenzione, però. Devi fornircelo in <strong>formato desktop (ossia “https://youtube.com/tuovideo) e NON in formato mobile (cioè “m.youtube.com/tuovideo”)</strong>. Inoltre, il video deve essere pubblico e non presentare alcuna limitazione.
               </p>
             </div>
@@ -136,19 +136,19 @@ const BuySteps = () => {
 
           <motion.div
             ref={(el) => (stepsRef.current[3] = el)}
-            className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
+            className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse border-none">
+            <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 border-none bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               4
             </div>
-            <div className="ml-8">
-              <h3 className="text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
+            <div className="ml-4 md:ml-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
               Effettua il pagamento
               </h3>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
               A questo punto, <strong>procedi con il pagamento</strong> che puoi effettuare scegliendo tra diversi metodi: <strong>carte di debito/credito, bonifici ordinari e istantanei, PayPal</strong> e via dicendo.
               </p>
             </div>
@@ -157,19 +157,19 @@ const BuySteps = () => {
 
           <motion.div
             ref={(el) => (stepsRef.current[4] = el)}
-            className="relative p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
+            className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 transition-all duration-500 group reveal-on-scroll"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse border-none">
+            <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 border-none bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold border-4 border-background glow z-10 group-[.active]:animate-step-pulse">
               5
             </div>
-            <div className="ml-8">
-              <h3 className="text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
+            <div className="ml-4 md:ml-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-[.active]:text-glow">
               Monitora i risultati
               </h3>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
               Infine, <strong>devi solo attendere che il nostro Staff elabori il tuo ordine</strong> e che lo “consegni” nel giro di pochissimi giorni lavorativi. In pratica, devi solo monitorare il contatore di views YouTube presente sul video di cui ci hai fornito l'URL.
               </p>
             </div>

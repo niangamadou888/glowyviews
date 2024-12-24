@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container flex h-16 items-center justify-between">
@@ -12,9 +17,9 @@ const Navigation = () => {
           <span className="text-2xl font-bold text-primary text-glow">GlowyViews</span>
         </Link>
 
-        {/* Navigation Links */}
-        <NavigationMenu>
-          <NavigationMenuList className="hidden md:flex">
+        {/* Desktop Navigation */}
+        <NavigationMenu className="hidden md:block">
+          <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink
                 className={cn(
@@ -38,14 +43,65 @@ const Navigation = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Auth Buttons */}
+        {/* Auth Buttons and Mobile Menu */}
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden md:inline-flex">
-            Log In
-          </Button>
-          <Button className="glow">
-            Sign Up
-          </Button>
+          <div className="hidden md:flex items-center gap-4">
+            <Button variant="ghost">
+              Log In
+            </Button>
+            <Button className="glow">
+              Sign Up
+            </Button>
+          </div>
+
+          {/* Mobile Menu */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon" className="relative">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center p-6 border-b border-border">
+                  <span className="text-lg font-semibold">Menu</span>
+                </div>
+                <div className="flex-1 overflow-y-auto">
+                  <div className="flex flex-col gap-1 p-6">
+                    <a 
+                      href="#features" 
+                      className="px-4 py-3 text-sm font-medium transition-colors hover:bg-accent rounded-md"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Features
+                    </a>
+                    <a 
+                      href="#faq" 
+                      className="px-4 py-3 text-sm font-medium transition-colors hover:bg-accent rounded-md"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      FAQ
+                    </a>
+                  </div>
+                </div>
+                <div className="border-t border-border p-6 space-y-4">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-start"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Log In
+                  </Button>
+                  <Button 
+                    className="w-full glow"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Sign Up
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </div>

@@ -1,47 +1,48 @@
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Clock, Shield, Users, Lock, TrendingUp, Eye, AlertTriangle } from "lucide-react";
+import 'lord-icon-element';
+import { AlertTriangle } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
       title: "VISUALIZZAZIONI ALTA QUALITA' VS REALI",
       description: "Le visualizzazioni di alta qualità provengono da account del tutto simili a quelli 'genuini'. Quelle reali, invece, provengono da account verificati.",
-      icon: Eye
+      icon: "https://cdn.lordicon.com/oqhlhtfq.json" // Eye animation
     },
     {
       title: "VISUALIZZAZIONI ITALIANE",
       description: "Aumenta il grado di rilevanza tra il tuo canale e il tuo target. Inoltre, non vengono rilevate dagli algoritmi.",
-      icon: Users
+      icon: "https://cdn.lordicon.com/uukerzzv.json" // People animation
     },
     {
       title: "CONSEGNA RAPIDA",
       description: "Se hai effettuato un ordine con noi, riceverai le visualizzazioni comprate nel giro di un paio d'ore.",
-      icon: Clock
+      icon: "https://cdn.lordicon.com/tclnsjgx.json" // Timer animation
     },
     {
       title: "SUPPORTO DEDICATO 24/7",
       description: "In caso di problemi, puoi sempre contare sul nostro Staff, sempre pronto ad aiutarti.",
-      icon: CheckCircle
+      icon: "https://cdn.lordicon.com/zpxybbhl.json" // Customer support animation
     },
     {
       title: "PAGAMENTI SICURI",
       description: "Ci serviamo dei sistemi crittografici più avanzati per rendere i nostri pagamenti a prova di attacco 'hacker'.",
-      icon: Shield
+      icon: "https://cdn.lordicon.com/dqxvvqzi.json" // Shield animation
     },
     {
       title: "NESSUNA RICHIESTA DI CREDENZIALI",
       description: "Comprare visualizzazioni YouTube da SocialX è estremamente sicuro perché non richiediamo password o altri codici personali.",
-      icon: Lock
+      icon: "https://cdn.lordicon.com/rjzlnunf.json" // Lock animation
     },
     {
       title: "CRESCITA ORGANICA A RISCHIO ZERO",
       description: "Comprare visualizzazioni YouTube su SocialX ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
-      icon: TrendingUp
+      icon: "https://cdn.lordicon.com/jectmwqf.json" // Growth chart animation
     },
     {
-      title: "PERCHE’ COMPRARE VISUALIZZAZIONI DI ALTA QUALITA’",
+      title: "PERCHE' COMPRARE VISUALIZZAZIONI DI ALTA QUALITA'",
       description: "Con le visualizzazioni YouTube di alta qualità nessuno noterà la tua strategia, nemmeno i tuoi reali follower.",
-      icon: Eye
+      icon: "https://cdn.lordicon.com/wjyqkiew.json" // Eye animation
     }
   ];
 
@@ -57,7 +58,13 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="p-8 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
-              <feature.icon className="w-12 h-12 text-primary mb-6" />
+              <lord-icon
+                src={feature.icon}
+                trigger="hover"
+                colors="primary:#4f46e5"
+                style={{ width: "48px", height: "48px" }}
+                className="mb-6"
+              />
               <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </Card>

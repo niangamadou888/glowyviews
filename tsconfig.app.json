@@ -20,6 +20,8 @@
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
+    "strictNullChecks": false,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
 
     "baseUrl": ".",
     "paths": {
