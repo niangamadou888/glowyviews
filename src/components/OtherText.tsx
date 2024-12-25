@@ -1,17 +1,32 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const OtherText = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 py-16">
+    <section ref={containerRef} className="w-full max-w-7xl mx-auto px-4 py-16">
       <div className="space-y-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 relative pl-8"
         >
+          {/* Animated line for first section - Left side */}
+          <motion.div
+            className="absolute left-0 top-0 w-[3px] h-full bg-gradient-to-b from-purple-500 via-purple-400 to-purple-300"
+            style={{
+              scaleY: useTransform(scrollYProgress, [0, 0.1], [0, 1]),
+              originY: 0,
+            }}
+          />
           {/* Content Section */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
@@ -52,8 +67,16 @@ const OtherText = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 relative pr-8"
         >
+          {/* Animated line for second section - Right side */}
+          <motion.div
+            className="absolute right-0 top-0 w-[3px] h-full bg-gradient-to-b from-purple-500 via-purple-400 to-purple-300"
+            style={{
+              scaleY: useTransform(scrollYProgress, [0.2, 0.4], [0, 1]),
+              originY: 0,
+            }}
+          />
           {/* Content Section */}
           <div className="flex-1 md:order-2">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
@@ -100,8 +123,16 @@ const OtherText = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 relative pl-8"
         >
+          {/* Animated line for third section - Left side */}
+          <motion.div
+            className="absolute left-0 top-0 w-[3px] h-full bg-gradient-to-b from-purple-500 via-purple-400 to-purple-300"
+            style={{
+              scaleY: useTransform(scrollYProgress, [0.4, 0.6], [0, 1]),
+              originY: 0,
+            }}
+          />
           {/* Content Section */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
@@ -151,8 +182,16 @@ const OtherText = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 relative pr-8"
         >
+          {/* Animated line for fourth section - Right side */}
+          <motion.div
+            className="absolute right-0 top-0 w-[3px] h-full bg-gradient-to-b from-purple-500 via-purple-400 to-purple-300"
+            style={{
+              scaleY: useTransform(scrollYProgress, [0.6, 0.8], [0, 1]),
+              originY: 0,
+            }}
+          />
           {/* Content Section */}
           <div className="flex-1 md:order-2">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
@@ -192,9 +231,6 @@ const OtherText = () => {
         </motion.div>
       </div>
     </section>
-
-
-
   );
 };
 
