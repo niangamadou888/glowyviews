@@ -60,7 +60,7 @@ const Features = () => {
             <Card key={index} className="p-8 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
               <lord-icon
                 src={feature.icon}
-                trigger="hover"
+                trigger="loop"
                 colors="primary:#4f46e5"
                 style={{ width: "48px", height: "48px" }}
                 className="mb-6"
