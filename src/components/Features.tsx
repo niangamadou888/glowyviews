@@ -7,7 +7,7 @@ const Features = () => {
     {
       title: "VISUALIZZAZIONI ALTA QUALITA' VS REALI",
       description: "Le visualizzazioni di alta qualità provengono da account del tutto simili a quelli 'genuini'. Quelle reali, invece, provengono da account verificati.",
-      icon: "https://cdn.lordicon.com/oqhlhtfq.json" // Eye animation
+      icon: "https://cdn.lordicon.com/dfphohvz.json" // Eye animation
     },
     {
       title: "VISUALIZZAZIONI ITALIANE",
@@ -17,7 +17,7 @@ const Features = () => {
     {
       title: "CONSEGNA RAPIDA",
       description: "Se hai effettuato un ordine con noi, riceverai le visualizzazioni comprate nel giro di un paio d'ore.",
-      icon: "https://cdn.lordicon.com/tclnsjgx.json" // Timer animation
+      icon: "https://cdn.lordicon.com/vnlbhttp.json" // Timer animation
     },
     {
       title: "SUPPORTO DEDICATO 24/7",
@@ -27,12 +27,12 @@ const Features = () => {
     {
       title: "PAGAMENTI SICURI",
       description: "Ci serviamo dei sistemi crittografici più avanzati per rendere i nostri pagamenti a prova di attacco 'hacker'.",
-      icon: "https://cdn.lordicon.com/dqxvvqzi.json" // Shield animation
+      icon: "https://cdn.lordicon.com/gjlzobte.json" // Shield animation
     },
     {
       title: "NESSUNA RICHIESTA DI CREDENZIALI",
       description: "Comprare visualizzazioni YouTube da SocialX è estremamente sicuro perché non richiediamo password o altri codici personali.",
-      icon: "https://cdn.lordicon.com/rjzlnunf.json" // Lock animation
+      icon: "https://cdn.lordicon.com/ljupbvfa.json" // Lock animation
     },
     {
       title: "CRESCITA ORGANICA A RISCHIO ZERO",
@@ -42,7 +42,7 @@ const Features = () => {
     {
       title: "PERCHE' COMPRARE VISUALIZZAZIONI DI ALTA QUALITA'",
       description: "Con le visualizzazioni YouTube di alta qualità nessuno noterà la tua strategia, nemmeno i tuoi reali follower.",
-      icon: "https://cdn.lordicon.com/wjyqkiew.json" // Eye animation
+      icon: "https://cdn.lordicon.com/azasiwss.json" // Eye animation
     }
   ];
 
@@ -61,7 +61,7 @@ const Features = () => {
               <lord-icon
                 src={feature.icon}
                 trigger="loop"
-                colors="primary:#4f46e5"
+                colors="primary:#7166ee,secondary:#08a88a"
                 style={{ width: "48px", height: "48px" }}
                 className="mb-6"
               />
