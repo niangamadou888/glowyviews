@@ -65,7 +65,7 @@ module.exports = {
           'text-shadow': '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)'
         },
         '.text-glow-lg': {
-          'text-shadow': '0 0 15px rgba(var(--primary), 0.7), 0 0 30px rgba(var(--primary), 0.5), 0 0 45px rgba(var(--primary), 0.3)'
+          'text-shadow': '0 0 20px rgba(var(--primary), 1), 0 0 40px rgba(var(--primary), 0.8), 0 0 60px rgba(var(--primary), 0.6), 0 0 80px rgba(var(--primary), 0.4), 0 0 100px rgba(var(--primary), 0.2)'
         }
       })
     }

@@ -68,7 +68,7 @@ const Features = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden" id="features">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-primary text-glow-lg">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white text-glow-lg">
           I Nostri Servizi
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground pb-6">
