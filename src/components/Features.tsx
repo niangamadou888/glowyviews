@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import 'lord-icon-element';
 import { AlertTriangle } from "lucide-react";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Player } from '@lordicon/react';
 import growthIcon from '../assets/icons/wired-flat-12-layers-hover-slide.json';
 import icon1 from '../assets/icons/wired-flat-760-review-hover-pinch.json';
@@ -56,11 +56,10 @@ const Features = () => {
     }
   ];
 
-  // Create an array of refs for each feature
   const playerRefs = useRef<Array<Player | null>>(features.map(() => null));
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    // Play all animations when component mounts
     playerRefs.current.forEach((ref) => {
       ref?.playFromBeginning();
     });
@@ -69,7 +68,7 @@ const Features = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden" id="features">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-primary text-glow-lg">
           I Nostri Servizi
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground pb-6">
@@ -77,15 +76,34 @@ const Features = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="p-8 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
-              <Player
-                ref={(el) => (playerRefs.current[index] = el)}
-                icon={feature.icon || feature.iconUrl}
-                size={48}
-                onComplete={() => playerRefs.current[index]?.playFromBeginning()}
-              />
-              <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+            <Card 
+              key={index} 
+              className={`p-8 backdrop-blur-sm transition-all duration-300 ease-in-out relative
+                ${hoveredIndex === index 
+                  ? 'bg-primary/5 border-primary/50 shadow-2xl shadow-primary/30 scale-105 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow' 
+                  : 'bg-secondary/50 border-primary/20 hover:border-primary/40'}`}
+              onMouseEnter={() => {
+                setHoveredIndex(index);
+                playerRefs.current[index]?.playFromBeginning();
+              }}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className={`relative z-10 transition-all duration-300 ${hoveredIndex === index ? 'scale-110 drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]' : ''}`}>
+                <Player
+                  ref={(el) => (playerRefs.current[index] = el)}
+                  icon={feature.icon || feature.iconUrl}
+                  size={48}
+                  onComplete={() => playerRefs.current[index]?.playFromBeginning()}
+                />
+              </div>
+              <h3 className={`relative z-10 text-xl font-semibold mb-4 transition-all duration-300
+                ${hoveredIndex === index ? 'text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]' : ''}`}>
+                {feature.title}
+              </h3>
+              <p className={`relative z-10 transition-all duration-300
+                ${hoveredIndex === index ? 'text-primary/90 drop-shadow-[0_0_4px_rgba(var(--primary),0.3)]' : 'text-muted-foreground'}`}>
+                {feature.description}
+              </p>
             </Card>
           ))}
         </div>
