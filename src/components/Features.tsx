@@ -1,50 +1,70 @@
 import { Card } from "@/components/ui/card";
 import 'lord-icon-element';
 import { AlertTriangle } from "lucide-react";
+import { useEffect, useRef } from 'react';
+import { Player } from '@lordicon/react';
+import growthIcon from '../assets/icons/wired-flat-12-layers-hover-slide.json';
+import icon1 from '../assets/icons/wired-flat-760-review-hover-pinch.json';
+import icon2 from '../assets/icons/wired-flat-2129-login-hover-pinch.json';
+import icon3 from '../assets/icons/wired-flat-457-shield-security-hover-pinch.json';
+import icon4 from '../assets/icons/wired-flat-981-consultation-hover-conversation.json';
+import icon5 from '../assets/icons/wired-flat-2601-speed-hover-pinch.json';
+import icon6 from '../assets/icons/wired-flat-955-demand-hover-click.json';
+import icon7 from '../assets/icons/wired-flat-1368-best-seller-hover-pinch.json';
 
 const Features = () => {
   const features = [
     {
       title: "VISUALIZZAZIONI ALTA QUALITA' VS REALI",
       description: "Le visualizzazioni di alta qualità provengono da account del tutto simili a quelli 'genuini'. Quelle reali, invece, provengono da account verificati.",
-      icon: "https://cdn.lordicon.com/dfphohvz.json" // Eye animation
+      iconUrl: icon7
     },
     {
       title: "VISUALIZZAZIONI ITALIANE",
       description: "Aumenta il grado di rilevanza tra il tuo canale e il tuo target. Inoltre, non vengono rilevate dagli algoritmi.",
-      icon: "https://cdn.lordicon.com/uukerzzv.json" // People animation
+      iconUrl: icon6
     },
     {
       title: "CONSEGNA RAPIDA",
       description: "Se hai effettuato un ordine con noi, riceverai le visualizzazioni comprate nel giro di un paio d'ore.",
-      icon: "https://cdn.lordicon.com/vnlbhttp.json" // Timer animation
+      iconUrl: icon5
     },
     {
       title: "SUPPORTO DEDICATO 24/7",
       description: "In caso di problemi, puoi sempre contare sul nostro Staff, sempre pronto ad aiutarti.",
-      icon: "https://cdn.lordicon.com/zpxybbhl.json" // Customer support animation
+      iconUrl: icon4
     },
     {
       title: "PAGAMENTI SICURI",
       description: "Ci serviamo dei sistemi crittografici più avanzati per rendere i nostri pagamenti a prova di attacco 'hacker'.",
-      icon: "https://cdn.lordicon.com/gjlzobte.json" // Shield animation
+      iconUrl: icon3
     },
     {
       title: "NESSUNA RICHIESTA DI CREDENZIALI",
       description: "Comprare visualizzazioni YouTube da SocialX è estremamente sicuro perché non richiediamo password o altri codici personali.",
-      icon: "https://cdn.lordicon.com/ljupbvfa.json" // Lock animation
+      iconUrl: icon2
     },
     {
       title: "CRESCITA ORGANICA A RISCHIO ZERO",
       description: "Comprare visualizzazioni YouTube su SocialX ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
-      icon: "https://cdn.lordicon.com/jectmwqf.json" // Growth chart animation
+      icon: growthIcon
     },
     {
       title: "PERCHE' COMPRARE VISUALIZZAZIONI DI ALTA QUALITA'",
       description: "Con le visualizzazioni YouTube di alta qualità nessuno noterà la tua strategia, nemmeno i tuoi reali follower.",
-      icon: "https://cdn.lordicon.com/azasiwss.json" // Eye animation
+      iconUrl: icon1
     }
   ];
+
+  // Create an array of refs for each feature
+  const playerRefs = useRef<Array<Player | null>>(features.map(() => null));
+
+  useEffect(() => {
+    // Play all animations when component mounts
+    playerRefs.current.forEach((ref) => {
+      ref?.playFromBeginning();
+    });
+  }, []);
 
   return (
     <section className="py-32 px-6 relative overflow-hidden" id="features">
@@ -58,12 +78,11 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="p-8 bg-secondary/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors">
-              <lord-icon
-                src={feature.icon}
-                trigger="loop"
-                colors="primary:#7166ee,secondary:#08a88a"
-                style={{ width: "48px", height: "48px" }}
-                className="mb-6"
+              <Player
+                ref={(el) => (playerRefs.current[index] = el)}
+                icon={feature.icon || feature.iconUrl}
+                size={48}
+                onComplete={() => playerRefs.current[index]?.playFromBeginning()}
               />
               <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
