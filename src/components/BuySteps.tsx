@@ -29,14 +29,14 @@ const BuySteps = () => {
     },
   };
 
-  // Transform progress for more immediate line response
-  const lineProgress = useTransform(smoothProgress, [0, 0.8], [0, 1], {
-    clamp: false,
+  // Transform progress to stop at the last step
+  const lineProgress = useTransform(smoothProgress, [0, 1], [0, 1], {
+    clamp: true,
   });
 
   return (
     <section
-      className="relative w-full max-w-6xl mx-auto px-4 py-32 overflow-hidden"
+      className="relative mt-40 w-full max-w-6xl mx-auto px-4 py-32 overflow-hidden"
       ref={containerRef}
     >
       {/* Background Effect */}
@@ -61,50 +61,52 @@ const BuySteps = () => {
           semplicissimo, dal momento che devi solo seguire questi step:
         </p>
 
-        {/* Improved Progress Line */}
-        <div className="absolute left-[12px] md:left-[20px] top-[230px] bottom-[140px] w-[3px] md:w-1 bg-primary/10">
-          <motion.div
-            className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
-            style={{
-              height: useTransform(lineProgress, (v) => `${v * 100}%`),
-              transformOrigin: "top",
-              willChange: "transform",
-              boxShadow: "0 0 20px var(--primary)",
-            }}
-          />
-        </div>
-
-        <div className="space-y-24 md:space-y-32">
-          {[1, 2, 3, 4, 5].map((step) => (
+        <div className="relative">
+          {/* Improved Progress Line */}
+          <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10 animate-glow">
             <motion.div
-              key={step}
-              variants={stepVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 group"
-            >
-              <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold glow z-10">
-                {step}
-              </div>
+              className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
+              style={{
+                height: useTransform(lineProgress, (v) => `${v * 100}%`),
+                transformOrigin: "top",
+                willChange: "transform",
+                boxShadow: "0 0 20px var(--primary)",
+              }}
+            />
+          </div>
 
-              <div className="ml-4 md:ml-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-hover:text-glow transition-all">
-                  {getStepTitle(step)}
-                </h3>
-                <p className="text-base md:text-lg text-muted-foreground">
-                  {getStepContent(step)}
-                </p>
-              </div>
-
+          <div className="space-y-20 md:space-y-28">
+            {[1, 2, 3, 4, 5].map((step) => (
               <motion.div
-                className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 blur-xl"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              />
-            </motion.div>
-          ))}
+                key={step}
+                variants={stepVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 group"
+              >
+                <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold glow z-10">
+                  {step}
+                </div>
+
+                <div className="ml-4 md:ml-8">
+                  <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-hover:text-glow transition-all">
+                    {getStepTitle(step)}
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground">
+                    {getStepContent(step)}
+                  </p>
+                </div>
+
+                <motion.div
+                  className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 blur-xl"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
