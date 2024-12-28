@@ -11,15 +11,15 @@ const Navigation = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <span className="text-2xl font-bold text-primary text-glow">GlowyViews</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:block">
-          <NavigationMenuList>
+        <NavigationMenu className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
+          <NavigationMenuList className="flex gap-4">
             <NavigationMenuItem>
               <NavigationMenuLink
                 className={cn(
