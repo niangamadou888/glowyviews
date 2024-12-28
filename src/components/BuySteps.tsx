@@ -42,7 +42,7 @@ const BuySteps = () => {
       {/* Background Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-      {/* Optimized Glow Effect */}
+      {/* Glow Effect */}
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-primary/10 blur-3xl"
@@ -62,7 +62,7 @@ const BuySteps = () => {
         </p>
 
         <div className="relative">
-          {/* Improved Progress Line */}
+          {/* Progress Line */}
           <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10 animate-glow">
             <motion.div
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
@@ -113,7 +113,7 @@ const BuySteps = () => {
   );
 };
 
-// Helper functions remain the same
+// Helper functions
 const getStepTitle = (step: number) => {
   const titles = {
     1: "Crea il tuo account",
