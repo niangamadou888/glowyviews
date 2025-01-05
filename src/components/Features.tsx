@@ -101,16 +101,6 @@ const Features = () => {
             </Card>
           ))}
         </div>
-        <p className=" mt-16">
-        Se hai necessità di <strong>comprare visualizzazioni YouTube italiane e reali</strong>, sappi che sei nel posto giusto ma, prima di farlo, vorremmo che leggessi i nostri consigli. <br />
-        </p>
-        <p className=" mt-3">
-        Infatti, è una pratica che – se condotta nel modo giusto – può dare ottime soddisfazioni in relazione alla <strong>crescita organica del tuo canale</strong>. <br />
-        </p>
-        <p className=" mt-3">
-        Nei paragrafi a seguire, dunque, troverai le indicazioni per far fruttare il tuo investimento sin da subito.
-        </p>
-
         <Card className="mt-16 p-8 bg-destructive/10 border-destructive/20">
           <div className="flex items-start gap-6">
             <AlertTriangle className="w-8 h-8 text-destructive flex-shrink-0 mt-1" />
@@ -122,6 +112,17 @@ const Features = () => {
             </div>
           </div>
         </Card>
+        <p className=" mt-16">
+        Se hai necessità di <strong>comprare visualizzazioni YouTube italiane e reali</strong>, sappi che sei nel posto giusto ma, prima di farlo, vorremmo che leggessi i nostri consigli. <br />
+        </p>
+        <p className=" mt-3">
+        Infatti, è una pratica che – se condotta nel modo giusto – può dare ottime soddisfazioni in relazione alla <strong>crescita organica del tuo canale</strong>. <br />
+        </p>
+        <p className=" mt-3">
+        Nei paragrafi a seguire, dunque, troverai le indicazioni per far fruttare il tuo investimento sin da subito.
+        </p>
+
+        
       </div>
 
       {/* Decorative elements */}
