@@ -68,12 +68,6 @@ const Features = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden" id="features">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white text-glow-lg">
-          I Nostri Servizi
-        </h2>
-        <p className="text-lg md:text-xl text-muted-foreground pb-6">
-          Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di SocialX offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
-        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card 
@@ -93,7 +87,7 @@ const Features = () => {
                   ref={(el) => (playerRefs.current[index] = el)}
                   icon={feature.icon || feature.iconUrl}
                   size={48}
-                  onComplete={() => playerRefs.current[index]?.playFromBeginning()}
+                  //onComplete={() => playerRefs.current[index]?.playFromBeginning()}
                 />
               </div>
               <h3 className={`relative z-10 text-xl font-semibold mb-4 transition-all duration-300
@@ -107,6 +101,15 @@ const Features = () => {
             </Card>
           ))}
         </div>
+        <p className=" mt-16">
+        Se hai necessità di <strong>comprare visualizzazioni YouTube italiane e reali</strong>, sappi che sei nel posto giusto ma, prima di farlo, vorremmo che leggessi i nostri consigli. <br />
+        </p>
+        <p className=" mt-3">
+        Infatti, è una pratica che – se condotta nel modo giusto – può dare ottime soddisfazioni in relazione alla <strong>crescita organica del tuo canale</strong>. <br />
+        </p>
+        <p className=" mt-3">
+        Nei paragrafi a seguire, dunque, troverai le indicazioni per far fruttare il tuo investimento sin da subito.
+        </p>
 
         <Card className="mt-16 p-8 bg-destructive/10 border-destructive/20">
           <div className="flex items-start gap-6">

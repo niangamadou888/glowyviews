@@ -29,27 +29,31 @@ const YouTubeViewsInfo = () => {
               <p className="text-lg text-muted-foreground">
                 Essenzialmente, <strong>comprare views YouTube porta un grande vantaggio</strong>, ovvero il poter pianificare il proprio business. <br />
               </p>
-              <p className="text-lg text-muted-foreground ">
+              <p className="text-lg text-muted-foreground  mt-4">
                 Siamo tutti d'accordo sul fatto che lo scopo sarebbe quello di <strong>ottenere tale tipo di interazioni social in modo organico</strong>.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
                 Purtroppo, però, i <strong>canali aperti da poco potrebbero riscontrare non poche difficoltà</strong> nell'emergere. <br />
+              
+              </p>
+              <p className="text-lg text-muted-foreground mt-4">
+               
                 Infatti, i crawler del social network in questione tendono a <strong> "premiare" con maggiore visibilità proprio i canali già ben movimentati</strong> a livello di interazioni da parte del pubblico.
               </p>
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               Insomma, più visualizzazioni hai, più visibile sei.
               </p>
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               Capisci bene che, <strong>per i canali aperti da poco, sarebbe un po' come scommettere d'azzardo</strong>. Apri il profilo oggi, carichi un sacco di contenuti interessanti, ma non hai la più pallida idea di quando inizierai a vedere i primi risultati tangibili.
               </p>
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               È vero, <strong>comprare visualizzazioni YouTube non ti permette di stabilire degli obiettivi</strong> da raggiungere con precisione matematica.
               </p>
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               Tuttavia, <strong>tale pratica accorcia di gran lunga i tempi</strong>, consentendoti di vedere i primi risultati già nel giro di qualche mese.
               </p>
             </div>
@@ -85,19 +89,23 @@ const YouTubeViewsInfo = () => {
               <p className="text-lg text-muted-foreground">
               Da noi di Social X puoi <strong>comprare visualizzazioni YouTube italiane e reali per qualsiasi tipo di video</strong>. Non importa quale sia il topic trattato, così come non ha alcuna importanza lo stile, la grafica o qualsiasi altro parametro tecnico. <br />
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               In tal senso, però, mettiamo subito “le mani avanti” facendoti presente che, <strong>nell'altra sezione del nostro sito, puoi</strong> <a href="https://socialx.it/comprare-visualizzazioni-e-like-youtube-shorts/">comprare visualizzazioni e like agli Shorts YouTube</a> .
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               Quindi, <strong>se sei interessato ai servizi relativi a questo specifico formato</strong>, allora chiudi pure questa pagina e apri il link che ti abbiamo messo a disposizione. <br />
+             
+              </p>
+              <p className="text-lg text-muted-foreground mt-4">
+             
               Tornando al <strong>comprare visualizzazioni YouTube relative ai video “standard”</strong>, specifichiamo un altro nostro servizio mirato.
               </p>
 
-              <p className="text-lg text-muted-foreground">
-              In caso di contenuti decisamente lunghi, <strong>ti offriamo pure la possibilità di</strong><a href="https://socialx.it/comprare-ore-di-visualizzazione-youtube/">comprare ore di visualizzazione YouTube</a> <strong> in base alle tue specifiche esigenze</strong>.
+              <p className="text-lg text-muted-foreground mt-4">
+              In caso di contenuti decisamente lunghi, <strong>ti offriamo pure la possibilità di </strong><a href="https://socialx.it/comprare-ore-di-visualizzazione-youtube/">comprare ore di visualizzazione YouTube</a> <strong> in base alle tue specifiche esigenze</strong>.
               </p>
 
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mt-4">
               Detto ciò, ad esclusione di questi 2 casi specifici, per il resto non ci sono limiti, proprio perché <strong>operiamo con qualsiasi tipologia di video</strong>, a patto, però, che siano pubblici.
               </p>
             </div>
