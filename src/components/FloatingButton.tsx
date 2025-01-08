@@ -89,7 +89,7 @@ const FloatingButton = () => {
                       shadow-lg hover:shadow-xl
                       transition-shadow duration-300
                       focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-                      max-w-[90%] w-auto"
+                      max-w-[90%] w-auto  animate-glow"
           >
             <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" />
             <span>Acquista views</span>

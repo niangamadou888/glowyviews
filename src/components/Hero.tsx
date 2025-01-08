@@ -29,7 +29,7 @@ const Hero = () => {
         Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di SocialX offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
         </p>
 
-        <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce">
+        <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce text-lg">
           Inizia Ora
         </Button>
       </div>

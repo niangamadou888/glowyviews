@@ -3,29 +3,29 @@ import { motion } from "framer-motion";
 const YouTubeViewsInfo = () => {
   return (
     <section className="relative w-full max-w-7xl mx-auto px-4 py-16 overflow-hidden">
-      {/* Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+  {/* Background Effect */}
+  <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-      {/* Animated Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-primary/10 blur-3xl animate-pulse" />
-      </div>
+  {/* Animated Glow */}
+  <div className="absolute inset-0">
+    <div className="absolute inset-0 bg-primary/10 blur-3xl animate-pulse" />
+  </div>
 
-      <div className="relative space-y-24">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group"
-        >
-          {/* Content Section */}
-          <div className="flex-1 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
-                Tutti i vantaggi del comprare Visualizzazioni YouTube
-              </h2>
+  <div className="relative space-y-24">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group"
+    >
+      {/* Content Section */}
+      <div className="flex-1 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+        <div className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 text-glow hover:animate-glow">
+            Tutti i vantaggi del comprare Visualizzazioni YouTube
+          </h2>
               <p className="text-lg text-muted-foreground">
                 Essenzialmente, <strong>comprare views YouTube porta un grande vantaggio</strong>, ovvero il poter pianificare il proprio business. <br />
               </p>

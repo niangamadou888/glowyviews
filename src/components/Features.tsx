@@ -66,7 +66,8 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden" id="features">
+    <section className="pt-16 md:pt-32 pb-20 px-6 relative overflow-hidden" id="features">
+
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (

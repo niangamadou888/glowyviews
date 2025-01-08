@@ -9,7 +9,7 @@ const FAQ = () => {
 
   return (
     <section className="w-full max-w-6xl mx-auto px-4 py-16" id='faq'>
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-16 text-glow hover:animate-glow">
         Domande Frequenti
       </h2>
       <div className="space-y-6">
