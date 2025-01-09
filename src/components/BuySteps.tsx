@@ -36,30 +36,30 @@ const BuySteps = () => {
 
   return (
     <section
-      className="relative mt-40 w-full max-w-6xl mx-auto px-4 py-32 overflow-hidden"
-      ref={containerRef}
-    >
-      {/* Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+    className="relative mt-20 md:mt-40 w-full max-w-6xl mx-auto px-4 py-24 md:py-32 overflow-hidden"
+    ref={containerRef}
+  >
+    {/* Background Effect */}
+    <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-      {/* Glow Effect */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-primary/10 blur-3xl"
-          style={{
-            animation: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-          }}
-        />
-      </div>
+    {/* Glow Effect */}
+    <div className="absolute inset-0">
+      <div
+        className="absolute inset-0 bg-primary/10 blur-3xl"
+        style={{
+          animation: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        }}
+      />
+    </div>
 
-      <div className="relative">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-glow mb-24">
-          Come comprare Visualizzazioni YouTube italiane e reali
-        </h2>
-        <p className="text-lg text-muted-foreground leading-relaxed ml-4 md:ml-10 mb-10">
-          <strong>Comprare views YouTube italiane e reali</strong> è
-          semplicissimo, dal momento che devi solo seguire questi step:
-        </p>
+    <div className="relative">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-glow mb-16 md:mb-24">
+        Come comprare Visualizzazioni YouTube italiane e reali
+      </h2>
+      <p className="text-lg text-muted-foreground leading-relaxed ml-2 md:ml-10 mb-6 md:mb-10">
+        <strong>Comprare views YouTube italiane e reali</strong> è
+        semplicissimo, dal momento che devi solo seguire questi step:
+      </p>
 
         <div className="relative">
           {/* Progress Line */}

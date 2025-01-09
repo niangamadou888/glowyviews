@@ -12,6 +12,7 @@ import OtherText from "@/components/OtherText";
 import FloatingButton from "@/components/FloatingButton";
 import BackToTopButton from "@/components/BackToTopButton";
 import YouTubeViewsInfo from "@/components/YouTubeViewsInfo";
+import DoveComprare from "@/components/DoveComprare";
 
 const Index = () => {
   useEffect(() => {
@@ -48,6 +49,9 @@ const Index = () => {
       </div>
       <div className="reveal-on-scroll">
         <WhyBuyViews />
+      </div>
+      <div className="reveal-on-scroll">
+        <DoveComprare />
       </div>
       <div className="reveal-on-scroll">
         <YouTubeViewsInfo />

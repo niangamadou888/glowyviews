@@ -3,14 +3,13 @@ import { motion } from "framer-motion";
 const YouTubeViewsInfo = () => {
   return (
     <section className="relative w-full max-w-7xl mx-auto px-4 py-16 overflow-hidden">
-      {/* Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+  {/* Background Effect */}
+  <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-      {/* Animated Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-primary/10 blur-3xl animate-pulse" />
-      </div>
-
+  {/* Animated Glow */}
+  <div className="absolute inset-0">
+    <div className="absolute inset-0 bg-primary/10 blur-3xl animate-pulse" />
+  </div>
       <div className="relative space-y-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -38,7 +37,6 @@ const YouTubeViewsInfo = () => {
                   />
                 </div>
               </div>
-
               <p className="text-lg text-muted-foreground">
                 Essenzialmente,{" "}
                 <strong>
