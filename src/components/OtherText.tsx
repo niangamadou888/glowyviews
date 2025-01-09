@@ -1,10 +1,4 @@
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "framer-motion";
+import { motion, useScroll, useSpring, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
 interface Section {
@@ -111,11 +105,25 @@ const ContentSection = ({
   index: number;
   progress: MotionValue<number>;
 }) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
-  const sectionProgress = [index * 0.25, (index + 1) * 0.25];
+
+  // Calculate section-specific scroll progress
+  const { scrollYProgress: sectionProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "end center"],
+  });
+
+  // Smooth out the section progress
+  const smoothSectionProgress = useSpring(sectionProgress, {
+    damping: 30,
+    stiffness: 100,
+    mass: 0.5,
+  });
 
   return (
     <motion.div
+      ref={sectionRef}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -155,8 +163,8 @@ const ContentSection = ({
             strokeMiterlimit="1"
             strokeLinejoin="round"
             style={{
-              opacity: useTransform(progress, sectionProgress, [0, 1]),
-              pathLength: useTransform(progress, sectionProgress, [0, 1]),
+              opacity: smoothSectionProgress,
+              pathLength: smoothSectionProgress,
             }}
           />
           <defs>
@@ -192,16 +200,6 @@ const ContentSection = ({
 
 const OtherText = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, {
-    damping: 30,
-    stiffness: 100,
-    mass: 0.5,
-  });
 
   return (
     <section ref={containerRef} className="w-full max-w-7xl mx-auto px-4 py-16">
@@ -211,7 +209,7 @@ const OtherText = () => {
             key={index}
             section={section}
             index={index}
-            progress={smoothProgress}
+            progress={new MotionValue()} // Placeholder since we're not using the global progress anymore
           />
         ))}
       </div>
