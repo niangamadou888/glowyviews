@@ -1,15 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Player } from "@lordicon/react";
+import "lord-icon-element";
+import qualityIcon from "../assets/icons/wired-flat-489-rocket-space-hover-flying.json";
+import { Star } from "lucide-react";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const playerRef = useRef<Player | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
+    playerRef.current?.playFromBeginning();
   }, []);
 
+  const labels = ["Prezzi Bassi", "Utenti Reali", "Senza Cali", "100% Sicuro"];
+
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20">
+    <div className="relative min-h-[100vh] flex items-center justify-center overflow-hidden py-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
       
@@ -21,17 +29,53 @@ const Hero = () => {
       
       {/* Content */}
       <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-glow">
-          Comprare Visualizzazioni YouTube: Italiane e Reali
+        <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
+          <span className="mb-2 text-center">Comprare Visualizzazioni YouTube:</span>
+          <span className="bg-gradient-to-r from-[#009246] via-[#fff] to-[#ce2b37] text-transparent bg-clip-text inline-block transform hover:scale-105 transition-transform text-center">
+            Italiane e Reali
+          </span>
         </h1>
+
+        {/* Micro Labels */}
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
+          {labels.map((label, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-sm bg-white/5 backdrop-blur-sm rounded-full border border-white/10 text-white/90 shadow-glow"
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex justify-center mb-8">
+          <Player
+            ref={playerRef}
+            icon={qualityIcon}
+            size={80}
+            onComplete={() => playerRef.current.playFromBeginning()}
+          />
+        </div>
         
-        <p className="text-lg md:text-xl text-white mb-10 max-w-3xl mx-auto">
+        <p className="text-[18px] md:text-[18px] text-white mb-10 max-w-3xl mx-auto">
         Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di SocialX offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
         </p>
 
-        <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce text-lg">
+        <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce text-[20px]">
           Inizia Ora
         </Button>
+
+        {/* Rating Section */}
+        <div className="mt-6 flex items-center justify-center gap-2 text-white/90">
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            ))}
+          </div>
+          <span className="font-semibold">4.9</span>
+          <span className="text-white/70">•</span>
+          <span className="text-white/70">200+ recensioni</span>
+        </div>
       </div>
     </div>
   );

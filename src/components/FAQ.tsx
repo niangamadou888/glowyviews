@@ -21,7 +21,7 @@ const FAQ = () => {
           onClick={() => handleToggle(0)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 0 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 0 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
               1. Dopo quanto vedrò le mie visualizzazioni YouTube salire?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 0 ? 'rotate-180' : ''}`}>
@@ -55,7 +55,7 @@ const FAQ = () => {
           onClick={() => handleToggle(1)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 1 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 1 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
               2. I miei iscritti si accorgeranno delle visualizzazioni YouTube acquistate?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 1 ? 'rotate-180' : ''}`}>
@@ -86,7 +86,7 @@ const FAQ = () => {
           onClick={() => handleToggle(2)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 2 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 2 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
               3. Davvero da voi posso comprare visualizzazioni YouTube reali?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 2 ? 'rotate-180' : ''}`}>
@@ -119,7 +119,7 @@ const FAQ = () => {
           onClick={() => handleToggle(3)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 3 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 3 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             4. Devo fornire i miei codici di accesso una volta acquistato il servizio?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 3 ? 'rotate-180' : ''}`}>
@@ -153,7 +153,7 @@ const FAQ = () => {
           onClick={() => handleToggle(4)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 4 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 4 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             5. Comprare visualizzazioni YouTube è sicuro?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 4 ? 'rotate-180' : ''}`}>
@@ -180,7 +180,7 @@ const FAQ = () => {
           onClick={() => handleToggle(5)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 5 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 5 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             6. Come incrementare le visualizzazioni anche in modo organico?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 5 ? 'rotate-180' : ''}`}>
@@ -214,7 +214,7 @@ const FAQ = () => {
           onClick={() => handleToggle(6)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 6 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 6 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             7. Come faccio a riconoscere le agenzie di Social Marketing davvero affidabili?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 6 ? 'rotate-180' : ''}`}>
@@ -248,7 +248,7 @@ const FAQ = () => {
           onClick={() => handleToggle(7)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 7 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 7 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             8. Bisogna, per forza, comprare visualizzazioni YouTube?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 7 ? 'rotate-180' : ''}`}>
@@ -279,7 +279,7 @@ const FAQ = () => {
           onClick={() => handleToggle(8)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 8 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 8 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             9. Cosa succede una volta acquistate le visualizzazioni YouTube?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 8 ? 'rotate-180' : ''}`}>
@@ -316,7 +316,7 @@ const FAQ = () => {
           onClick={() => handleToggle(9)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 9 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 9 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             10. Diventerò più popolare dopo aver comprato visualizzazioni YouTube?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 9 ? 'rotate-180' : ''}`}>
@@ -350,7 +350,7 @@ const FAQ = () => {
           onClick={() => handleToggle(10)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 10 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 10 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             11. Ho comprato views YouTube ma non le vedo conteggiate: cosa faccio?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 10 ? 'rotate-180' : ''}`}>
@@ -384,7 +384,7 @@ const FAQ = () => {
           onClick={() => handleToggle(11)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-2xl font-semibold text-primary ${openIndex === 11 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 11 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
             12. Posso comprare visualizzazioni YouTube in qualsiasi momento?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 11 ? 'rotate-180' : ''}`}>
