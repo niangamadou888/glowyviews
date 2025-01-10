@@ -69,62 +69,65 @@ const Features = () => {
     features.map(() => null)
   );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Check if device is mobile
   useEffect(() => {
-    // Check if the screen size is mobile or desktop
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
     };
-
-    // Check on initial load
-    checkDevice();
-
-    // Add event listener to detect screen resizing
-    window.addEventListener("resize", checkDevice);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener("resize", checkDevice);
-    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Set up intersection observer for mobile
   useEffect(() => {
-    if (isMobile) {
-      const options = {
-        root: null,
-        rootMargin: "0px 0px -20% 0px", // Trigger when card is almost centered
-        threshold: 0.95,
-      };
+    if (!isMobile) return;
 
-      const observers = cardRefs.current.map((cardRef, index) => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveIndex(index);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = cardRefs.current.findIndex(
+            (ref) => ref === entry.target
+          );
+          if (index === -1) return;
+
+          if (entry.isIntersecting) {
+            // Check if the element is in the middle of the viewport
+            const rect = entry.target.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const elementMiddle = rect.top + rect.height / 2;
+            const viewportMiddle = viewportHeight / 2;
+
+            if (Math.abs(elementMiddle - viewportMiddle) < rect.height / 2) {
+              setHoveredIndex(index);
               playerRefs.current[index]?.playFromBeginning();
             } else {
-              setActiveIndex((current) => (current === index ? null : current));
+              setHoveredIndex(null);
             }
-          });
-        }, options);
+          }
+        });
+      },
+      {
+        threshold: [0, 0.5, 1],
+        rootMargin: "-50% 0px -50% 0px",
+      }
+    );
 
-        if (cardRef) {
-          observer.observe(cardRef);
-        }
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
 
-        return observer;
-      });
-
-      return () => {
-        observers.forEach((observer) => observer.disconnect());
-      };
-    }
+    return () => observer.disconnect();
   }, [isMobile]);
 
-  const isActive = (index: number) =>
-    hoveredIndex === index || activeIndex === index;
+  // Initial animation
+  useEffect(() => {
+    playerRefs.current.forEach((ref) => {
+      ref?.playFromBeginning();
+    });
+  }, []);
 
   return (
     <section
@@ -139,11 +142,10 @@ const Features = () => {
               ref={(el) => (cardRefs.current[index] = el)}
               className={`p-8 backdrop-blur-sm transition-all duration-300 ease-in-out relative
                 ${
-                  isActive(index)
+                  hoveredIndex === index
                     ? "bg-primary/5 border-primary/50 shadow-2xl shadow-primary/30 scale-105 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow"
                     : "bg-secondary/50 border-primary/20 hover:border-primary/40"
                 }`}
-              // For desktop, use hover effect
               onMouseEnter={() => {
                 if (!isMobile) {
                   setHoveredIndex(index);
@@ -151,12 +153,14 @@ const Features = () => {
                 }
               }}
               onMouseLeave={() => {
-                if (!isMobile) setHoveredIndex(null);
+                if (!isMobile) {
+                  setHoveredIndex(null);
+                }
               }}
             >
               <div
                 className={`relative z-10 transition-all duration-300 ${
-                  isActive(index)
+                  hoveredIndex === index
                     ? "scale-110 drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]"
                     : ""
                 }`}
@@ -170,7 +174,7 @@ const Features = () => {
               <h3
                 className={`relative z-10 text-xl font-semibold mb-4 transition-all duration-300
                 ${
-                  isActive(index)
+                  hoveredIndex === index
                     ? "text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]"
                     : ""
                 }`}
@@ -180,7 +184,7 @@ const Features = () => {
               <p
                 className={`relative z-10 transition-all duration-300
                 ${
-                  isActive(index)
+                  hoveredIndex === index
                     ? "text-primary/90 drop-shadow-[0_0_4px_rgba(var(--primary),0.3)]"
                     : "text-muted-foreground"
                 }`}
@@ -190,7 +194,6 @@ const Features = () => {
             </Card>
           ))}
         </div>
-
         <Card className="mt-16 p-8 bg-destructive/10 border-destructive/20">
           <div className="flex items-start gap-6">
             <AlertTriangle className="w-8 h-8 text-destructive flex-shrink-0 mt-1" />
@@ -203,17 +206,16 @@ const Features = () => {
             </div>
           </div>
         </Card>
-
         <p className="mt-16">
           Se hai necessità di{" "}
           <strong>comprare visualizzazioni YouTube italiane e reali</strong>,
           sappi che sei nel posto giusto ma, prima di farlo, vorremmo che
-          leggessi i nostri consigli.
+          leggessi i nostri consigli. <br />
         </p>
         <p className="mt-3">
           Infatti, è una pratica che – se condotta nel modo giusto – può dare
           ottime soddisfazioni in relazione alla{" "}
-          <strong>crescita organica del tuo canale</strong>.
+          <strong>crescita organica del tuo canale</strong>. <br />
         </p>
         <p className="mt-3">
           Nei paragrafi a seguire, dunque, troverai le indicazioni per far
