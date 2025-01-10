@@ -27,39 +27,76 @@ const WhyBuyViews = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
                 Comprare Visualizzazioni YouTube: per quale motivo?
               </h2>
+
+              {/* Image Section for mobile */}
+              <div className="md:hidden mb-8">
+                <div className="relative aspect-video rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
+                  <img
+                    src="viewsyoutube2019.png"
+                    alt="Comprare Visualizzazioni YouTube"
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Nel caso ti stessi chiedendo <strong>perché convenga comprare Views YouTube</strong>, la risposta è davvero semplice.
+                Nel caso ti stessi chiedendo{" "}
+                <strong>perché convenga comprare Views YouTube</strong>, la
+                risposta è davvero semplice.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                In parole povere, <strong>servono per "amicarsi" i crawler della piattaforma stessa</strong>, ossia i "bot" che determinano la visibilità di ciascun canale e dei suoi rispettivi contenuti.
+                In parole povere,{" "}
+                <strong>
+                  servono per "amicarsi" i crawler della piattaforma stessa
+                </strong>
+                , ossia i "bot" che determinano la visibilità di ciascun canale
+                e dei suoi rispettivi contenuti.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Per certi versi, il mondo della rete <strong>non funziona in modo poi così diverso dalla "realtà" offline</strong>.
-              
+                Per certi versi, il mondo della rete{" "}
+                <strong>
+                  non funziona in modo poi così diverso dalla "realtà" offline
+                </strong>
+                .
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-               
-                Infatti, il <strong>meccanismo della vendita</strong> (e quindi anche del guadagno del venditore) è sempre lo stesso.
+                Infatti, il <strong>meccanismo della vendita</strong> (e quindi
+                anche del guadagno del venditore) è sempre lo stesso.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Su "X" persone che vengono a conoscenza di una determinata offerta, <strong>una data percentuale decide di effettuare l'acquisto</strong>.
-                Di conseguenza, più si amplia questo "bacino", maggiori saranno anche i guadagni finali.
+                Su "X" persone che vengono a conoscenza di una determinata
+                offerta,{" "}
+                <strong>
+                  una data percentuale decide di effettuare l'acquisto
+                </strong>
+                . Di conseguenza, più si amplia questo "bacino", maggiori
+                saranno anche i guadagni finali.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Ecco, <strong>comprare visualizzazioni YouTube serve proprio a questo</strong>, ossia "posare i primi mattoni" che costituiranno la solida base della tua attività.
+                Ecco,{" "}
+                <strong>
+                  comprare visualizzazioni YouTube serve proprio a questo
+                </strong>
+                , ossia "posare i primi mattoni" che costituiranno la solida
+                base della tua attività.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-              
-                Arrivati a questo punto, potrebbe sorgerti spontanea una domanda: <strong>perché comprare views YouTube in modo pianificato</strong> e non attendere di ottenerle in modo puramente organico?
+                Arrivati a questo punto, potrebbe sorgerti spontanea una
+                domanda:{" "}
+                <strong>
+                  perché comprare views YouTube in modo pianificato
+                </strong>{" "}
+                e non attendere di ottenerle in modo puramente organico?
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-              
-               
                 Andiamo subito al prossimo paragrafo per la risposta.
               </p>
             </div>
           </div>
-          <div className="flex-1">
+
+          {/* Image Section for desktop */}
+          <div className="flex-1 hidden md:block">
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
@@ -85,29 +122,70 @@ const WhyBuyViews = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
                 Perché comprare Visualizzazioni YouTube da noi su SocialX
               </h2>
+
+              {/* Image Section for mobile */}
+              <div className="md:hidden mb-8">
+                <div className="relative aspect-video rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
+                  <img
+                    src="viewsyoutube2019.png"
+                    alt="Perché comprare Visualizzazioni YouTube da noi"
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ti invitiamo a <strong>comprare views YouTube reali ed italiane da noi perché siamo un'agenzia specializzata</strong> operante da diversi anni nel settore.
+                Ti invitiamo a{" "}
+                <strong>
+                  comprare views YouTube reali ed italiane da noi perché siamo
+                  un'agenzia specializzata
+                </strong>{" "}
+                operante da diversi anni nel settore.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Quindi, <strong>abbiamo letteralmente "esperienza da vendere"</strong> e, come ovvio, offriamo un regolare servizio comprensivo di tutte le garanzie del caso.
+                Quindi,{" "}
+                <strong>abbiamo letteralmente "esperienza da vendere"</strong>{" "}
+                e, come ovvio, offriamo un regolare servizio comprensivo di
+                tutte le garanzie del caso.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Per quanto riguarda l'erogazione, <strong>ci serviamo dei migliori sistemi informatici per "produrre" interazioni social</strong> che, sul piano tecnico, sono indistinguibili da quelle che si acquisiscono in modo prettamente organico.
-               
+                Per quanto riguarda l'erogazione,{" "}
+                <strong>
+                  ci serviamo dei migliori sistemi informatici per "produrre"
+                  interazioni social
+                </strong>{" "}
+                che, sul piano tecnico, sono indistinguibili da quelle che si
+                acquisiscono in modo prettamente organico.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-               
-                Altre realtà, invece, <strong>rischiano di mettere nei guai i clienti</strong> proprio perché non sfruttano tali sistemi. Ecco perché è fondamentale rivolgersi solo ed esclusivamente ad agenzie specializzate come la nostra.
+                Altre realtà, invece,{" "}
+                <strong>rischiano di mettere nei guai i clienti</strong> proprio
+                perché non sfruttano tali sistemi. Ecco perché è fondamentale
+                rivolgersi solo ed esclusivamente ad agenzie specializzate come
+                la nostra.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Tutto qui? Ovviamente no, dal momento che, tra i nostri punti di forza, <strong>c'è anche il rapporto qualità/prezzo eccezionale</strong>, così come la possibilità di personalizzare i propri acquisti scegliendo il pacchetto più in linea con le proprie esigenze.
+                Tutto qui? Ovviamente no, dal momento che, tra i nostri punti di
+                forza,{" "}
+                <strong>
+                  c'è anche il rapporto qualità/prezzo eccezionale
+                </strong>
+                , così come la possibilità di personalizzare i propri acquisti
+                scegliendo il pacchetto più in linea con le proprie esigenze.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                Tra l'altro, sebbene vengano elaborati "a mano", <strong>i nostri servizi sono a disposizione 24 ore su 24, 7 giorni su 7.</strong>
+                Tra l'altro, sebbene vengano elaborati "a mano",{" "}
+                <strong>
+                  i nostri servizi sono a disposizione 24 ore su 24, 7 giorni su
+                  7.
+                </strong>
               </p>
             </div>
           </div>
-          <div className="flex-1 md:order-1">
+
+          {/* Image Section for desktop */}
+          <div className="flex-1 md:order-1 hidden md:block">
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
@@ -119,9 +197,7 @@ const WhyBuyViews = () => {
           </div>
         </motion.div>
       </div>
-      
     </section>
-    
   );
 };
 
