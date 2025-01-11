@@ -17,7 +17,7 @@ const Hero = () => {
   const labels = ["Prezzi Bassi", "Utenti Reali", "Senza Cali", "100% Sicuro"];
 
   return (
-    <div className="relative min-h-[100vh] flex items-center justify-center overflow-hidden py-20">
+    <div className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-32 pb-20 md:py-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
       
