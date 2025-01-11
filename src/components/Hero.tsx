@@ -31,7 +31,7 @@ const Hero = () => {
       <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
           <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare Visualizzazioni YouTube:</span>
-          <span className="bg-gradient-to-r from-[#009246] via-[#fff] to-[#ce2b37] text-transparent bg-clip-text inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
+          <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 bg-clip-text text-transparent inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
             Italiane e Reali
             <Player
               ref={playerRef}

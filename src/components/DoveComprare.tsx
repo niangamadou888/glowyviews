@@ -9,7 +9,7 @@ const DoveComprare = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-2xl"
+          className="relative overflow-hidden rounded-2xl border border-white/30 transition-all duration-300 hover:border-white/70 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#009246] via-[#ffffff] to-[#ce2b37] opacity-20" />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
