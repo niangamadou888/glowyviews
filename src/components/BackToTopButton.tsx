@@ -38,7 +38,7 @@ const BackToTopButton = () => {
             duration: 0.5,
           }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-primary hover:bg-primary/90 text-white p-2.5 md:p-3 rounded-full shadow-lg z-50
+          className="fixed bottom-6 right-4 md:bottom-8 md:right-8 bg-primary hover:bg-primary/90 text-white p-2.5 md:p-3 rounded-full shadow-lg z-50
                     hover:scale-110 hover:shadow-xl hover:ring-4 hover:ring-primary/50 transition-all duration-300  animate-glow"
           aria-label="Back to top"
         >

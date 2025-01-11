@@ -1,6 +1,6 @@
 const FAQIntro = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto px-6 py-16">
+    <section className="w-full max-w-6xl mx-auto px-6 pt-16">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
         Sezione F.A.Q.: rispondiamo insieme alle domande più comuni
       </h2>
