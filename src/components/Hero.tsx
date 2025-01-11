@@ -30,9 +30,15 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
-          <span className="mb-2 text-center">Comprare Visualizzazioni YouTube:</span>
-          <span className="bg-gradient-to-r from-[#009246] via-[#fff] to-[#ce2b37] text-transparent bg-clip-text inline-block transform hover:scale-105 transition-transform text-center">
+          <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare Visualizzazioni YouTube:</span>
+          <span className="bg-gradient-to-r from-[#009246] via-[#fff] to-[#ce2b37] text-transparent bg-clip-text inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
             Italiane e Reali
+            <Player
+              ref={playerRef}
+              icon={qualityIcon}
+              size={50}
+              onComplete={() => playerRef.current?.playFromBeginning()}
+            />
           </span>
         </h1>
 
@@ -41,20 +47,23 @@ const Hero = () => {
           {labels.map((label, index) => (
             <span
               key={index}
-              className="px-3 py-1 text-sm bg-white/5 backdrop-blur-sm rounded-full border border-white/10 text-white/90 shadow-glow"
+              className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md 
+              rounded-full border border-white/20 text-white/90 
+              shadow-[0_0_15px_rgba(255,255,255,0.1)] 
+              hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] 
+              hover:border-white/30 
+              hover:scale-105 
+              hover:text-white 
+              transition-all duration-300 ease-out
+              flex items-center gap-2"
             >
+              <Star className="w-3.5 h-3.5 text-primary/80" />
               {label}
             </span>
           ))}
         </div>
 
         <div className="flex justify-center mb-8">
-          <Player
-            ref={playerRef}
-            icon={qualityIcon}
-            size={80}
-            onComplete={() => playerRef.current.playFromBeginning()}
-          />
         </div>
         
         <p className="text-[18px] md:text-[18px] text-white mb-10 max-w-3xl mx-auto">
