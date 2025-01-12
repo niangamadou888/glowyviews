@@ -1,7 +1,7 @@
 const FinalConsiderations = () => {
   return (
     <section className="w-full max-w-6xl mx-auto px-6 py-24 mb-24 glass-effect border-glow rounded-lg px-12">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-glow text-center">
         Considerazioni finali sul comprare Visualizzazioni YouTube
       </h2>
       <ul className="space-y-8 list-none">

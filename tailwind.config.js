@@ -51,10 +51,21 @@ module.exports = {
         glow: {
           '0%, 100%': { opacity: 0.1 },
           '50%': { opacity: 0.3 }
-        }
+        },
+        'border-glow': {
+          '0%': {
+            borderColor: "rgba(220, 38, 38, 0)",
+            boxShadow: "0 0 0 rgba(220, 38, 38, 0)",
+          },
+          '100%': {
+            borderColor: "rgba(220, 38, 38, 1)",
+            boxShadow: "0 0 25px rgba(220, 38, 38, 0.8)",
+          },
+        },
       },
       animation: {
-        glow: 'glow 3s ease-in-out infinite'
+        glow: 'glow 3s ease-in-out infinite',
+        'border-glow': 'border-glow 0.5s ease-out forwards',
       },
       textShadow: {
         glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)'

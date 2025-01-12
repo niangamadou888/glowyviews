@@ -70,6 +70,8 @@ const Features = () => {
   );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isAvvertenzeVisible, setIsAvvertenzeVisible] = useState(false);
+  const avvertenzeRef = useRef<HTMLDivElement>(null);
 
   // Check if device is mobile
   useEffect(() => {
@@ -121,6 +123,25 @@ const Features = () => {
 
     return () => observer.disconnect();
   }, [isMobile]);
+
+  // Set up intersection observer for AVVERTENZE section
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsAvvertenzeVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (avvertenzeRef.current) {
+      observer.observe(avvertenzeRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Initial animation
   useEffect(() => {
@@ -194,18 +215,27 @@ const Features = () => {
             </Card>
           ))}
         </div>
-        <Card className="mt-16 p-8 bg-destructive/10 border-destructive/20">
-          <div className="flex items-start gap-6">
-            <AlertTriangle className="w-8 h-8 text-destructive flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold mb-4">AVVERTENZE</h3>
-              <p className="text-muted-foreground">
-                Per tracciare e verificare la consegna dell'ordine, sconsigliamo
-                di effettuare acquisti presso altre agenzie per almeno 48 ore.
-              </p>
+        <div className="mt-16" ref={avvertenzeRef}>
+          <Card className="p-8 bg-destructive/10 border-destructive/20 relative">
+            <div
+              className={`absolute inset-0 border-2 rounded-lg transition-all duration-500 ${
+                isAvvertenzeVisible
+                  ? "animate-border-glow border-red-700"
+                  : "border-red-700/0"
+              }`}
+            />
+            <div className="flex items-start gap-6 relative z-10">
+              <AlertTriangle className="w-8 h-8 text-destructive flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-semibold mb-4">AVVERTENZE</h3>
+                <p className="text-muted-foreground">
+                  Per tracciare e verificare la consegna dell'ordine, sconsigliamo
+                  di effettuare acquisti presso altre agenzie per almeno 48 ore.
+                </p>
+              </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+        </div>
         <p className="mt-16">
           Se hai necessità di{" "}
           <strong>comprare visualizzazioni YouTube italiane e reali</strong>,
