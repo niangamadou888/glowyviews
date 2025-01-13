@@ -217,13 +217,22 @@ const Features = () => {
         </div>
         <div className="mt-16" ref={avvertenzeRef}>
           <Card className="p-8 bg-destructive/10 border-destructive/20 relative">
-            <div
-              className={`absolute inset-0 border-2 rounded-lg transition-all duration-500 ${
-                isAvvertenzeVisible
-                  ? "animate-border-glow border-red-700"
-                  : "border-red-700/0"
-              }`}
-            />
+            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+              <rect
+                x="1"
+                y="1"
+                width="calc(100% - 2px)"
+                height="calc(100% - 2px)"
+                className={`stroke-red-500 fill-none ${isAvvertenzeVisible ? 'animate-border-draw' : ''}`}
+                strokeWidth="3"
+                rx="8"
+                style={{
+                  strokeDasharray: '400%',
+                  strokeDashoffset: '400%',
+                  filter: 'drop-shadow(0 0 6px rgb(239 68 68)) drop-shadow(0 0 12px rgb(239 68 68))',
+                }}
+              />
+            </svg>
             <div className="flex items-start gap-6 relative z-10">
               <AlertTriangle className="w-8 h-8 text-destructive flex-shrink-0 mt-1" />
               <div>
