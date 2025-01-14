@@ -57,8 +57,8 @@ module.exports = {
             'stroke-dashoffset': '-400%',
             filter: 'drop-shadow(0 0 2px rgb(220 38 38))'
           },
-          '85%': {
-            'stroke-dashoffset': '-60%',
+          '95%': {
+            'stroke-dashoffset': '-20%',
             filter: 'drop-shadow(0 0 8px rgb(220 38 38))'
           },
           '100%': {
@@ -69,7 +69,7 @@ module.exports = {
       },
       animation: {
         glow: 'glow 3s ease-in-out infinite',
-        'border-draw': 'border-draw 2s cubic-bezier(0.99, 0, 0.01, 1) forwards'
+        'border-draw': 'border-draw 1s cubic-bezier(0.98, 0, 0.005, 1) forwards'
       },
       textShadow: {
         glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)'
