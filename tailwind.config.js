@@ -54,21 +54,22 @@ module.exports = {
         },
         'border-draw': {
           '0%': {
-            'stroke-dashoffset': '400%',
-            filter: 'drop-shadow(0 0 4px rgb(239 68 68)) drop-shadow(0 0 8px rgb(239 68 68))'
+            'stroke-dashoffset': '-400%',
+            filter: 'drop-shadow(0 0 2px rgb(220 38 38))'
           },
-          '50%': {
-            filter: 'drop-shadow(0 0 8px rgb(239 68 68)) drop-shadow(0 0 16px rgb(239 68 68))'
+          '75%': {
+            'stroke-dashoffset': '-80%',
+            filter: 'drop-shadow(0 0 8px rgb(220 38 38))'
           },
           '100%': {
             'stroke-dashoffset': '0%',
-            filter: 'drop-shadow(0 0 6px rgb(239 68 68)) drop-shadow(0 0 12px rgb(239 68 68))'
+            filter: 'drop-shadow(0 0 4px rgb(220 38 38))'
           }
         }
       },
       animation: {
         glow: 'glow 3s ease-in-out infinite',
-        'border-draw': 'border-draw 2.5s ease-out forwards'
+        'border-draw': 'border-draw 2.2s cubic-bezier(0.4, 0.05, 0.1, 1) forwards'
       },
       textShadow: {
         glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)'

@@ -223,13 +223,13 @@ const Features = () => {
                 y="1"
                 width="calc(100% - 2px)"
                 height="calc(100% - 2px)"
-                className={`stroke-red-500 fill-none ${isAvvertenzeVisible ? 'animate-border-draw' : ''}`}
+                className={`stroke-red-600 fill-none ${isAvvertenzeVisible ? 'animate-border-draw' : ''}`}
                 strokeWidth="3"
                 rx="8"
                 style={{
                   strokeDasharray: '400%',
-                  strokeDashoffset: '400%',
-                  filter: 'drop-shadow(0 0 6px rgb(239 68 68)) drop-shadow(0 0 12px rgb(239 68 68))',
+                  strokeDashoffset: '-400%',
+                  filter: 'drop-shadow(0 0 4px rgb(220 38 38))',
                 }}
               />
             </svg>
