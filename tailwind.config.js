@@ -65,7 +65,7 @@ module.exports = {
       },
       animation: {
         glow: 'glow 3s ease-in-out infinite',
-        'border-draw': 'border-draw 1.5s cubic-bezier(0.15, 1, 0.3, 1) forwards',
+        'border-draw': 'border-draw 1.5s cubic-bezier(0.10, 1, 0.1, 1) forwards',
       },
       textShadow: {
         glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)',
