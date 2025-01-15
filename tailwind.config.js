@@ -50,30 +50,26 @@ module.exports = {
       keyframes: {
         glow: {
           '0%, 100%': { opacity: 0.1 },
-          '50%': { opacity: 0.3 }
+          '50%': { opacity: 0.3 },
         },
         'border-draw': {
           '0%': {
             'stroke-dashoffset': '-400%',
-            filter: 'drop-shadow(0 0 2px rgb(220 38 38))'
-          },
-          '95%': {
-            'stroke-dashoffset': '-20%',
-            filter: 'drop-shadow(0 0 8px rgb(220 38 38))'
+            filter: 'drop-shadow(0 0 2px rgb(220 38 38))',
           },
           '100%': {
             'stroke-dashoffset': '0%',
-            filter: 'drop-shadow(0 0 4px rgb(220 38 38))'
-          }
-        }
+            filter: 'drop-shadow(0 0 4px rgb(220 38 38))',
+          },
+        },
       },
       animation: {
         glow: 'glow 3s ease-in-out infinite',
-        'border-draw': 'border-draw 1s cubic-bezier(0.98, 0, 0.005, 1) forwards'
+        'border-draw': 'border-draw 1.5s cubic-bezier(0.15, 1, 0.3, 1) forwards',
       },
       textShadow: {
-        glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)'
-      }
+        glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)',
+      },
     },
   },
   plugins: [
