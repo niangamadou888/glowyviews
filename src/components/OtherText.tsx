@@ -23,8 +23,8 @@ const SECTIONS: Section[] = [
       "In ogni caso, per eventuali dubbi o perplessità legati all'acquisto, **c'è sempre il nostro servizio assistenza clienti** pronto a darti tutti i chiarimenti e specifiche che desideri.",
     ],
     image: {
-      src: "YouTube-Thumbnail_1.webp",
-      alt: "Tutti i vantaggi del comprare Visualizzazioni YouTube",
+      src: "/public/Comprare Views YouTube_dopo quanto tempo arrivano_ no background.png",
+      alt: "Comprare Views YouTube_dopo quanto tempo arrivano",
     },
   },
   {
@@ -39,8 +39,8 @@ const SECTIONS: Section[] = [
       'In caso, **puoi sempre accordarti con il nostro Staff per una consegna "diluita"** nel tempo, proprio evitare ciò di cui parliamo nel paragrafo successivo.',
     ],
     image: {
-      src: "cf948d2f-adf9-4327-889d-4606e6185e72.jpeg",
-      alt: "Per quali video si possono comprare Visualizzazioni YouTube?",
+      src: "/public/Quanto costa comprare Visualizzazioni YouTube_ no background.png",
+      alt: "Quanto costa comprare Visualizzazioni YouTube?",
     },
   },
   {
@@ -53,11 +53,11 @@ const SECTIONS: Section[] = [
       "Ecco perché **non bisogna mai effettuare acquisti del genere alla leggera** ma, anzi, pianificare una strategia efficace.",
       "Per certi versi, lo **stesso numero di interazioni comprate può dare risultati diversi** proprio a seconda di come vengono gestite.",
       'Il "segreto" del successo sta proprio nel **far passare le acquisizioni come una "conseguenza organica"** della tua attività di YouTuber.',
-      'Insomma, sarebbe come dire ai crawler della piattaforma: **"Ehi! Guarda che mi arrivano tante visualizzazioni perché carico ottimi contenuti e piaccio al pubblico!".**',
+      'Insomma, sarebbe come dire ai crawler della piattaforma: **"Ehi! Guarda che mi arrivano tante visualizzazioni perchè carico ottimi contenuti e piaccio al pubblico!".**',
     ],
     image: {
-      src: "trueview.webp",
-      alt: "Tutti i vantaggi del comprare Visualizzazioni YouTube",
+      src: "/public/Comprare Views YouTube è legale_ no background.png",
+      alt: "Comprare Views YouTube è legale",
     },
   },
   {
@@ -71,8 +71,8 @@ const SECTIONS: Section[] = [
       'A tal proposito, ti **consigliamo pure di realizzare una sorta di "scaletta"**, proprio per programmare l\'erogazione delle interazioni, al fine di renderle più genuine possibili.',
     ],
     image: {
-      src: "Come-guadagnare-su-YouTube-Quello-che-devi-sapere.jpg",
-      alt: "Per quali video si possono comprare Visualizzazioni YouTube?",
+      src: "/public/Comprare Visualizzazioni YouTube_cosa non fare no background.png",
+      alt: "Comprare Visualizzazioni YouTube_cosa non fare",
     },
   },
 ];

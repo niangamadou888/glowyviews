@@ -33,8 +33,8 @@ const WhyBuyViews = () => {
                 <div className="relative aspect-video rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
                   <img
-                    src="viewsyoutube2019.png"
-                    alt="Comprare Visualizzazioni YouTube"
+                    src="/public/Comprare Visualizzazioni YouTube_per quale motivo_ no background.png"
+                    alt="Comprare Visualizzazioni YouTube_per quale motivo"
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
@@ -100,8 +100,8 @@ const WhyBuyViews = () => {
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
-                src="viewsyoutube2019.png"
-                alt="Comprare Visualizzazioni YouTube"
+                src="/public/Comprare Visualizzazioni YouTube_per quale motivo_ no background.png"
+                alt="Comprare Visualizzazioni YouTube_per quale motivo"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
@@ -128,8 +128,8 @@ const WhyBuyViews = () => {
                 <div className="relative aspect-video rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
                   <img
-                    src="viewsyoutube2019.png"
-                    alt="Perché comprare Visualizzazioni YouTube da noi"
+                    src="/public/Perché comprare Visualizzazioni YouTube da noi su SocialX no background.png"
+                    alt="Perché comprare Visualizzazioni YouTube da noi su SocialX"
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
@@ -189,8 +189,8 @@ const WhyBuyViews = () => {
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
-                src="viewsyoutube2019.png"
-                alt="Perché comprare Visualizzazioni YouTube da noi"
+                src="/public/Perché comprare Visualizzazioni YouTube da noi su SocialX no background.png"
+                alt="Perché comprare Visualizzazioni YouTube da noi su SocialX"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
