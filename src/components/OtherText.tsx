@@ -23,7 +23,7 @@ const SECTIONS: Section[] = [
       "In ogni caso, per eventuali dubbi o perplessità legati all'acquisto, **c'è sempre il nostro servizio assistenza clienti** pronto a darti tutti i chiarimenti e specifiche che desideri.",
     ],
     image: {
-      src: "/public/Comprare Views YouTube_dopo quanto tempo arrivano_ no background.png",
+      src: "Comprare Views YouTube_dopo quanto tempo arrivano_ no background.png",
       alt: "Comprare Views YouTube_dopo quanto tempo arrivano",
     },
   },
@@ -39,7 +39,7 @@ const SECTIONS: Section[] = [
       'In caso, **puoi sempre accordarti con il nostro Staff per una consegna "diluita"** nel tempo, proprio evitare ciò di cui parliamo nel paragrafo successivo.',
     ],
     image: {
-      src: "/public/Quanto costa comprare Visualizzazioni YouTube_ no background.png",
+      src: "Quanto costa comprare Visualizzazioni YouTube_ no background.png",
       alt: "Quanto costa comprare Visualizzazioni YouTube?",
     },
   },
@@ -56,7 +56,7 @@ const SECTIONS: Section[] = [
       'Insomma, sarebbe come dire ai crawler della piattaforma: **"Ehi! Guarda che mi arrivano tante visualizzazioni perchè carico ottimi contenuti e piaccio al pubblico!".**',
     ],
     image: {
-      src: "/public/Comprare Views YouTube è legale_ no background.png",
+      src: "Comprare Views YouTube è legale_ no background.png",
       alt: "Comprare Views YouTube è legale",
     },
   },
@@ -71,7 +71,7 @@ const SECTIONS: Section[] = [
       'A tal proposito, ti **consigliamo pure di realizzare una sorta di "scaletta"**, proprio per programmare l\'erogazione delle interazioni, al fine di renderle più genuine possibili.',
     ],
     image: {
-      src: "/public/Comprare Visualizzazioni YouTube_cosa non fare no background.png",
+      src: "Comprare Visualizzazioni YouTube_cosa non fare no background.png",
       alt: "Comprare Visualizzazioni YouTube_cosa non fare",
     },
   },
