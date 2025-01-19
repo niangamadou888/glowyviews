@@ -33,7 +33,7 @@ const Navigation = () => {
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500"
                       href="#"
                     >
-                      Views
+                      Visualizzazioni Youtube
                     </NavigationMenuLink>
                   </li>
                   <li>
@@ -41,7 +41,7 @@ const Navigation = () => {
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500"
                       href="#"
                     >
-                      Subscribers
+                      Iscritti Youtube
                     </NavigationMenuLink>
                   </li>
                 </ul>
@@ -50,7 +50,7 @@ const Navigation = () => {
 
             {/* Instagram Menu */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="group h-10 w-max px-4 py-2 hover:bg-purple-500/20 hover:text-purple-500 data-[state=open]:bg-purple-500/20 data-[state=open]:text-purple-500 transition-all duration-300">
+              <NavigationMenuTrigger className="group h-10 w-max px-4 py-2 hover:bg-pink-500/20 hover:text-pink-500 data-[state=open]:bg-pink-500/20 data-[state=open]:text-pink-500 transition-all duration-300">
                 <Instagram className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                 Instagram
               </NavigationMenuTrigger>
@@ -58,18 +58,18 @@ const Navigation = () => {
                 <ul className="grid w-[200px] gap-2 p-4">
                   <li>
                     <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500"
                       href="#"
                     >
-                      Followers
+                      Follower Instagram
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500"
                       href="#"
                     >
-                      Likes
+                      Like Instagram
                     </NavigationMenuLink>
                   </li>
                 </ul>
