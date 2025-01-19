@@ -103,20 +103,53 @@ const Navigation = () => {
                 </div>
                 <div className="flex-1 overflow-y-auto">
                   <div className="flex flex-col gap-1 p-6">
-                    <a 
-                      href="#features" 
-                      className="px-4 py-3 text-sm font-medium transition-colors hover:bg-accent rounded-md"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Features
-                    </a>
-                    <a 
-                      href="#faq" 
-                      className="px-4 py-3 text-sm font-medium transition-colors hover:bg-accent rounded-md"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      FAQ
-                    </a>
+                    {/* YouTube Section */}
+                    <div className="mb-4">
+                      <div className="flex items-center px-4 py-2 text-sm font-semibold text-red-500">
+                        <Youtube className="w-5 h-5 mr-2" />
+                        YouTube
+                      </div>
+                      <div className="ml-6 flex flex-col gap-1">
+                        <a 
+                          href="#" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Visualizzazioni Youtube
+                        </a>
+                        <a 
+                          href="#" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Iscritti Youtube
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Instagram Section */}
+                    <div className="mb-4">
+                      <div className="flex items-center px-4 py-2 text-sm font-semibold text-pink-500">
+                        <Instagram className="w-5 h-5 mr-2" />
+                        Instagram
+                      </div>
+                      <div className="ml-6 flex flex-col gap-1">
+                        <a 
+                          href="#" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-pink-500/20 hover:text-pink-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Follower Instagram
+                        </a>
+                        <a 
+                          href="#" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-pink-500/20 hover:text-pink-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Like Instagram
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="border-t border-border p-6 space-y-4">
