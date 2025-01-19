@@ -27,21 +27,21 @@ const Navigation = () => {
                 YouTube
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-2 p-4">
+                <ul className="grid w-[400px] gap-3 p-6 rounded-lg border border-border bg-background/80 backdrop-blur-sm shadow-md">
                   <li>
                     <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
                       href="#"
                     >
-                      Visualizzazioni Youtube
+                      <div className="text-sm font-medium leading-none">Visualizzazioni Youtube</div>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
                       href="#"
                     >
-                      Iscritti Youtube
+                      <div className="text-sm font-medium leading-none">Iscritti Youtube</div>
                     </NavigationMenuLink>
                   </li>
                 </ul>
@@ -55,21 +55,21 @@ const Navigation = () => {
                 Instagram
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-2 p-4">
+                <ul className="grid w-[400px] gap-3 p-6 rounded-lg border border-border bg-background/80 backdrop-blur-sm shadow-md">
                   <li>
                     <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
                       href="#"
                     >
-                      Follower Instagram
+                      <div className="text-sm font-medium leading-none">Follower Instagram</div>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
                       href="#"
                     >
-                      Like Instagram
+                      <div className="text-sm font-medium leading-none">Like Instagram</div>
                     </NavigationMenuLink>
                   </li>
                 </ul>
