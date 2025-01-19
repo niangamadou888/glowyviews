@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, Youtube, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -20,25 +20,60 @@ const Navigation = () => {
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
           <NavigationMenuList className="flex gap-4">
+            {/* YouTube Menu */}
             <NavigationMenuItem>
-              <NavigationMenuLink
-                className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                )}
-                href="#features"
-              >
-                Features
-              </NavigationMenuLink>
+              <NavigationMenuTrigger className="group h-10 w-max px-4 py-2 hover:bg-red-500/20 hover:text-red-500 data-[state=open]:bg-red-500/20 data-[state=open]:text-red-500 transition-all duration-300">
+                <Youtube className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                YouTube
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[200px] gap-2 p-4">
+                  <li>
+                    <NavigationMenuLink
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500"
+                      href="#"
+                    >
+                      Views
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500"
+                      href="#"
+                    >
+                      Subscribers
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
             </NavigationMenuItem>
+
+            {/* Instagram Menu */}
             <NavigationMenuItem>
-              <NavigationMenuLink
-                className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                )}
-                href="#faq"
-              >
-                FAQ
-              </NavigationMenuLink>
+              <NavigationMenuTrigger className="group h-10 w-max px-4 py-2 hover:bg-purple-500/20 hover:text-purple-500 data-[state=open]:bg-purple-500/20 data-[state=open]:text-purple-500 transition-all duration-300">
+                <Instagram className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                Instagram
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[200px] gap-2 p-4">
+                  <li>
+                    <NavigationMenuLink
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500"
+                      href="#"
+                    >
+                      Followers
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500"
+                      href="#"
+                    >
+                      Likes
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
