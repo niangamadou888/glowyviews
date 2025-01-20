@@ -13,6 +13,174 @@ import twitterIcon from "../assets/icons/wired-flat-2714-logo-x-hover-pinch.json
 import tiktokIcon from "../assets/icons/wired-flat-2546-logo-tiktok-hover-pinch.json";
 import menuIcon from "../assets/icons/menu-icon.json";
 
+const YoutubeMenu = () => {
+  const youtubeIconRef = useRef<Player | null>(null);
+  return (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger 
+            className="group relative h-10 w-max px-4 py-2 hover:bg-red-500/30 hover:text-red-500 data-[state=open]:bg-red-500/30 data-[state=open]:text-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-red-500/50 hover:scale-105 active:scale-95"
+            onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
+          >
+            <div className="mr-2">
+              <Player
+                ref={youtubeIconRef}
+                icon={youtubeIcon}
+                size={24}
+                state="morph"
+              />
+            </div>
+            YouTube
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li>
+                <NavigationMenuLink
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  href="#"
+                >
+                  <div className="text-sm font-medium leading-none">Visualizzazioni Youtube</div>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  href="#"
+                >
+                  <div className="text-sm font-medium leading-none">Iscritti Youtube</div>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};
+
+const InstagramMenu = () => {
+  const instagramIconRef = useRef<Player | null>(null);
+  return (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger 
+            className="group relative h-10 w-max px-4 py-2 hover:bg-pink-500/30 hover:text-pink-500 data-[state=open]:bg-pink-500/30 data-[state=open]:text-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(236,72,153,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-pink-500/50 hover:scale-105 active:scale-95"
+            onMouseEnter={() => instagramIconRef.current?.playFromBeginning()}
+          >
+            <div className="mr-2">
+              <Player
+                ref={instagramIconRef}
+                icon={instagramIcon}
+                size={24}
+                state="morph"
+              />
+            </div>
+            Instagram
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li>
+                <NavigationMenuLink
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
+                  href="#"
+                >
+                  <div className="text-sm font-medium leading-none">Follower Instagram</div>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
+                  href="#"
+                >
+                  <div className="text-sm font-medium leading-none">Like Instagram</div>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};
+
+const TwitterMenu = () => {
+  const twitterIconRef = useRef<Player | null>(null);
+  return (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger 
+            className="group relative h-10 w-max px-4 py-2 hover:bg-neutral-500/30 hover:text-neutral-500 data-[state=open]:bg-neutral-500/30 data-[state=open]:text-neutral-500 hover:shadow-[0_0_25px_rgba(115,115,115,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(115,115,115,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-neutral-500/50 hover:scale-105 active:scale-95"
+            onMouseEnter={() => twitterIconRef.current?.playFromBeginning()}
+          >
+            <div className="mr-2">
+              <Player
+                ref={twitterIconRef}
+                icon={twitterIcon}
+                size={24}
+                state="morph"
+              />
+            </div>
+            X
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li>
+                <NavigationMenuLink
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-500/20 hover:text-neutral-500 focus:bg-neutral-500/20 focus:text-neutral-500"
+                  href="#"
+                >
+                  <div className="text-sm font-medium leading-none">Follow Us</div>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};
+
+const TikTokMenu = () => {
+  const tiktokIconRef = useRef<Player | null>(null);
+  return (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger 
+            className="group relative h-10 w-max px-4 py-2 hover:bg-purple-500/30 hover:text-purple-500 data-[state=open]:bg-purple-500/30 data-[state=open]:text-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-purple-500/50 hover:scale-105 active:scale-95"
+            onMouseEnter={() => tiktokIconRef.current?.playFromBeginning()}
+          >
+            <div className="mr-2">
+              <Player
+                ref={tiktokIconRef}
+                icon={tiktokIcon}
+                size={24}
+                state="morph"
+              />
+            </div>
+            TikTok
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li>
+                <NavigationMenuLink
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
+                  href="#"
+                >
+                  <div className="text-sm font-medium leading-none">Follow Us</div>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const youtubeIconRef = useRef<Player | null>(null);
@@ -30,148 +198,12 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:flex relative">
-          <NavigationMenuList className="flex gap-4">
-            {/* YouTube Menu */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger 
-                className="group relative h-10 w-max px-4 py-2 hover:bg-red-500/30 hover:text-red-500 data-[state=open]:bg-red-500/30 data-[state=open]:text-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-red-500/50 hover:scale-105 active:scale-95"
-                onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
-              >
-                <div className="mr-2">
-                  <Player
-                    ref={youtubeIconRef}
-                    icon={youtubeIcon}
-                    size={24}
-                    state="morph"
-                  />
-                </div>
-                YouTube
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <li>
-                    <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                      href="#"
-                    >
-                      <div className="text-sm font-medium leading-none">Visualizzazioni Youtube</div>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                      href="#"
-                    >
-                      <div className="text-sm font-medium leading-none">Iscritti Youtube</div>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            {/* Instagram Menu */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger 
-                className="group relative h-10 w-max px-4 py-2 hover:bg-pink-500/30 hover:text-pink-500 data-[state=open]:bg-pink-500/30 data-[state=open]:text-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(236,72,153,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-pink-500/50 hover:scale-105 active:scale-95"
-                onMouseEnter={() => instagramIconRef.current?.playFromBeginning()}
-              >
-                <div className="mr-2">
-                  <Player
-                    ref={instagramIconRef}
-                    icon={instagramIcon}
-                    size={24}
-                    state="morph"
-                  />
-                </div>
-                Instagram
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <li>
-                    <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
-                      href="#"
-                    >
-                      <div className="text-sm font-medium leading-none">Follower Instagram</div>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
-                      href="#"
-                    >
-                      <div className="text-sm font-medium leading-none">Like Instagram</div>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            {/* X (Twitter) Menu */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger 
-                className="group relative h-10 w-max px-4 py-2 hover:bg-neutral-500/30 hover:text-neutral-500 data-[state=open]:bg-neutral-500/30 data-[state=open]:text-neutral-500 hover:shadow-[0_0_25px_rgba(115,115,115,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(115,115,115,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-neutral-500/50 hover:scale-105 active:scale-95"
-                onMouseEnter={() => twitterIconRef.current?.playFromBeginning()}
-              >
-                <div className="mr-2">
-                  <Player
-                    ref={twitterIconRef}
-                    icon={twitterIcon}
-                    size={24}
-                    state="morph"
-                  />
-                </div>
-                X
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <li>
-                    <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-500/20 hover:text-neutral-500 focus:bg-neutral-500/20 focus:text-neutral-500"
-                      href="#"
-                    >
-                      <div className="text-sm font-medium leading-none">Follow Us</div>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            {/* TikTok Menu */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger 
-                className="group relative h-10 w-max px-4 py-2 hover:bg-purple-500/30 hover:text-purple-500 data-[state=open]:bg-purple-500/30 data-[state=open]:text-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-purple-500/50 hover:scale-105 active:scale-95"
-                onMouseEnter={() => tiktokIconRef.current?.playFromBeginning()}
-              >
-                <div className="mr-2">
-                  <Player
-                    ref={tiktokIconRef}
-                    icon={tiktokIcon}
-                    size={24}
-                    state="morph"
-                  />
-                </div>
-                TikTok
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <li>
-                    <NavigationMenuLink
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
-                      href="#"
-                    >
-                      <div className="text-sm font-medium leading-none">Follow Us</div>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-          <div className="perspective-[2000px] absolute top-full left-0 flex w-full justify-center">
-            <NavigationMenuViewport className="origin-[top_center] relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg duration-300 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]" />
-          </div>
-        </NavigationMenu>
+        <div className="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 space-x-6">
+          <YoutubeMenu />
+          <InstagramMenu />
+          <TwitterMenu />
+          <TikTokMenu />
+        </div>
 
         {/* Auth Buttons and Mobile Menu */}
         <div className="flex items-center gap-4">
