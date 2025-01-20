@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuContent, NavigationMenuTrigger, NavigationMenuViewport } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import { Player } from "@lordicon/react";
@@ -11,16 +10,15 @@ import youtubeIcon from "../assets/icons/wired-flat-2547-logo-youtube-hover-pinc
 import instagramIcon from "../assets/icons/wired-flat-2542-logo-instagram-hover-pinch.json";
 import twitterIcon from "../assets/icons/wired-flat-2714-logo-x-hover-pinch.json";
 import tiktokIcon from "../assets/icons/wired-flat-2546-logo-tiktok-hover-pinch.json";
-import menuIcon from "../assets/icons/menu-icon.json";
 
-const YoutubeMenu = () => {
+const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: () => void }) => {
   const youtubeIconRef = useRef<Player | null>(null);
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className="group relative h-10 w-max px-4 py-2 hover:bg-red-500/30 hover:text-red-500 data-[state=open]:bg-red-500/30 data-[state=open]:text-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-red-500/50 hover:scale-105 active:scale-95"
+            className={`group relative h-10 w-max px-4 py-2 hover:bg-red-500/30 hover:text-red-500 data-[state=open]:bg-red-500/30 data-[state=open]:text-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-red-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
           >
             <div className="mr-2">
@@ -39,6 +37,7 @@ const YoutubeMenu = () => {
                 <NavigationMenuLink
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
                   href="#"
+                  onClick={onActivate}
                 >
                   <div className="text-sm font-medium leading-none">Visualizzazioni Youtube</div>
                 </NavigationMenuLink>
@@ -47,6 +46,7 @@ const YoutubeMenu = () => {
                 <NavigationMenuLink
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
                   href="#"
+                  onClick={onActivate}
                 >
                   <div className="text-sm font-medium leading-none">Iscritti Youtube</div>
                 </NavigationMenuLink>
@@ -59,14 +59,14 @@ const YoutubeMenu = () => {
   );
 };
 
-const InstagramMenu = () => {
+const InstagramMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: () => void }) => {
   const instagramIconRef = useRef<Player | null>(null);
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className="group relative h-10 w-max px-4 py-2 hover:bg-pink-500/30 hover:text-pink-500 data-[state=open]:bg-pink-500/30 data-[state=open]:text-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(236,72,153,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-pink-500/50 hover:scale-105 active:scale-95"
+            className={`group relative h-10 w-max px-4 py-2 hover:bg-pink-500/30 hover:text-pink-500 data-[state=open]:bg-pink-500/30 data-[state=open]:text-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(236,72,153,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-pink-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => instagramIconRef.current?.playFromBeginning()}
           >
             <div className="mr-2">
@@ -85,6 +85,7 @@ const InstagramMenu = () => {
                 <NavigationMenuLink
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
                   href="#"
+                  onClick={onActivate}
                 >
                   <div className="text-sm font-medium leading-none">Follower Instagram</div>
                 </NavigationMenuLink>
@@ -93,6 +94,7 @@ const InstagramMenu = () => {
                 <NavigationMenuLink
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
                   href="#"
+                  onClick={onActivate}
                 >
                   <div className="text-sm font-medium leading-none">Like Instagram</div>
                 </NavigationMenuLink>
@@ -105,14 +107,14 @@ const InstagramMenu = () => {
   );
 };
 
-const TwitterMenu = () => {
+const TwitterMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: () => void }) => {
   const twitterIconRef = useRef<Player | null>(null);
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className="group relative h-10 w-max px-4 py-2 hover:bg-neutral-500/30 hover:text-neutral-500 data-[state=open]:bg-neutral-500/30 data-[state=open]:text-neutral-500 hover:shadow-[0_0_25px_rgba(115,115,115,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(115,115,115,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-neutral-500/50 hover:scale-105 active:scale-95"
+            className={`group relative h-10 w-max px-4 py-2 hover:bg-neutral-500/30 hover:text-neutral-500 data-[state=open]:bg-neutral-500/30 data-[state=open]:text-neutral-500 hover:shadow-[0_0_25px_rgba(115,115,115,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(115,115,115,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-neutral-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => twitterIconRef.current?.playFromBeginning()}
           >
             <div className="mr-2">
@@ -131,6 +133,7 @@ const TwitterMenu = () => {
                 <NavigationMenuLink
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-500/20 hover:text-neutral-500 focus:bg-neutral-500/20 focus:text-neutral-500"
                   href="#"
+                  onClick={onActivate}
                 >
                   <div className="text-sm font-medium leading-none">Follow Us</div>
                 </NavigationMenuLink>
@@ -143,14 +146,14 @@ const TwitterMenu = () => {
   );
 };
 
-const TikTokMenu = () => {
+const TikTokMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: () => void }) => {
   const tiktokIconRef = useRef<Player | null>(null);
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className="group relative h-10 w-max px-4 py-2 hover:bg-purple-500/30 hover:text-purple-500 data-[state=open]:bg-purple-500/30 data-[state=open]:text-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-purple-500/50 hover:scale-105 active:scale-95"
+            className={`group relative h-10 w-max px-4 py-2 hover:bg-purple-500/30 hover:text-purple-500 data-[state=open]:bg-purple-500/30 data-[state=open]:text-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-purple-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => tiktokIconRef.current?.playFromBeginning()}
           >
             <div className="mr-2">
@@ -169,6 +172,7 @@ const TikTokMenu = () => {
                 <NavigationMenuLink
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
                   href="#"
+                  onClick={onActivate}
                 >
                   <div className="text-sm font-medium leading-none">Follow Us</div>
                 </NavigationMenuLink>
@@ -183,11 +187,7 @@ const TikTokMenu = () => {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const youtubeIconRef = useRef<Player | null>(null);
-  const instagramIconRef = useRef<Player | null>(null);
-  const twitterIconRef = useRef<Player | null>(null);
-  const tiktokIconRef = useRef<Player | null>(null);
-  const menuIconRef = useRef<Player | null>(null);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
@@ -199,10 +199,10 @@ const Navigation = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 space-x-6">
-          <YoutubeMenu />
-          <InstagramMenu />
-          <TwitterMenu />
-          <TikTokMenu />
+          <YoutubeMenu isActive={activeMenu === 'youtube'} onActivate={() => setActiveMenu('youtube')} />
+          <InstagramMenu isActive={activeMenu === 'instagram'} onActivate={() => setActiveMenu('instagram')} />
+          <TwitterMenu isActive={activeMenu === 'twitter'} onActivate={() => setActiveMenu('twitter')} />
+          <TikTokMenu isActive={activeMenu === 'tiktok'} onActivate={() => setActiveMenu('tiktok')} />
         </div>
 
         {/* Auth Buttons and Mobile Menu */}
