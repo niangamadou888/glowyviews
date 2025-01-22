@@ -21,6 +21,7 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
             className={`group relative h-10 w-max px-4 py-2 hover:bg-red-500/30 hover:text-red-500 data-[state=open]:bg-red-500/30 data-[state=open]:text-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-red-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
           >
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             <div className="mr-2">
               <Player
                 ref={youtubeIconRef}
@@ -32,22 +33,24 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
             YouTube
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
-              <li>
+            <ul className="relative flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li className="group">
                 <NavigationMenuLink
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
                   href="#"
                   onClick={onActivate}
                 >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="text-sm font-medium leading-none">Visualizzazioni Youtube</div>
                 </NavigationMenuLink>
               </li>
-              <li>
+              <li className="group">
                 <NavigationMenuLink
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
                   href="#"
                   onClick={onActivate}
                 >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="text-sm font-medium leading-none">Iscritti Youtube</div>
                 </NavigationMenuLink>
               </li>
@@ -69,6 +72,7 @@ const InstagramMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate
             className={`group relative h-10 w-max px-4 py-2 hover:bg-pink-500/30 hover:text-pink-500 data-[state=open]:bg-pink-500/30 data-[state=open]:text-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(236,72,153,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-pink-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => instagramIconRef.current?.playFromBeginning()}
           >
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-pink-500/10 via-pink-500/50 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             <div className="mr-2">
               <Player
                 ref={instagramIconRef}
@@ -80,22 +84,24 @@ const InstagramMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate
             Instagram
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
-              <li>
+            <ul className="relative flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li className="group">
                 <NavigationMenuLink
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
                   href="#"
                   onClick={onActivate}
                 >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-pink-500/10 via-pink-500/50 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="text-sm font-medium leading-none">Follower Instagram</div>
                 </NavigationMenuLink>
               </li>
-              <li>
+              <li className="group">
                 <NavigationMenuLink
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
                   href="#"
                   onClick={onActivate}
                 >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-pink-500/10 via-pink-500/50 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="text-sm font-medium leading-none">Like Instagram</div>
                 </NavigationMenuLink>
               </li>
@@ -114,9 +120,10 @@ const TwitterMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger 
-            className={`group relative h-10 w-max px-4 py-2 hover:bg-neutral-500/30 hover:text-neutral-500 data-[state=open]:bg-neutral-500/30 data-[state=open]:text-neutral-500 hover:shadow-[0_0_25px_rgba(115,115,115,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(115,115,115,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-neutral-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
+            className={`group relative h-10 w-max px-4 py-2 hover:bg-blue-500/30 hover:text-blue-500 data-[state=open]:bg-blue-500/30 data-[state=open]:text-blue-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-blue-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => twitterIconRef.current?.playFromBeginning()}
           >
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/10 via-blue-500/50 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             <div className="mr-2">
               <Player
                 ref={twitterIconRef}
@@ -128,13 +135,14 @@ const TwitterMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
             X
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
-              <li>
+            <ul className="relative flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li className="group">
                 <NavigationMenuLink
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-500/20 hover:text-neutral-500 focus:bg-neutral-500/20 focus:text-neutral-500"
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500"
                   href="#"
                   onClick={onActivate}
                 >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/10 via-blue-500/50 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="text-sm font-medium leading-none">Follow Us</div>
                 </NavigationMenuLink>
               </li>
@@ -156,6 +164,7 @@ const TikTokMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: (
             className={`group relative h-10 w-max px-4 py-2 hover:bg-purple-500/30 hover:text-purple-500 data-[state=open]:bg-purple-500/30 data-[state=open]:text-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] data-[state=open]:shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-full border border-transparent hover:border-purple-500/50 hover:scale-105 active:scale-95 ${isActive ? 'animate-glow' : ''}`}
             onMouseEnter={() => tiktokIconRef.current?.playFromBeginning()}
           >
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 via-purple-500/50 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             <div className="mr-2">
               <Player
                 ref={tiktokIconRef}
@@ -167,13 +176,14 @@ const TikTokMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: (
             TikTok
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
-              <li>
+            <ul className="relative flex flex-col w-[300px] gap-2 p-4 rounded-lg border bg-background/95 backdrop-blur-sm shadow-lg">
+              <li className="group">
                 <NavigationMenuLink
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
                   href="#"
                   onClick={onActivate}
                 >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 via-purple-500/50 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="text-sm font-medium leading-none">Follow Us</div>
                 </NavigationMenuLink>
               </li>
