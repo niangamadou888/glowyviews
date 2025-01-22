@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="1000px" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#006FCF" x="0" y="0" width="1000" height="1000" rx="50"></rect>
+        <path d="M500,304.5 L573.2,304.5 L500,377.7 L426.8,304.5 L500,304.5 Z M500,695.5 L426.8,695.5 L500,622.3 L573.2,695.5 L500,695.5 Z" fill="#FFFFFF"></path>
+        <path d="M304.5,500 L304.5,426.8 L377.7,500 L304.5,573.2 L304.5,500 Z M695.5,500 L695.5,573.2 L622.3,500 L695.5,426.8 L695.5,500 Z" fill="#FFFFFF"></path>
+    </g>
+</svg>

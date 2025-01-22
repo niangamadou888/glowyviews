@@ -1,7 +1,77 @@
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FaCcVisa } from "react-icons/fa";
+import { RiMastercardFill } from "react-icons/ri";
+import { SiAmericanexpress } from "react-icons/si";
+import { FaStripeS } from "react-icons/fa";
+import { FaBitcoin } from "react-icons/fa";
+import { useState, useRef } from "react";
+import { Player } from "@lordicon/react";
+import youtubeIcon from "../assets/icons/wired-flat-2547-logo-youtube-hover-pinch.json";
+import instagramIcon from "../assets/icons/wired-flat-2542-logo-instagram-hover-pinch.json";
+import twitterIcon from "../assets/icons/wired-flat-2714-logo-x-hover-pinch.json";
+import tiktokIcon from "../assets/icons/wired-flat-2546-logo-tiktok-hover-pinch.json";
 
 const Footer = () => {
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const youtubeIconRef = useRef<Player | null>(null);
+  const instagramIconRef = useRef<Player | null>(null);
+  const twitterIconRef = useRef<Player | null>(null);
+  const tiktokIconRef = useRef<Player | null>(null);
+
+  const toggleService = (service: string) => {
+    if (expandedService === service) {
+      setExpandedService(null);
+    } else {
+      setExpandedService(service);
+    }
+  };
+
+  const services = {
+    YouTube: {
+      icon: youtubeIcon,
+      ref: youtubeIconRef,
+      color: 'red',
+      items: [
+        'YouTube Views',
+        'YouTube Likes',
+        'YouTube Subscribers',
+        'YouTube Comments',
+        'YouTube Shares'
+      ]
+    },
+    Instagram: {
+      icon: instagramIcon,
+      ref: instagramIconRef,
+      color: 'pink',
+      items: [
+        'Instagram Followers',
+        'Instagram Likes',
+        'Instagram Views'
+      ]
+    },
+    Twitter: {
+      icon: twitterIcon,
+      ref: twitterIconRef,
+      color: 'blue',
+      items: [
+        'Twitter Followers',
+        'Twitter Likes',
+        'Twitter Retweets'
+      ]
+    },
+    TikTok: {
+      icon: tiktokIcon,
+      ref: tiktokIconRef,
+      color: 'purple',
+      items: [
+        'TikTok Followers',
+        'TikTok Likes',
+        'TikTok Views'
+      ]
+    }
+  };
+
   return (
     <footer className="w-full bg-secondary/50 backdrop-blur-sm border-t border-primary/20">
       <div className="max-w-7xl mx-auto px-4 py-16">
@@ -13,50 +83,67 @@ const Footer = () => {
             <p className="text-muted-foreground">
               Boost your social media presence with our premium YouTube views service.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
-                <Youtube className="h-6 w-6" />
-              </a>
-            </div>
+            <Link
+              to="/login"
+              className="inline-block px-4 py-2 text-sm bg-purple-600 text-white rounded-md hover:bg-purple-500 transition-colors duration-300 shadow-[0_0_5px_#8b5cf6,0_0_15px_#8b5cf6,0_0_30px_#8b5cf6]"
+            >
+              Log In
+            </Link>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-primary">Services</h4>
+            <ul className="space-y-2">
+              {Object.entries(services).map(([serviceName, service]) => (
+                <li key={serviceName} className="space-y-2">
+                  <button
+                    onClick={() => toggleService(serviceName)}
+                    onMouseEnter={() => service.ref.current?.playFromBeginning()}
+                    className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-muted-foreground hover:text-${service.color}-500 transition-colors duration-300 rounded-lg hover:bg-${service.color}-500/20`}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Player
+                        ref={service.ref}
+                        icon={service.icon}
+                        size={24}
+                        state="morph"
+                      />
+                      <span>{serviceName}</span>
+                    </div>
+                    <span className="text-lg">{expandedService === serviceName ? '-' : '+'}</span>
+                  </button>
+                  {expandedService === serviceName && (
+                    <ul className="pl-4 space-y-2 animate-slideDown">
+                      {service.items.map((item) => (
+                        <li key={item}>
+                          <Link
+                            to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                            className={`text-muted-foreground hover:text-${service.color}-500 transition-colors duration-300 hover:translate-x-2 transform inline-block text-sm group`}
+                          >
+                            <div className={`absolute inset-0 -z-10 bg-gradient-to-r from-${service.color}-500/10 via-${service.color}-500/50 to-${service.color}-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg`} />
+                            {item}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-primary">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Blog', 'Contact'].map((item) => (
-                <li key={item}>
+              {['Privacy Policy', 'Refund Policy', 'Terms of Service'].map((links) => (
+                <li key={links}>
                   <Link 
-                    to="#" 
+                    to={`/${links.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:translate-x-2 transform inline-block"
                   >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-primary">Our Services</h4>
-            <ul className="space-y-2">
-              {['YouTube Views', 'Instagram Followers', 'Facebook Likes', 'Twitter Engagement'].map((service) => (
-                <li key={service}>
-                  <Link 
-                    to="#" 
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:translate-x-2 transform inline-block"
-                  >
-                    {service}
+                    {links}
                   </Link>
                 </li>
               ))}
@@ -87,18 +174,21 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © 2024 GlowyViews. All rights reserved.
+              2024 GlowyViews. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link to="#" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
-                Cookie Policy
-              </Link>
+            <div className="flex items-center space-x-2">
+              <Shield className="h-5 w-5 text-green-500" />
+              <div className="text-left">
+                <h4 className="text-sm font-semibold text-muted-foreground">SSL Pagamento Sicuro</h4>
+                <p className="text-xs text-muted-foreground">Il tuo pagamento è protetto da criptografia SSL a 256-bit</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+            <FaCcVisa  className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity"/>
+            <RiMastercardFill className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
+            <SiAmericanexpress className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
+            <FaStripeS className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
+            <FaBitcoin className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>

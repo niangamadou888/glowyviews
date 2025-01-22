@@ -62,10 +62,15 @@ module.exports = {
             filter: 'drop-shadow(0 0 4px rgb(220 38 38))',
           },
         },
+        slideDown: {
+          from: { height: 0, opacity: 0 },
+          to: { height: 'var(--radix-accordion-content-height)', opacity: 1 },
+        },
       },
       animation: {
         glow: 'glow 3s ease-in-out infinite',
         'border-draw': 'border-draw 3.0s cubic-bezier(0.00001, 0.0005, 0.1, 1) forwards',
+        slideDown: 'slideDown 0.2s ease-out',
       },
       textShadow: {
         glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)',
