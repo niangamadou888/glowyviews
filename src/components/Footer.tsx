@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Shield } from "lucide-react";
+import { Mail, Phone, MapPin, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaCcVisa } from "react-icons/fa";
 import { RiMastercardFill } from "react-icons/ri";
@@ -33,11 +33,11 @@ const Footer = () => {
       ref: youtubeIconRef,
       color: 'red',
       items: [
-        'YouTube Views',
-        'YouTube Likes',
-        'YouTube Subscribers',
-        'YouTube Comments',
-        'YouTube Shares'
+        { name: 'YouTube Views', icon: <Eye className="h-4 w-4" /> },
+        { name: 'YouTube Likes', icon: <ThumbsUp className="h-4 w-4" /> },
+        { name: 'YouTube Subscribers', icon: <UserPlus className="h-4 w-4" /> },
+        { name: 'YouTube Comments', icon: <MessageCircle className="h-4 w-4" /> },
+        { name: 'YouTube Shares', icon: <Share2 className="h-4 w-4" /> }
       ]
     },
     Instagram: {
@@ -45,9 +45,9 @@ const Footer = () => {
       ref: instagramIconRef,
       color: 'pink',
       items: [
-        'Instagram Followers',
-        'Instagram Likes',
-        'Instagram Views'
+        { name: 'Instagram Followers', icon: <UserPlus className="h-4 w-4" /> },
+        { name: 'Instagram Likes', icon: <ThumbsUp className="h-4 w-4" /> },
+        { name: 'Instagram Views', icon: <Eye className="h-4 w-4" /> }
       ]
     },
     Twitter: {
@@ -55,9 +55,9 @@ const Footer = () => {
       ref: twitterIconRef,
       color: 'blue',
       items: [
-        'Twitter Followers',
-        'Twitter Likes',
-        'Twitter Retweets'
+        { name: 'Twitter Followers', icon: <UserPlus className="h-4 w-4" /> },
+        { name: 'Twitter Likes', icon: <ThumbsUp className="h-4 w-4" /> },
+        { name: 'Twitter Retweets', icon: <Share2 className="h-4 w-4" /> }
       ]
     },
     TikTok: {
@@ -65,9 +65,9 @@ const Footer = () => {
       ref: tiktokIconRef,
       color: 'purple',
       items: [
-        'TikTok Followers',
-        'TikTok Likes',
-        'TikTok Views'
+        { name: 'TikTok Followers', icon: <UserPlus className="h-4 w-4" /> },
+        { name: 'TikTok Likes', icon: <ThumbsUp className="h-4 w-4" /> },
+        { name: 'TikTok Views', icon: <Eye className="h-4 w-4" /> }
       ]
     }
   };
@@ -125,12 +125,13 @@ const Footer = () => {
                   {expandedService === serviceName && (
                     <ul className="pl-4 space-y-2 animate-slideDown">
                       {service.items.map((item) => (
-                        <li key={item}>
+                        <li key={item.name}>
                           <Link
-                            to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                            className={`text-muted-foreground hover:text-${service.color}-500 transition-colors duration-300 hover:translate-x-2 transform inline-block text-sm`}
+                            to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                            className={`text-muted-foreground/80 hover:text-${service.color}-500 transition-colors duration-300 hover:translate-x-2 transform inline-flex items-center space-x-2 text-sm`}
                           >
-                            {item}
+                            {item.icon}
+                            <span>{item.name}</span>
                           </Link>
                         </li>
                       ))}
@@ -148,13 +149,18 @@ const Footer = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
             </h4>
             <ul className="space-y-3">
-              {['Privacy Policy', 'Refund Policy', 'Terms of Service'].map((links) => (
-                <li key={links} className="group">
+              {[
+                { name: 'Privacy Policy', icon: <FileText className="h-4 w-4" /> },
+                { name: 'Refund Policy', icon: <RefreshCw className="h-4 w-4" /> },
+                { name: 'Terms of Service', icon: <ScrollText className="h-4 w-4" /> }
+              ].map((link) => (
+                <li key={link.name} className="group">
                   <Link 
-                    to={`/${links.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="relative inline-flex items-center text-muted-foreground/80 hover:text-primary transition-colors duration-300 hover:translate-x-2 transform"
+                    to={`/${link.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="relative inline-flex items-center space-x-2 text-muted-foreground/80 hover:text-primary transition-colors duration-300 hover:translate-x-2 transform"
                   >
-                    <span className="relative">{links}</span>
+                    <span className="text-muted-foreground/60 group-hover:text-primary transition-colors duration-300">{link.icon}</span>
+                    <span className="relative">{link.name}</span>
                   </Link>
                 </li>
               ))}
