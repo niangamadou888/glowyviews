@@ -73,35 +73,44 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-secondary/50 backdrop-blur-sm border-t border-primary/20">
-      <div className="max-w-7xl mx-auto px-4 py-16">
+    <footer className="relative w-full bg-background/50 backdrop-blur-md border-t border-primary/20">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10" />
+      <div className="relative max-w-7xl mx-auto px-4 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary text-glow mb-4">GlowyViews</h3>
-            <p className="text-muted-foreground">
-              Boost your social media presence with our premium YouTube views service.
+          <div className="space-y-6">
+            <h3 className="text-3xl font-bold text-primary text-glow mb-4 relative">
+              <span className="relative z-10">GlowyViews</span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            </h3>
+            <p className="text-muted-foreground/80 leading-relaxed">
+              Boost your social media presence with our premium YouTube views service. We provide high-quality engagement that helps you grow.
             </p>
             <Link
               to="/login"
-              className="inline-block px-4 py-2 text-sm bg-purple-600 text-white rounded-md hover:bg-purple-500 transition-colors duration-300 shadow-[0_0_5px_#8b5cf6,0_0_15px_#8b5cf6,0_0_30px_#8b5cf6]"
+              className="group relative inline-flex items-center px-6 py-3 text-sm bg-primary/10 text-primary rounded-md hover:bg-primary/20 transition-colors duration-300 overflow-hidden"
             >
-              Log In
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+              <span className="relative">Log In</span>
             </Link>
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-primary">Services</h4>
+          <div className="space-y-6">
+            <h4 className="text-xl font-semibold text-primary relative inline-block">
+              <span className="relative z-10">Services</span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            </h4>
             <ul className="space-y-2">
               {Object.entries(services).map(([serviceName, service]) => (
                 <li key={serviceName} className="space-y-2">
                   <button
                     onClick={() => toggleService(serviceName)}
                     onMouseEnter={() => service.ref.current?.playFromBeginning()}
-                    className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-muted-foreground hover:text-${service.color}-500 transition-colors duration-300 rounded-lg hover:bg-${service.color}-500/20`}
+                    className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-muted-foreground hover:text-${service.color}-500 hover:bg-${service.color}-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-lg border border-transparent hover:border-${service.color}-500/50 hover:scale-105 active:scale-95`}
                   >
+                    <div className={`absolute inset-0 -z-10 bg-gradient-to-r from-${service.color}-500/10 via-${service.color}-500/50 to-${service.color}-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg`} />
                     <div className="flex items-center space-x-2">
                       <Player
                         ref={service.ref}
@@ -119,9 +128,8 @@ const Footer = () => {
                         <li key={item}>
                           <Link
                             to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                            className={`text-muted-foreground hover:text-${service.color}-500 transition-colors duration-300 hover:translate-x-2 transform inline-block text-sm group`}
+                            className={`text-muted-foreground hover:text-${service.color}-500 transition-colors duration-300 hover:translate-x-2 transform inline-block text-sm`}
                           >
-                            <div className={`absolute inset-0 -z-10 bg-gradient-to-r from-${service.color}-500/10 via-${service.color}-500/50 to-${service.color}-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg`} />
                             {item}
                           </Link>
                         </li>
@@ -134,16 +142,19 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-primary">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="space-y-6">
+            <h4 className="text-xl font-semibold text-primary relative inline-block">
+              <span className="relative z-10">Quick Links</span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            </h4>
+            <ul className="space-y-3">
               {['Privacy Policy', 'Refund Policy', 'Terms of Service'].map((links) => (
-                <li key={links}>
+                <li key={links} className="group">
                   <Link 
                     to={`/${links.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:translate-x-2 transform inline-block"
+                    className="relative inline-flex items-center text-muted-foreground/80 hover:text-primary transition-colors duration-300 hover:translate-x-2 transform"
                   >
-                    {links}
+                    <span className="relative">{links}</span>
                   </Link>
                 </li>
               ))}
@@ -151,44 +162,47 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-primary">Contact Us</h4>
-            <div className="space-y-3">
-              <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group">
+          <div className="space-y-6">
+            <h4 className="text-xl font-semibold text-primary relative inline-block">
+              <span className="relative z-10">Contact Us</span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            </h4>
+            <div className="space-y-4">
+              <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group">
                 <Mail className="h-5 w-5 group-hover:animate-bounce" />
-                <span>info@glowyviews.com</span>
+                <span className="relative">info@glowyviews.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors duration-300 group">
+              <a href="tel:+1234567890" className="flex items-center space-x-3 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group">
                 <Phone className="h-5 w-5 group-hover:animate-bounce" />
-                <span>+1 (234) 567-890</span>
+                <span className="relative">+1 (234) 567-890</span>
               </a>
-              <div className="flex items-center space-x-3 text-muted-foreground group">
+              <div className="flex items-center space-x-3 text-muted-foreground/80 group">
                 <MapPin className="h-5 w-5 group-hover:animate-bounce" />
-                <span>123 Social Street, Digital City</span>
+                <span className="relative">123 Social Street, Digital City</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-primary/10">
+        <div className="relative pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground/70 text-sm">
               2024 GlowyViews. All rights reserved.
             </p>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <Shield className="h-5 w-5 text-green-500" />
               <div className="text-left">
-                <h4 className="text-sm font-semibold text-muted-foreground">SSL Pagamento Sicuro</h4>
-                <p className="text-xs text-muted-foreground">Il tuo pagamento è protetto da criptografia SSL a 256-bit</p>
+                <h4 className="text-sm font-semibold text-muted-foreground/80">SSL Secure Payment</h4>
+                <p className="text-xs text-muted-foreground/60">Your payment is protected by 256-bit SSL encryption</p>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-            <FaCcVisa  className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity"/>
-            <RiMastercardFill className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
-            <SiAmericanexpress className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
-            <FaStripeS className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
-            <FaBitcoin className="h-8 w-auto opacity-75 hover:opacity-100 transition-opacity" />
+            <div className="flex items-center space-x-6">
+              <FaCcVisa className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
+              <RiMastercardFill className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
+              <SiAmericanexpress className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
+              <FaStripeS className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
+              <FaBitcoin className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
             </div>
           </div>
         </div>
