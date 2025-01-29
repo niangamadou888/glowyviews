@@ -128,9 +128,9 @@ const Footer = () => {
                         <li key={item.name}>
                           <Link
                             to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                            className={`text-muted-foreground/80 hover:text-${service.color}-500 transition-colors duration-300 hover:translate-x-2 transform inline-flex items-center space-x-2 text-sm`}
+                            className={`text-muted-foreground/80 hover:text-${service.color}-500 transition-colors duration-300 inline-flex items-center space-x-2 text-sm group`}
                           >
-                            {item.icon}
+                            <span className="group-hover:animate-bounce">{item.icon}</span>
                             <span>{item.name}</span>
                           </Link>
                         </li>
@@ -157,9 +157,9 @@ const Footer = () => {
                 <li key={link.name} className="group">
                   <Link 
                     to={`/${link.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="relative inline-flex items-center space-x-2 text-muted-foreground/80 hover:text-primary transition-colors duration-300 hover:translate-x-2 transform"
+                    className="relative inline-flex items-center space-x-2 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group"
                   >
-                    <span className="text-muted-foreground/60 group-hover:text-primary transition-colors duration-300">{link.icon}</span>
+                    <span className="text-muted-foreground/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
                     <span className="relative">{link.name}</span>
                   </Link>
                 </li>
