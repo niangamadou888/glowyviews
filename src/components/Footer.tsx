@@ -84,7 +84,7 @@ const Footer = () => {
             <h3 className="text-3xl font-bold text-primary mb-4">
               <span>GlowyViews</span>
             </h3>
-            <p className="text-muted-foreground/80 leading-relaxed">
+            <p className="text-white leading-relaxed">
               Boost your social media presence with our premium YouTube views service. We provide high-quality engagement that helps you grow.
             </p>
             <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px]">
@@ -103,7 +103,7 @@ const Footer = () => {
                   <button
                     onClick={() => toggleService(serviceName)}
                     onMouseEnter={() => service.ref.current?.playFromBeginning()}
-                    className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-muted-foreground hover:text-${service.color}-500 hover:bg-${service.color}-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-lg border border-transparent hover:border-${service.color}-500/50 hover:scale-105 active:scale-95`}
+                    className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-white hover:text-${service.color}-500 hover:bg-${service.color}-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-lg border border-transparent hover:border-${service.color}-500/50 hover:scale-105 active:scale-95`}
                   >
                     <div className={`absolute inset-0 -z-10 bg-gradient-to-r from-${service.color}-500/10 via-${service.color}-500/50 to-${service.color}-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg`} />
                     <div className="flex items-center space-x-2">
@@ -123,7 +123,7 @@ const Footer = () => {
                         <li key={item.name}>
                           <Link
                             to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                            className={`text-muted-foreground/80 hover:text-${service.color}-500 transition-colors duration-300 inline-flex items-center space-x-2 text-sm group`}
+                            className={`text-white hover:text-${service.color}-500 transition-colors duration-300 inline-flex items-center space-x-2 text-sm group`}
                           >
                             <span className="group-hover:animate-bounce">{item.icon}</span>
                             <span>{item.name}</span>
@@ -151,9 +151,9 @@ const Footer = () => {
                 <li key={link.name} className="group">
                   <Link 
                     to={`/${link.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="relative inline-flex items-center space-x-2 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group"
+                    className="relative inline-flex items-center space-x-2 text-white hover:text-primary transition-colors duration-300 group"
                   >
-                    <span className="text-muted-foreground/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
+                    <span className="text-white/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
                     <span className="relative">{link.name}</span>
                   </Link>
                 </li>
@@ -167,16 +167,16 @@ const Footer = () => {
               <span>Contact Us</span>
             </h4>
             <div className="space-y-4">
-              <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group">
-                <Mail className="h-5 w-5 group-hover:animate-bounce" />
+              <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
+                <Mail className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">info@glowyviews.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center space-x-3 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group">
-                <Phone className="h-5 w-5 group-hover:animate-bounce" />
+              <a href="tel:+1234567890" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
+                <Phone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">+1 (234) 567-890</span>
               </a>
-              <div className="flex items-center space-x-3 text-muted-foreground/80 group">
-                <MapPin className="h-5 w-5 group-hover:animate-bounce" />
+              <div className="flex items-center space-x-3 text-white group">
+                <MapPin className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">123 Social Street, Digital City</span>
               </div>
             </div>
@@ -186,22 +186,22 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="relative pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground/70 text-sm">
+            <p className="text-white/70 text-sm">
               &copy; 2024 GlowyViews. All rights reserved.
             </p>
             <div className="flex items-center space-x-3">
               <Shield className="h-5 w-5 text-green-500" />
               <div className="text-left">
-                <h4 className="text-sm font-semibold text-muted-foreground/80">SSL Secure Payment</h4>
-                <p className="text-xs text-muted-foreground/60">Your payment is protected by 256-bit SSL encryption</p>
+                <h4 className="text-sm font-semibold text-white/80">SSL Secure Payment</h4>
+                <p className="text-xs text-white/60">Your payment is protected by 256-bit SSL encryption</p>
               </div>
             </div>
             <div className="flex items-center space-x-6">
-              <FaCcVisa className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
-              <RiMastercardFill className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
-              <SiAmericanexpress className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
-              <FaStripeS className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
-              <FaBitcoin className="h-8 w-auto text-muted-foreground/60 hover:text-primary/80 transition-colors duration-300" />
+              <FaCcVisa className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
+              <RiMastercardFill className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
+              <SiAmericanexpress className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
+              <FaStripeS className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
+              <FaBitcoin className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
             </div>
           </div>
         </div>
