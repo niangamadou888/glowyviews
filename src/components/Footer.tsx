@@ -81,9 +81,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-primary text-glow mb-4 relative">
-              <span className="relative z-10">GlowyViews</span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            <h3 className="text-3xl font-bold text-primary mb-4">
+              <span>GlowyViews</span>
             </h3>
             <p className="text-muted-foreground/80 leading-relaxed">
               Boost your social media presence with our premium YouTube views service. We provide high-quality engagement that helps you grow.
@@ -95,9 +94,8 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-primary relative inline-block">
-              <span className="relative z-10">Services</span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            <h4 className="text-xl font-semibold text-primary">
+              <span>Services</span>
             </h4>
             <ul className="space-y-2">
               {Object.entries(services).map(([serviceName, service]) => (
@@ -141,9 +139,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-primary relative inline-block">
-              <span className="relative z-10">Quick Links</span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            <h4 className="text-xl font-semibold text-primary">
+              <span>Quick Links</span>
             </h4>
             <ul className="space-y-3">
               {[
@@ -166,9 +163,8 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-primary relative inline-block">
-              <span className="relative z-10">Contact Us</span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 blur-lg opacity-50" />
+            <h4 className="text-xl font-semibold text-primary">
+              <span>Contact Us</span>
             </h4>
             <div className="space-y-4">
               <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-muted-foreground/80 hover:text-primary transition-colors duration-300 group">
