@@ -6,6 +6,7 @@ import { SiAmericanexpress } from "react-icons/si";
 import { FaStripeS } from "react-icons/fa";
 import { FaBitcoin } from "react-icons/fa";
 import { useState, useRef } from "react";
+import { Button } from "@/components/ui/button";
 import { Player } from "@lordicon/react";
 import youtubeIcon from "../assets/icons/wired-flat-2547-logo-youtube-hover-pinch.json";
 import instagramIcon from "../assets/icons/wired-flat-2542-logo-instagram-hover-pinch.json";
@@ -87,13 +88,9 @@ const Footer = () => {
             <p className="text-muted-foreground/80 leading-relaxed">
               Boost your social media presence with our premium YouTube views service. We provide high-quality engagement that helps you grow.
             </p>
-            <Link
-              to="/login"
-              className="group relative inline-flex items-center px-6 py-3 text-sm bg-primary/10 text-primary rounded-md hover:bg-primary/20 transition-colors duration-300 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
-              <span className="relative">Log In</span>
-            </Link>
+            <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px]">
+          Accedi
+        </Button>
           </div>
 
           {/* Services */}
@@ -194,7 +191,7 @@ const Footer = () => {
         <div className="relative pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground/70 text-sm">
-              2024 GlowyViews. All rights reserved.
+              &copy; 2024 GlowyViews. All rights reserved.
             </p>
             <div className="flex items-center space-x-3">
               <Shield className="h-5 w-5 text-green-500" />
