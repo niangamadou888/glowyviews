@@ -82,10 +82,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-primary mb-4">
-              <span>GlowyViews</span>
+              <span><span className="text-white">Glow</span>Likes</span>
             </h3>
             <p className="text-white leading-relaxed">
-              Boost your social media presence with our premium YouTube views service. We provide high-quality engagement that helps you grow.
+            Potenzia i tuoi profili social con i nostri servizi premium. Garantiamo interazioni di qualità e reali che ti aiutano a crescere, in modo sicuro.
             </p>
             <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px]">
           Accedi
@@ -169,7 +169,7 @@ const Footer = () => {
             <div className="space-y-4">
               <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
                 <Mail className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
-                <span className="relative">info@glowyviews.com</span>
+                <span className="relative">supporto@glowlikes.it</span>
               </a>
               <a href="tel:+1234567890" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
                 <Phone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
@@ -187,13 +187,13 @@ const Footer = () => {
         <div className="relative pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/70 text-sm">
-              &copy; 2024 GlowyViews. All rights reserved.
+              &copy; 2024 GlowLikes. Tutti i diritti riservati.
             </p>
             <div className="flex items-center space-x-3">
               <Shield className="h-5 w-5 text-green-500" />
               <div className="text-left">
-                <h4 className="text-sm font-semibold text-white/80">SSL Secure Payment</h4>
-                <p className="text-xs text-white/60">Your payment is protected by 256-bit SSL encryption</p>
+                <h4 className="text-sm font-semibold text-white/80">Pagamento Sicuro</h4>
+                <p className="text-xs text-white/60">I dati di pagamento sono criptati e protetti da tecnologia SSL</p>
               </div>
             </div>
             <div className="flex items-center space-x-6">

@@ -204,7 +204,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-primary text-glow">GlowyViews</span>
+          <span className="text-2xl font-bold text-primary text-glow"><span className="text-white">Glow</span>Likes</span>
         </Link>
 
         {/* Desktop Navigation */}

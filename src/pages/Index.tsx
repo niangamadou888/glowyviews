@@ -13,6 +13,7 @@ import FloatingButton from "@/components/FloatingButton";
 import BackToTopButton from "@/components/BackToTopButton";
 import YouTubeViewsInfo from "@/components/YouTubeViewsInfo";
 import DoveComprare from "@/components/DoveComprare";
+import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   useEffect(() => {
@@ -70,6 +71,9 @@ const Index = () => {
       </div>
       <div className="reveal-on-scroll">
         <FinalConsiderations />
+      </div>
+      <div className="reveal-on-scroll">
+        <Testimonials />
       </div>
       <FloatingButton />
       <BackToTopButton />
