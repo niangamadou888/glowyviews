@@ -8,6 +8,7 @@ import { FaBitcoin } from "react-icons/fa";
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Player } from "@lordicon/react";
+import { FaEthereum } from "react-icons/fa";
 import youtubeIcon from "../assets/icons/wired-flat-2547-logo-youtube-hover-pinch.json";
 import instagramIcon from "../assets/icons/wired-flat-2542-logo-instagram-hover-pinch.json";
 import twitterIcon from "../assets/icons/wired-flat-2714-logo-x-hover-pinch.json";
@@ -200,7 +201,7 @@ const Footer = () => {
               <FaCcVisa className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
               <RiMastercardFill className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
               <SiAmericanexpress className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
-              <FaStripeS className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
+              <FaEthereum className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
               <FaBitcoin className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
             </div>
           </div>

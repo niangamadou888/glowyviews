@@ -43,7 +43,7 @@ const Testimonials = () => {
           {reviews.map((review) => (
             <div 
               key={review.id} 
-              className="bg-[#262937] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300 border-glow"
+              className="bg-[#262937] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300"
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, index) => (
