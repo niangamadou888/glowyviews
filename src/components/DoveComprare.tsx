@@ -25,7 +25,7 @@ const DoveComprare = () => {
                 Oltre al <strong>rapporto qualità/prezzo imbattibile</strong>, c'è un altro importante motivo per cui conviene rivolgersi a noi.
               </p>
               <p className="text-lg text-white/90 leading-relaxed">
-                Sebbene nei prossimi paragrafi avrai tutti i dettagli in merito, il <strong>comprare visualizzazioni YouTube è da considerarsi una</strong> <a href="https://www.treccani.it/vocabolario/borderline/">pratica quasi "borderline"</a> da condurre con la massima attenzione.<br />
+                Sebbene nei prossimi paragrafi avrai tutti i dettagli in merito, il <strong>comprare visualizzazioni YouTube è da considerarsi una</strong> <a href="https://www.treccani.it/vocabolario/borderline/" className='mystyle'>pratica quasi "borderline"</a> da condurre con la massima attenzione.<br />
 
               </p>
               <p className="text-lg text-white/90 leading-relaxed">

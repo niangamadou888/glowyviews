@@ -263,7 +263,7 @@ const FAQ = () => {
             Se il tuo canale e i tuoi video stanno andando alla grande, <strong>allora significa che stai già raggiungendo i tuoi traguardi in modo “genuino”</strong>.
             </p>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            In parallelo, poi, c'è un'altra questione. Infatti, <strong>può essere che, nel tuo caso specifico, tu abbia più bisogno di</strong> <a href="https://socialx.it/comprare-like-youtube/">comprare Like YouTube</a>.
+            In parallelo, poi, c'è un'altra questione. Infatti, <strong>può essere che, nel tuo caso specifico, tu abbia più bisogno di</strong> <a href="https://socialx.it/comprare-like-youtube/" className='mystyle'>comprare Like YouTube</a>.
             </p>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
             A grandi linee, prima di intraprendere una qualsivoglia strategia di Social Media Marketing, <strong>devi analizzare dettagliatamente la tua situazione</strong> e mettere in atto quella che realmente può dare i risultati migliori.
