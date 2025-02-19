@@ -177,7 +177,7 @@ const Testimonials = () => {
                     key={review.id} 
                     className="w-full flex-shrink-0"
                   >
-                    <div className="bg-[#1a1a1a] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300">
+                    <div className="bg-[#262937] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300">
                       <div className="flex justify-center mb-4">
                         {[...Array(5)].map((_, index) => (
                           <FaStar
