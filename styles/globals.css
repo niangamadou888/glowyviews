@@ -1,0 +1,17 @@
+/* ... existing styles ... */
+
+@media (max-width: 1024px) {
+  .testimonials-slider {
+    gap: 1rem;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+}

@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface Review {
   id: number;
@@ -27,38 +29,272 @@ const reviews: Review[] = [
     text: "Great experience from start to finish. The team was very responsive and delivered exactly what we needed.",
     name: "Mike Davis"
   },
+  {
+    id: 4,
+    stars: 5,
+    text: "Outstanding quality and customer service. The results were better than expected!",
+    name: "Emma Wilson"
+  },
+  {
+    id: 5,
+    stars: 5,
+    text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
+    name: "David Brown"
+  }
 ];
 
 const Testimonials = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [reviewText, setReviewText] = useState('');
+  const [name, setName] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [confirmationMessage, setConfirmationMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<NodeJS.Timeout>();
+
+  useEffect(() => {
+    // Start the automatic rotation
+    startAutoRotation();
+
+    return () => {
+      // Cleanup timer on component unmount
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, []);
+
+  const startAutoRotation = () => {
+    timerRef.current = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % reviews.length);
+    }, 4000);
+  };
+
+  const stopAutoRotation = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+  };
+
+  const slideNext = () => {
+    stopAutoRotation();
+    setCurrentIndex(prev => (prev + 1) % reviews.length);
+    startAutoRotation();
+  };
+
+  const slidePrev = () => {
+    stopAutoRotation();
+    setCurrentIndex(prev => (prev - 1 + reviews.length) % reviews.length);
+    startAutoRotation();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Check if all fields are filled and CAPTCHA is verified
+    if (!rating || !reviewText || !name || !captchaVerified) {
+      setErrorMessage('Errore: per favore, compila tutti i campi.');
+      setConfirmationMessage('');
+    } else {
+      setErrorMessage('');
+      setConfirmationMessage('La tua recensione è stata inviata e verrà approvata entro 24-48 ore.');
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleCaptchaChange = (value: string | null) => {
+    if (value) {
+      setCaptchaVerified(true);
+    }
+  };
+
+  // Calculate average rating
+  const avgRating = reviews.reduce((acc, review) => acc + review.stars, 0) / reviews.length;
+  const totalReviews = reviews.length;
 
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">
-          What Our Customers Say
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {reviews.map((review) => (
-            <div 
-              key={review.id} 
-              className="bg-[#262937] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300"
-            >
-              <div className="flex mb-4">
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-4xl font-bold text-center mb-6 text-white">
+            What Our Customers Say
+          </h2>
+          
+          {/* Average Rating Display */}
+          <div className="flex items-center gap-6 mb-8">
+            <div className="flex flex-col items-center">
+              <div className="text-5xl font-bold text-white mb-2">
+                {avgRating.toFixed(1)}
+              </div>
+              <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, index) => (
                   <FaStar
                     key={index}
-                    className={index < review.stars ? "text-primary" : "text-gray-600"}
+                    className={index < Math.round(avgRating) ? "text-primary" : "text-gray-600"}
                     size={20}
                   />
                 ))}
               </div>
-              <p className="text-gray-300 mb-4 italic leading-relaxed">&quot;{review.text}&quot;</p>
-              <p className="text-primary font-medium">- {review.name}</p>
+              <div className="text-gray-400">
+                {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}
+              </div>
             </div>
-          ))}
+          </div>
         </div>
+        
+        <div className="relative max-w-3xl mx-auto">
+          {/* Slider Navigation Buttons */}
+          <button 
+            onClick={slidePrev}
+            className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-20 
+              text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
+          >
+            <IoIosArrowBack size={24} />
+          </button>
+          
+          <button 
+            onClick={slideNext}
+            className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-20 
+              text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
+          >
+            <IoIosArrowForward size={24} />
+          </button>
+
+          {/* Slider Container */}
+          <div className="overflow-hidden">
+            <div 
+              ref={sliderRef}
+              className="transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              <div className="flex">
+                {reviews.map((review) => (
+                  <div 
+                    key={review.id} 
+                    className="w-full flex-shrink-0"
+                  >
+                    <div className="bg-[#1a1a1a] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300">
+                      <div className="flex justify-center mb-4">
+                        {[...Array(5)].map((_, index) => (
+                          <FaStar
+                            key={index}
+                            className={index < review.stars ? "text-primary" : "text-gray-600"}
+                            size={20}
+                          />
+                        ))}
+                      </div>
+                      <p className="text-gray-300 mb-4 italic leading-relaxed text-center">&quot;{review.text}&quot;</p>
+                      <p className="text-primary font-medium text-center">- {review.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-6">
+            {reviews.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-colors duration-300 
+                  ${index === currentIndex ? 'bg-primary' : 'bg-gray-600'}`}
+                onClick={() => {
+                  stopAutoRotation();
+                  setCurrentIndex(index);
+                  startAutoRotation();
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/80 transition-colors duration-300 font-medium"
+          >
+            Submit Your Review
+          </button>
+        </div>
+
+        {/* Modal for Review Form */}
+        {isModalOpen && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-[#262937] p-8 rounded-xl max-w-md w-full relative">
+      {/* Close Button */}
+      <button
+        onClick={() => setIsModalOpen(false)}
+        className="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl"
+      >
+        &times;
+      </button>
+
+      <h3 className="text-2xl font-semibold mb-4">Submit Your Review</h3>
+      <form onSubmit={handleSubmit}>
+        {/* Name Input */}
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full p-3 border rounded-md text-black"
+          />
+        </div>
+
+        {/* Rating Input */}
+        <div className="mb-4">
+          <div className="flex gap-1">
+            {[...Array(5)].map((_, index) => (
+              <FaStar
+                key={index}
+                className={index < rating ? 'text-primary cursor-pointer' : 'text-gray-400 cursor-pointer'}
+                size={24}
+                onClick={() => setRating(index + 1)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Review Text Input */}
+        <div className="mb-4">
+          <textarea
+            placeholder="Write your review..."
+            value={reviewText}
+            onChange={(e) => setReviewText(e.target.value)}
+            className="w-full p-3 border rounded-md text-black"
+            rows={4}
+          />
+        </div>
+
+        {/* CAPTCHA */}
+        <div className="mb-4">
+          <ReCAPTCHA
+            sitekey="6LfNVNsqAAAAAF7SXwMAwz4V4Oh7ziha-nl5rKpy"
+            onChange={handleCaptchaChange}
+          />
+        </div>
+
+        {/* Error or Confirmation Message */}
+        {errorMessage && <div className="text-red-500 mb-4">{errorMessage}</div>}
+        {confirmationMessage && <div className="text-green-500 mb-4">{confirmationMessage}</div>}
+
+        <button
+          type="submit"
+          className="w-full bg-primary text-white py-3 rounded-md hover:bg-primary/80 transition-colors"
+        >
+          Submit Review
+        </button>
+      </form>
+    </div>
+  </div>
+)}
+
       </div>
     </section>
   );
