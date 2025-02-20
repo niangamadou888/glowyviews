@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaCcVisa } from "react-icons/fa";
@@ -86,11 +87,11 @@ const Footer = () => {
               <span><span className="text-white">Glow</span>Likes</span>
             </h3>
             <p className="text-white leading-relaxed">
-            Potenzia i tuoi profili social con i nostri servizi premium. Garantiamo interazioni di qualità e reali che ti aiutano a crescere, in modo sicuro.
+              Potenzia i tuoi profili social con i nostri servizi premium. Garantiamo interazioni di qualità e reali che ti aiutano a crescere, in modo sicuro.
             </p>
             <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px]">
-          Accedi
-        </Button>
+              Accedi
+            </Button>
           </div>
 
           {/* Services */}
@@ -180,6 +181,13 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">123 Social Street, Digital City</span>
               </div>
+              <Link to="/contact">
+                <Button 
+                  className="w-full mt-4 bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg hover:shadow-primary/20 hover:scale-105 active:scale-95"
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
