@@ -1,162 +1,112 @@
 
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
-import { Mail, Send, User } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const { error } = await supabase.functions.invoke("send-contact", {
-        body: formData,
-      });
+      const result = await emailjs.sendForm(
+        'YOUR_SERVICE_ID', // You'll need to replace this
+        'YOUR_TEMPLATE_ID', // You'll need to replace this
+        form.current!,
+        'YOUR_PUBLIC_KEY' // You'll need to replace this
+      );
 
-      if (error) throw error;
-
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-
-      // Reset form
-      setFormData({ name: "", email: "", message: "" });
+      if (result.text === 'OK') {
+        toast({
+          title: "Success!",
+          description: "Your message has been sent successfully. We'll get back to you soon!",
+          duration: 5000,
+        });
+        form.current?.reset();
+      }
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error('Error sending email:', error);
       toast({
-        variant: "destructive",
         title: "Error",
         description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+        duration: 5000,
       });
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   return (
-    <main className="min-h-screen bg-background flex flex-col">
-      <Navigation />
-      <div className="flex-1 py-24 px-4 sm:px-6 lg:px-8 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90 backdrop-blur-xl" />
-        <div className="relative max-w-md mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/90 to-primary/80">
-              Contact Us
-            </h2>
-            <p className="mt-4 text-muted-foreground text-lg">
-              We'd love to hear from you. Send us a message and we'll respond as soon
-              as possible.
-            </p>
-          </div>
+    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md mx-auto">
+        <div className="text-center">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-white">
+            Contact Us
+          </h2>
+          <p className="mt-2 text-sm text-gray-400">
+            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          </p>
+        </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 backdrop-blur-lg bg-card/50 p-8 rounded-xl border border-border/50 shadow-xl">
+        <form ref={form} onSubmit={handleSubmit} className="mt-8 space-y-6">
+          <div className="rounded-md shadow-sm space-y-4">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-foreground"
-              >
+              <label htmlFor="name" className="sr-only">
                 Name
               </label>
-              <div className="mt-1 relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-muted-foreground" />
-                </div>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="block w-full pl-10 bg-background/50 border-input rounded-lg shadow-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 sm:text-sm h-10 px-3 py-2"
-                  placeholder="Your name"
-                />
-              </div>
+              <input
+                id="name"
+                name="user_name"
+                type="text"
+                required
+                className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                placeholder="Your name"
+              />
             </div>
-
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-foreground"
-              >
+              <label htmlFor="email" className="sr-only">
                 Email
               </label>
-              <div className="mt-1 relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-muted-foreground" />
-                </div>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="block w-full pl-10 bg-background/50 border-input rounded-lg shadow-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 sm:text-sm h-10 px-3 py-2"
-                  placeholder="your@email.com"
-                />
-              </div>
+              <input
+                id="email"
+                name="user_email"
+                type="email"
+                required
+                className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                placeholder="Your email"
+              />
             </div>
-
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-foreground"
-              >
+              <label htmlFor="message" className="sr-only">
                 Message
               </label>
-              <div className="mt-1">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="block w-full bg-background/50 border-input rounded-lg shadow-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 sm:text-sm px-3 py-2"
-                  placeholder="Your message..."
-                />
-              </div>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                placeholder="Your message"
+              />
             </div>
+          </div>
 
-            <Button
-              type="submit"
-              className="w-full flex justify-center items-center space-x-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 shadow-lg hover:shadow-primary/20"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                "Sending..."
-              ) : (
-                <>
-                  Send Message
-                  <Send className="ml-2 h-4 w-4" />
-                </>
-              )}
-            </Button>
-          </form>
-        </div>
+          <Button
+            type="submit"
+            disabled={isLoading}
+            className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg hover:shadow-primary/20"
+          >
+            {isLoading ? "Sending..." : "Send Message"}
+          </Button>
+        </form>
       </div>
-      <Footer />
-    </main>
+    </div>
   );
 };
 
