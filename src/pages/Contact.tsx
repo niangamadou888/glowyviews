@@ -1,6 +1,6 @@
-
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import Footer from '@/components/Footer';
@@ -8,12 +8,25 @@ import Navigation from '@/components/Navigation';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
+
+    const recaptchaValue = recaptchaRef.current?.getValue();
+    if (!recaptchaValue) {
+      toast({
+        title: "Error",
+        description: "Please complete the reCAPTCHA verification",
+        variant: "destructive",
+        duration: 5000,
+      });
+      setIsLoading(false);
+      return;
+    }
 
     try {
       const result = await emailjs.sendForm(
@@ -41,6 +54,7 @@ const Contact = () => {
       });
     } finally {
       setIsLoading(false);
+      recaptchaRef.current?.reset();
     }
   };
 
@@ -100,6 +114,14 @@ const Contact = () => {
                 placeholder="Your message"
               />
             </div>
+          </div>
+
+          <div className="flex justify-center mb-4">
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6LfNVNsqAAAAAF7SXwMAwz4V4Oh7ziha-nl5rKpy"
+              theme="dark"
+            />
           </div>
 
           <Button
