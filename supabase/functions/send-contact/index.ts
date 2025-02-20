@@ -25,6 +25,8 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, message }: ContactFormData = await req.json();
 
+    console.log("Attempting to send email with data:", { name, email, message });
+
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: ["supporto@glowlikes.it"],
