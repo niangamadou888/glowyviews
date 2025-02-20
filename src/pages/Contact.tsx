@@ -3,6 +3,8 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -15,10 +17,10 @@ const Contact = () => {
 
     try {
       const result = await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // You'll need to replace this
-        'YOUR_TEMPLATE_ID', // You'll need to replace this
+        'service_dxfc8q2', // You'll need to replace this
+        'template_35v2ea9', // You'll need to replace this
         form.current!,
-        'YOUR_PUBLIC_KEY' // You'll need to replace this
+        'ZMJ2Q0zEGxVezJZIR' // You'll need to replace this
       );
 
       if (result.text === 'OK') {
@@ -43,10 +45,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md mx-auto">
-        <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-white">
+    <main className="min-h-screen bg-background flex flex-col">
+    <Navigation />
+    <div className="flex-1 py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90 backdrop-blur-xl" />
+      <div className="relative max-w-md mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl font-bold text-center mb-6 text-white glow">
             Contact Us
           </h2>
           <p className="mt-2 text-sm text-gray-400">
@@ -57,12 +62,12 @@ const Contact = () => {
         <form ref={form} onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm space-y-4">
             <div>
-              <label htmlFor="name" className="sr-only">
+              <label htmlFor="from_name" className="sr-only">
                 Name
               </label>
               <input
                 id="name"
-                name="user_name"
+                name="from_name"
                 type="text"
                 required
                 className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
@@ -70,12 +75,12 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="sr-only">
+              <label htmlFor="reply_to" className="sr-only">
                 Email
               </label>
               <input
                 id="email"
-                name="user_email"
+                name="reply_to"
                 type="email"
                 required
                 className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
@@ -105,8 +110,10 @@ const Contact = () => {
             {isLoading ? "Sending..." : "Send Message"}
           </Button>
         </form>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </main>
   );
 };
 

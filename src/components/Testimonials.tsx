@@ -169,13 +169,13 @@ const Testimonials = () => {
             <div 
               ref={sliderRef}
               className="transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              style={{ transform: `translateX(-${currentIndex * 50}%)` }}
             >
               <div className="flex">
                 {reviews.map((review) => (
                   <div 
                     key={review.id} 
-                    className="w-full flex-shrink-0"
+                    className="w-1/2 flex-shrink-0 px-4"
                   >
                     <div className="bg-[#262937] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300">
                       <div className="flex justify-center mb-4">
@@ -198,7 +198,7 @@ const Testimonials = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-6">
-            {reviews.map((_, index) => (
+            {reviews.slice(0, reviews.length - 1).map((_, index) => (
               <button
                 key={index}
                 className={`w-2 h-2 rounded-full transition-colors duration-300 
