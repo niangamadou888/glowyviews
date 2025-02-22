@@ -146,11 +146,11 @@ const Testimonials = () => {
           </div>
         </div>
         
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative w-full mx-auto">
           {/* Slider Navigation Buttons */}
           <button 
             onClick={slidePrev}
-            className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-20 
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 
               text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
           >
             <IoIosArrowBack size={24} />
@@ -158,7 +158,7 @@ const Testimonials = () => {
           
           <button 
             onClick={slideNext}
-            className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-20 
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 
               text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
           >
             <IoIosArrowForward size={24} />
@@ -169,15 +169,15 @@ const Testimonials = () => {
             <div 
               ref={sliderRef}
               className="transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 50}%)` }}
+              style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
             >
               <div className="flex">
                 {reviews.map((review) => (
                   <div 
                     key={review.id} 
-                    className="w-1/2 flex-shrink-0 px-4"
+                    className="w-1/3 flex-shrink-0 px-1"
                   >
-                    <div className="bg-[#262937] p-6 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300">
+                    <div className="bg-[#262937] p-8 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300 min-h-[250px] flex flex-col justify-between">
                       <div className="flex justify-center mb-4">
                         {[...Array(5)].map((_, index) => (
                           <FaStar
