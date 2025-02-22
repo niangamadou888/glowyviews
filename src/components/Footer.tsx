@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaCcVisa } from "react-icons/fa";
 import { RiMastercardFill } from "react-icons/ri";
 import { SiAmericanexpress } from "react-icons/si";
-import { FaStripeS } from "react-icons/fa";
+import { MdOutlineContactPhone } from "react-icons/md";
 import { FaBitcoin } from "react-icons/fa";
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -97,7 +97,7 @@ const Footer = () => {
           {/* Services */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold text-primary">
-              <span>Services</span>
+              <span>Servizi</span>
             </h4>
             <ul className="space-y-2">
               {Object.entries(services).map(([serviceName, service]) => (
@@ -142,7 +142,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold text-primary">
-              <span>Quick Links</span>
+              <span>Link Utili</span>
             </h4>
             <ul className="space-y-3">
               {[
@@ -166,26 +166,22 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold text-primary">
-              <span>Contact Us</span>
+              <span>Contattaci</span>
             </h4>
             <div className="space-y-4">
               <a href="mailto:info@glowyviews.com" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
                 <Mail className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">supporto@glowlikes.it</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
-                <Phone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
-                <span className="relative">+1 (234) 567-890</span>
+              <a className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
+              <MdOutlineContactPhone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
+                <span className="relative">Modulo di contatto</span>
               </a>
-              <div className="flex items-center space-x-3 text-white group">
-                <MapPin className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
-                <span className="relative">123 Social Street, Digital City</span>
-              </div>
               <Link to="/contact">
                 <Button 
                   className="w-full mt-4 bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg hover:shadow-primary/20 hover:scale-105 active:scale-95"
                 >
-                  Contact Us
+                  Contattaci
                 </Button>
               </Link>
             </div>

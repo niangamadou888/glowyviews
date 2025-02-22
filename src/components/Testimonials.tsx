@@ -121,7 +121,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-6 text-white">
-            What Our Customers Say
+          Cosa Dicono I Nostri Clienti
           </h2>
           
           {/* Average Rating Display */}
@@ -140,7 +140,7 @@ const Testimonials = () => {
                 ))}
               </div>
               <div className="text-gray-400">
-                {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}
+                {totalReviews} {totalReviews === 1 ? 'Recensioni' : 'Recensioni'}
               </div>
             </div>
           </div>
@@ -216,9 +216,9 @@ const Testimonials = () => {
         <div className="text-center mt-12">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/80 transition-colors duration-300 font-medium"
+            className="bg-primary text-white px-8 py-3 rounded-md hover:bg-primary/80 transition-colors duration-300 font-medium"
           >
-            Submit Your Review
+            Scrivi Una Recensione
           </button>
         </div>
 
@@ -234,13 +234,13 @@ const Testimonials = () => {
         &times;
       </button>
 
-      <h3 className="text-2xl font-semibold mb-4">Submit Your Review</h3>
+      <h3 className="text-2xl font-semibold mb-4">Scrivi Una Recensione</h3>
       <form onSubmit={handleSubmit}>
         {/* Name Input */}
         <div className="mb-4">
           <input
             type="text"
-            placeholder="Your Name"
+            placeholder="il tuo nome..."
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full p-3 border rounded-md text-black"
@@ -264,7 +264,7 @@ const Testimonials = () => {
         {/* Review Text Input */}
         <div className="mb-4">
           <textarea
-            placeholder="Write your review..."
+            placeholder="Scrivi Una Recensione..."
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
             className="w-full p-3 border rounded-md text-black"

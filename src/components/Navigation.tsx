@@ -219,10 +219,10 @@ const Navigation = () => {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost">
-              Log In
+            Accedi
             </Button>
             <Button className="glow">
-              Sign Up
+            Registrati
             </Button>
           </div>
 
