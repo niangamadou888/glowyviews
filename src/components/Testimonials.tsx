@@ -169,13 +169,13 @@ const Testimonials = () => {
             <div 
               ref={sliderRef}
               className="transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (window.innerWidth < 768 ? 100 : 33.333)}%)` }}
             >
               <div className="flex">
                 {reviews.map((review) => (
                   <div 
                     key={review.id} 
-                    className="w-1/3 flex-shrink-0 px-1"
+                    className="w-full md:w-1/3 flex-shrink-0 px-1"
                   >
                     <div className="bg-[#262937] p-8 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300 min-h-[250px] flex flex-col justify-between">
                       <div className="flex justify-center mb-4">
