@@ -201,7 +201,7 @@ const Testimonials = () => {
             {reviews.slice(0, reviews.length - 1).map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-colors duration-300 
+                className={`w-2 h-2 rounded-md transition-colors duration-300 
                   ${index === currentIndex ? 'bg-primary' : 'bg-gray-600'}`}
                 onClick={() => {
                   stopAutoRotation();
