@@ -119,19 +119,19 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
-      <div className="container mx-auto px-4 py-16 relative z-10">
+      <div className="container mx-auto px-4 pb-10 relative z-10">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-6 text-white">
           Cosa Dicono I Nostri Clienti
           </h2>
           
           {/* Average Rating Display */}
-          <div className="flex items-center gap-6 mb-8">
+          <div className="flex items-center gap-6">
             <div className="flex flex-col items-center">
-              <div className="text-5xl font-bold text-white mb-2">
+              <div className="text-4xl mb-1 font-bold text-white font-size">
                 {avgRating.toFixed(1)}
               </div>
-              <div className="flex gap-1 mb-2">
+              <div className="flex gap-1 mb-1">
                 {[...Array(5)].map((_, index) => (
                   <FaStar
                     key={index}
@@ -229,7 +229,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-6">
           <button
             onClick={() => setIsModalOpen(true)}
             className="bg-primary text-white px-8 py-3 rounded-md hover:bg-primary/80 transition-colors duration-300 font-medium"

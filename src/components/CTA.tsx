@@ -2,14 +2,14 @@ import React from 'react';
 
 const CTA = () => {
   return (
-    <div className="relative w-full min-h-[600px] flex items-center justify-center px-4 py-16">
+    <div className="relative w-full min-h-[600px] flex items-center justify-center px-4 py-24 sm:py-16">
       <div 
         className="absolute inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-purple-700 via-purple-600 to-purple-400"
         style={{
           width: '100vw',
           left: '50%',
           transform: 'translateX(-50%)',
-          clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0 100%)',
+          clipPath: 'polygon(0 5%, 100% 0, 100% 95%, 0 100%)',
         }}
       />
       

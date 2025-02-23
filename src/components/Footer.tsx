@@ -196,7 +196,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-3">
               <Shield className="h-5 w-5 text-green-500" />
-              <div className="text-left">
+              <div className="text-center py-4">
                 <h4 className="text-sm font-semibold text-white/80">Pagamento Sicuro</h4>
                 <p className="text-xs text-white/60">I dati di pagamento sono criptati e protetti da tecnologia SSL</p>
               </div>
