@@ -39,16 +39,10 @@ const CTA = () => {
             Buy YouTube Subscribers
           </button>
           <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy Instagram Followers
+            Buy Youtube Followers
           </button>
           <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy Instagram Likes
-          </button>
-          <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy TikTok Followers
-          </button>
-          <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy TikTok Likes
+            Buy Youtube Likes
           </button>
         </div>
       </div>
