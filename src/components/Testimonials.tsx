@@ -54,6 +54,7 @@ const Testimonials = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const sliderRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<NodeJS.Timeout>();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     // Start the automatic rotation
@@ -172,23 +173,38 @@ const Testimonials = () => {
               style={{ transform: `translateX(-${currentIndex * (window.innerWidth < 768 ? 100 : 33.333)}%)` }}
             >
               <div className="flex">
-                {reviews.map((review) => (
+                {reviews.map((review, index) => (
                   <div 
                     key={review.id} 
                     className="w-full md:w-1/3 flex-shrink-0 px-1"
                   >
-                    <div className="bg-[#262937] p-5 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300 min-h-[250px] flex flex-col ml-2 mr-2 justify-between">
-                      <div className="flex justify-center mb-4">
-                        {[...Array(5)].map((_, index) => (
+                    <div 
+                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 ease-in-out relative h-[215px] flex flex-col
+                        ${hoveredIndex === index 
+                          ? "border-primary/50 shadow-2xl shadow-primary/30 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow" 
+                          : "border-[#333333] hover:border-primary/40"}`}
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                      <div className={`flex justify-center mb-4 transition-all duration-300 ${
+                        hoveredIndex === index ? "drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]" : ""
+                      }`}>
+                        {[...Array(5)].map((_, starIndex) => (
                           <FaStar
-                            key={index}
-                            className={index < review.stars ? "text-primary" : "text-gray-600"}
+                            key={starIndex}
+                            className={`${starIndex < review.stars ? "text-primary" : "text-gray-600"} ${
+                              hoveredIndex === index ? "drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]" : ""
+                            }`}
                             size={20}
                           />
                         ))}
                       </div>
-                      <p className="text-gray-300 mb-4 italic leading-relaxed text-center">&quot;{review.text}&quot;</p>
-                      <p className="text-primary font-medium text-center">- {review.name}</p>
+                      <p className={`text-gray-300 mb-4 italic leading-relaxed text-center flex-grow transition-all duration-300 ${
+                        hoveredIndex === index ? "text-primary/90 drop-shadow-[0_0_4px_rgba(var(--primary),0.3)]" : ""
+                      }`}>&quot;{review.text}&quot;</p>
+                      <p className={`text-primary font-medium text-center mt-auto transition-all duration-300 ${
+                        hoveredIndex === index ? "drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]" : ""
+                      }`}>- {review.name}</p>
                     </div>
                   </div>
                 ))}
