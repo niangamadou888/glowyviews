@@ -179,7 +179,7 @@ const Testimonials = () => {
                     className="w-full md:w-1/3 flex-shrink-0 px-1"
                   >
                     <div 
-                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 ease-in-out relative h-[215px] flex flex-col
+                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 ease-in-out relative h-[215px] flex flex-col ml-1 mr-1
                         ${hoveredIndex === index 
                           ? "border-primary/50 shadow-2xl shadow-primary/30 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow" 
                           : "border-[#333333] hover:border-primary/40"}`}
