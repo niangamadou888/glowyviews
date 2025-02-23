@@ -177,7 +177,7 @@ const Testimonials = () => {
                     key={review.id} 
                     className="w-full md:w-1/3 flex-shrink-0 px-1"
                   >
-                    <div className="bg-[#262937] p-8 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300 min-h-[250px] flex flex-col justify-between">
+                    <div className="bg-[#262937] p-5 rounded-xl border border-[#333333] hover:border-primary transition-colors duration-300 min-h-[250px] flex flex-col ml-2 mr-2 justify-between">
                       <div className="flex justify-center mb-4">
                         {[...Array(5)].map((_, index) => (
                           <FaStar

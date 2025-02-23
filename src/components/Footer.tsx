@@ -175,7 +175,7 @@ const Footer = () => {
               </a>
               <a className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
               <MdOutlineContactPhone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
-                <span className="relative">Modulo di contatto</span>
+                <span className="relative">Apri un ticket</span>
               </a>
               <Link to="/contact">
                 <Button 
