@@ -76,7 +76,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full bg-background/50 backdrop-blur-md border-t border-primary/20">
+    <footer className="relative w-full bg-background/50 backdrop-blur-md border-primary/20">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10" />
       <div className="relative max-w-7xl mx-auto px-4 py-16">
         {/* Main Footer Content */}

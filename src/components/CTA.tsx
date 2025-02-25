@@ -2,9 +2,10 @@ import React from 'react';
 
 const CTA = () => {
   return (
-    <div className="relative w-full min-h-[600px] flex items-center justify-center px-4 py-24 sm:py-16">
+    <div className="relative w-full min-h-[700px] flex items-center justify-center px-4 py-24 sm:py-16">
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-700 to-[#1b1e2c] z-20" />
       <div 
-        className="absolute inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-purple-700 via-purple-600 to-purple-400"
+        className="absolute inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-purple-700 via-purple-700 to-purple-700"
         style={{
           width: '100vw',
           left: '50%',
