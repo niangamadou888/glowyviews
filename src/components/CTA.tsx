@@ -3,8 +3,13 @@ import React from 'react';
 const CTA = () => {
   return (
     <div className="relative w-full min-h-[900px] flex items-center justify-center px-4 py-24 sm:py-16">
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-700 to-[#1b1e2c] z-20" />
-      <div 
+      {/* Top fade in - reduced thickness */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-700 to-[#1b1e2c] z-20" />
+      
+      {/* Bottom fade out - reduced thickness */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-purple-700 to-[#1b1e2c] z-20" />
+      
+      <div
         className="absolute inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-purple-700 via-purple-700 to-purple-700"
         style={{
           width: '100vw',
@@ -13,7 +18,6 @@ const CTA = () => {
           clipPath: 'polygon(0 5%, 100% 0, 100% 95%, 0 100%)',
         }}
       />
-      
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="text-white max-w-xl">
           <h2 className="text-5xl font-bold mb-6">Join Now</h2>
@@ -31,7 +35,6 @@ const CTA = () => {
             community of satisfied customers today!
           </p>
         </div>
-
         <div className="flex flex-col gap-3 w-full max-w-sm">
           <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
             Buy YouTube Views
