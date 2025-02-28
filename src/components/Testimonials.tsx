@@ -40,12 +40,6 @@ const reviews: Review[] = [
     stars: 5,
     text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
     name: "David Brown"
-  },
-  {
-    "id": 6,
-    "stars": 5,
-    "text": "Impressive service from start to finish! The team was professional, efficient, and the results were beyond what I expected.",
-    "name": "James Taylor"
   }
 ];
 
@@ -61,84 +55,70 @@ const Testimonials = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<NodeJS.Timeout>();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const itemsPerView = windowWidth < 768 ? 1 : 3;
 
   useEffect(() => {
-    // Start the automatic rotation
-    startAutoRotation();
+    // Handle window resize
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Only start auto-rotation if there are enough reviews
+    if (reviews.length > itemsPerView) {
+      startAutoRotation();
+    }
 
     return () => {
-      // Cleanup timer on component unmount
+      // Cleanup
+      window.removeEventListener('resize', handleResize);
       if (timerRef.current) {
         clearInterval(timerRef.current);
       }
     };
-  }, []);
+  }, [itemsPerView]);
 
-  const itemsPerPage = 3;
-const totalPages = Math.ceil(reviews.length / itemsPerPage);
+  const startAutoRotation = () => {
+    timerRef.current = setInterval(() => {
+      setCurrentIndex(prev => {
+        // If we're at the last possible index, reset to 0
+        if (prev >= reviews.length - itemsPerView) {
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 4000);
+  };
 
-// Add this state for active page
-const [activePage, setActivePage] = useState(0);
-
-const startAutoRotation = () => {
-  timerRef.current = setInterval(() => {
-    const isMobile = window.innerWidth < 768;
-    setCurrentIndex(prev => {
-      if (isMobile) {
-        // For mobile: move 1 review at a time
-        return (prev + 1) % reviews.length;
-      } else {
-        // For desktop: move 3 reviews at a time
-        return (prev + 3) % reviews.length;
-      }
-    });
-  }, 4000);
-};
-
-const stopAutoRotation = () => {
-  if (timerRef.current) {
-    clearInterval(timerRef.current);
-  }
-};
-
-const slideNext = () => {
-  stopAutoRotation();
-  const isMobile = window.innerWidth < 768; // Check if mobile
-
-  setCurrentIndex(prev => {
-    if (isMobile) {
-      // For mobile: move 1 review at a time
-      return (prev + 1) % reviews.length;
-    } else {
-      // For desktop: move 3 reviews at a time
-      return (prev + 3) % reviews.length;
+  const stopAutoRotation = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
     }
-  });
-  startAutoRotation();
-};
+  };
 
-const slidePrev = () => {
-  stopAutoRotation();
-  const isMobile = window.innerWidth < 768; // Check if mobile
-
-  setCurrentIndex(prev => {
-    if (isMobile) {
-      // For mobile: move 1 review at a time
-      return (prev - 1 + reviews.length) % reviews.length;
-    } else {
-      // For desktop: move 3 reviews at a time
-      return (prev - 3 + reviews.length) % reviews.length;
-    }
-  });
-  startAutoRotation();
-};
-
-  
-  // Add a function to handle dot navigation
-  const goToPage = (pageIndex: number) => {
+  const slideNext = () => {
     stopAutoRotation();
-    setCurrentIndex(pageIndex * itemsPerPage);
-    setActivePage(pageIndex);
+    setCurrentIndex(prev => {
+      // If we're at the last possible index, reset to 0
+      if (prev >= reviews.length - itemsPerView) {
+        return 0;
+      }
+      return prev + 1;
+    });
+    startAutoRotation();
+  };
+
+  const slidePrev = () => {
+    stopAutoRotation();
+    setCurrentIndex(prev => {
+      // If we're at the first index, go to the last possible index
+      if (prev === 0) {
+        return reviews.length - itemsPerView;
+      }
+      return prev - 1;
+    });
     startAutoRotation();
   };
 
@@ -152,13 +132,26 @@ const slidePrev = () => {
     } else {
       setErrorMessage('');
       setConfirmationMessage('La tua recensione è stata inviata e verrà approvata entro 24-48 ore.');
-      setIsModalOpen(false);
+      
+      // Reset form fields
+      setRating(0);
+      setReviewText('');
+      setName('');
+      setCaptchaVerified(false);
+      
+      // Close modal after a delay
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setConfirmationMessage('');
+      }, 2000);
     }
   };
 
   const handleCaptchaChange = (value: string | null) => {
     if (value) {
       setCaptchaVerified(true);
+    } else {
+      setCaptchaVerified(false);
     }
   };
 
@@ -166,19 +159,25 @@ const slidePrev = () => {
   const avgRating = reviews.reduce((acc, review) => acc + review.stars, 0) / reviews.length;
   const totalReviews = reviews.length;
 
+  // Maximum possible index based on items per view
+  const maxIndex = Math.max(0, reviews.length - itemsPerView);
+  
+  // Calculate the slide width percentage based on items per view
+  const slideWidth = 100 / itemsPerView;
+
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
       <div className="container mx-auto px-4 pb-12 relative z-10">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-6 text-white">
-          Cosa Dicono I Nostri Clienti
+            Cosa Dicono I Nostri Clienti
           </h2>
           
           {/* Average Rating Display */}
           <div className="flex items-center gap-6">
             <div className="flex flex-col items-center">
-              <div className="text-4xl mb-1 font-bold text-white font-size">
+              <div className="text-4xl mb-1 font-bold text-white">
                 {avgRating.toFixed(1)}
               </div>
               <div className="flex gap-1 mb-1">
@@ -191,45 +190,53 @@ const slidePrev = () => {
                 ))}
               </div>
               <div className="text-gray-400">
-                {totalReviews} {totalReviews === 1 ? 'Recensioni' : 'Recensioni'}
+                {totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'}
               </div>
             </div>
           </div>
         </div>
         
-        <div className="relative w-full mx-auto">
-          {/* Slider Navigation Buttons */}
-          <button 
-            onClick={slidePrev}
-            className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 z-20 
-              text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
-          >
-            <IoIosArrowBack size={24} />
-          </button>
-          
-          <button 
-            onClick={slideNext}
-            className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 z-20 
-              text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
-          >
-            <IoIosArrowForward size={24} />
-          </button>
+        {/* Only show slider if there are reviews */}
+        {reviews.length > 0 && (
+          <div className="relative w-full mx-auto">
+            {/* Slider Navigation Buttons - only show if there are enough reviews to navigate */}
+            {reviews.length > itemsPerView && (
+              <>
+                <button 
+                  onClick={slidePrev}
+                  className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 z-20 
+                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
+                  aria-label="Previous review"
+                >
+                  <IoIosArrowBack size={24} />
+                </button>
+                
+                <button 
+                  onClick={slideNext}
+                  className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 z-20 
+                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
+                  aria-label="Next review"
+                >
+                  <IoIosArrowForward size={24} />
+                </button>
+              </>
+            )}
 
-          {/* Slider Container */}
-          <div className="overflow-hidden max-w-[1200px] mx-auto">
-            <div 
-              ref={sliderRef}
-              className="transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (window.innerWidth < 768 ? 100 : 33.333)}%)` }}
-            >
-              <div className="flex">
+            {/* Slider Container */}
+            <div className="overflow-hidden max-w-[1200px] mx-auto">
+              <div 
+                ref={sliderRef}
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentIndex * slideWidth}%)` }}
+              >
                 {reviews.map((review, index) => (
                   <div 
                     key={review.id} 
-                    className="w-full md:w-1/3 flex-shrink-0 px-1 max-w-[400px]"
+                    className={`w-full flex-shrink-0 px-1 max-w-[400px]`}
+                    style={{ width: `${slideWidth}%` }}
                   >
                     <div 
-                      className={`bg-secondary/50 p-5 rounded-xl border transition-all duration-300 ease-in-out relative h-[215px] flex flex-col mx-1
+                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 ease-in-out relative h-[215px] flex flex-col mx-1
                         ${hoveredIndex === index 
                           ? "border-primary/50 shadow-2xl shadow-primary/30 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow" 
                           : "border-[#333333] hover:border-primary/40"}`}
@@ -260,22 +267,34 @@ const slidePrev = () => {
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-4">
-  {Array.from({ length: totalPages }).map((_, index) => (
-    <button
-      key={index}
-      onClick={() => goToPage(index)}
-      className={`w-2 h-2 rounded-full transition-all ${
-        activePage === index ? 'bg-primary w-4' : 'bg-gray-300'
-      }`}
-      aria-label={`Go to page ${index + 1}`}
-    />
-  ))}
-</div>
-        </div>
+            {/* Dots Indicator - only show if there are enough reviews */}
+            {reviews.length > itemsPerView && (
+              <div className="flex justify-center gap-2 mt-6">
+                {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-2 h-2 rounded-md transition-colors duration-300 
+                      ${index === currentIndex ? 'bg-primary' : 'bg-gray-600'}`}
+                    onClick={() => {
+                      stopAutoRotation();
+                      setCurrentIndex(index);
+                      startAutoRotation();
+                    }}
+                    aria-label={`Go to review set ${index + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* No reviews message */}
+        {reviews.length === 0 && (
+          <div className="text-center py-8 text-gray-400">
+            Non ci sono ancora recensioni. Sii il primo a lasciarne una!
+          </div>
+        )}
 
         <div className="text-center mt-6">
           <button
@@ -288,77 +307,80 @@ const slidePrev = () => {
 
         {/* Modal for Review Form */}
         {isModalOpen && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div className="bg-[#262937] p-8 rounded-xl max-w-md w-full relative">
-      {/* Close Button */}
-      <button
-        onClick={() => setIsModalOpen(false)}
-        className="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl"
-      >
-        &times;
-      </button>
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-[#262937] p-8 rounded-xl max-w-md w-full relative">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-600 hover:text-white text-2xl"
+                aria-label="Close form"
+              >
+                &times;
+              </button>
 
-      <h3 className="text-2xl font-semibold mb-4">Scrivi Una Recensione</h3>
-      <form onSubmit={handleSubmit}>
-        {/* Name Input */}
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="il tuo nome..."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-3 border rounded-md text-black"
-          />
-        </div>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Scrivi Una Recensione</h3>
+              <form onSubmit={handleSubmit}>
+                {/* Name Input */}
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    placeholder="Il tuo nome..."
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full p-3 border rounded-md text-black"
+                    aria-label="Your name"
+                  />
+                </div>
 
-        {/* Rating Input */}
-        <div className="mb-4">
-          <div className="flex gap-1">
-            {[...Array(5)].map((_, index) => (
-              <FaStar
-                key={index}
-                className={index < rating ? 'text-primary cursor-pointer' : 'text-gray-400 cursor-pointer'}
-                size={24}
-                onClick={() => setRating(index + 1)}
-              />
-            ))}
+                {/* Rating Input */}
+                <div className="mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, index) => (
+                      <FaStar
+                        key={index}
+                        className={index < rating ? 'text-primary cursor-pointer' : 'text-gray-400 cursor-pointer'}
+                        size={24}
+                        onClick={() => setRating(index + 1)}
+                        aria-label={`Rate ${index + 1} stars`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Review Text Input */}
+                <div className="mb-4">
+                  <textarea
+                    placeholder="Scrivi Una Recensione..."
+                    value={reviewText}
+                    onChange={(e) => setReviewText(e.target.value)}
+                    className="w-full p-3 border rounded-md text-black"
+                    rows={4}
+                    aria-label="Your review"
+                  />
+                </div>
+
+                {/* CAPTCHA */}
+                <div className="mb-4">
+                  <ReCAPTCHA
+                    sitekey="6LfNVNsqAAAAAF7SXwMAwz4V4Oh7ziha-nl5rKpy"
+                    onChange={handleCaptchaChange}
+                  />
+                </div>
+
+                {/* Error or Confirmation Message */}
+                {errorMessage && <div className="text-red-500 mb-4" role="alert">{errorMessage}</div>}
+                {confirmationMessage && <div className="text-green-500 mb-4" role="alert">{confirmationMessage}</div>}
+
+                <button
+                  type="submit"
+                  className="w-full bg-primary text-white py-3 rounded-md hover:bg-primary/80 transition-colors"
+                >
+                  Invia Recensione
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-
-        {/* Review Text Input */}
-        <div className="mb-4">
-          <textarea
-            placeholder="Scrivi Una Recensione..."
-            value={reviewText}
-            onChange={(e) => setReviewText(e.target.value)}
-            className="w-full p-3 border rounded-md text-black"
-            rows={4}
-          />
-        </div>
-
-        {/* CAPTCHA */}
-        <div className="mb-4">
-          <ReCAPTCHA
-            sitekey="6LfNVNsqAAAAAF7SXwMAwz4V4Oh7ziha-nl5rKpy"
-            onChange={handleCaptchaChange}
-          />
-        </div>
-
-        {/* Error or Confirmation Message */}
-        {errorMessage && <div className="text-red-500 mb-4">{errorMessage}</div>}
-        {confirmationMessage && <div className="text-green-500 mb-4">{confirmationMessage}</div>}
-
-        <button
-          type="submit"
-          className="w-full bg-primary text-white py-3 rounded-md hover:bg-primary/80 transition-colors"
-        >
-          Submit Review
-        </button>
-      </form>
-    </div>
-  </div>
-)}
-
+        )}
       </div>
     </section>
   );

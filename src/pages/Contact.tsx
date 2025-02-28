@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import { FaEnvelope, FaTicketAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -70,18 +71,26 @@ const Contact = () => {
       <div className="relative max-w-md mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-center mb-6 text-white glow">
-            Contact Us
+          Contattaci
           </h2>
           <p className="mt-2 text-sm text-gray-400">
-            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          Hai domande sui nostri servizi o su un ordine? Contattaci senza esitazione! Ti rispondiamo entro 24 ore, festivi inclusi.
           </p>
+          <p className="mt-2 text-sm text-gray-400">
+    Scrivici a   <a href="mailto:supporto@glowlikes.it" className="inline-flex items-center">
+      <FaEnvelope className="mr-1 text-xs" />supporto@glowlikes.it
+    </a>, 
+    apri un ticket dalla tua area cliente <a href="http://glowlikes.it/" className="inline-flex items-center">
+      <FaTicketAlt className="mr-1 text-xs" />un ticket
+      </a>  o compila il modulo qui sotto. Scegli tu!
+  </p>
         </div>
 
         <form ref={form} onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm space-y-4">
             <div>
               <label htmlFor="from_name" className="sr-only">
-                Name
+              Nome
               </label>
               <input
                 id="name"
@@ -89,7 +98,16 @@ const Contact = () => {
                 type="text"
                 required
                 className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                placeholder="Your name"
+                placeholder="Nome"
+              />
+            </div>
+            <div>
+              <label htmlFor="reply_to" className="sr-only">
+              Numero Ordine
+              </label>
+              <input
+                className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                placeholder="Numero Ordine"
               />
             </div>
             <div>
@@ -102,7 +120,7 @@ const Contact = () => {
                 type="email"
                 required
                 className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                placeholder="Your email"
+                placeholder="Email"
               />
             </div>
             <div>
@@ -115,7 +133,7 @@ const Contact = () => {
                 required
                 rows={4}
                 className="relative block w-full rounded-md border-0 bg-background/50 backdrop-blur-sm py-2.5 px-4 text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                placeholder="Your message"
+                placeholder="Messaggio"
               />
             </div>
           </div>
@@ -133,7 +151,7 @@ const Contact = () => {
             disabled={isLoading}
             className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg hover:shadow-primary/20"
           >
-            {isLoading ? "Sending..." : "Send Message"}
+            {isLoading ? "Invia" : "Invia"}
           </Button>
         </form>
         </div>
