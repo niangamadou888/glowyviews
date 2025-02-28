@@ -119,7 +119,7 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
-      <div className="container mx-auto px-4 pb-10 relative z-10">
+      <div className="container mx-auto px-4 pb-12 relative z-10">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-6 text-white">
           Cosa Dicono I Nostri Clienti

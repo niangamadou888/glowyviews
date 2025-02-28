@@ -1,18 +1,21 @@
 
 import React, { useState } from 'react';
-import { ArrowRight, ThumbsUp, Users, Eye, Clock } from 'lucide-react';
+import { ArrowRight, ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share2 } from 'lucide-react';
 
 const CTA = () => {
   const [activeButton, setActiveButton] = useState(null);
 
   const buttons = [
-    { text: 'Buy YouTube Views', icon: <Eye size={20} /> },
-    { text: 'Buy YouTube Subscribers', icon: <Users size={20} /> },
-    { text: 'Buy YouTube Followers', icon: <Users size={20} /> },
-    { text: 'Buy YouTube Likes', icon: <ThumbsUp size={20} /> }
+    { text: 'Compra Visualizzazioni YouTube', icon: <Eye size={20} /> },
+{ text: 'Compra Iscritti YouTube', icon: <UserPlus size={20} /> },
+{ text: 'Compra Likes YouTube', icon: <ThumbsUp size={20} /> },
+{ text: 'Compra Ore Di Visualizzazione YouTube', icon: <Clock size={20} /> },
+{ text: 'Compra Commenti YouTube', icon: <MessageCircle size={20} /> },
+{ text: 'Compra Condivisioni YouTube', icon: <Share2 size={20} /> },
+{ text: 'Compra Spettatori Diretta YouTube', icon: <Users size={20} /> }
   ];
   return (
-    <div className="relative w-full min-h-[800px] flex items-center justify-center px-4 py-24 sm:py-16">
+    <div className="relative w-full min-h-[750px] flex items-center justify-center px-4 py-24 sm:py-16">
       {/* Top fade in - reduced thickness */}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-700 to-[#1b1e2c] z-20" />
       
@@ -30,19 +33,13 @@ const CTA = () => {
       />
       <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="text-white max-w-xl">
-          <h2 className="text-5xl font-bold mb-6">Join Now</h2>
+          <h2 className="text-5xl font-bold mb-6">Unisciti Ora</h2>
           <p className="mb-6">
-            <span className="font-semibold">Affordable Quality Engagement</span> Views4You
-            offer real subscribers, followers, likes, views, and
-            watch hours at highly competitive prices,
-            ensuring that our rates remain as good as or
-            lower than other providers.
+          Vuoi più iscritti, like e visualizzazioni? Con <span className="font-semibold">GlowLikes</span> ottieni crescita autentica su YouTube, Instagram, TikTok e altre piattaforme, sempre al miglior prezzo.
+
           </p>
           <p className="mb-6">
-            For a long time, we've been experts in honest
-            and effective YouTube, Instagram, TikTok, and
-            other social media platforms growth. Join our
-            community of satisfied customers today!
+          Siamo esperti da anni nella crescita social sicura ed efficace. Unisciti a migliaia di clienti soddisfatti e inizia oggi stesso!
           </p>
         </div>
         <div className="flex flex-col gap-3 w-full max-w-sm">
