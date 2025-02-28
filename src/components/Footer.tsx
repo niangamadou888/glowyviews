@@ -194,13 +194,14 @@ const Footer = () => {
             <p className="text-white/70 text-sm">
               &copy; 2024 GlowLikes. Tutti i diritti riservati.
             </p>
-            <div className="flex items-center space-x-3">
-              <Shield className="h-5 w-5 text-green-500" />
-              <div className="text-center py-4">
-                <h4 className="text-sm font-semibold text-white/80">Pagamento Sicuro</h4>
-                <p className="text-xs text-white/60">I dati di pagamento sono criptati e protetti da tecnologia SSL</p>
-              </div>
-            </div>
+            <div className="flex flex-col items-center py-4">
+  <div className="flex items-center space-x-2">
+    <Shield className="h-5 w-5 text-green-500" />
+    <h4 className="text-sm font-semibold text-white/80">Pagamento Sicuro</h4>
+  </div>
+  <p className="text-xs text-white/60 text-center">I dati di pagamento sono criptati e protetti da tecnologia SSL</p>
+</div>
+
             <div className="flex items-center space-x-6">
               <FaCcVisa className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
               <RiMastercardFill className="h-8 w-auto text-white/60 hover:text-primary/80 transition-colors duration-300" />
