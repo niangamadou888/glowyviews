@@ -55,14 +55,15 @@ const CTA = () => {
               }}
             >
               <div className="flex items-center justify-between">
-                <span>{button.text}</span>
-                <span 
+              <span 
                   className={`transform transition-all duration-300 ${
                     activeButton === index ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                   }`}
                 >
                   {button.icon}
                 </span>
+                <span>{button.text}</span>
+                
               </div>
               <div 
                 className="absolute bottom-0 left-0 h-1 bg-purple-500 transform transition-all duration-300"

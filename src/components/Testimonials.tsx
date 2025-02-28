@@ -151,7 +151,7 @@ const Testimonials = () => {
           {/* Slider Navigation Buttons */}
           <button 
             onClick={slidePrev}
-            className="absolute left-[-50px] top-1/2 transform -translate-y-1/2 z-20 
+            className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 z-20 
               text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
           >
             <IoIosArrowBack size={24} />
@@ -159,7 +159,7 @@ const Testimonials = () => {
           
           <button 
             onClick={slideNext}
-            className="absolute right-[-50px] top-1/2 transform -translate-y-1/2 z-20 
+            className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 z-20 
               text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
           >
             <IoIosArrowForward size={24} />
