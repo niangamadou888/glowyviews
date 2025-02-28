@@ -3,7 +3,6 @@ import { ArrowRight, ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share
 
 const CTA = () => {
   const [activeButton, setActiveButton] = useState(null);
-  
   const buttons = [
     { text: 'Compra Visualizzazioni YouTube', icon: <Eye size={20} /> },
     { text: 'Compra Iscritti YouTube', icon: <UserPlus size={20} /> },
@@ -13,12 +12,12 @@ const CTA = () => {
     { text: 'Compra Condivisioni YouTube', icon: <Share2 size={20} /> },
     { text: 'Compra Spettatori Diretta YouTube', icon: <Users size={20} /> }
   ];
-  
+
   return (
     <div className="relative w-full min-h-[720px] flex items-center justify-center px-4 py-24 sm:py-16">
-      {/** Top fade in - reduced thickness **/}
+      {/*** Top fade in - reduced thickness ***/}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-700 to-[#1b1e2c] z-20" />
-      {/** Bottom fade out - reduced thickness **/}
+      {/*** Bottom fade out - reduced thickness ***/}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-purple-700 to-[#1b1e2c] z-20" />
       <div
         className="absolute inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-purple-700 via-purple-600 to-purple-400"
@@ -53,16 +52,16 @@ const CTA = () => {
             >
               <div className="flex items-center">
                 <span
-                  className={`transition-all duration-300 mr-2 ${
+                  className={`transition-all duration-300 ${
                     activeButton === index ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 absolute'
                   }`}
                 >
                   {button.icon}
                 </span>
-                <span 
+                <span
                   className="text-left transition-all duration-300"
                   style={{
-                    transform: activeButton === index ? 'translateX(28px)' : 'translateX(0)',
+                    transform: activeButton === index ? 'translateX(8px)' : 'translateX(0)',
                   }}
                 >
                   {button.text}
