@@ -1,27 +1,25 @@
-
 import React, { useState } from 'react';
 import { ArrowRight, ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share2 } from 'lucide-react';
 
 const CTA = () => {
   const [activeButton, setActiveButton] = useState(null);
-
+  
   const buttons = [
     { text: 'Compra Visualizzazioni YouTube', icon: <Eye size={20} /> },
-{ text: 'Compra Iscritti YouTube', icon: <UserPlus size={20} /> },
-{ text: 'Compra Likes YouTube', icon: <ThumbsUp size={20} /> },
-{ text: 'Compra Ore Di Visualizzazione YouTube', icon: <Clock size={20} /> },
-{ text: 'Compra Commenti YouTube', icon: <MessageCircle size={20} /> },
-{ text: 'Compra Condivisioni YouTube', icon: <Share2 size={20} /> },
-{ text: 'Compra Spettatori Diretta YouTube', icon: <Users size={20} /> }
+    { text: 'Compra Iscritti YouTube', icon: <UserPlus size={20} /> },
+    { text: 'Compra Likes YouTube', icon: <ThumbsUp size={20} /> },
+    { text: 'Compra Ore Di Visualizzazione YouTube', icon: <Clock size={20} /> },
+    { text: 'Compra Commenti YouTube', icon: <MessageCircle size={20} /> },
+    { text: 'Compra Condivisioni YouTube', icon: <Share2 size={20} /> },
+    { text: 'Compra Spettatori Diretta YouTube', icon: <Users size={20} /> }
   ];
+  
   return (
     <div className="relative w-full min-h-[720px] flex items-center justify-center px-4 py-24 sm:py-16">
-      {/* Top fade in - reduced thickness */}
+      {/** Top fade in - reduced thickness **/}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-700 to-[#1b1e2c] z-20" />
-      
-      {/* Bottom fade out - reduced thickness */}
+      {/** Bottom fade out - reduced thickness **/}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-purple-700 to-[#1b1e2c] z-20" />
-      
       <div
         className="absolute inset-0 w-full h-full overflow-hidden bg-gradient-to-br from-purple-700 via-purple-600 to-purple-400"
         style={{
@@ -35,11 +33,10 @@ const CTA = () => {
         <div className="text-white max-w-xl">
           <h2 className="text-5xl font-bold mb-6">Unisciti Ora</h2>
           <p className="mb-6">
-          Vuoi più iscritti, like e visualizzazioni? Con <span className="font-semibold">GlowLikes</span> ottieni crescita autentica su YouTube, Instagram, TikTok e altre piattaforme, sempre al miglior prezzo.
-
+            Vuoi più iscritti, like e visualizzazioni? Con <span className="font-semibold">GlowLikes</span> ottieni crescita autentica su YouTube, Instagram, TikTok e altre piattaforme, sempre al miglior prezzo.
           </p>
           <p className="mb-6">
-          Siamo esperti da anni nella crescita social sicura ed efficace. Unisciti a migliaia di clienti soddisfatti e inizia oggi stesso!
+            Siamo esperti da anni nella crescita social sicura ed efficace. Unisciti a migliaia di clienti soddisfatti e inizia oggi stesso!
           </p>
         </div>
         <div className="flex flex-col gap-3 w-full max-w-sm">
@@ -54,20 +51,26 @@ const CTA = () => {
                 transition: 'all 0.2s ease-in-out'
               }}
             >
-              <div className="flex items-center justify-between">
-              <span 
-                  className={`transform transition-all duration-300 ${
-                    activeButton === index ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+              <div className="flex items-center">
+                <span
+                  className={`transition-all duration-300 mr-2 ${
+                    activeButton === index ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 absolute'
                   }`}
                 >
                   {button.icon}
                 </span>
-                <span>{button.text}</span>
-                
+                <span 
+                  className="text-left transition-all duration-300"
+                  style={{
+                    transform: activeButton === index ? 'translateX(28px)' : 'translateX(0)',
+                  }}
+                >
+                  {button.text}
+                </span>
               </div>
-              <div 
+              <div
                 className="absolute bottom-0 left-0 h-1 bg-purple-500 transform transition-all duration-300"
-                style={{ 
+                style={{
                   width: activeButton === index ? '100%' : '0%',
                   opacity: activeButton === index ? 1 : 0
                 }}
