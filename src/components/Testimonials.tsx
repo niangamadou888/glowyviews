@@ -205,7 +205,7 @@ const Testimonials = () => {
                 <button 
                   onClick={slidePrev}
                   className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 z-20 
-                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
+                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer [@media(min-width:1500px)]:left-[100px]"
                   aria-label="Previous review"
                 >
                   <IoIosArrowBack size={24} />
@@ -214,7 +214,7 @@ const Testimonials = () => {
                 <button 
                   onClick={slideNext}
                   className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 z-20 
-                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer"
+                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer [@media(min-width:1500px)]:right-[100px]"
                   aria-label="Next review"
                 >
                   <IoIosArrowForward size={24} />
