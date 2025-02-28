@@ -40,6 +40,12 @@ const reviews: Review[] = [
     stars: 5,
     text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
     name: "David Brown"
+  },
+  {
+    "id": 6,
+    "stars": 5,
+    "text": "Impressive service from start to finish! The team was professional, efficient, and the results were beyond what I expected.",
+    "name": "James Taylor"
   }
 ];
 
@@ -68,27 +74,71 @@ const Testimonials = () => {
     };
   }, []);
 
-  const startAutoRotation = () => {
-    timerRef.current = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % reviews.length);
-    }, 4000);
-  };
+  const itemsPerPage = 3;
+const totalPages = Math.ceil(reviews.length / itemsPerPage);
 
-  const stopAutoRotation = () => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
+// Add this state for active page
+const [activePage, setActivePage] = useState(0);
+
+const startAutoRotation = () => {
+  timerRef.current = setInterval(() => {
+    const isMobile = window.innerWidth < 768;
+    setCurrentIndex(prev => {
+      if (isMobile) {
+        // For mobile: move 1 review at a time
+        return (prev + 1) % reviews.length;
+      } else {
+        // For desktop: move 3 reviews at a time
+        return (prev + 3) % reviews.length;
+      }
+    });
+  }, 4000);
+};
+
+const stopAutoRotation = () => {
+  if (timerRef.current) {
+    clearInterval(timerRef.current);
+  }
+};
+
+const slideNext = () => {
+  stopAutoRotation();
+  const isMobile = window.innerWidth < 768; // Check if mobile
+
+  setCurrentIndex(prev => {
+    if (isMobile) {
+      // For mobile: move 1 review at a time
+      return (prev + 1) % reviews.length;
+    } else {
+      // For desktop: move 3 reviews at a time
+      return (prev + 3) % reviews.length;
     }
-  };
+  });
+  startAutoRotation();
+};
 
-  const slideNext = () => {
-    stopAutoRotation();
-    setCurrentIndex(prev => (prev + 1) % reviews.length);
-    startAutoRotation();
-  };
+const slidePrev = () => {
+  stopAutoRotation();
+  const isMobile = window.innerWidth < 768; // Check if mobile
 
-  const slidePrev = () => {
+  setCurrentIndex(prev => {
+    if (isMobile) {
+      // For mobile: move 1 review at a time
+      return (prev - 1 + reviews.length) % reviews.length;
+    } else {
+      // For desktop: move 3 reviews at a time
+      return (prev - 3 + reviews.length) % reviews.length;
+    }
+  });
+  startAutoRotation();
+};
+
+  
+  // Add a function to handle dot navigation
+  const goToPage = (pageIndex: number) => {
     stopAutoRotation();
-    setCurrentIndex(prev => (prev - 1 + reviews.length) % reviews.length);
+    setCurrentIndex(pageIndex * itemsPerPage);
+    setActivePage(pageIndex);
     startAutoRotation();
   };
 
@@ -213,20 +263,18 @@ const Testimonials = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
-            {reviews.slice(0, reviews.length - 1).map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-md transition-colors duration-300 
-                  ${index === currentIndex ? 'bg-primary' : 'bg-gray-600'}`}
-                onClick={() => {
-                  stopAutoRotation();
-                  setCurrentIndex(index);
-                  startAutoRotation();
-                }}
-              />
-            ))}
-          </div>
+          <div className="flex justify-center gap-2 mt-4">
+  {Array.from({ length: totalPages }).map((_, index) => (
+    <button
+      key={index}
+      onClick={() => goToPage(index)}
+      className={`w-2 h-2 rounded-full transition-all ${
+        activePage === index ? 'bg-primary w-4' : 'bg-gray-300'
+      }`}
+      aria-label={`Go to page ${index + 1}`}
+    />
+  ))}
+</div>
         </div>
 
         <div className="text-center mt-6">
