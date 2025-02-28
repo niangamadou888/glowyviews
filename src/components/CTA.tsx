@@ -1,6 +1,16 @@
-import React from 'react';
+
+import React, { useState } from 'react';
+import { ArrowRight, ThumbsUp, Users, Eye, Clock } from 'lucide-react';
 
 const CTA = () => {
+  const [activeButton, setActiveButton] = useState(null);
+
+  const buttons = [
+    { text: 'Buy YouTube Views', icon: <Eye size={20} /> },
+    { text: 'Buy YouTube Subscribers', icon: <Users size={20} /> },
+    { text: 'Buy YouTube Followers', icon: <Users size={20} /> },
+    { text: 'Buy YouTube Likes', icon: <ThumbsUp size={20} /> }
+  ];
   return (
     <div className="relative w-full min-h-[800px] flex items-center justify-center px-4 py-24 sm:py-16">
       {/* Top fade in - reduced thickness */}
@@ -36,18 +46,36 @@ const CTA = () => {
           </p>
         </div>
         <div className="flex flex-col gap-3 w-full max-w-sm">
-          <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy YouTube Views
-          </button>
-          <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy YouTube Subscribers
-          </button>
-          <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy Youtube Followers
-          </button>
-          <button className="bg-white text-purple-700 py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all font-semibold shadow-lg">
-            Buy Youtube Likes
-          </button>
+          {buttons.map((button, index) => (
+            <button
+              key={index}
+              className="group relative bg-white text-purple-700 py-3 px-6 rounded-lg transition-all font-semibold shadow-lg overflow-hidden"
+              onMouseEnter={() => setActiveButton(index)}
+              onMouseLeave={() => setActiveButton(null)}
+              style={{
+                transform: activeButton === index ? 'scale(1.05)' : 'scale(1)',
+                transition: 'all 0.2s ease-in-out'
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <span>{button.text}</span>
+                <span 
+                  className={`transform transition-all duration-300 ${
+                    activeButton === index ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                  }`}
+                >
+                  {button.icon}
+                </span>
+              </div>
+              <div 
+                className="absolute bottom-0 left-0 h-1 bg-purple-500 transform transition-all duration-300"
+                style={{ 
+                  width: activeButton === index ? '100%' : '0%',
+                  opacity: activeButton === index ? 1 : 0
+                }}
+              />
+            </button>
+          ))}
         </div>
       </div>
     </div>
