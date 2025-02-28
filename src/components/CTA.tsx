@@ -15,7 +15,7 @@ const CTA = () => {
 { text: 'Compra Spettatori Diretta YouTube', icon: <Users size={20} /> }
   ];
   return (
-    <div className="relative w-full min-h-[750px] flex items-center justify-center px-4 py-24 sm:py-16">
+    <div className="relative w-full min-h-[720px] flex items-center justify-center px-4 py-24 sm:py-16">
       {/* Top fade in - reduced thickness */}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-700 to-[#1b1e2c] z-20" />
       
