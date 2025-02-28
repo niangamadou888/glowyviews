@@ -162,7 +162,7 @@ const FAQ = () => {
           </div>
           <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 4 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Certo che sì, dal momento che <strong>è una pratica legale al 100%</strong>, quindi non si infrange alcuna legge. Non solo, <strong>comprare views YouTube da noi di SocialX</strong> è sicuro perché siamo una realtà seria, operante nella piena legalità e in grado di fornire ai nostri utenti ogni garanzia commerciale possibile.
+            Certo che sì, dal momento che <strong>è una pratica legale al 100%</strong>, quindi non si infrange alcuna legge. Non solo, <strong>comprare views YouTube da noi di glowlikes</strong> è sicuro perché siamo una realtà seria, operante nella piena legalità e in grado di fornire ai nostri utenti ogni garanzia commerciale possibile.
             </p>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
             Per certi versi, <strong>si tratta di una pratica sicura anche perché, grazie a tutte le precauzioni che prendiamo</strong> nell'erogazione dei nostri servizi, né i tuoi follower, né i crawler di YouTube sono in grado di risalire all'origine delle interazioni stesse.
@@ -263,7 +263,7 @@ const FAQ = () => {
             Se il tuo canale e i tuoi video stanno andando alla grande, <strong>allora significa che stai già raggiungendo i tuoi traguardi in modo “genuino”</strong>.
             </p>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            In parallelo, poi, c'è un'altra questione. Infatti, <strong>può essere che, nel tuo caso specifico, tu abbia più bisogno di</strong> <a href="https://socialx.it/comprare-like-youtube/" className='mystyle'>comprare Like YouTube</a>.
+            In parallelo, poi, c'è un'altra questione. Infatti, <strong>può essere che, nel tuo caso specifico, tu abbia più bisogno di</strong> <a href="https://glowlikes.it/comprare-like-youtube/" className='mystyle'>comprare Like YouTube</a>.
             </p>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
             A grandi linee, prima di intraprendere una qualsivoglia strategia di Social Media Marketing, <strong>devi analizzare dettagliatamente la tua situazione</strong> e mettere in atto quella che realmente può dare i risultati migliori.
@@ -359,7 +359,7 @@ const FAQ = () => {
           </div>
           <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 10 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Mantieni “calma e sangue freddo” perché <strong>noi di SocialX non lasciamo mai soli i nostri clienti!</strong> Guarda, l'ipotesi descritta dalla domanda è davvero remota.
+            Mantieni “calma e sangue freddo” perché <strong>noi di glowlikes non lasciamo mai soli i nostri clienti!</strong> Guarda, l'ipotesi descritta dalla domanda è davvero remota.
             </p>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
             Dal nostro “debutto” ad oggi, <strong>sarà successo – sì e no – un paio di volte</strong> al massimo.

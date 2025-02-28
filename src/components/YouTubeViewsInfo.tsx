@@ -153,7 +153,7 @@ const YouTubeViewsInfo = () => {
                 In tal senso, però, mettiamo subito “le mani avanti” facendoti
                 presente che,{" "}
                 <strong>nell'altra sezione del nostro sito, puoi</strong>{" "}
-                <a href="https://socialx.it/comprare-visualizzazioni-e-like-youtube-shorts/" className='mystyle'>
+                <a href="https://glowlikes.it/comprare-visualizzazioni-e-like-youtube-shorts/" className='mystyle'>
                   comprare visualizzazioni e like agli Shorts YouTube
                 </a>{" "}
                 .
@@ -176,7 +176,7 @@ const YouTubeViewsInfo = () => {
               <p className="text-lg text-muted-foreground">
                 In caso di contenuti decisamente lunghi,{" "}
                 <strong>ti offriamo pure la possibilità di </strong>
-                <a href="https://socialx.it/comprare-ore-di-visualizzazione-youtube/" className='mystyle'>
+                <a href="https://glowlikes.it/comprare-ore-di-visualizzazione-youtube/" className='mystyle'>
                   comprare ore di visualizzazione YouTube
                 </a>{" "}
                 <strong> in base alle tue specifiche esigenze</strong>.

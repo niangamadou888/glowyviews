@@ -19,7 +19,7 @@ const DoveComprare = () => {
             </h2>
             <div className="space-y-6">
               <p className="text-lg text-white/90 leading-relaxed">
-                Nonostante ci siano diverse agenzie che erogano tale servizio, se vuoi <strong>comprare views YouTube italiane e reali</strong> andando sul sicuro, rivolgiti pure a noi di SocialX.<br />
+                Nonostante ci siano diverse agenzie che erogano tale servizio, se vuoi <strong>comprare views YouTube italiane e reali</strong> andando sul sicuro, rivolgiti pure a noi di glowlikes.<br />
               </p>
               <p className="text-lg text-white/90 leading-relaxed">
                 Oltre al <strong>rapporto qualità/prezzo imbattibile</strong>, c'è un altro importante motivo per cui conviene rivolgersi a noi.
@@ -36,7 +36,7 @@ const DoveComprare = () => {
                 In parole povere, <strong>comprando views di dubbia provenienza</strong>, si corre il serio rischio di venir intercettati dai crawler del social e subire pesanti penalizzazioni.
               </p>
               <p className="text-lg text-white/90 leading-relaxed">
-                Al contrario, <strong>noi di SocialX prendiamo tutte le precauzioni del caso</strong>, in modo da offrire ai nostri clienti un servizio di qualità superiore, sicuro e affidabile al 100%.
+                Al contrario, <strong>noi di glowlikes prendiamo tutte le precauzioni del caso</strong>, in modo da offrire ai nostri clienti un servizio di qualità superiore, sicuro e affidabile al 100%.
               </p>
               <p className="text-lg text-white/90 leading-relaxed">
                 Se hai già le idee chiare, non attendere oltre ed <strong>effettua il tuo primo acquisto con noi</strong>. In caso contrario, prosegui con la lettura per leggere anche gli altri nostri consigli.

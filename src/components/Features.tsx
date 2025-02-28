@@ -47,13 +47,13 @@ const Features = () => {
     {
       title: "NESSUNA RICHIESTA DI CREDENZIALI",
       description:
-        "Comprare visualizzazioni YouTube da SocialX è estremamente sicuro perché non richiediamo password o altri codici personali.",
+        "Comprare visualizzazioni YouTube da glowlikes è estremamente sicuro perché non richiediamo password o altri codici personali.",
       iconUrl: icon2,
     },
     {
       title: "CRESCITA ORGANICA A RISCHIO ZERO",
       description:
-        "Comprare visualizzazioni YouTube su SocialX ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
+        "Comprare visualizzazioni YouTube su glowlikes ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
       icon: growthIcon,
     },
     {

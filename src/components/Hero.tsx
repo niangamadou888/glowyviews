@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
         
         <p className="text-[18px] md:text-[18px] text-white mb-10 max-w-3xl mx-auto">
-        Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di SocialX offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
+        Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di glowlikes offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
         </p>
 
         <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce text-[20px]">

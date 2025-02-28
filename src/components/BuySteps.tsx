@@ -130,7 +130,7 @@ const getStepContent = (step: number) => {
     1: (
       <>
         Per prima cosa,{" "}
-        <strong>crea la tua area personale iscrivendoti a SocialX</strong> e
+        <strong>crea la tua area personale iscrivendoti a glowlikes</strong> e
         recati nella sezione in cui sono presenti le nostre offerte commerciali.
       </>
     ),

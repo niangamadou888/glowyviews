@@ -120,7 +120,7 @@ const WhyBuyViews = () => {
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
-                Perché comprare Visualizzazioni YouTube da noi su SocialX
+                Perché comprare Visualizzazioni YouTube da noi su glowlikes
               </h2>
 
               {/* Image Section for mobile */}
@@ -128,8 +128,8 @@ const WhyBuyViews = () => {
                 <div className="relative aspect-video rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
                   <img
-                    src="Perché comprare Visualizzazioni YouTube da noi su SocialX no background.png"
-                    alt="Perché comprare Visualizzazioni YouTube da noi su SocialX"
+                    src="Perché comprare Visualizzazioni YouTube da noi su glowlikes no background.png"
+                    alt="Perché comprare Visualizzazioni YouTube da noi su glowlikes"
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
@@ -189,8 +189,8 @@ const WhyBuyViews = () => {
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
-                src="Perché comprare Visualizzazioni YouTube da noi su SocialX no background.png"
-                alt="Perché comprare Visualizzazioni YouTube da noi su SocialX"
+                src="Perché comprare Visualizzazioni YouTube da noi su glowlikes no background.png"
+                alt="Perché comprare Visualizzazioni YouTube da noi su glowlikes"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
