@@ -140,7 +140,7 @@ const YouTubeViewsInfo = () => {
                 </div>
               </div>
               <p className="text-lg text-muted-foreground">
-                Da noi di Social X puoi{" "}
+                Da noi di GlowLikes puoi{" "}
                 <strong>
                   comprare visualizzazioni YouTube italiane e reali per
                   qualsiasi tipo di video

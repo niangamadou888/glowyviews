@@ -80,7 +80,7 @@ const Contact = () => {
     Scrivici a   <a href="mailto:supporto@glowlikes.it" className="inline-flex items-center">
       <FaEnvelope className="mr-1 text-xs" />supporto@glowlikes.it
     </a>, 
-    apri un ticket dalla tua area cliente <a href="http://glowlikes.it/" className="inline-flex items-center">
+    apri un ticket dalla tua area cliente <a href="https://app.glowlikes.it/ticket" className="inline-flex items-center">
       <FaTicketAlt className="mr-1 text-xs" />un ticket
       </a>  o compila il modulo qui sotto. Scegli tu!
   </p>

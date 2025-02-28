@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Share2 } from "lucide-react";
+import { Mail, Phone, MapPin, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Share2, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaCcVisa } from "react-icons/fa";
 import { RiMastercardFill } from "react-icons/ri";
@@ -36,11 +36,11 @@ const Footer = () => {
       ref: youtubeIconRef,
       color: 'red',
       items: [
-        { name: 'YouTube Views', icon: <Eye className="h-4 w-4" /> },
-        { name: 'YouTube Likes', icon: <ThumbsUp className="h-4 w-4" /> },
-        { name: 'YouTube Subscribers', icon: <UserPlus className="h-4 w-4" /> },
-        { name: 'YouTube Comments', icon: <MessageCircle className="h-4 w-4" /> },
-        { name: 'YouTube Shares', icon: <Share2 className="h-4 w-4" /> }
+        { name: 'Visualizzazioni YouTube', icon: <Eye className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-visualizzazioni-youtube/' },
+        { name: 'Like YouTube', icon: <ThumbsUp className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-like-youtube/' },
+        { name: 'Iscritti YouTube', icon: <UserPlus className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-iscritti-youtube/' },
+        { name: 'Commenti YouTube', icon: <MessageCircle className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-commenti-youtube/' },
+        { name: 'Ore YouTube (yes, ore not commenti)', icon: <Clock className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/' }
       ]
     },
     Instagram: {
@@ -48,19 +48,19 @@ const Footer = () => {
       ref: instagramIconRef,
       color: 'pink',
       items: [
-        { name: 'Instagram Followers', icon: <UserPlus className="h-4 w-4" /> },
-        { name: 'Instagram Likes', icon: <ThumbsUp className="h-4 w-4" /> },
-        { name: 'Instagram Views', icon: <Eye className="h-4 w-4" /> }
+        { name: 'Follower Instagram', icon: <UserPlus className="h-4 w-4" />, path: '/' },
+        { name: 'Like Instagram', icon: <ThumbsUp className="h-4 w-4" />, path: '/' },
+        { name: 'Visualizzazioni Instagram', icon: <Eye className="h-4 w-4" />, path: '/' }
       ]
     },
-    Twitter: {
+    X: {
       icon: twitterIcon,
       ref: twitterIconRef,
       color: 'blue',
       items: [
-        { name: 'Twitter Followers', icon: <UserPlus className="h-4 w-4" /> },
-        { name: 'Twitter Likes', icon: <ThumbsUp className="h-4 w-4" /> },
-        { name: 'Twitter Retweets', icon: <Share2 className="h-4 w-4" /> }
+        { name: 'Follower X', icon: <UserPlus className="h-4 w-4" />, path: '/' },
+        { name: 'Like X', icon: <ThumbsUp className="h-4 w-4" />, path: '/' },
+        { name: 'Visualizzazioni X', icon: <Eye className="h-4 w-4" />, path: '/' }
       ]
     },
     TikTok: {
@@ -68,9 +68,9 @@ const Footer = () => {
       ref: tiktokIconRef,
       color: 'purple',
       items: [
-        { name: 'TikTok Followers', icon: <UserPlus className="h-4 w-4" /> },
-        { name: 'TikTok Likes', icon: <ThumbsUp className="h-4 w-4" /> },
-        { name: 'TikTok Views', icon: <Eye className="h-4 w-4" /> }
+        { name: 'Follower TikTok', icon: <UserPlus className="h-4 w-4" />, path: '/' },
+        { name: 'Like TikTok', icon: <ThumbsUp className="h-4 w-4" />, path: '/' },
+        { name: 'Visualizzazioni TikTok', icon: <Eye className="h-4 w-4" />, path: '/' }
       ]
     }
   };
@@ -89,79 +89,83 @@ const Footer = () => {
             <p className="text-white leading-relaxed">
               Potenzia i tuoi profili social con i nostri servizi premium. Garantiamo interazioni di qualità e reali che ti aiutano a crescere, in modo sicuro.
             </p>
-            <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px]">
+            <Link to="https://app.glowlikes.it/">
+            <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px] mt-2">
               Accedi
             </Button>
+            </Link>
           </div>
 
           {/* Services */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-primary">
-              <span>Servizi</span>
-            </h4>
-            <ul className="space-y-2">
-              {Object.entries(services).map(([serviceName, service]) => (
-                <li key={serviceName} className="space-y-2">
-                  <button
-                    onClick={() => toggleService(serviceName)}
-                    onMouseEnter={() => service.ref.current?.playFromBeginning()}
-                    className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-white hover:text-${service.color}-500 hover:bg-${service.color}-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-lg border border-transparent hover:border-${service.color}-500/50 hover:scale-105 active:scale-95`}
-                  >
-                    <div className={`absolute inset-0 -z-10 bg-gradient-to-r from-${service.color}-500/10 via-${service.color}-500/50 to-${service.color}-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg`} />
-                    <div className="flex items-center space-x-2">
-                      <Player
-                        ref={service.ref}
-                        icon={service.icon}
-                        size={24}
-                        state="morph"
-                      />
-                      <span>{serviceName}</span>
-                    </div>
-                    <span className="text-lg">{expandedService === serviceName ? '-' : '+'}</span>
-                  </button>
-                  {expandedService === serviceName && (
-                    <ul className="pl-4 space-y-2 animate-slideDown">
-                      {service.items.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                            className={`text-white hover:text-${service.color}-500 transition-colors duration-300 inline-flex items-center space-x-2 text-sm group`}
-                          >
-                            <span className="group-hover:animate-bounce">{item.icon}</span>
-                            <span>{item.name}</span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
+<div className="space-y-6">
+  <h4 className="text-xl font-semibold text-primary">
+    <span>Servizi</span>
+  </h4>
+  <ul className="space-y-2">
+    {Object.entries(services).map(([serviceName, service]) => (
+      <li key={serviceName} className="space-y-2">
+        <button
+          onClick={() => toggleService(serviceName)}
+          onMouseEnter={() => service.ref.current?.playFromBeginning()}
+          className={`group relative flex items-center justify-between w-full px-4 py-2 text-left text-white hover:text-${service.color}-500 hover:bg-${service.color}-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all duration-300 backdrop-blur-sm hover:backdrop-blur-md rounded-lg border border-transparent hover:border-${service.color}-500/50 hover:scale-105 active:scale-95`}
+        >
+          <div className={`absolute inset-0 -z-10 bg-gradient-to-r from-${service.color}-500/10 via-${service.color}-500/50 to-${service.color}-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg`} />
+          <div className="flex items-center space-x-2">
+            <Player
+              ref={service.ref}
+              icon={service.icon}
+              size={24}
+              state="morph"
+            />
+            <span>{serviceName}</span>
           </div>
+          <span className="text-lg">{expandedService === serviceName ? '-' : '+'}</span>
+        </button>
+        {expandedService === serviceName && (
+          <ul className="pl-4 space-y-2 animate-slideDown">
+            {service.items.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  className={`text-white hover:text-${service.color}-500 transition-colors duration-300 inline-flex items-center space-x-2 text-sm group`}
+                >
+                  <span className="group-hover:animate-bounce">{item.icon}</span>
+                  <span>{item.name}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           {/* Quick Links */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-primary">
-              <span>Link Utili</span>
-            </h4>
-            <ul className="space-y-3">
-              {[
-                { name: 'Privacy Policy', icon: <FileText className="h-4 w-4" /> },
-                { name: 'Refund Policy', icon: <RefreshCw className="h-4 w-4" /> },
-                { name: 'Terms of Service', icon: <ScrollText className="h-4 w-4" /> }
-              ].map((link) => (
-                <li key={link.name} className="group">
-                  <Link 
-                    to={`/${link.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="relative inline-flex items-center space-x-2 text-white hover:text-primary transition-colors duration-300 group"
-                  >
-                    <span className="text-white/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
-                    <span className="relative">{link.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+<div className="space-y-6">
+  <h4 className="text-xl font-semibold text-primary">
+    <span>Link Utili</span>
+  </h4>
+  <ul className="space-y-3">
+    {[
+      { name: 'Informativa sulla Privacy', icon: <FileText className="h-4 w-4" />, path: 'https://app.glowlikes.it/informativa-sulla-privacy' },
+      { name: 'Politica di Rimborso', icon: <RefreshCw className="h-4 w-4" />, path: 'https://app.glowlikes.it/politica-di-rimborso' },
+      { name: 'Termini di Servizio', icon: <ScrollText className="h-4 w-4" />, path: 'https://app.glowlikes.it/termini-di-servizio' }
+    ].map((link) => (
+      <li key={link.name} className="group">
+        <Link 
+          to={link.path}  // Directly use the defined path
+          className="relative inline-flex items-center space-x-2 text-white hover:text-primary transition-colors duration-300 group"
+        >
+          <span className="text-white/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
+          <span className="relative">{link.name}</span>
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           {/* Contact Info */}
           <div className="space-y-6">
@@ -173,7 +177,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">supporto@glowlikes.it</span>
               </a>
-              <a className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
+              <a href="https://app.glowlikes.it/ticket" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
               <MdOutlineContactPhone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">Apri un ticket</span>
               </a>
@@ -195,7 +199,7 @@ const Footer = () => {
               &copy; 2024 GlowLikes. Tutti i diritti riservati.
             </p>
             <div className="flex flex-col items-center py-4">
-  <div className="flex items-center space-x-2">
+  <div className="flex items-center space-x-1">
     <Shield className="h-5 w-5 text-green-500" />
     <h4 className="text-sm font-semibold text-white/80">Pagamento Sicuro</h4>
   </div>

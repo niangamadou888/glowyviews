@@ -4,6 +4,7 @@ import { Player } from "@lordicon/react";
 import "lord-icon-element";
 import qualityIcon from "../assets/icons/wired-flat-489-rocket-space-hover-flying.json";
 import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,10 +71,11 @@ const Hero = () => {
         Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di glowlikes offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
         </p>
 
+ <Link to="https://app.glowlikes.it/">
         <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce text-[20px]">
           Inizia Ora
         </Button>
-
+        </Link>
         {/* Rating Section */}
         <div className="mt-6 flex items-center justify-center gap-2 text-white/90">
           <div className="flex items-center gap-1">
@@ -83,7 +85,7 @@ const Hero = () => {
           </div>
           <span className="font-semibold">4.9</span>
           <span className="text-white/70">•</span>
-          <span className="text-white/70">200+ recensioni</span>
+          <span className="text-white/70"><a href="https://app.glowlikes.it/recensioni">200+ recensioni</a></span>
         </div>
       </div>
     </div>

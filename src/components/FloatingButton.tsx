@@ -68,7 +68,7 @@ const FloatingButton = () => {
       {isVisible && (
         <div className="fixed bottom-4 md:bottom-6 left-0 right-0 flex justify-center items-center z-50 px-4">
           <motion.a
-            href="https://glowlikes.it"
+            href="https://app.glowlikes.it/"
             variants={buttonVariants}
             initial="initial"
             animate="animate"

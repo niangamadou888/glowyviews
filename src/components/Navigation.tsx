@@ -37,21 +37,51 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="#"
+                  href="https://app.glowlikes.it/comprare-visualizzazioni-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
-                  <div className="text-sm font-medium leading-none">Visualizzazioni Youtube</div>
+                  <div className="text-sm font-medium leading-none">Visualizzazioni YouTube</div>
                 </NavigationMenuLink>
               </li>
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="#"
+                  href="https://app.glowlikes.it/comprare-like-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
-                  <div className="text-sm font-medium leading-none">Iscritti Youtube</div>
+                  <div className="text-sm font-medium leading-none">Like YouTube</div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  href="https://app.glowlikes.it/comprare-iscritti-youtube/"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Iscritti YouTube</div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  href="https://app.glowlikes.it/comprare-commenti-youtube/"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Commenti YouTube</div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
+                  href="https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Ore YouTube (yes, ore not commenti)</div>
                 </NavigationMenuLink>
               </li>
             </ul>
@@ -105,6 +135,16 @@ const InstagramMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate
                   <div className="text-sm font-medium leading-none">Like Instagram</div>
                 </NavigationMenuLink>
               </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-pink-500/20 hover:text-pink-500 focus:bg-pink-500/20 focus:text-pink-500"
+                  href="#"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-pink-500/10 via-pink-500/50 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Visualizzazioni Instagram</div>
+                </NavigationMenuLink>
+              </li>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -143,7 +183,27 @@ const TwitterMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/10 via-blue-500/50 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
-                  <div className="text-sm font-medium leading-none">Follow Us</div>
+                  <div className="text-sm font-medium leading-none">Follower X</div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500"
+                  href="#"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/10 via-blue-500/50 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Like X</div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-500/20 hover:text-blue-500 focus:bg-blue-500/20 focus:text-blue-500"
+                  href="#"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500/10 via-blue-500/50 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Visualizzazioni X</div>
                 </NavigationMenuLink>
               </li>
             </ul>
@@ -184,7 +244,30 @@ const TikTokMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: (
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 via-purple-500/50 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
-                  <div className="text-sm font-medium leading-none">Follow Us</div>
+                  <div className="text-sm font-medium leading-none">Follower TikTok
+                  </div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
+                  href="#"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 via-purple-500/50 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Like TikTok
+                  </div>
+                </NavigationMenuLink>
+              </li>
+              <li className="group">
+                <NavigationMenuLink
+                  className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-purple-500/20 hover:text-purple-500 focus:bg-purple-500/20 focus:text-purple-500"
+                  href="#"
+                  onClick={onActivate}
+                >
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 via-purple-500/50 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="text-sm font-medium leading-none">Visualizzazioni TikTok
+                  </div>
                 </NavigationMenuLink>
               </li>
             </ul>
@@ -218,12 +301,16 @@ const Navigation = () => {
         {/* Auth Buttons and Mobile Menu */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
+          <Link to="https://app.glowlikes.it/">
             <Button variant="ghost">
             Accedi
             </Button>
+            </Link>
+            <Link to="https://app.glowlikes.it/registrati">
             <Button className="glow">
             Registrati
             </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu */}

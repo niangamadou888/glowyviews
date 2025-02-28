@@ -1,16 +1,49 @@
 import React, { useState } from 'react';
-import { ArrowRight, ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share2 } from 'lucide-react';
+import { ArrowRight, ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share2, FileVideo } from 'lucide-react';
 
 const CTA = () => {
   const [activeButton, setActiveButton] = useState(null);
   const buttons = [
-    { text: 'Compra Visualizzazioni YouTube', icon: <Eye size={20} /> },
-    { text: 'Compra Iscritti YouTube', icon: <UserPlus size={20} /> },
-    { text: 'Compra Likes YouTube', icon: <ThumbsUp size={20} /> },
-    { text: 'Compra Ore Di Visualizzazione YouTube', icon: <Clock size={20} /> },
-    { text: 'Compra Commenti YouTube', icon: <MessageCircle size={20} /> },
-    { text: 'Compra Condivisioni YouTube', icon: <Share2 size={20} /> },
-    { text: 'Compra Spettatori Diretta YouTube', icon: <Users size={20} /> }
+    { 
+      text: 'Compra Visualizzazioni YouTube', 
+      icon: <Eye size={20} />,
+      link: 'https://app.glowlikes.it/comprare-visualizzazioni-youtube/'
+    },
+    { 
+      text: 'Compra Iscritti YouTube', 
+      icon: <UserPlus size={20} />,
+      link: 'https://app.glowlikes.it/comprare-iscritti-youtube/'
+    },
+    { 
+      text: 'Compra Likes YouTube', 
+      icon: <ThumbsUp size={20} />,
+      link: 'https://app.glowlikes.it/comprare-like-youtube/'
+    },
+    { 
+      text: 'Compra Ore Di Visualizzazione YouTube', 
+      icon: <Clock size={20} />,
+      link: 'https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/'
+    },
+    { 
+      text: 'Compra Commenti YouTube', 
+      icon: <MessageCircle size={20} />,
+      link: 'https://app.glowlikes.it/comprare-commenti-youtube/'
+    },
+    { 
+      text: 'Compra Condivisioni YouTube', 
+      icon: <Share2 size={20} />,
+      link: 'https://app.glowlikes.it/comprare-condivisioni-youtube/'
+    },
+    { 
+      text: 'Compra Spettatori Diretta YouTube', 
+      icon: <Users size={20} />,
+      link: 'https://app.glowlikes.it/comprare-spettatori-diretta-youtube/'
+    },
+    { 
+      text: 'Compra Visualizzazioni YouTube Shorts', 
+      icon: <FileVideo size={20} />,
+      link: 'https://app.glowlikes.it/comprare-visualizzazioni-e-like-youtube-shorts/'
+    }
   ];
 
   return (
@@ -40,9 +73,10 @@ const CTA = () => {
         </div>
         <div className="flex flex-col gap-3 w-full max-w-sm">
           {buttons.map((button, index) => (
-            <button
+            <a 
               key={index}
-              className="group relative bg-white text-purple-700 py-3 px-6 rounded-lg transition-all font-semibold shadow-lg overflow-hidden"
+              href={button.link}
+              className="group relative bg-white text-purple-700 py-3 px-6 rounded-lg transition-all font-semibold shadow-lg overflow-hidden no-underline block"
               onMouseEnter={() => setActiveButton(index)}
               onMouseLeave={() => setActiveButton(null)}
               style={{
@@ -50,18 +84,21 @@ const CTA = () => {
                 transition: 'all 0.2s ease-in-out'
               }}
             >
-              <div className="flex items-center">
+              <div className="flex items-center relative h-6">
                 <span
-                  className={`transition-all duration-300 ${
-                    activeButton === index ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 absolute'
-                  }`}
+                  className="absolute left-0 transition-all duration-300 flex items-center"
+                  style={{
+                    opacity: activeButton === index ? 1 : 0,
+                    transform: activeButton === index ? 'translateX(0)' : 'translateX(-12px)',
+                    visibility: activeButton === index ? 'visible' : 'hidden'
+                  }}
                 >
                   {button.icon}
                 </span>
                 <span
-                  className="text-left transition-all duration-300"
+                  className="transition-all duration-300 flex items-center"
                   style={{
-                    transform: activeButton === index ? 'translateX(8px)' : 'translateX(0)',
+                    transform: activeButton === index ? 'translateX(28px)' : 'translateX(0)',
                   }}
                 >
                   {button.text}
@@ -74,7 +111,7 @@ const CTA = () => {
                   opacity: activeButton === index ? 1 : 0
                 }}
               />
-            </button>
+            </a>
           ))}
         </div>
       </div>
