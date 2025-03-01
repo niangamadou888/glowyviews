@@ -340,18 +340,46 @@ const Navigation = () => {
                       </div>
                       <div className="ml-6 flex flex-col gap-1">
                         <a 
-                          href="#" 
+                          href="https://app.glowlikes.it/comprare-visualizzazioni-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
-                          Visualizzazioni Youtube
+                          Visualizzazioni YouTube
+
                         </a>
                         <a 
-                          href="#" 
+                          href="https://app.glowlikes.it/comprare-like-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
-                          Iscritti Youtube
+                          Like YouTube
+
+                        </a>
+                        <a 
+                          href="https://app.glowlikes.it/comprare-iscritti-youtube/" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                         Iscritti YouTube
+
+
+                        </a>
+                        <a 
+                          href="https://app.glowlikes.it/comprare-commenti-youtube/" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                         Commenti YouTube
+
+
+                        </a>
+                        <a 
+                          href="https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                         Ore YouTube (yes, ore not commenti)
+
                         </a>
                       </div>
                     </div>
@@ -382,6 +410,14 @@ const Navigation = () => {
                         >
                           Like Instagram
                         </a>
+                        <a 
+                          href="#" 
+                          className="px-4 py-3 text-sm font-medium transition-colors hover:bg-pink-500/20 hover:text-pink-500 rounded-md"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Visualizzazioni Instagram
+
+                        </a>
                       </div>
                     </div>
 
@@ -401,7 +437,21 @@ const Navigation = () => {
                           to="#"
                           className="px-4 py-2 text-sm hover:bg-neutral-500/20 rounded-md transition-colors"
                         >
-                          Follow Us
+                          Follower X
+
+                        </Link>
+                        <Link
+                          to="#"
+                          className="px-4 py-2 text-sm hover:bg-neutral-500/20 rounded-md transition-colors"
+                        >
+                          Like X
+                        </Link>
+                        <Link
+                          to="#"
+                          className="px-4 py-2 text-sm hover:bg-neutral-500/20 rounded-md transition-colors"
+                        >
+                          Visualizzazioni X
+
                         </Link>
                       </div>
                     </div>
@@ -422,7 +472,22 @@ const Navigation = () => {
                           to="#"
                           className="px-4 py-2 text-sm hover:bg-purple-500/20 rounded-md transition-colors"
                         >
-                          Follow Us
+                          Follower TikTok
+
+                        </Link>
+                        <Link
+                          to="#"
+                          className="px-4 py-2 text-sm hover:bg-purple-500/20 rounded-md transition-colors"
+                        >
+                         Like TikTok
+
+                        </Link>
+                        <Link
+                          to="#"
+                          className="px-4 py-2 text-sm hover:bg-purple-500/20 rounded-md transition-colors"
+                        >
+                         Visualizzazioni TikTok
+
                         </Link>
                       </div>
                     </div>
