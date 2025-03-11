@@ -1,12 +1,12 @@
 
 import { Mail, Phone, MapPin, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Share2, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaCcVisa } from "react-icons/fa";
 import { RiMastercardFill } from "react-icons/ri";
 import { SiAmericanexpress } from "react-icons/si";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { FaBitcoin } from "react-icons/fa";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Player } from "@lordicon/react";
 import { FaEthereum } from "react-icons/fa";
@@ -74,6 +74,13 @@ const Footer = () => {
       ]
     }
   };
+
+  const location = useLocation();
+
+  // Scroll to top when the location changes (i.e., when a new page is loaded)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <footer className="relative w-full bg-background/50 backdrop-blur-md border-primary/20">
@@ -143,28 +150,28 @@ const Footer = () => {
 
 
           {/* Quick Links */}
-<div className="space-y-6">
-  <h4 className="text-xl font-semibold text-primary">
-    <span>Link Utili</span>
-  </h4>
-  <ul className="space-y-3">
-    {[
-      { name: 'Informativa sulla Privacy', icon: <FileText className="h-4 w-4" />, path: '/informativa-sulla-privacy' },
-      { name: 'Politica di Rimborso', icon: <RefreshCw className="h-4 w-4" />, path: '/politica-di-rimborso' },
-      { name: 'Termini di Servizio', icon: <ScrollText className="h-4 w-4" />, path: '/termini-di-servizio' }
-    ].map((link) => (
-      <li key={link.name} className="group">
-        <Link 
-          to={link.path}  // Directly use the defined path
-          className="relative inline-flex items-center space-x-2 text-white hover:text-primary transition-colors duration-300 group"
-        >
-          <span className="text-white/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
-          <span className="relative">{link.name}</span>
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
+          <div className="space-y-6">
+      <h4 className="text-xl font-semibold text-primary">
+        <span>Link Utili</span>
+      </h4>
+      <ul className="space-y-3">
+        {[
+          { name: 'Informativa sulla Privacy', icon: <FileText className="h-4 w-4" />, path: '/informativa-sulla-privacy' },
+          { name: 'Politica di Rimborso', icon: <RefreshCw className="h-4 w-4" />, path: '/politica-di-rimborso' },
+          { name: 'Termini di Servizio', icon: <ScrollText className="h-4 w-4" />, path: '/termini-di-servizio' }
+        ].map((link) => (
+          <li key={link.name} className="group">
+            <Link 
+              to={link.path}  // Directly use the defined path
+              className="relative inline-flex items-center space-x-2 text-white hover:text-primary transition-colors duration-300 group"
+            >
+              <span className="text-white/60 group-hover:text-primary transition-colors duration-300 group-hover:animate-bounce">{link.icon}</span>
+              <span className="relative">{link.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
 
 
           {/* Contact Info */}
