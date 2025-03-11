@@ -164,6 +164,7 @@ const Testimonials = () => {
   
   // Calculate the slide width percentage based on items per view
   const slideWidth = 100 / itemsPerView;
+  
 
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">

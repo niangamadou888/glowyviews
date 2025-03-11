@@ -499,13 +499,13 @@ const Navigation = () => {
                     className="w-full justify-start"
                     onClick={() => setIsOpen(false)}
                   >
-                    Log In
+                    Accedi
                   </Button>
                   <Button 
                     className="w-full glow"
                     onClick={() => setIsOpen(false)}
                   >
-                    Sign Up
+                    Registrati
                   </Button>
                 </div>
               </div>
