@@ -69,22 +69,22 @@ const Contact = () => {
     <div className="flex-1 py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/90 backdrop-blur-xl" />
       <div className="relative max-w-md mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-center mb-6 text-white glow">
-          Contattaci
-          </h2>
-          <p className="mt-2 text-sm text-gray-400">
-          Hai domande sui nostri servizi o su un ordine? Contattaci senza esitazione! Ti rispondiamo entro 24 ore, festivi inclusi.
-          </p>
-          <p className="mt-2 text-sm text-gray-400">
-    Scrivici a   <a href="mailto:supporto@glowlikes.it" className="inline-flex items-center">
-      <FaEnvelope className="mr-1 text-xs" />supporto@glowlikes.it
-    </a>, 
-    apri un ticket dalla tua area cliente <a href="https://app.glowlikes.it/ticket" className="inline-flex items-center">
-      <FaTicketAlt className="mr-1 text-xs" />un ticket
-      </a>  o compila il modulo qui sotto. Scegli tu!
-  </p>
-        </div>
+  <div className="text-center mb-8">
+    <h2 className="text-4xl font-bold text-center mb-6 text-white glow">
+      Contattaci
+    </h2>
+    <p className="mt-2 text-sm text-gray-400">
+      Hai domande sui nostri servizi o su un ordine? Contattaci senza esitazione! Ti rispondiamo entro 24 ore, festivi inclusi.
+    </p>
+    <p className="mt-2 text-sm text-gray-400">
+      Scrivici a <a href="mailto:supporto@glowlikes.it" className="inline-flex items-center text-purple-500 align-middle mb-0.5">
+        <FaEnvelope className="mr-1 text-xs text-purple-500 inline-block align-middle" />supporto@glowlikes.it
+      </a>,
+      apri <a href="https://app.glowlikes.it/ticket" className="inline-flex items-center text-purple-500 align-middle mb-0.5">
+        <FaTicketAlt className="mr-1 text-xs text-purple-500 inline-block align-middle" />un ticket
+      </a> dalla tua area cliente o compila il modulo qui sotto. Scegli tu!
+    </p>
+  </div>
 
         <form ref={form} onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm space-y-4">

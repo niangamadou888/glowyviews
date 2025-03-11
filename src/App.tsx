@@ -17,7 +17,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/comprare-visualizzazioni-youtube" element={<Index />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contattaci" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

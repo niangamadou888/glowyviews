@@ -47,7 +47,7 @@ const CTA = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-[720px] flex items-center justify-center px-4 py-24 sm:py-16">
+    <div className="relative w-full min-h-[720px] flex items-center justify-center px-4 py-32 sm:py-16">
       {/*** Top fade in - reduced thickness ***/}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-700 to-[#1b1e2c] z-20" />
       {/*** Bottom fade out - reduced thickness ***/}
@@ -76,7 +76,7 @@ const CTA = () => {
             <a 
               key={index}
               href={button.link}
-              className="group relative bg-white text-purple-700 py-3 px-6 rounded-lg transition-all font-semibold shadow-lg overflow-hidden no-underline block"
+              className="group relative bg-white text-purple-700 py-4 px-6 rounded-lg transition-all font-semibold shadow-lg overflow-hidden no-underline block"
               onMouseEnter={() => setActiveButton(index)}
               onMouseLeave={() => setActiveButton(null)}
               style={{

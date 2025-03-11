@@ -168,7 +168,7 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
-      <div className="container mx-auto px-4 pb-12 relative z-10">
+      <div className="container mx-auto px-4 pb-16 relative z-10">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-6 text-white">
             Cosa Dicono I Nostri Clienti
@@ -176,21 +176,39 @@ const Testimonials = () => {
           
           {/* Average Rating Display */}
           <div className="flex items-center gap-6">
-            <div className="flex flex-col items-center">
-              <div className="text-4xl mb-1 font-bold text-white">
-                {avgRating.toFixed(1)}
-              </div>
-              <div className="flex gap-1 mb-1">
-                {[...Array(5)].map((_, index) => (
-                  <FaStar
-                    key={index}
-                    className={index < Math.round(avgRating) ? "text-primary" : "text-gray-600"}
-                    size={20}
-                  />
-                ))}
-              </div>
-              <div className="text-gray-400">
-                {totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'}
+    <div className="flex flex-col items-center">
+      <div className="text-4xl mb-1 font-bold text-white">
+        {avgRating.toFixed(1)} <span className="text-gray-400">({totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'})</span>
+      </div>
+      <div className="flex gap-1 mb-1">
+        {[...Array(5)].map((_, index) => (
+          <div key={index} className="relative">
+            <FaStar
+              className={`transform transition-all duration-300 ${index < Math.round(avgRating) ? "text-primary scale-110" : "text-gray-600 scale-100"}`}
+              size={20}
+            />
+            {index < Math.round(avgRating) && (
+              <>
+                <FaStar
+                  className="absolute top-0 left-0 text-primary animate-pulse"
+                  size={20}
+                  style={{
+                    filter: "drop-shadow(0 0 4px rgba(255, 215, 0, 0.6))"
+                  }}
+                />
+                <div 
+                  className="absolute top-0 left-0 w-full h-full rounded-full"
+                  style={{
+                    background: "radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0) 70%)",
+                    transform: "scale(1.4)",
+                    pointerEvents: "none"
+                  }}
+                />
+              </>
+            )}
+          </div>
+        ))}
+                
               </div>
             </div>
           </div>
