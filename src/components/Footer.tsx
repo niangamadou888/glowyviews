@@ -149,9 +149,9 @@ const Footer = () => {
   </h4>
   <ul className="space-y-3">
     {[
-      { name: 'Informativa sulla Privacy', icon: <FileText className="h-4 w-4" />, path: 'https://app.glowlikes.it/informativa-sulla-privacy' },
-      { name: 'Politica di Rimborso', icon: <RefreshCw className="h-4 w-4" />, path: 'https://app.glowlikes.it/politica-di-rimborso' },
-      { name: 'Termini di Servizio', icon: <ScrollText className="h-4 w-4" />, path: 'https://app.glowlikes.it/termini-di-servizio' }
+      { name: 'Informativa sulla Privacy', icon: <FileText className="h-4 w-4" />, path: '/informativa-sulla-privacy' },
+      { name: 'Politica di Rimborso', icon: <RefreshCw className="h-4 w-4" />, path: '/politica-di-rimborso' },
+      { name: 'Termini di Servizio', icon: <ScrollText className="h-4 w-4" />, path: '/termini-di-servizio' }
     ].map((link) => (
       <li key={link.name} className="group">
         <Link 
