@@ -147,6 +147,8 @@ const Testimonials = () => {
     }
   };
 
+  
+
   const handleCaptchaChange = (value: string | null) => {
     if (value) {
       setCaptchaVerified(true);
@@ -186,27 +188,24 @@ const Testimonials = () => {
         {[...Array(5)].map((_, index) => (
           <div key={index} className="relative">
             <FaStar
-              className={`transform transition-all duration-300 ${index < Math.round(avgRating) ? "text-primary scale-110" : "text-gray-600 scale-100"}`}
+              className={`transform transition-all duration-300 ${
+                index < Math.round(avgRating) 
+                  ? "text-[#FFD700] opacity-0" 
+                  : "text-gray-600"
+              }`}
               size={20}
             />
             {index < Math.round(avgRating) && (
-              <>
-                <FaStar
-                  className="absolute top-0 left-0 text-primary animate-pulse"
-                  size={20}
-                  style={{
-                    filter: "drop-shadow(0 0 4px rgba(255, 215, 0, 0.6))"
-                  }}
-                />
-                <div 
-                  className="absolute top-0 left-0 w-full h-full rounded-full"
-                  style={{
-                    background: "radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0) 70%)",
-                    transform: "scale(1.4)",
-                    pointerEvents: "none"
-                  }}
-                />
-              </>
+              <FaStar
+                className="absolute top-0 left-0"
+                style={{
+                  color: '#FFD700',
+                  animation: `starEntrance 0.4s ease-out ${index * 0.2}s forwards`,
+                  filter: 'drop-shadow(0 0 4px #FFD700)',
+                  WebkitTextStroke: '1px #FFA500',
+                }}
+                size={20}
+              />
             )}
           </div>
         ))}
@@ -407,3 +406,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
