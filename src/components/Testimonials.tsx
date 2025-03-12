@@ -200,7 +200,7 @@ const Testimonials = () => {
                 className="absolute top-0 left-0"
                 style={{
                   color: '#FFD700',
-                  animation: `starEntrance 0.4s ease-out ${index * 0.2}s forwards`,
+                  animation: `starEntrance 2.4s ease-out ${index * 0.2}s forwards`,
                   filter: 'drop-shadow(0 0 4px #FFD700)',
                   WebkitTextStroke: '1px #FFA500',
                 }}

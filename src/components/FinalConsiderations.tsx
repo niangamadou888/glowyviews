@@ -8,7 +8,7 @@ const FinalConsiderations = () => {
         <li className="flex items-start space-x-4 group ml-0 sm:ml-8">
           <span className="flex-shrink-0 w-8 h-8 mt-1 relative">
             <span className="absolute inset-0 bg-primary/20 rounded-full group-hover:scale-110 transition-transform duration-300"></span>
-            <span className="absolute inset-2 bg-primary rounded-full animate-pulse"></span>
+            <span className="absolute inset-2 bg-primary rounded-full md:animate-pulse"></span>
           </span>
           <p className="text-muted-foreground leading-relaxed flex-1 group-hover:text-white transition-colors duration-300">
             <strong>Comprare views YouTube è da considerarsi come una manovra di Social Media Marketing</strong>, il cui scopo è quello di "farsi prendere in considerazione" dai crawler della stessa piattaforma social.

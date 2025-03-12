@@ -80,21 +80,21 @@ const CTA = () => {
               onMouseEnter={() => setActiveButton(index)}
               onMouseLeave={() => setActiveButton(null)}
               style={{
-                transform: activeButton === index ? 'scale(1.02)' : 'scale(1)',
-                transition: 'transform 0.2s ease-out',
-                willChange: 'transform',
+                transform: window.innerWidth > 768 && activeButton === index ? 'scale(1.02)' : 'scale(1)',
+                transition: window.innerWidth > 768 ? 'transform 0.2s ease-out' : 'none',
+                willChange: window.innerWidth > 768 ? 'transform' : 'auto',
                 WebkitTapHighlightColor: 'transparent'
               }}
             >
               <div className="flex items-center relative h-6"
                    style={{ transform: 'translateZ(0)' }}>
                 <span
-                  className="absolute left-0 transition-all duration-200 ease-out flex items-center"
+                  className="md:absolute left-0 transition-all duration-200 ease-out flex items-center mr-2 md:mr-0"
                   style={{
-                    opacity: activeButton === index ? 1 : 0,
-                    transform: `translateX(${activeButton === index ? '0' : '-8px'})`,
-                    visibility: activeButton === index ? 'visible' : 'hidden',
-                    willChange: 'transform, opacity'
+                    opacity: window.innerWidth > 768 ? (activeButton === index ? 1 : 0) : 1,
+                    transform: window.innerWidth > 768 ? `translateX(${activeButton === index ? '0' : '-8px'})` : 'none',
+                    visibility: window.innerWidth > 768 ? (activeButton === index ? 'visible' : 'hidden') : 'visible',
+                    willChange: window.innerWidth > 768 ? 'transform, opacity' : 'auto'
                   }}
                 >
                   {button.icon}
@@ -102,15 +102,15 @@ const CTA = () => {
                 <span
                   className="transition-all duration-200 ease-out flex items-center"
                   style={{
-                    transform: `translateX(${activeButton === index ? '28px' : '0'})`,
-                    willChange: 'transform'
+                    transform: window.innerWidth > 768 ? `translateX(${activeButton === index ? '28px' : '0'})` : 'none',
+                    willChange: window.innerWidth > 768 ? 'transform' : 'auto'
                   }}
                 >
                   {button.text}
                 </span>
               </div>
               <div
-                className="absolute bottom-0 left-0 h-1 bg-purple-500"
+                className="absolute bottom-0 left-0 h-1 bg-purple-500 hidden md:block"
                 style={{
                   width: activeButton === index ? '100%' : '0%',
                   opacity: activeButton === index ? 1 : 0,

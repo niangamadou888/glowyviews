@@ -96,18 +96,10 @@ const Features = () => {
           if (index === -1) return;
 
           if (entry.isIntersecting) {
-            // Check if the element is in the middle of the viewport
-            const rect = entry.target.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            const elementMiddle = rect.top + rect.height / 2;
-            const viewportMiddle = viewportHeight / 2;
-
-            if (Math.abs(elementMiddle - viewportMiddle) < rect.height / 2) {
-              setHoveredIndex(index);
-              playerRefs.current[index]?.playFromBeginning();
-            } else {
-              setHoveredIndex(null);
-            }
+            setHoveredIndex(index);
+            // Removed animation playback for mobile
+          } else {
+            setHoveredIndex(null);
           }
         });
       },
@@ -122,6 +114,15 @@ const Features = () => {
     });
 
     return () => observer.disconnect();
+  }, [isMobile]);
+
+  // Initial animation - only for desktop
+  useEffect(() => {
+    if (!isMobile) {
+      playerRefs.current.forEach((ref) => {
+        ref?.playFromBeginning();
+      });
+    }
   }, [isMobile]);
 
   // Set up intersection observer for AVVERTENZE section

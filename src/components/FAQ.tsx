@@ -15,20 +15,20 @@ const FAQ = () => {
       <div className="space-y-6">
         <div 
           className={`bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
-            transition-all duration-300 cursor-pointer
+            transition-all md:duration-300 cursor-pointer
             ${openIndex === 0 ? 'border-glow shadow-[0_0_30px_rgba(147,51,234,0.3)]' : 'hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]'}
             group`}
           onClick={() => handleToggle(0)}
         >
           <div className="flex justify-between items-center">
-            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 0 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 0 ? 'text-glow' : 'group-hover:text-glow'} md:transition-all md:duration-300`}>
               1. Dopo quanto vedrò le mie visualizzazioni YouTube salire?
             </h3>
-            <span className={`transform transition-transform duration-300 ${openIndex === 0 ? 'rotate-180' : ''}`}>
+            <span className={`transform md:transition-transform md:duration-300 ${openIndex === 0 ? 'rotate-180' : ''}`}>
               ▼
             </span>
           </div>
-          <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 0 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className={`mt-6 space-y-4 overflow-hidden md:transition-all md:duration-300 ${openIndex === 0 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
             <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
               Tutto dipende da pacchetto che hai comprato. Ovviamente, se si tratta di poche centinaia, <strong>riusciamo a consegnare l'ordine in poche ore</strong>.
             </p>

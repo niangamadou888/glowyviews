@@ -1,10 +1,21 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 const FAQIntro = () => {
+  const shouldReduceMotion = useReducedMotion();
+
+  const initialAnimation = shouldReduceMotion ? {} : {
+    opacity: 0,
+    y: 15
+  };
+
+  const fadeAnimation = shouldReduceMotion ? {} : {
+    opacity: 0
+  };
+
   return (
     <section className="w-full max-w-6xl mx-auto px-6 pt-16">
       <motion.h2
-        initial={{ opacity: 0, y: 15 }}
+        initial={initialAnimation}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.4, ease: "easeOut" }}
@@ -15,7 +26,7 @@ const FAQIntro = () => {
       </motion.h2>
       
       <motion.div 
-        initial={{ opacity: 0 }}
+        initial={fadeAnimation}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}

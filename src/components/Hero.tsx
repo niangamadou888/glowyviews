@@ -23,14 +23,14 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
       
       {/* Optimized animated circles */}
-      <div className={`absolute transition-all duration-700 ease-out will-change-transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+      <div className={`absolute transition-all duration-700 ease-out will-change-transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} md:transition-all md:duration-700 hidden md:block`}
            style={{ transform: 'translateZ(0)' }}>
         <div className="absolute top-1/4 -left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-[pulse_3s_ease-in-out_infinite]" />
         <div className="absolute bottom-1/4 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-[pulse_3s_ease-in-out_infinite_0.5s]" />
       </div>
       
       {/* Optimized content animations */}
-      <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-700 ease-out will-change-transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center md:transition-all md:duration-700 md:ease-out will-change-transform ${isVisible ? 'opacity-100 md:translate-y-0' : 'opacity-0 md:translate-y-8'}`}
            style={{ transform: 'translateZ(0)' }}>
         
         <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
@@ -78,7 +78,7 @@ const Hero = () => {
         <Link to="https://app.glowlikes.it/">
           <Button 
             size="lg" 
-            className="glow bg-primary hover:bg-primary/90 text-white text-[20px] animate-[bounce_2s_ease-in-out_infinite]"
+            className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
             style={{ transform: 'translateZ(0)' }}
           >
             Inizia Ora

@@ -107,26 +107,25 @@ const ContentSection = ({
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   const { scrollYProgress: sectionProgress } = useScroll({
     target: sectionRef,
     offset: ["start center", "end center"],
   });
 
-  // Optimized spring configuration for mobile
+  // Always use useSpring, but configure it differently for mobile
   const smoothSectionProgress = useSpring(sectionProgress, {
-    damping: 20,
-    stiffness: 80,
-    mass: 0.2,
+    damping: isMobile ? 100 : 20,
+    stiffness: isMobile ? 300 : 80,
+    mass: isMobile ? 0.1 : 0.2,
+    restDelta: isMobile ? 0.01 : 0.001
   });
 
   return (
     <motion.div
       ref={sectionRef}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      initial={{ opacity: 1, y: 0 }}
       className={`flex flex-col md:flex-row items-start gap-8 md:gap-16 relative ${
         isEven ? "pl-8" : "pr-8"
       }`}

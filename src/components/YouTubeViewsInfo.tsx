@@ -130,14 +130,14 @@ const YouTubeViewsInfo = () => {
             ease: "easeOut",
             willChange: "transform, opacity"
           }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group md:motion-safe:animate-none"
           style={{ 
             transform: "translateZ(0)",
             willChange: "transform"
           }}
         >
           {/* Content Section */}
-          <div className="flex-1 md:order-2 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">
+          <div className="flex-1 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">

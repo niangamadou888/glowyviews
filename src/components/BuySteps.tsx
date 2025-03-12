@@ -19,11 +19,11 @@ const BuySteps = () => {
     clamp: true,
   });
 
-  // Optimized animation variants
+  // Optimized animation variants with mobile considerations
   const stepVariants = {
     hidden: {
-      opacity: 0,
-      y: 20,
+      opacity: window.innerWidth > 768 ? 0 : 1,
+      y: window.innerWidth > 768 ? 20 : 0,
       transition: { duration: 0.4, ease: "easeOut" },
     },
     visible: {
@@ -38,11 +38,11 @@ const BuySteps = () => {
       className="relative mt-20 md:mt-40 w-full max-w-6xl mx-auto px-4 py-24 md:py-32 overflow-hidden"
       ref={containerRef}
     >
-      {/* Background Effect */}
+      {/* Background Effect - Simplified for mobile */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-      {/* Glow Effect */}
-      <div className="absolute inset-0">
+      {/* Glow Effect - Only on desktop */}
+      <div className="hidden md:block absolute inset-0">
         <div
           className="absolute inset-0 bg-primary/10 blur-3xl"
           style={{
@@ -94,8 +94,8 @@ const BuySteps = () => {
               <motion.div
                 className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 blur-xl"
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                whileInView={{ opacity: window.innerWidth > 768 ? 1 : 0.3 }}
+                transition={{ duration: window.innerWidth > 768 ? 0.6 : 0 }}
               />
             </motion.div>
           ))}
