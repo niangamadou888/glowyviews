@@ -110,11 +110,19 @@ const WhyBuyViews = () => {
 
         {/* Second Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ 
+            duration: 0.4,
+            ease: "easeOut",
+            willChange: "transform, opacity"
+          }}
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group"
+          style={{ 
+            transform: "translateZ(0)",
+            willChange: "transform"
+          }}
         >
           <div className="flex-1 md:order-2 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />

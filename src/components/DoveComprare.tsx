@@ -6,10 +6,15 @@ const DoveComprare = () => {
     <section className="relative w-full max-w-7xl mx-auto px-4 py-16 overflow-hidden">
       <div className="relative space-y-24">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative overflow-hidden rounded-2xl border border-white/30 transition-all duration-300 hover:border-white/70 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="relative overflow-hidden rounded-2xl border border-white/30 transition-all duration-200 hover:border-white/70 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+          style={{
+            transform: 'translateZ(0)',
+            willChange: 'transform, opacity'
+          }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#009246] via-[#ffffff] to-[#ce2b37] opacity-20" />
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
@@ -45,9 +50,7 @@ const DoveComprare = () => {
           </div>
         </motion.div>
       </div>
-      
     </section>
-    
   );
 };
 

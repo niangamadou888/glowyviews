@@ -108,43 +108,42 @@ const ContentSection = ({
   const sectionRef = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
 
-  // Calculate section-specific scroll progress
   const { scrollYProgress: sectionProgress } = useScroll({
     target: sectionRef,
     offset: ["start center", "end center"],
   });
 
-  // Smooth out the section progress
+  // Optimized spring configuration for mobile
   const smoothSectionProgress = useSpring(sectionProgress, {
-    damping: 30,
-    stiffness: 100,
-    mass: 0.5,
+    damping: 20,
+    stiffness: 80,
+    mass: 0.2,
   });
 
   return (
     <motion.div
       ref={sectionRef}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       className={`flex flex-col md:flex-row items-start gap-8 md:gap-16 relative ${
         isEven ? "pl-8" : "pr-8"
       }`}
+      style={{
+        transform: 'translateZ(0)',
+        willChange: 'transform, opacity'
+      }}
     >
-      <div
-        className={`absolute ${
-          isEven ? "left-0" : "right-0"
-        } top-0 h-[104%] w-full`}
-      >
+      {/* Path animation optimization */}
+      <div className={`absolute ${isEven ? "left-0" : "right-0"} top-0 h-[104%] w-full`}>
         <motion.svg
           width="100%"
           height="100%"
           viewBox="0 0 50 103"
           preserveAspectRatio="none"
-          className={`absolute ${
-            isEven ? "left-0" : "right-0"
-          } top-0 animate-glow`}
+          className={`absolute ${isEven ? "left-0" : "right-0"} top-0`}
+          style={{ transform: 'translateZ(0)', willChange: 'transform' }}
         >
           <motion.path
             d={
@@ -165,6 +164,8 @@ const ContentSection = ({
             style={{
               opacity: smoothSectionProgress,
               pathLength: smoothSectionProgress,
+              transform: 'translateZ(0)',
+              willChange: 'opacity, strokeDashoffset'
             }}
           />
           <defs>
@@ -177,20 +178,29 @@ const ContentSection = ({
         </motion.svg>
       </div>
 
+      {/* Content sections with optimized image loading */}
       <div className={`flex-1 ${!isEven ? "md:order-2" : ""}`}>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow"
+          style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+        >
           {section.title}
-        </h2>
+        </motion.h2>
         {renderContent(section.content)}
       </div>
 
       <div className={`flex-1 ${!isEven ? "md:order-1" : ""}`}>
         <div className="relative aspect-video rounded-xl overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
           <img
             src={section.image.src}
             alt={section.image.alt}
             className="w-full h-full object-cover rounded-xl"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

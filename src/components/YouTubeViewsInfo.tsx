@@ -12,11 +12,19 @@ const YouTubeViewsInfo = () => {
   </div>
       <div className="relative space-y-24">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ 
+            duration: 0.4,
+            ease: "easeOut",
+            willChange: "transform, opacity"
+          }}
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group"
+          style={{ 
+            transform: "translateZ(0)",
+            willChange: "transform"
+          }}
         >
           {/* Content Section */}
           <div className="flex-1 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">
@@ -114,11 +122,19 @@ const YouTubeViewsInfo = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ 
+            duration: 0.4,
+            ease: "easeOut",
+            willChange: "transform, opacity"
+          }}
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16 group"
+          style={{ 
+            transform: "translateZ(0)",
+            willChange: "transform"
+          }}
         >
           {/* Content Section */}
           <div className="flex-1 md:order-2 relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20">

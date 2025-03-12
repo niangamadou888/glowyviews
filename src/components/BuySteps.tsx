@@ -8,105 +8,97 @@ const BuySteps = () => {
     offset: ["start center", "end center"],
   });
 
-  // Use spring for smooth scrolling
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
+    stiffness: 50,
+    damping: 20,
+    restDelta: 0.005,
   });
 
-  // Pre-define animation variants
-  const stepVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
-
-  // Transform progress to stop at the last step
+  // Add this line to define lineProgress
   const lineProgress = useTransform(smoothProgress, [0, 1], [0, 1], {
     clamp: true,
   });
 
+  // Optimized animation variants
+  const stepVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
-    className="relative mt-20 md:mt-40 w-full max-w-6xl mx-auto px-4 py-24 md:py-32 overflow-hidden"
-    ref={containerRef}
-  >
-    {/* Background Effect */}
-    <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      className="relative mt-20 md:mt-40 w-full max-w-6xl mx-auto px-4 py-24 md:py-32 overflow-hidden"
+      ref={containerRef}
+    >
+      {/* Background Effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
-    {/* Glow Effect */}
-    <div className="absolute inset-0">
-      <div
-        className="absolute inset-0 bg-primary/10 blur-3xl"
-        style={{
-          animation: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        }}
-      />
-    </div>
+      {/* Glow Effect */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 bg-primary/10 blur-3xl"
+          style={{
+            animation: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+          }}
+        />
+      </div>
 
-    <div className="relative">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-glow mb-16 md:mb-24">
-        Come comprare Visualizzazioni YouTube italiane e reali
-      </h2>
-      <p className="text-lg text-muted-foreground leading-relaxed ml-2 md:ml-10 mb-6 md:mb-10">
-        <strong>Comprare views YouTube italiane e reali</strong> è
-        semplicissimo, dal momento che devi solo seguire questi step:
-      </p>
+      <div className="relative">
+        {/* Optimized progress line */}
+        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+          <motion.div
+            className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
+            style={{
+              height: useTransform(lineProgress, (v) => `${v * 100}%`),
+              transform: 'translateZ(0)',
+              willChange: 'transform',
+            }}
+          />
+        </div>
 
-        <div className="relative">
-          {/* Progress Line */}
-          <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10 animate-glow">
+        <div className="space-y-20 md:space-y-28">
+          {[1, 2, 3, 4, 5].map((step) => (
             <motion.div
-              className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
+              key={step}
+              variants={stepVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 group"
               style={{
-                height: useTransform(lineProgress, (v) => `${v * 100}%`),
-                transformOrigin: "top",
-                willChange: "transform",
-                boxShadow: "0 0 20px var(--primary)",
+                transform: 'translateZ(0)',
+                willChange: 'transform',
               }}
-            />
-          </div>
+            >
+              <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold glow z-10">
+                {step}
+              </div>
 
-          <div className="space-y-20 md:space-y-28">
-            {[1, 2, 3, 4, 5].map((step) => (
+              <div className="ml-4 md:ml-8">
+                <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-hover:text-glow transition-all">
+                  {getStepTitle(step)}
+                </h3>
+                <p className="text-base md:text-lg text-muted-foreground">
+                  {getStepContent(step)}
+                </p>
+              </div>
+
               <motion.div
-                key={step}
-                variants={stepVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 group"
-              >
-                <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold glow z-10">
-                  {step}
-                </div>
-
-                <div className="ml-4 md:ml-8">
-                  <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-hover:text-glow transition-all">
-                    {getStepTitle(step)}
-                  </h3>
-                  <p className="text-base md:text-lg text-muted-foreground">
-                    {getStepContent(step)}
-                  </p>
-                </div>
-
-                <motion.div
-                  className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 blur-xl"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6 }}
-                />
-              </motion.div>
-            ))}
-          </div>
+                className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 blur-xl"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

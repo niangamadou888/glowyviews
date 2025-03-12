@@ -22,14 +22,17 @@ const Hero = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
       
-      {/* Animated circles */}
-      <div className={`absolute transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}>
-        <div className="absolute top-1/4 -left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse delay-700" />
+      {/* Optimized animated circles */}
+      <div className={`absolute transition-all duration-700 ease-out will-change-transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+           style={{ transform: 'translateZ(0)' }}>
+        <div className="absolute top-1/4 -left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-[pulse_3s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-[pulse_3s_ease-in-out_infinite_0.5s]" />
       </div>
       
-      {/* Content */}
-      <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      {/* Optimized content animations */}
+      <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center transition-all duration-700 ease-out will-change-transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+           style={{ transform: 'translateZ(0)' }}>
+        
         <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
           <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare Visualizzazioni YouTube:</span>
           <span className="bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
@@ -71,10 +74,15 @@ const Hero = () => {
         Se stai cercando di acquistare visualizzazioni YouTube, e' importante farlo nel modo giusto. Noi di glowlikes offriamo Visualizzazioni YouTube 100% reali e da profili italiani, a prezzi accessibili. Acquista subito visualizzazioni in modo sicuro e confidenziale tramite la nostra piattaforma.
         </p>
 
- <Link to="https://app.glowlikes.it/">
-        <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white animate-bounce text-[20px]">
-          Inizia Ora
-        </Button>
+        {/* Optimized button animation */}
+        <Link to="https://app.glowlikes.it/">
+          <Button 
+            size="lg" 
+            className="glow bg-primary hover:bg-primary/90 text-white text-[20px] animate-[bounce_2s_ease-in-out_infinite]"
+            style={{ transform: 'translateZ(0)' }}
+          >
+            Inizia Ora
+          </Button>
         </Link>
         {/* Rating Section */}
         <div className="mt-6 flex items-center justify-center gap-2 text-white/90">
