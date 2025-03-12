@@ -83,13 +83,13 @@ const FloatingButton = () => {
             }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center justify-center gap-2 
-                      px-4 py-2.5 md:px-5 md:py-3 rounded-full 
+                      px-4 py-2.5 md:px-5 md:py-3 rounded-md 
                       bg-gradient-to-r from-blue-500 to-purple-600
                       text-white font-medium text-xs md:text-base
                       shadow-lg hover:shadow-xl
                       transition-shadow duration-300
                       focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-                      max-w-[90%] w-auto  animate-glow"
+                      max-w-[90%] w-auto animate-glow"
           >
             <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" />
             <span>Acquista views</span>
