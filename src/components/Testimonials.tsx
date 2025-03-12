@@ -181,7 +181,7 @@ const Testimonials = () => {
           <div className="flex items-center gap-6">
     <div className="flex flex-col items-center">
       <div className="text-4xl mb-1 font-bold text-white">
-        {avgRating.toFixed(1)} <span className="text-gray-400 text-[16px]">({totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'})</span>
+        {avgRating.toFixed(1)} <span className="text-white text-[16px] font-normal">({totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'})</span>
 
       </div>
       <div className="flex gap-1 mb-1">
