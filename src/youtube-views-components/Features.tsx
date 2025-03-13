@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "@/youtube-views-components/ui/card";
 import "lord-icon-element";
 import { AlertTriangle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";

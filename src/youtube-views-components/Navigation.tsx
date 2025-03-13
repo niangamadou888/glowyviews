@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/youtube-views-components/ui/button";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuContent, NavigationMenuTrigger } from "@/youtube-views-components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/youtube-views-components/ui/sheet";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import { Player } from "@lordicon/react";

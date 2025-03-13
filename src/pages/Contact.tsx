@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/youtube-views-components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import Footer from '@/components/Footer';
-import Navigation from '@/components/Navigation';
+import Footer from '@/youtube-views-components/Footer';
+import Navigation from '@/youtube-views-components/Navigation';
 import { FaEnvelope, FaTicketAlt } from 'react-icons/fa';
 
 const Contact = () => {

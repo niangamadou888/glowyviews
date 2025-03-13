@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowRight, ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share2, FileVideo } from 'lucide-react';
+import { useState } from 'react';
+import { ThumbsUp, Users, Eye, Clock, UserPlus, MessageCircle, Share2, FileVideo } from 'lucide-react';
 
 const CTA = () => {
   const [activeButton, setActiveButton] = useState(null);

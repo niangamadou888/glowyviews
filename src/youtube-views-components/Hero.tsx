@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/youtube-views-components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { Player } from "@lordicon/react";
 import "lord-icon-element";

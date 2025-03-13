@@ -1,22 +1,22 @@
+import BackToTopButton from "@/youtube-views-components/BackToTopButton";
+import BuySteps from "@/youtube-views-components/BuySteps";
+import CTA from "@/youtube-views-components/CTA";
+import DoveComprare from "@/youtube-views-components/DoveComprare";
+import FAQ from "@/youtube-views-components/FAQ";
+import FAQIntro from "@/youtube-views-components/FAQIntro";
+import Features from "@/youtube-views-components/Features";
+import FinalConsiderations from "@/youtube-views-components/FinalConsiderations";
+import FloatingButton from "@/youtube-views-components/FloatingButton";
+import Footer from "@/youtube-views-components/Footer";
+import Hero from "@/youtube-views-components/Hero";
+import Navigation from "@/youtube-views-components/Navigation";
+import OtherText from "@/youtube-views-components/OtherText";
+import Testimonials from "@/youtube-views-components/Testimonials";
+import WhyBuyViews from "@/youtube-views-components/WhyBuyViews";
+import YouTubeViewsInfo from "@/youtube-views-components/YouTubeViewsInfo";
 import { useEffect } from "react";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import FAQ from "@/components/FAQ";
-import FAQIntro from "@/components/FAQIntro";
-import FinalConsiderations from "@/components/FinalConsiderations";
-import Navigation from "@/components/Navigation";
-import WhyBuyViews from "@/components/WhyBuyViews";
-import BuySteps from "@/components/BuySteps";
-import Footer from "@/components/Footer";
-import OtherText from "@/components/OtherText";
-import FloatingButton from "@/components/FloatingButton";
-import BackToTopButton from "@/components/BackToTopButton";
-import YouTubeViewsInfo from "@/components/YouTubeViewsInfo";
-import DoveComprare from "@/components/DoveComprare";
-import Testimonials from "@/components/Testimonials";
-import CTA from "@/components/CTA";
 
-const Index = () => {
+const YoutubeViews = () => {
   useEffect(() => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
@@ -86,4 +86,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default YoutubeViews;

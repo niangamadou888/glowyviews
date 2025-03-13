@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer';
-import Navigation from '@/components/Navigation';
+import Footer from '@/youtube-views-components/Footer';
+import Navigation from '@/youtube-views-components/Navigation';
 import React from 'react';
 
 const Rimborso: React.FC = () => {

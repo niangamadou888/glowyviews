@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Share2, Clock } from "lucide-react";
+import { Mail, Shield, FileText, RefreshCw, ScrollText, Eye, ThumbsUp, UserPlus, MessageCircle, Clock } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { FaCcVisa } from "react-icons/fa";
 import { RiMastercardFill } from "react-icons/ri";
@@ -7,7 +7,7 @@ import { SiAmericanexpress } from "react-icons/si";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { FaBitcoin } from "react-icons/fa";
 import { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/youtube-views-components/ui/button";
 import { Player } from "@lordicon/react";
 import { FaEthereum } from "react-icons/fa";
 import youtubeIcon from "../assets/icons/wired-flat-2547-logo-youtube-hover-pinch.json";
