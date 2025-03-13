@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ShoppingCart, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaYoutube } from "react-icons/fa";
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -114,7 +115,7 @@ const FloatingButton = () => {
             >
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0">
-                  <Youtube className="w-6 h-6 text-red-600" />
+                  <FaYoutube className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">Boost Your YouTube Views</h4>
