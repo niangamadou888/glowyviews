@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ShoppingCart } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaYoutube } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";import { FaYoutube } from "react-icons/fa";
+import { Player } from "@lordicon/react";
+import youtubeIcon from "../assets/icons/wired-flat-2547-logo-youtube-hover-pinch.json";
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const youtubeIconRef = useRef<Player | null>(null);
 
   useEffect(() => {
     // Check if mobile on mount and resize
@@ -100,6 +102,16 @@ const FloatingButton = () => {
     }
   };
 
+  // Add useEffect for animation when the button becomes visible
+  useEffect(() => {
+    if (youtubeIconRef.current) {
+      if (isVisible) {
+        // Play animation when component mounts
+        youtubeIconRef.current.playFromBeginning();
+      }
+    }
+  }, [isVisible]);
+
   return (
     <AnimatePresence mode="wait">
       {isVisible && (
@@ -114,8 +126,16 @@ const FloatingButton = () => {
               className="w-full max-w-lg mx-auto flex items-center justify-between bg-white/90 backdrop-blur-sm rounded-lg shadow-lg px-5 py-3"
             >
               <div className="flex items-center gap-3">
-                <div className="flex-shrink-0">
-                  <FaYoutube className="w-6 h-6 text-red-600" />
+                <div 
+                  className="flex-shrink-0"
+                  onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
+                >
+                  <Player
+                    ref={youtubeIconRef}
+                    icon={youtubeIcon}
+                    size={28}
+                    state="morph"
+                  />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">Boost Your YouTube Views</h4>
