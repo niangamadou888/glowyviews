@@ -43,6 +43,7 @@ const reviews: Review[] = [
   }
 ];
 
+// Add these near the other state declarations at the top of the component
 const Testimonials = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [rating, setRating] = useState(0);
@@ -57,6 +58,27 @@ const Testimonials = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const itemsPerView = windowWidth < 768 ? 1 : 3;
+  const [isInView, setIsInView] = useState(false);
+  const ratingRef = useRef<HTMLDivElement>(null);
+
+  // Add this useEffect after your other useEffect hooks
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect(); // Only trigger once
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ratingRef.current) {
+      observer.observe(ratingRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     // Handle window resize
@@ -179,37 +201,37 @@ const Testimonials = () => {
           
           {/* Average Rating Display */}
           <div className="flex items-center gap-6">
-    <div className="flex flex-col items-center">
-      <div className="text-4xl mb-1 font-bold text-white">
-        {avgRating.toFixed(1)} <span className="text-white text-[16px] font-normal">({totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'})</span>
-
-      </div>
-      <div className="flex gap-1 mb-1">
-        {[...Array(5)].map((_, index) => (
-          <div key={index} className="relative">
-            <FaStar
-              className={`transform transition-all duration-300 ${
-                index < Math.round(avgRating) 
-                  ? "text-[#FFD700] opacity-0" 
-                  : "text-gray-600"
-              }`}
-              size={20}
-            />
-            {index < Math.round(avgRating) && (
-              <FaStar
-                className="absolute top-0 left-0"
-                style={{
-                  color: '#FFD700',
-                  animation: `starEntrance 2.4s ease-out ${index * 0.2}s forwards`,
-                  filter: 'drop-shadow(0 0 4px #FFD700)',
-                  WebkitTextStroke: '1px #FFA500',
-                }}
-                size={20}
-              />
-            )}
-          </div>
-        ))}
-                
+            <div className="flex flex-col items-center" ref={ratingRef}>
+              <div className="text-4xl mb-1 font-bold text-white">
+                {avgRating.toFixed(1)} <span className="text-white text-[16px] font-normal">
+                  ({totalReviews} {totalReviews === 1 ? 'Recensione' : 'Recensioni'})
+                </span>
+              </div>
+              <div className="flex gap-1 mb-1">
+                {[...Array(5)].map((_, index) => (
+                  <div key={index} className="relative">
+                    <FaStar
+                      className={`transform transition-all duration-300 ${
+                        index < Math.round(avgRating) 
+                          ? "text-[#FFD700] opacity-0" 
+                          : "text-gray-600"
+                      }`}
+                      size={20}
+                    />
+                    {index < Math.round(avgRating) && (
+                      <FaStar
+                        className="absolute top-0 left-0"
+                        style={{
+                          color: '#FFD700',
+                          animation: isInView ? `starEntrance 2.4s ease-out ${index * 0.2}s forwards` : 'none',
+                          filter: 'drop-shadow(0 0 4px #FFD700)',
+                          WebkitTextStroke: '1px #FFA500',
+                        }}
+                        size={20}
+                      />
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
