@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/youtube-views-components/ui/card";
 import { motion } from "framer-motion";
 
 const DoveComprare = () => {
@@ -9,8 +10,9 @@ const DoveComprare = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="relative overflow-hidden rounded-2xl border border-white/30 transition-all duration-200 hover:border-white/70 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] md:motion-safe:animate-in hidden md:block"
+          className="relative overflow-hidden rounded-2xl border border-white/30 transition-all duration-200 hover:border-white/70 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
           style={{
+            transform: 'translateZ(0)',
             willChange: 'transform, opacity'
           }}
         >
