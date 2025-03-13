@@ -123,13 +123,20 @@ const FloatingButton = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="w-full max-w-lg mx-auto flex items-center justify-between bg-white/90 backdrop-blur-sm rounded-lg shadow-lg px-5 py-3"
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 10px 30px -10px rgba(0,0,0,0.2)",
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 20
+                }
+              }}
+              onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
+              className="w-full max-w-lg mx-auto flex items-center justify-between bg-white/90 backdrop-blur-sm rounded-lg shadow-lg px-5 py-3 hover:bg-white/95 transition-colors duration-300"
             >
               <div className="flex items-center gap-3">
-                <div 
-                  className="flex-shrink-0"
-                  onMouseEnter={() => youtubeIconRef.current?.playFromBeginning()}
-                >
+                <div className="flex-shrink-0">
                   <Player
                     ref={youtubeIconRef}
                     icon={youtubeIcon}
