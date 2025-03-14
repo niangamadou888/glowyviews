@@ -73,25 +73,40 @@ const reviews: Review[] = [
   }
 ];
 
+// Add these near the other state declarations at the top of the component
 const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 'left' | 'right' }) => {
   const [isPaused, setIsPaused] = useState(false);
+
+  const handleInteractionStart = () => {
+    setIsPaused(true);
+  };
+
+  const handleInteractionEnd = () => {
+    setIsPaused(false);
+  };
 
   return (
     <div 
       className="flex gap-4 mb-8 overflow-hidden relative touch-pan-y"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => setIsPaused(false)}
+      onMouseEnter={handleInteractionStart}
+      onMouseLeave={handleInteractionEnd}
+      onTouchStart={handleInteractionStart}
+      onTouchEnd={handleInteractionEnd}
+      onTouchCancel={handleInteractionEnd}
     >
       <div 
         className={`flex gap-4 animate-${direction === 'left' ? 'scroll-left' : 'scroll-right'}`}
-        style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+        style={{ 
+          animationPlayState: isPaused ? 'paused' : 'running',
+          WebkitTouchCallout: 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none'
+        }}
       >
         {[...reviews, ...reviews].map((review, idx) => (
           <div 
             key={`${review.id}-${idx}`}
-            className="w-[300px] sm:w-[350px] md:w-[400px] flex-shrink-0"
+            className="w-[280px] sm:w-[320px] md:w-[400px] flex-shrink-0"
           >
             <div className="bg-[#262937] p-4 sm:p-5 rounded-xl border border-[#333333] h-[200px] sm:h-[215px] flex flex-col mx-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/30">
               <div className="flex justify-center mb-3 sm:mb-4">
@@ -266,9 +281,9 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
-      <div className="container mx-auto px-2 md:px-4 pb-8 md:pb-16 relative z-10">
-        <div className="flex flex-col items-center mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6 text-white">
+      <div className="container mx-auto px-4 pb-16 relative z-10">
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-4xl font-bold text-center mb-6 text-white">
             Cosa Dicono I Nostri Clienti
           </h2>
           
@@ -315,13 +330,13 @@ const Testimonials = () => {
           {/* Fade effect containers */}
           <div className="pointer-events-none absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#121212] to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#121212] to-transparent z-10" />
-        
+
           {/* First row - moves left */}
           <TestimonialRow 
             reviews={reviews.slice(0, Math.ceil(reviews.length/2))} 
             direction="left" 
           />
-        
+
           {/* Second row - moves right */}
           <TestimonialRow 
             reviews={reviews.slice(Math.ceil(reviews.length/2))} 
