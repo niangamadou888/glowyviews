@@ -40,10 +40,83 @@ const reviews: Review[] = [
     stars: 5,
     text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
     name: "David Brown"
+  },
+  {
+    id: 6,
+    stars: 5,
+    text: "The growth in my channel's engagement has been phenomenal. Their service is worth every penny!",
+    name: "Alex Turner"
+  },
+  {
+    id: 7,
+    stars: 5,
+    text: "I was hesitant at first, but the results exceeded my expectations. My subscriber count doubled!",
+    name: "Rachel Chen"
+  },
+  {
+    id: 8,
+    stars: 4,
+    text: "Fast delivery and excellent customer support. They really know what they're doing.",
+    name: "Marcus Williams"
+  },
+  {
+    id: 9,
+    stars: 5,
+    text: "Best investment I've made for my YouTube channel. The organic growth is impressive!",
+    name: "Sofia Rodriguez"
+  },
+  {
+    id: 10,
+    stars: 5,
+    text: "Their service helped me reach monetization requirements in record time. Highly recommended!",
+    name: "James Parker"
   }
 ];
 
-// Add these near the other state declarations at the top of the component
+const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 'left' | 'right' }) => {
+  const [isPaused, setIsPaused] = useState(false);
+
+  return (
+    <div 
+      className="flex gap-4 mb-8 overflow-hidden relative touch-pan-y"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+    >
+      <div 
+        className={`flex gap-4 animate-${direction === 'left' ? 'scroll-left' : 'scroll-right'}`}
+        style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+      >
+        {[...reviews, ...reviews].map((review, idx) => (
+          <div 
+            key={`${review.id}-${idx}`}
+            className="w-[300px] sm:w-[350px] md:w-[400px] flex-shrink-0"
+          >
+            <div className="bg-[#262937] p-4 sm:p-5 rounded-xl border border-[#333333] h-[200px] sm:h-[215px] flex flex-col mx-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/30">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                {[...Array(5)].map((_, starIndex) => (
+                  <FaStar
+                    key={starIndex}
+                    className={starIndex < review.stars ? "text-primary" : "text-gray-600"}
+                    size={16}
+                  />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-3 sm:mb-4 italic leading-relaxed text-center flex-grow text-sm sm:text-base">
+                &quot;{review.text}&quot;
+              </p>
+              <p className="text-primary font-medium text-center mt-auto text-sm sm:text-base">
+                - {review.name}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Testimonials = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [rating, setRating] = useState(0);
@@ -193,14 +266,14 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
-      <div className="container mx-auto px-4 pb-16 relative z-10">
-        <div className="flex flex-col items-center mb-12">
-          <h2 className="text-4xl font-bold text-center mb-6 text-white">
+      <div className="container mx-auto px-2 md:px-4 pb-8 md:pb-16 relative z-10">
+        <div className="flex flex-col items-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6 text-white">
             Cosa Dicono I Nostri Clienti
           </h2>
           
           {/* Average Rating Display */}
-          <div className="flex items-center justify-center gap-6 mt-4">
+          <div className="flex items-center gap-6">
             <div className="flex flex-col items-center" ref={ratingRef}>
               <div className="text-4xl mb-1 font-bold text-white">
                 {avgRating.toFixed(1)} <span className="text-white text-[16px] font-normal">
@@ -237,100 +310,26 @@ const Testimonials = () => {
           </div>
         </div>
         
-        {/* Only show slider if there are reviews */}
-        {reviews.length > 0 && (
-          <div className="relative w-full mx-auto">
-            {/* Slider Navigation Buttons - only show if there are enough reviews to navigate */}
-            {reviews.length > itemsPerView && (
-              <>
-                <button 
-                  onClick={slidePrev}
-                  className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 z-20 
-                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer [@media(min-width:1500px)]:left-[100px]"
-                  aria-label="Previous review"
-                >
-                  <IoIosArrowBack size={24} />
-                </button>
-                
-                <button 
-                  onClick={slideNext}
-                  className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 z-20 
-                    text-white/50 hover:text-white transition-colors pb-12 cursor-pointer [@media(min-width:1500px)]:right-[100px]"
-                  aria-label="Next review"
-                >
-                  <IoIosArrowForward size={24} />
-                </button>
-              </>
-            )}
+        {/* Replace the existing slider with two rows */}
+        <div className="relative mt-16">
+          {/* Fade effect containers */}
+          <div className="pointer-events-none absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#121212] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#121212] to-transparent z-10" />
+        
+          {/* First row - moves left */}
+          <TestimonialRow 
+            reviews={reviews.slice(0, Math.ceil(reviews.length/2))} 
+            direction="left" 
+          />
+        
+          {/* Second row - moves right */}
+          <TestimonialRow 
+            reviews={reviews.slice(Math.ceil(reviews.length/2))} 
+            direction="right" 
+          />
+        </div>
 
-            {/* Slider Container */}
-            <div className="overflow-hidden max-w-[1200px] mx-auto">
-              <div 
-                ref={sliderRef}
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * slideWidth}%)` }}
-              >
-                {reviews.map((review, index) => (
-                  <div 
-                    key={review.id} 
-                    className="w-full flex-shrink-0 px-1 max-w-[400px]"
-                    style={{ width: `${slideWidth}%` }}
-                  >
-                    <div 
-                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 relative h-[215px] flex flex-col mx-1
-                        ${hoveredIndex === index ? "shadow-lg" : ""}`}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                      <div className="flex gap-1 mb-4">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <FaStar
-                            key={starIndex}
-                            className={`w-4 h-4 ${
-                              starIndex < review.stars 
-                                ? "fill-yellow-400 text-yellow-400" 
-                                : "fill-gray-200 text-gray-200"
-                            }`}
-                            size={16}
-                          />
-                        ))}
-                      </div>
-                      <p className="text-gray-300 text-base mb-4">{review.text}</p>
-                      <p className="text-gray-300 text-base mt-auto font-semibold">- {review.name}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Dots Indicator - only show if there are enough reviews */}
-            {reviews.length > itemsPerView && (
-              <div className="flex justify-center gap-2 mt-6">
-                {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-2 h-2 rounded-md transition-colors duration-300 
-                      ${index === currentIndex ? 'bg-primary' : 'bg-gray-600'}`}
-                    onClick={() => {
-                      stopAutoRotation();
-                      setCurrentIndex(index);
-                      startAutoRotation();
-                    }}
-                    aria-label={`Go to review set ${index + 1}`}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* No reviews message */}
-        {reviews.length === 0 && (
-          <div className="text-center py-8 text-gray-400">
-            Non ci sono ancora recensioni. Sii il primo a lasciarne una!
-          </div>
-        )}
-
+        {/* Write Review Button */}
         <div className="text-center mt-6">
           <button
             onClick={() => setIsModalOpen(true)}
@@ -422,4 +421,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
