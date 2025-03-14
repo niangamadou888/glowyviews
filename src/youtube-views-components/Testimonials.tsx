@@ -286,7 +286,7 @@ const Testimonials = () => {
                         {[...Array(5)].map((_, starIndex) => (
                           <FaStar
                             key={starIndex}
-                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
+                            className={`w-4 h-4 ${
                               starIndex < review.stars 
                                 ? "fill-yellow-400 text-yellow-400" 
                                 : "fill-gray-200 text-gray-200"
@@ -295,8 +295,8 @@ const Testimonials = () => {
                           />
                         ))}
                       </div>
-                      <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">{review.text}</p>
-                      <p className="font-semibold text-gray-300 text-sm sm:text-base">- {review.name}</p>
+                      <p className="text-gray-300 text-base mb-4">{review.text}</p>
+                      <p className="text-gray-300 text-base mt-auto font-semibold">- {review.name}</p>
                     </div>
                   </div>
                 ))}
