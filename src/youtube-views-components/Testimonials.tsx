@@ -200,7 +200,7 @@ const Testimonials = () => {
           </h2>
           
           {/* Average Rating Display */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center justify-center gap-6 mt-4">
             <div className="flex flex-col items-center" ref={ratingRef}>
               <div className="text-4xl mb-1 font-bold text-white">
                 {avgRating.toFixed(1)} <span className="text-white text-[16px] font-normal">
@@ -273,36 +273,30 @@ const Testimonials = () => {
                 {reviews.map((review, index) => (
                   <div 
                     key={review.id} 
-                    className={`w-full flex-shrink-0 px-1 max-w-[400px]`}
+                    className="w-full flex-shrink-0 px-4"
                     style={{ width: `${slideWidth}%` }}
                   >
                     <div 
-                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 ease-in-out relative h-[215px] flex flex-col mx-1
-                        ${hoveredIndex === index 
-                          ? "border-primary/50 shadow-2xl shadow-primary/30 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow" 
-                          : "border-[#333333] hover:border-primary/40"}`}
+                      className={`w-80 flex-shrink-0 rounded-2xl bg-[#262937] p-8 transition-all duration-300 h-full
+                        ${hoveredIndex === index ? "shadow-lg" : ""}`}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
-                      <div className={`flex justify-center mb-4 transition-all duration-300 ${
-                        hoveredIndex === index ? "drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]" : ""
-                      }`}>
+                      <div className="flex gap-1 mb-4">
                         {[...Array(5)].map((_, starIndex) => (
                           <FaStar
                             key={starIndex}
-                            className={`${starIndex < review.stars ? "text-primary" : "text-gray-600"} ${
-                              hoveredIndex === index ? "drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]" : ""
+                            className={`w-5 h-5 ${
+                              starIndex < review.stars 
+                                ? "fill-yellow-400 text-yellow-400" 
+                                : "fill-gray-200 text-gray-200"
                             }`}
                             size={20}
                           />
                         ))}
                       </div>
-                      <p className={`text-gray-300 mb-4 italic leading-relaxed text-center flex-grow transition-all duration-300 ${
-                        hoveredIndex === index ? "text-primary/90 drop-shadow-[0_0_4px_rgba(var(--primary),0.3)]" : ""
-                      }`}>&quot;{review.text}&quot;</p>
-                      <p className={`text-primary font-medium text-center mt-auto transition-all duration-300 ${
-                        hoveredIndex === index ? "drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]" : ""
-                      }`}>- {review.name}</p>
+                      <p className="text-gray-900 mb-6">{review.text}</p>
+                      <p className="font-semibold text-gray-900">- {review.name}</p>
                     </div>
                   </div>
                 ))}
