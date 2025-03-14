@@ -181,10 +181,17 @@ module.exports = {
         'border-draw': 'border-draw 3.0s cubic-bezier(0.00001, 0.0005, 0.1, 1) forwards',
         slideDown: 'slideDown 0.2s ease-out',
         'scroll-left': 'scroll-left 40s linear infinite',
-        'scroll-right': 'scroll-right 40s linear infinite'
+        'scroll-right': 'scroll-right 40s linear infinite',
       },
-      textShadow: {
-        glow: '0 0 10px rgba(var(--primary), 0.5), 0 0 20px rgba(var(--primary), 0.3), 0 0 30px rgba(var(--primary), 0.2)',
+      keyframes: {
+        'scroll-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
     },
   },

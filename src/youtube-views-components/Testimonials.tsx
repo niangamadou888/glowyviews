@@ -95,7 +95,11 @@ const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 
       onTouchCancel={handleInteractionEnd}
     >
       <div 
-        className={`flex gap-4 animate-${direction === 'left' ? 'scroll-left' : 'scroll-right'}`}
+        className={`flex gap-4 ${
+          direction === 'left' 
+            ? 'animate-scroll-left' 
+            : 'animate-scroll-right'
+        }`}
         style={{ 
           animationPlayState: isPaused ? 'paused' : 'running',
           WebkitTouchCallout: 'none',
