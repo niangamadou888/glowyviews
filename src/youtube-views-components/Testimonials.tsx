@@ -273,11 +273,11 @@ const Testimonials = () => {
                 {reviews.map((review, index) => (
                   <div 
                     key={review.id} 
-                    className="w-full flex-shrink-0 px-4"
+                    className="w-full flex-shrink-0 px-1 max-w-[400px]"
                     style={{ width: `${slideWidth}%` }}
                   >
                     <div 
-                      className={`w-80 flex-shrink-0 rounded-2xl bg-[#262937] p-8 transition-all duration-300 h-full
+                      className={`bg-[#262937] p-5 rounded-xl border transition-all duration-300 relative h-[215px] flex flex-col mx-1
                         ${hoveredIndex === index ? "shadow-lg" : ""}`}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
@@ -286,17 +286,17 @@ const Testimonials = () => {
                         {[...Array(5)].map((_, starIndex) => (
                           <FaStar
                             key={starIndex}
-                            className={`w-5 h-5 ${
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
                               starIndex < review.stars 
                                 ? "fill-yellow-400 text-yellow-400" 
                                 : "fill-gray-200 text-gray-200"
                             }`}
-                            size={20}
+                            size={16}
                           />
                         ))}
                       </div>
-                      <p className="text-gray-900 mb-6">{review.text}</p>
-                      <p className="font-semibold text-gray-900">- {review.name}</p>
+                      <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">{review.text}</p>
+                      <p className="font-semibold text-gray-300 text-sm sm:text-base">- {review.name}</p>
                     </div>
                   </div>
                 ))}
