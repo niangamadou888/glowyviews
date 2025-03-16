@@ -331,21 +331,23 @@ const Testimonials = () => {
         
         {/* Replace the existing slider with two rows */}
         <div className="relative mt-16">
-          {/* Fade effect containers */}
-          <div className="pointer-events-none absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-[#121212] to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-[#121212] to-transparent z-10" />
-
-          {/* First row - moves left */}
-          <TestimonialRow 
-            reviews={reviews.slice(0, Math.ceil(reviews.length/2))} 
-            direction="left" 
-          />
-
-          {/* Second row - moves right */}
-          <TestimonialRow 
-            reviews={reviews.slice(Math.ceil(reviews.length/2))} 
-            direction="right" 
-          />
+          <div className="max-w-[1200px] mx-auto overflow-hidden">
+            {/* Fade effect containers with reduced opacity */}
+            <div className="pointer-events-none absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-background/80 to-transparent z-10" />
+            <div className="pointer-events-none absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-background/80 to-transparent z-10" />
+        
+            {/* First row - moves left */}
+            <TestimonialRow 
+              reviews={reviews.slice(0, Math.ceil(reviews.length/2))} 
+              direction="left" 
+            />
+        
+            {/* Second row - moves right */}
+            <TestimonialRow 
+              reviews={reviews.slice(Math.ceil(reviews.length/2))} 
+              direction="right" 
+            />
+          </div>
         </div>
 
         {/* Write Review Button */}
