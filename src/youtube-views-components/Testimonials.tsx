@@ -332,9 +332,9 @@ const Testimonials = () => {
         {/* Replace the existing slider with two rows */}
         <div className="relative mt-16">
           <div className="max-w-[90%] xl:max-w-[1400px] 2xl:max-w-[1300px] mx-auto overflow-hidden">
-            {/* Fade effect containers with stronger 2xl values */}
-            <div className="pointer-events-none absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-background/90 via-background/50 to-transparent z-10 2xl:from-background 2xl:via-background/80 2xl:to-transparent" />
-            <div className="pointer-events-none absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-background/90 via-background/50 to-transparent z-10 2xl:from-background 2xl:via-background/80 2xl:to-transparent" />
+            {/* Updated fade effect containers with specific 2xl breakpoint styles */}
+            <div className="pointer-events-none absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-background/90 via-background/50 to-transparent z-10 2xl:w-60 2xl:bg-gradient-to-r 2xl:from-background 2xl:via-background/80 2xl:to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-background/90 via-background/50 to-transparent z-10 2xl:w-60 2xl:bg-gradient-to-l 2xl:from-background 2xl:via-background/80 2xl:to-transparent" />
             
             {/* First row - moves left */}
             <TestimonialRow 
