@@ -279,6 +279,46 @@ const Testimonials = () => {
   const slideWidth = 100 / itemsPerView;
   
 
+  // Add schema markup
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GlowyViews",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": avgRating.toFixed(1),
+        "reviewCount": totalReviews,
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": reviews.map(review => ({
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": review.stars,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": review.name
+        },
+        "reviewBody": review.text
+      }))
+    };
+
+    // Add schema to head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [avgRating, totalReviews]);
+
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden" id='testimonials'>
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
