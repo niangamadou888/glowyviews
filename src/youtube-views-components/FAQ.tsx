@@ -1,7 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  // Add schema markup
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Dopo quanto vedrò le mie visualizzazioni YouTube salire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tutto dipende da pacchetto che hai comprato. Per poche centinaia di visualizzazioni, riusciamo a consegnare l'ordine in poche ore. Per i pacchetti più ampi, ci prendiamo alcuni giorni lavorativi per simulare una reale crescita organica."
+          }
+        },
+        // ... more questions and answers
+      ]
+    };
+
+    // Add schema to head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -87,7 +116,7 @@ const FAQ = () => {
         >
           <div className="flex justify-between items-center">
             <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 2 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
-              3. Davvero da voi posso comprare visualizzazioni YouTube reali?
+              3. Davvero da voi posco comprare visualizzazioni YouTube reali?
             </h3>
             <span className={`transform transition-transform duration-300 ${openIndex === 2 ? 'rotate-180' : ''}`}>
               ▼
