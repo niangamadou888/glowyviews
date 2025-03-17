@@ -94,6 +94,9 @@ const Hero = () => {
         </Link>
         {/* Rating Section */}
         <div className="mt-6 flex items-center justify-center gap-2 text-white/90">
+        <span className="px-3 py-1 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-full border border-primary/30 shadow-sm">
+            A partire da 0,52 €
+          </span>
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -102,7 +105,7 @@ const Hero = () => {
           <span className="font-semibold">4.9</span>
           <span className="text-white/70">•</span>
           <span className="text-white/70">
-            <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a> a partire da 0,52 €
+            <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
           </span>
         </div>
       </div>
