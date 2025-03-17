@@ -8,6 +8,7 @@ interface Review {
   stars: number;
   text: string;
   name: string;
+  row: 'first' | 'second';  // Add this field
 }
 
 const reviews: Review[] = [
@@ -15,61 +16,57 @@ const reviews: Review[] = [
     id: 1,
     stars: 5,
     text: "Absolutely amazing service! Could not be happier with the results. Highly recommend to anyone looking for quality work.",
-    name: "John Smith"
+    name: "John Smith",
+    row: 'first'
   },
   {
     id: 2,
     stars: 5,
     text: "Professional, timely, and exceeded all expectations. Will definitely use their services again!",
-    name: "Sarah Johnson"
+    name: "Sarah Johnson",
+    row: 'first'
   },
   {
     id: 3,
     stars: 4,
     text: "Great experience from start to finish. The team was very responsive and delivered exactly what we needed.",
-    name: "Mike Davis"
+    name: "Mike Davis",
+    row: 'first'
   },
   {
     id: 4,
     stars: 5,
     text: "Outstanding quality and customer service. The results were better than expected!",
-    name: "Emma Wilson"
+    name: "Emma Wilson",
+    row: 'first'
   },
   {
     id: 5,
     stars: 5,
     text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
-    name: "David Brown"
+    name: "David Brown",
+    row: 'second'
   },
   {
     id: 6,
     stars: 5,
     text: "The growth in my channel's engagement has been phenomenal. Their service is worth every penny!",
-    name: "Alex Turner"
+    name: "Alex Turner",
+    row: 'second'
   },
   {
     id: 7,
     stars: 5,
     text: "I was hesitant at first, but the results exceeded my expectations. My subscriber count doubled!",
-    name: "Rachel Chen"
+    name: "Rachel Chen",
+    row: 'second'
   },
   {
     id: 8,
     stars: 4,
     text: "Fast delivery and excellent customer support. They really know what they're doing.",
-    name: "Marcus Williams"
-  },
-  {
-    id: 9,
-    stars: 5,
-    text: "Best investment I've made for my YouTube channel. The organic growth is impressive!",
-    name: "Sofia Rodriguez"
-  },
-  {
-    id: 10,
-    stars: 5,
-    text: "Their service helped me reach monetization requirements in record time. Highly recommended!",
-    name: "James Parker"
+    name: "Marcus Williams",
+    row: 'second'
   }
 ];
 
@@ -283,7 +280,7 @@ const Testimonials = () => {
   
 
   return (
-    <section className="w-full bg-hsl(var(--background)) relative overflow-hidden">
+    <section className="w-full bg-hsl(var(--background)) relative overflow-hidden" id='testimonials'>
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5"></div>
       <div className="container mx-auto px-4 pb-16 relative z-10">
         <div className="flex flex-col items-center mb-12">

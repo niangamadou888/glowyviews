@@ -10,6 +10,14 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const playerRef = useRef<Player | null>(null);
 
+  const handleScrollToTestimonials = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('testimonials');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   useEffect(() => {
     setIsVisible(true);
     playerRef.current?.playFromBeginning();
@@ -93,7 +101,9 @@ const Hero = () => {
           </div>
           <span className="font-semibold">4.9</span>
           <span className="text-white/70">•</span>
-          <span className="text-white/70"><a href="https://app.glowlikes.it/recensioni">200+ recensioni</a></span>
+          <span className="text-white/70">
+            <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a> a partire da 0,52 €
+          </span>
         </div>
       </div>
     </div>
