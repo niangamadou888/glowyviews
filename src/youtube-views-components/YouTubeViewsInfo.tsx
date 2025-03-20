@@ -39,7 +39,7 @@ const YouTubeViewsInfo = () => {
                 <div className="relative aspect-video rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
                   <img
-                    src="Tutti i vantaggi del comprare Visualizzazioni YouTube no background.png"
+                    src="/Tutti i vantaggi del comprare Visualizzazioni YouTube no background.png"
                     alt="Tutti i vantaggi del comprare Visualizzazioni YouTube"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -113,7 +113,7 @@ const YouTubeViewsInfo = () => {
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
-                src="Tutti i vantaggi del comprare Visualizzazioni YouTube no background.png"
+                src="/Tutti i vantaggi del comprare Visualizzazioni YouTube no background.png"
                 alt="Tutti i vantaggi del comprare Visualizzazioni YouTube"
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -149,7 +149,7 @@ const YouTubeViewsInfo = () => {
                 <div className="relative aspect-video rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
                   <img
-                    src="Per quali video si possono comprare Visualizzazioni YouTube_ no background.png"
+                    src="/Per quali video si possono comprare Visualizzazioni YouTube_ no background.png"
                     alt="Per quali video si possono comprare Visualizzazioni YouTube?"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -212,7 +212,7 @@ const YouTubeViewsInfo = () => {
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
-                src="Per quali video si possono comprare Visualizzazioni YouTube_ no background.png"
+                src="/Per quali video si possono comprare Visualizzazioni YouTube_ no background.png"
                 alt="Per quali video si possono comprare Visualizzazioni YouTube?"
                 className="w-full h-full object-cover rounded-xl"
               />
