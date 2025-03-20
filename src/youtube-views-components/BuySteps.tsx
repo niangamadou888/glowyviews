@@ -35,7 +35,7 @@ const BuySteps = () => {
 
   return (
     <section
-      className="relative mt-20 md:mt-40 w-full max-w-6xl mx-auto px-4 py-24 md:py-32 overflow-hidden"
+      className="relative mt-18 md:mt-40 w-full max-w-6xl mx-auto px-4 py-20 md:py-32 overflow-hidden"
       ref={containerRef}
     >
       {/* Background Effect - Simplified for mobile */}
