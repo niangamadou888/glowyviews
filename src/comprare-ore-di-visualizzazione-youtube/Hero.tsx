@@ -34,7 +34,7 @@ const Hero = () => {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "Ore di Visualizzazione YouTube Reali e Italiane",
-            "description": "Compra Ore di Visualizzazione YouTube reali e italiane al 100%, a partire da solo 0,47 €. Incrementa la tua popolarità senza pensieri con interazioni top qualità.",
+            "description": "Compra Ore di Visualizzazione YouTube reali e italiane al 100%, a partire da solo 0,47 €. Incrementa la tua popolarità senza pensieri con interazioni top qualità. Prova ora!",
             "offers": {
               "@type": "Offer",
               "priceCurrency": "EUR",
@@ -42,7 +42,142 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-ore-di-visualizzazione-youtube"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.6",
+              "reviewCount": "9",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Adriano"
+                },
+                "reviewBody": "Sono sempre stato convinto che la chiave di tutto è e rimane il lavoro organico. Tuttavia, il mio canale stava andando a picco, così ho comprato un po’ di ore di visualizzazione YouTube per smuovere le acque. Vediamo come va."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Rick"
+                },
+                "reviewBody": "Ho conosciuto GlowLikes per caso e devo dire che è stata una bella sorpresa. Sono anni che bazzico in questo settore e non è facile trovare agenzie serie e competenti. 3000 ore di visualizzazioni arrivate in un solo pomeriggio 🔝🔝"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Martin"
+                },
+                "reviewBody": "Ore di visualizzazione YouTube ad un prezzo più che vantaggioso 😉! Ne ho ordinate 5000 e sono arrivate prima del previsto. Tra l’altro non ho riscontrato nessun calo, quindi significa che sono davvero ottime interazioni 👍."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Irina"
+                },
+                "reviewBody": "Ottimo servizio anche per chi vive all’estero! 😍😍 Ero convinta che la distanza potesse essere un problema. Era solo una mia paranoia, visto che ho ricevuto 6000 ore di visualizzazioni YouTube secondo i tempi dichiarati."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "3",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Alex92"
+                },
+                "reviewBody": "Ciao gente! Se può essere d’aiuto lascio anche la mia recensione. Nel complesso è un servizio di tutto rispetto, però consiglierei di velocizzare i tempi di consegna, dato che ho dovuto aspettare quasi 1 giorni intero per 7000 ore di visualizzazione."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Giova Official"
+                },
+                "reviewBody": "Avevo bisogno di un boost rapido per raggiungere le 4000 ore e sbloccare la monetizzazione… Beh, missione compiuta! Ho preso 4500 ore da GlowLikes e sono arrivate spalmate su pochi giorni. Ora finalmente ho l’AdSense attivo 🤑 Grazie ragazzi!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Veronica"
+                },
+                "reviewBody": "Ammetto che ero titubante… avevo paura di penalizzazioni da YouTube. Invece è andato tutto liscio, nessuna anomalia e le ore sono stabili e il canale monetizzato. "
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "SimoneYT"
+                },
+                "reviewBody": "Ho testato GlowLikes per curiosità: 2000 ore acquistate e arrivate nei tempi. Nulla da dire sulla qualità, ma forse si potrebbe lavorare un po’ meglio sull’assistenza clienti, che in chat ha risposto dopo quasi un giorno."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "AlessandroFX"
+                },
+                "reviewBody": " Finalmente qualcuno che mantiene le promesse! Ero stanco di servizi che promettono ore di visualizzazione e poi serve contattare diverse volte per ricordare che mancano ore. GlowLikes invece ha inviato tutte le ore e più al primo tentativo!"
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -125,7 +260,7 @@ const Hero = () => {
             <span className="font-semibold">4.9</span>
             <span className="text-white/70">•</span>
             <span className="text-white/70">
-              <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+              <a href="#testimonials" onClick={handleScrollToTestimonials}>9 recensioni</a>
             </span>
           </div>
         </div>

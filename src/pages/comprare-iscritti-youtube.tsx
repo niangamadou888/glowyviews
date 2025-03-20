@@ -27,7 +27,7 @@ const ComprareIscritti = () => {
           <Hero />
         </div>
         <Features />
-        <Testimonials/>
+        <Testimonials />
         <CTA />
         <FloatingButton />
         <BackToTopButton />

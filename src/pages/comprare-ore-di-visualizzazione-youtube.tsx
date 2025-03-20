@@ -6,6 +6,7 @@ import Footer from "@/youtube-views-components/Footer";
 import Navigation from "@/youtube-views-components/Navigation";
 import Hero from "@/comprare-ore-di-visualizzazione-youtube/Hero";
 import Features from "@/comprare-ore-di-visualizzazione-youtube/Features";
+import Testimonials from "@/comprare-ore-di-visualizzazione-youtube/Testiomonials";
 
 const ComprareOre = () => {
   return (
@@ -27,6 +28,7 @@ const ComprareOre = () => {
           <Hero />
         </div>
         <Features />
+        <Testimonials />
         <CTA />
         <FloatingButton />
         <BackToTopButton />
