@@ -8,7 +8,7 @@ interface Review {
   stars: number;
   text: string;
   name: string;
-  row: 'first' | 'second';  // Add this field
+  row: 'first' | 'second' | 'third';  // Updated to include 'third'
 }
 
 const reviews: Review[] = [
@@ -66,14 +66,14 @@ const reviews: Review[] = [
     stars: 5,
     text: "Ho provato visualizzazioni da altri siti prima, ma per me quelle di GlowViews sono le migliori. Rapide, economiche e senza cali. Inoltre supporto rapido quando serve 🙂",
     name: "Antonio Roma",
-    row: 'first'
+    row: 'third'
   },
   {
     id: 10,
     stars: 5,
     text: "Uso le views italiane da google ads, partono un po dopo ma a parte questo, ottima qualità. Ricevo anche like e iscritti!",
     name: "Gio Gaming",
-    row: 'second'
+    row: 'third'
   },
   {
     id: 11,
@@ -87,14 +87,14 @@ const reviews: Review[] = [
     stars: 5,
     text: "Uso GlowLikes per tutti i nuovi video, servizio sempre eccellente. Views e likes che partono quasi subito e da utenti italiani reali. I miei video poi continuano a ottenere views per diversi giorni.",
     name: "Cronache Milano",
-    row: 'second'
+    row: 'third'
   },
   {
     id: 13,
     stars: 4,
     text: "Comprato 1,000 visualizzazioni, consegna senza problemi e con un generoso extra. Consigliati!",
     name: "Samu",
-    row: 'first'
+    row: 'third'
   }
 ];
 
@@ -364,14 +364,20 @@ const Testimonials = () => {
             
             {/* First row - moves left */}
             <TestimonialRow 
-              reviews={reviews.slice(0, Math.ceil(reviews.length/2))} 
+              reviews={reviews.filter(r => r.row === 'first')} 
               direction="left" 
             />
             
             {/* Second row - moves right */}
             <TestimonialRow 
-              reviews={reviews.slice(Math.ceil(reviews.length/2))} 
+              reviews={reviews.filter(r => r.row === 'second')} 
               direction="right" 
+            />
+            
+            {/* Third row - moves left */}
+            <TestimonialRow 
+              reviews={reviews.filter(r => r.row === 'third')} 
+              direction="left" 
             />
           </div>
         </div>
