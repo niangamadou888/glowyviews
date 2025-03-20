@@ -54,8 +54,6 @@
     "lord-icon-element": "^4.1.2",
     "lottie-web": "^5.12.2",
     "lucide-react": "^0.462.0",
-    "next": "^15.2.3",
-    "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
@@ -76,7 +74,6 @@
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/next": "^8.0.7",
     "@types/node": "^22.5.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
