@@ -6,6 +6,7 @@ import CTA from "@/youtube-views-components/CTA";
 import FloatingButton from "@/youtube-views-components/FloatingButton";
 import Footer from "@/youtube-views-components/Footer";
 import Navigation from "@/youtube-views-components/Navigation";
+import Testimonials from "@/comprare-iscritti-youtube/Testiomonials";
 
 const ComprareIscritti = () => {
   return (
@@ -26,6 +27,7 @@ const ComprareIscritti = () => {
           <Hero />
         </div>
         <Features />
+        <Testimonials/>
         <CTA />
         <FloatingButton />
         <BackToTopButton />

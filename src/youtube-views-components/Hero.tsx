@@ -45,8 +45,8 @@ const Hero = () => {
             },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "8",
+              "ratingValue": "4.7",
+              "reviewCount": "12",
               "bestRating": "5",
               "worstRating": "1"
             },

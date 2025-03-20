@@ -33,16 +33,249 @@ const Hero = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Iscritti YouTube Reali e Italiani",
-            "description": "Compra Iscritti YouTube reali e italiani al 100%, a partire da solo 0,53 €. Incrementa la tua popolarità senza pensieri con iscritti qualità top.",
+            "name": "Iscritti YouTube Reali e Italiane",
+            "description": "Compra Iscritti YouTube reali e italiani al 100%, a partire da solo 0,53 €. Incrementa la tua popolarità senza pensieri con iscritti qualità top. Prova ora!",
             "offers": {
               "@type": "Offer",
               "priceCurrency": "EUR",
               "price": "0.53",
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
-              "url": "https://glowlikes.it/comprare-iscritti-youtube/"
-            }
+              "url": "https://glowlikes.it/comprare-iscritti-youtube"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "16",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Luca"
+                },
+                "reviewBody": "In passato ho comprato visualizzazioni e like, ma niente follower, non mi sono mai fidato. Per curiosità ne ho ordinati 500 da GlowLikes e devo ammettere che sono rimasto colpito dalla loro qualità. Sembrano veri! 👍👍"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Johnny_x76"
+                },
+                "reviewBody": "Bella raga! Finalmente un sito che vende roba seria e non le solite porcherie che si trovano in giro! 1000 iscritti YouTube (di ottima qualità) arrivati in meno di mezza giornata. Sto già programmando il prossimo ordine!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Enrico"
+                },
+                "reviewBody": "Buongiorno, se può essere di aiuto a qualcun altro volevo confermare che questa agenzia rispetta tutte le condizioni di vendita che propone. Ottima qualità e tempi di consegna decisamente veloci 👏."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Giada93"
+                },
+                "reviewBody": "L’altro giorno ho fatto un ordine ma, controllando, notavo che la situazione era rimasta invariata. Ho contattato lo Staff e mi ha risposto che c’erano i server in aggiornamento. Poco male, hanno rimediato nel giro di un paio d’ore con 20 follower YouTube extra."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Maverick"
+                },
+                "reviewBody": "Di solito lavoro in modo organico, però ogni tanto qualche follower YouTube ci sta tutto. Niente di che, ne ho comprati 100. Beh, sicuramente di ottima qualità e in grado di ingannare anche l’occhio più attento 😉."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Andrea"
+                },
+                "reviewBody": "Per quelli che sono i miei standard si potrebbe fare di meglio. Nulla da dire sulla qualità e sui tempi di consegna. Secondo me, però, il prezzo è un po’ altino. Do 3 stelle, in attesa che i costi diventino più competitivi."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Vale Social"
+                },
+                "reviewBody": "Non ero convinta… ho sempre pensato che comprare iscritti non fosse buono per l’algoritmo. Però devo dire che GlowLikes mi ha fatto cambiare idea. Servizio veloce e iscritti che sembrano reali. Ottimo per dare una spintarella al mio nuovo canale!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "MrTech88"
+                },
+                "reviewBody": "Super professionali! Avevo bisogno di 500 iscritti per un nuovo canale e loro hanno fatto il lavoro in tempi record. Risultato? Primo video con oltre 2,000 views 🔥🔥. Consigliatissimi per chi lavora nel digitale."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Carmelo"
+                },
+                "reviewBody": " Devo essere sincera: quando ho visto che l’ordine tardava un pochino, stavo già scrivendo una recensione negativa 😅. Poi però mi hanno ricontattata subito e hanno risolto il problema e inviato iscritti extra."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Z3N_Gamer"
+                },
+                "reviewBody": "Amo quando le cose funzionano senza intoppi. Ordinati 1000 iscritti per il mio canale gaming e in 8 ore erano già tutti lì. Complimenti a GlowLikes 💪"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "LolloY"
+                },
+                "reviewBody": "Mah… nel complesso bene, ma secondo me c’è ancora margine di miglioramento sui tempi. Però il servizio clienti è stato top e mi hanno pure omaggiato di qualche follower extra."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Sara & Marco"
+                },
+                "reviewBody": "Abbiamo testato diversi servizi ma GlowLikes ha una marcia in più. Ottima comunicazione, velocità e soprattutto iscritti che non scompaiono il giorno seguente…"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Manu K"
+                },
+                "reviewBody": "Tutto perfetto, ma... ci starebbe un piccolo omaggio per i clienti affezionati 😉. Ho già fatto tre ordini e ogni volta servizio impeccabile. Se abbassate un pochino i prezzi vi sposo!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Il Diario Web"
+                },
+                "reviewBody": "Soddisfatto al 90%. Ho preso like e iscritti per il canale di un mio cliente e il boost iniziale è stato ottimo. Solo una cosa: se aggiungeste un’opzione per la consegna più lenta, sarebbe perfetto!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Edoardo"
+                },
+                "reviewBody": "Dovevo presentare un report ai miei sponsor e il mio engagement era bassino... Ho ordinato like views e iscritti e nel giro di poche ore i numeri sono migliorati. Nessuno si è accorto di nulla 😉"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Fra"
+                },
+                "reviewBody": "Sono nel marketing da anni e raramente mi sbilancio così: questi ragazzi sanno cosa fanno! Consigliati."
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -125,7 +358,7 @@ const Hero = () => {
             <span className="font-semibold">4.9</span>
             <span className="text-white/70">•</span>
             <span className="text-white/70">
-              <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+              <a href="#testimonials" onClick={handleScrollToTestimonials}>16 recensioni</a>
             </span>
           </div>
         </div>

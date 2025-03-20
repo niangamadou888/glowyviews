@@ -8,67 +8,124 @@ interface Review {
   stars: number;
   text: string;
   name: string;
-  row: 'first' | 'second';  // Add this field
+  row: 'first' | 'second' | 'third';  // Updated to include 'third'
 }
 
 const reviews: Review[] = [
   {
     id: 1,
     stars: 5,
-    text: "Absolutely amazing service! Could not be happier with the results. Highly recommend to anyone looking for quality work.",
-    name: "John Smith",
+    text: "In passato ho comprato visualizzazioni e like, ma niente follower, non mi sono mai fidato. Per curiosità ne ho ordinati 500 da GlowLikes e devo ammettere che sono rimasto colpito dalla loro qualità. Sembrano veri! 👍👍",
+    name: "Luca",
     row: 'first'
   },
   {
     id: 2,
     stars: 5,
-    text: "Professional, timely, and exceeded all expectations. Will definitely use their services again!",
-    name: "Sarah Johnson",
+    text: "Bella raga! Finalmente un sito che vende roba seria e non le solite porcherie che si trovano in giro! 1000 iscritti YouTube (di ottima qualità) arrivati in meno di mezza giornata. Sto già programmando il prossimo ordine!",
+    name: "Johnny_x76",
     row: 'first'
   },
   {
     id: 3,
-    stars: 4,
-    text: "Great experience from start to finish. The team was very responsive and delivered exactly what we needed.",
-    name: "Mike Davis",
+    stars: 5,
+    text: "Buongiorno, se può essere di aiuto a qualcun altro volevo confermare che questa agenzia rispetta tutte le condizioni di vendita che propone. Ottima qualità e tempi di consegna decisamente veloci 👏.",
+    name: "Enrico",
     row: 'first'
   },
   {
     id: 4,
-    stars: 5,
-    text: "Outstanding quality and customer service. The results were better than expected!",
-    name: "Emma Wilson",
-    row: 'first'
+    stars: 4,
+    text: "L’altro giorno ho fatto un ordine ma, controllando, notavo che la situazione era rimasta invariata. Ho contattato lo Staff e mi ha risposto che c’erano i server in aggiornamento. Poco male, hanno rimediato nel giro di un paio d’ore con 20 follower YouTube extra.",
+    name: "Giada93",
+    row: 'second'
   },
   {
     id: 5,
     stars: 5,
-    text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
-    name: "David Brown",
+    text: "Di solito lavoro in modo organico, però ogni tanto qualche follower YouTube ci sta tutto. Niente di che, ne ho comprati 100. Beh, sicuramente di ottima qualità e in grado di ingannare anche l’occhio più attento 😉.",
+    name: "Maverick",
     row: 'second'
   },
   {
     id: 6,
-    stars: 5,
-    text: "The growth in my channel's engagement has been phenomenal. Their service is worth every penny!",
-    name: "Alex Turner",
+    stars: 4,
+    text: "Per quelli che sono i miei standard si potrebbe fare di meglio. Nulla da dire sulla qualità e sui tempi di consegna. Secondo me, però, il prezzo è un po’ altino. Do 3 stelle, in attesa che i costi diventino più competitivi.",
+    name: "Andrea",
     row: 'second'
   },
   {
     id: 7,
     stars: 5,
-    text: "I was hesitant at first, but the results exceeded my expectations. My subscriber count doubled!",
-    name: "Rachel Chen",
-    row: 'second'
+    text: "Non ero convinta… ho sempre pensato che comprare iscritti non fosse buono per l’algoritmo. Però devo dire che GlowLikes mi ha fatto cambiare idea. Servizio veloce e iscritti che sembrano reali. Ottimo per dare una spintarella al mio nuovo canale!",
+    name: "Vale Social",
+    row: 'third'
   },
   {
     id: 8,
+    stars: 5,
+    text: "Super professionali! Avevo bisogno di 500 iscritti per un nuovo canale e loro hanno fatto il lavoro in tempi record. Risultato? Primo video con oltre 2,000 views 🔥🔥. Consigliatissimi per chi lavora nel digitale.",
+    name: "MrTech88",
+    row: 'third'
+  },
+  {
+    id: 9,
+    stars: 5,
+    text: "Devo essere sincera: quando ho visto che l’ordine tardava un pochino, stavo già scrivendo una recensione negativa 😅. Poi però mi hanno ricontattata subito e hanno risolto il problema e inviato iscritti extra.",
+    name: "Carmelo",
+    row: 'third'
+  },
+  {
+    id: 10,
+    stars: 5,
+    text: "Amo quando le cose funzionano senza intoppi. Ordinati 1000 iscritti per il mio canale gaming e in 8 ore erano già tutti lì. Complimenti a GlowLikes 💪",
+    name: "Z3N_Gamer",
+    row: 'third'
+  },
+  {
+    id: 11,
+    stars: 5,
+    text: "Abbiamo testato diversi servizi ma GlowLikes ha una marcia in più. Ottima comunicazione, velocità e soprattutto iscritti che non scompaiono il giorno seguente…",
+    name: "Sara & Marco",
+    row: 'first'
+  },
+  {
+    id: 12,
+    stars: 5,
+    text: "Tutto perfetto, ma... ci starebbe un piccolo omaggio per i clienti affezionati 😉. Ho già fatto tre ordini e ogni volta servizio impeccabile. Se abbassate un pochino i prezzi vi sposo!",
+    name: "ManuK",
+    row: 'first'
+  },
+  {
+    id: 13,
     stars: 4,
-    text: "Fast delivery and excellent customer support. They really know what they're doing.",
-    name: "Marcus Williams",
+    text: "Soddisfatto al 90%. Ho preso like e iscritti per il canale di un mio cliente e il boost iniziale è stato ottimo. Solo una cosa: se aggiungeste un’opzione per la consegna più lenta, sarebbe perfetto!",
+    name: "Il Diario Web",
     row: 'second'
+  },
+  {
+    id: 14,
+    stars: 5,
+    text: "Dovevo presentare un report ai miei sponsor e il mio engagement era bassino... Ho ordinato like views e iscritti e nel giro di poche ore i numeri sono migliorati. Nessuno si è accorto di nulla 😉",
+    name: "Edoardo",
+    row: 'second'
+  },
+  {
+    id: 15,
+    stars: 5,
+    text: "Sono nel marketing da anni e raramente mi sbilancio così: questi ragazzi sanno cosa fanno! Consigliati.",
+    name: "Fra",
+    row: 'third'
+  },
+  {
+    id: 16,
+    stars: 4,
+    text: "Mah… nel complesso bene, ma secondo me c’è ancora margine di miglioramento sui tempi. Però il servizio clienti è stato top e mi hanno pure omaggiato di qualche follower extra.",
+    name: "LolloY",
+    row: 'third'
   }
 ];
+
 
 // Add these near the other state declarations at the top of the component
 const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 'left' | 'right' }) => {
@@ -122,7 +179,7 @@ const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 
               <p className="text-gray-300 mb-3 sm:mb-4 italic leading-relaxed text-center flex-grow text-sm sm:text-base">
                 &quot;{review.text}&quot;
               </p>
-              <p className="text-primary font-medium text-center mt-auto text-sm sm:text-base">
+              <p className="text-primary text-white font-medium text-center mt-auto text-sm sm:text-base">
                 - {review.name}
               </p>
             </div>
@@ -279,45 +336,6 @@ const Testimonials = () => {
   const slideWidth = 100 / itemsPerView;
   
 
-  // Add schema markup
-  useEffect(() => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "GlowyViews",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": avgRating.toFixed(1),
-        "reviewCount": totalReviews,
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": reviews.map(review => ({
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": review.stars,
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": review.name
-        },
-        "reviewBody": review.text
-      }))
-    };
-
-    // Add schema to head
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [avgRating, totalReviews]);
 
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden" id='testimonials'>
@@ -375,14 +393,20 @@ const Testimonials = () => {
             
             {/* First row - moves left */}
             <TestimonialRow 
-              reviews={reviews.slice(0, Math.ceil(reviews.length/2))} 
+              reviews={reviews.filter(r => r.row === 'first')} 
               direction="left" 
             />
             
             {/* Second row - moves right */}
             <TestimonialRow 
-              reviews={reviews.slice(Math.ceil(reviews.length/2))} 
+              reviews={reviews.filter(r => r.row === 'second')} 
               direction="right" 
+            />
+            
+            {/* Third row - moves left */}
+            <TestimonialRow 
+              reviews={reviews.filter(r => r.row === 'third')} 
+              direction="left" 
             />
           </div>
         </div>
