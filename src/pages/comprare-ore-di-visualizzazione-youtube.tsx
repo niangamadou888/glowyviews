@@ -1,7 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import Features from "@/comprare-iscritti-youtube/Features";
-import Hero from "@/comprare-iscritti-youtube/Hero";
-import Testimonials from "@/comprare-iscritti-youtube/Testiomonials";
 import BackToTopButton from "@/youtube-views-components/BackToTopButton";
 import BuySteps from "@/youtube-views-components/BuySteps";
 import CTA from "@/youtube-views-components/CTA";
@@ -15,17 +12,21 @@ import Navigation from "@/youtube-views-components/Navigation";
 import OtherText from "@/youtube-views-components/OtherText";
 import WhyBuyViews from "@/youtube-views-components/WhyBuyViews";
 import YouTubeViewsInfo from "@/youtube-views-components/YouTubeViewsInfo";
+import Hero from "@/comprare-ore-di-visualizzazione-youtube/Hero";
+import Features from "@/comprare-ore-di-visualizzazione-youtube/Features";
+import Testimonials from "@/comprare-ore-di-visualizzazione-youtube/Testiomonials";
 
-const ComprareIscritti = () => {
+const ComprareOre = () => {
   return (
     <>
       <Helmet>
         <title>
-          Comprare Iscritti YouTube - 100% reali e italiani - Solo 0,53 €
+          Comprare Ore di Visualizzazione YouTube - 100% reali e italiane - Solo
+          0,47 €
         </title>
         <meta
           name="description"
-          content="Compra Iscritti YouTube reali e italiani al 100%, a partire da solo 0,53 €. Incrementa la tua popolarità senza pensieri con iscritti qualità top. Prova ora!"
+          content="Compra Ore di Visualizzazione YouTube reali e italiane al 100%, a partire da solo 0,47 €. Incrementa la tua popolarità senza pensieri con interazioni top qualità. Prova ora!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
@@ -44,4 +45,4 @@ const ComprareIscritti = () => {
   );
 };
 
-export default ComprareIscritti;
+export default ComprareOre;

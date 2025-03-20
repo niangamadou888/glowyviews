@@ -37,7 +37,7 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="https://app.glowlikes.it/comprare-visualizzazioni-youtube/"
+                  href="/comprare-visualizzazioni-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
@@ -47,7 +47,7 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="https://app.glowlikes.it/comprare-like-youtube/"
+                  href="/comprare-like-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
@@ -57,7 +57,7 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="https://app.glowlikes.it/comprare-iscritti-youtube/"
+                  href="/comprare-iscritti-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
@@ -67,7 +67,7 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="https://app.glowlikes.it/comprare-commenti-youtube/"
+                  href="/comprare-commenti-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
@@ -77,7 +77,7 @@ const YoutubeMenu = ({ isActive, onActivate }: { isActive: boolean; onActivate: 
               <li className="group">
                 <NavigationMenuLink
                   className="relative block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500/20 hover:text-red-500 focus:bg-red-500/20 focus:text-red-500"
-                  href="https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/"
+                  href="/comprare-ore-di-visualizzazione-youtube/"
                   onClick={onActivate}
                 >
                   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/10 via-red-500/50 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
@@ -301,12 +301,12 @@ const Navigation = () => {
         {/* Auth Buttons and Mobile Menu */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
-          <Link to="https://app.glowlikes.it/">
+          <Link to="/">
             <Button variant="ghost">
             Accedi
             </Button>
             </Link>
-            <Link to="https://app.glowlikes.it/registrati">
+            <Link to="/registrati">
             <Button className="glow">
             Registrati
             </Button>
@@ -340,7 +340,7 @@ const Navigation = () => {
                       </div>
                       <div className="ml-6 flex flex-col gap-1">
                         <a 
-                          href="https://app.glowlikes.it/comprare-visualizzazioni-youtube/" 
+                          href="/comprare-visualizzazioni-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
@@ -348,7 +348,7 @@ const Navigation = () => {
 
                         </a>
                         <a 
-                          href="https://app.glowlikes.it/comprare-like-youtube/" 
+                          href="/comprare-like-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
@@ -356,7 +356,7 @@ const Navigation = () => {
 
                         </a>
                         <a 
-                          href="https://app.glowlikes.it/comprare-iscritti-youtube/" 
+                          href="/comprare-iscritti-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
@@ -365,7 +365,7 @@ const Navigation = () => {
 
                         </a>
                         <a 
-                          href="https://app.glowlikes.it/comprare-commenti-youtube/" 
+                          href="/comprare-commenti-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
@@ -374,7 +374,7 @@ const Navigation = () => {
 
                         </a>
                         <a 
-                          href="https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/" 
+                          href="/comprare-ore-di-visualizzazione-youtube/" 
                           className="px-4 py-3 text-sm font-medium transition-colors hover:bg-red-500/20 hover:text-red-500 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >

@@ -7,42 +7,42 @@ const CTA = () => {
     { 
       text: 'Compra Visualizzazioni YouTube', 
       icon: <Eye size={20} />,
-      link: 'https://app.glowlikes.it/comprare-visualizzazioni-youtube/'
+      link: '/comprare-visualizzazioni-youtube/'
     },
     { 
       text: 'Compra Iscritti YouTube', 
       icon: <UserPlus size={20} />,
-      link: 'https://app.glowlikes.it/comprare-iscritti-youtube/'
+      link: '/comprare-iscritti-youtube/'
     },
     { 
       text: 'Compra Likes YouTube', 
       icon: <ThumbsUp size={20} />,
-      link: 'https://app.glowlikes.it/comprare-like-youtube/'
+      link: '/comprare-like-youtube/'
     },
     { 
       text: 'Compra Ore Di Visualizzazione YouTube', 
       icon: <Clock size={20} />,
-      link: 'https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/'
+      link: '/comprare-ore-di-visualizzazione-youtube/'
     },
     { 
       text: 'Compra Commenti YouTube', 
       icon: <MessageCircle size={20} />,
-      link: 'https://app.glowlikes.it/comprare-commenti-youtube/'
+      link: '/comprare-commenti-youtube/'
     },
     { 
       text: 'Compra Condivisioni YouTube', 
       icon: <Share2 size={20} />,
-      link: 'https://app.glowlikes.it/comprare-condivisioni-youtube/'
+      link: '/comprare-condivisioni-youtube/'
     },
     { 
       text: 'Compra Spettatori Diretta YouTube', 
       icon: <Users size={20} />,
-      link: 'https://app.glowlikes.it/comprare-spettatori-diretta-youtube/'
+      link: '/comprare-spettatori-diretta-youtube/'
     },
     { 
       text: 'Compra Visualizzazioni YouTube Shorts', 
       icon: <FileVideo size={20} />,
-      link: 'https://app.glowlikes.it/comprare-visualizzazioni-e-like-youtube-shorts/'
+      link: '/comprare-visualizzazioni-e-like-youtube-shorts/'
     }
   ];
 

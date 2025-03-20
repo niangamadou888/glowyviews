@@ -42,7 +42,7 @@ const Hero = () => {
            style={{ transform: 'translateZ(0)' }}>
         
         <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
-          <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare iscritti YouTube:</span>
+          <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare Ore di Visualizzazione YouTube:</span>
           <span className="bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
             Italiane e Reali
             <Player
@@ -79,7 +79,7 @@ const Hero = () => {
         </div>
         
         <p className="text-[18px] md:text-[18px] text-white mb-10 max-w-3xl mx-auto">
-        Vuoi acquistare iscritti YouTube? Bene, ma è importante farlo nel modo corretto. Noi di GlowLikes offriamo iscritti YouTube 100% reali e da profili italiani, a prezzi più che accessibili. Acquista subito iscritti in modo sicuro, discreto e anonimo tramite la nostra agenzia.
+        Vuoi acquistare ore di visualizzazione YouTube? Bene, ma è importante farlo nel modo corretto. Noi di GlowLikes offriamo ore di visualizzazione YouTube 100% reali e da profili italiani, a prezzi più che accessibili. Acquista subito ore di visualizzazione in modo sicuro, discreto e anonimo tramite la nostra agenzia.
         </p>
 
         {/* Optimized button animation */}

@@ -36,11 +36,11 @@ const Footer = () => {
       ref: youtubeIconRef,
       color: 'red',
       items: [
-        { name: 'Visualizzazioni YouTube', icon: <Eye className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-visualizzazioni-youtube/' },
-        { name: 'Like YouTube', icon: <ThumbsUp className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-like-youtube/' },
-        { name: 'Iscritti YouTube', icon: <UserPlus className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-iscritti-youtube/' },
-        { name: 'Commenti YouTube', icon: <MessageCircle className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-commenti-youtube/' },
-        { name: 'Ore YouTube (yes, ore not commenti)', icon: <Clock className="h-4 w-4" />, path: 'https://app.glowlikes.it/comprare-ore-di-visualizzazione-youtube/' }
+        { name: 'Visualizzazioni YouTube', icon: <Eye className="h-4 w-4" />, path: '/comprare-visualizzazioni-youtube/' },
+        { name: 'Like YouTube', icon: <ThumbsUp className="h-4 w-4" />, path: '/comprare-like-youtube/' },
+        { name: 'Iscritti YouTube', icon: <UserPlus className="h-4 w-4" />, path: '/comprare-iscritti-youtube/' },
+        { name: 'Commenti YouTube', icon: <MessageCircle className="h-4 w-4" />, path: '/comprare-commenti-youtube/' },
+        { name: 'Ore YouTube (yes, ore not commenti)', icon: <Clock className="h-4 w-4" />, path: '/comprare-ore-di-visualizzazione-youtube/' }
       ]
     },
     Instagram: {
@@ -96,7 +96,7 @@ const Footer = () => {
             <p className="text-white leading-relaxed">
               Potenzia i tuoi profili social con i nostri servizi premium. Garantiamo interazioni di qualità e reali che ti aiutano a crescere, in modo sicuro.
             </p>
-            <Link to="https://app.glowlikes.it/">
+            <Link to="/">
             <Button size="lg" className="glow bg-primary hover:bg-primary/90 text-white text-[20px] mt-2">
               Accedi
             </Button>
@@ -184,7 +184,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">supporto@glowlikes.it</span>
               </a>
-              <a href="https://app.glowlikes.it/ticket" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
+              <a href="/ticket" className="flex items-center space-x-3 text-white hover:text-primary transition-colors duration-300 group">
               <MdOutlineContactPhone className="h-5 w-5 text-white/60 group-hover:text-primary group-hover:animate-bounce" />
                 <span className="relative">Apri un ticket</span>
               </a>

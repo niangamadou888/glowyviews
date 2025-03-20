@@ -21,15 +21,15 @@ const Features = () => {
       iconUrl: icon7,
     },
     {
-      title: "ISCRITTI ITALIANI",
+      title: "ORE DI VISUALIZZAZIONE ITALIANE",
       description:
-        "Aumentano il grado di rilevanza tra il tuo canale e il tuo target. Inoltre, non vengono rilevati dagli algoritmi.",
+        "Aumentano il grado di rilevanza tra il tuo canale e il tuo target. Inoltre, non vengono rilevate dagli algoritmi.",
       iconUrl: icon6,
     },
     {
-      title: "ISCRITTI ALTA QUALITA’ Vs ISCRITTI REALI",
+      title: "ORE DI VISUALIZZAZIONE ALTA QUALITA’ Vs ORE DI VISUALIZZAZIONE REALI",
       description:
-        "Gli iscritti di alta qualità provengono da account del tutto simili a quelli “genuini”. Quelli reali, invece, provengono da account verificati.",
+        "Le ore di visualizzazione di alta qualità provengono da account del tutto simili a quelli “genuini”. Quelle reali, invece, provengono da account verificati.",
       iconUrl: icon5,
     },
     {
@@ -47,19 +47,19 @@ const Features = () => {
     {
       title: "NESSUNA RICHIESTA DI CREDENZIALI",
       description:
-        "Comprare visualizzazioni YouTube da glowlikes è estremamente sicuro perché non richiediamo password o altri codici personali.",
+        "Comprare ore di visualizzazione YouTube da GlowLikes è estremamente sicuro perché non richiediamo password o altri codici personali.",
       iconUrl: icon2,
     },
     {
-      title: "PERCHE’ COMPRARE ISCRITTI DI ALTA QUALITA’",
+      title: "PERCHE’ COMPRARE ORE DI VISUALIZZAZIONE DI ALTA QUALITA’’",
       description:
-        "Con gli iscritti YouTube di alta qualità nessuno noterà la tua strategia, nemmeno i tuoi reali follower.",
+        "Con le ore di visualizzazione YouTube di alta qualità nessuno noterà la tua strategia, nemmeno i tuoi reali follower.",
       icon: icon1,
     },
     {
       title: "CRESCITA ORGANICA A RISCHIO ZERO",
       description:
-        "Comprare iscritti YouTube su GlowLikes ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
+        "Comprare ore di visualizzazione YouTube su GlowLikes ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.",
       iconUrl: growthIcon,
     },
   ];
@@ -239,27 +239,23 @@ const Features = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4">AVVERTENZE</h3>
                 <p className="text-muted-foreground">
-                  Per tracciare e verificare la consegna dell'ordine, sconsigliamo
-                  di effettuare acquisti presso altre agenzie per almeno 48 ore.
+                Comprare ore di visualizzazione YouTube su GlowLikes ti permette di crescere in modo organico e di non subire alcuna penalizzazione dalla piattaforma.
                 </p>
               </div>
             </div>
           </Card>
         </div>
         <p className="mt-16">
-        No, {" "}
-          <strong>comprare iscritti YouTube non è un “basso escamotage” </strong>per vantare dei numeri che, in realtà, non si hanno.<br />
+        Alcuni potrebbero sorridere all'idea di 
+          <strong>comprare ore di visualizzazione YouTube </strong>perché, superficialmente, potrebbe apparire come un qualcosa da “sfigati”.<br />
         </p>
         <p className="mt-3">
-          Infatti, {" "}
-          <strong>si tratta di una “sottile” operazione di Social Media Marketing</strong> che, se condotta con il giusto criterio, può dare davvero una svolta alla tua carriera di YouTuber. <br />
+        Può anche essere (in alcuni casi “patologici”) ma, date le numerose aziende che lavorano nel settore, 
+          <strong>le cose stanno in modo ben diverso.</strong><br />
         </p>
         <p className="mt-3">
-        A dispetto delle apparenze, 
-          <strong>si tratta di un argomento complesso</strong> su cui c'è molto da dire. <br />
-        </p>
-        <p className="mt-3">
-        Di conseguenza, non perdiamo altro tempo prezioso ed entriamo subito nel vivo dell'argomento.
+        No, non si tratta di un basso “espediente” ma, al contrario, 
+          <strong>di una tecnica di Social Media Marketing</strong> di cui parleremo proprio in questa guida. <br />
         </p>
       </div>
 
