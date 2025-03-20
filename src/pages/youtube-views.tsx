@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import BackToTopButton from "@/youtube-views-components/BackToTopButton";
 import BuySteps from "@/youtube-views-components/BuySteps";
 import CTA from "@/youtube-views-components/CTA";
@@ -17,26 +18,35 @@ import YouTubeViewsInfo from "@/youtube-views-components/YouTubeViewsInfo";
 
 const YoutubeViews = () => {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <div id="hero">
-        <Hero />
-      </div>
-      <Features />
-      <WhyBuyViews />
-      <DoveComprare />
-      <YouTubeViewsInfo />
-      <BuySteps />
-      <OtherText />
-      <FAQIntro />
-      <FAQ />
-      <FinalConsiderations />
-      <Testimonials />
-      <CTA />
-      <FloatingButton />
-      <BackToTopButton />
-      <Footer />
-    </main>
+    <>
+      <Helmet>
+        <title>Comprare Visualizzazioni YouTube - 100% reali e italiane - Solo 0,52 €</title>
+        <meta
+          name="description"
+          content="Compra visualizzazioni YouTube reali e italiane al 100%, partendo da solo 0,52 €. Incrementa la tua popolarità senza pensieri con visualizzazioni top quality. Prova ora!"
+        />
+      </Helmet>
+      <main className="min-h-screen">
+        <Navigation />
+        <div id="hero">
+          <Hero />
+        </div>
+        <Features />
+        <WhyBuyViews />
+        <DoveComprare />
+        <YouTubeViewsInfo />
+        <BuySteps />
+        <OtherText />
+        <FAQIntro />
+        <FAQ />
+        <FinalConsiderations />
+        <Testimonials />
+        <CTA />
+        <FloatingButton />
+        <BackToTopButton />
+        <Footer />
+      </main>
+    </>
   );
 };
 
