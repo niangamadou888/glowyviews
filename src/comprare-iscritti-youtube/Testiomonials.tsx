@@ -122,7 +122,7 @@ const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 
               <p className="text-gray-300 mb-3 sm:mb-4 italic leading-relaxed text-center flex-grow text-sm sm:text-base">
                 &quot;{review.text}&quot;
               </p>
-              <p className="text-primary text-white font-medium text-center mt-auto text-sm sm:text-base">
+              <p className="text-primary font-medium text-center mt-auto text-sm sm:text-base">
                 - {review.name}
               </p>
             </div>
