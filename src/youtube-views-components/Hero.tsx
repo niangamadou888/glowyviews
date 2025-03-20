@@ -42,7 +42,184 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-visualizzazioni-youtube"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "8",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Marco"
+                },
+                "reviewBody": "Ho comprato 2000 visualizzazioni YouTube e sono rimasto stupito dalla qualita'. Nessun calo, consegna rapida e tutto questo nonostante i prezzi bassi, che mi rendevano un po' diffidente inizialmente."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Gianni"
+                },
+                "reviewBody": "Ho provato diverse agenzie, ma erano tutte piuttosto lente. Invece, le visualizzazioni YouTube che ho comprato qui mi sono arrivate nel giro di poche ore e nella quantità esatta che avevo ordinato. Top!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Chris"
+                },
+                "reviewBody": "Salve, volevo raccontare la mia esperienza. Ho acquistato 10mila visualizzazioni TikTok per il profilo della mia attività e il servizio ha superato le mie aspettative. Tempi di consegna super veloci e nessuna perdita di interazioni. Consigliato!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Jack84"
+                },
+                "reviewBody": "Ho ordinato 5000 visualizzazioni, peccato però che ne mancavano una cinquantina. Ho contattato lo Staff e nel giro di pochissimo tempo mi sono arrivate anche quelle che mancavano. Tutto sommato un buon servizio."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Alessia"
+                },
+                "reviewBody": "All’inizio era scettica perché non avevo mai acquistato servizi del genere. Mi sono fidata, ho acquistato 3000 visualizzazioni YouTube e sono arrivate nei tempi previsti. Da oggi GlowLikes sarà il mio fornitore ufficiale!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Carlos"
+                },
+                "reviewBody": "Peccato per i prezzi 😔 se fossero un po’ più bassi avrei comprato sicuramente più views YouTube. Sono d’accordo che la qualità si paga, ma credo si potrebbe fare di meglio in termini di rapporto qualità/prezzo."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Silvio"
+                },
+                "reviewBody": "Ho un canale YouTube aperto da poco, ma con le visualizzazioni YouTube che ho acquistato l’altro ieri ho subito notato un miglioramento delle performance. In futuro tornerò senz’altro per dei nuovi ordini!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Antonio Roma"
+                },
+                "reviewBody": "Ho provato visualizzazioni da altri siti prima, ma per me quelle di GlowViews sono le migliori. Rapide, economiche e senza cali. Inoltre supporto rapido quando serve 🙂"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Gio Gaming"
+                },
+                "reviewBody": "Uso le views italiane da google ads, partono un po dopo ma a parte questo, ottima qualità. Ricevo anche like e iscritti!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Simone Di Luca"
+                },
+                "reviewBody": "Visualizzazioni YuoTube che finalmente sono senza cali e rapide. Tuttavia una volta l’ordine non è partito e ho dovuto aspettare 12 ore perché si sbloccasse. "
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Cronache Milano"
+                },
+                "reviewBody": "Uso GlowLikes per tutti i nuovi video, servizio sempre eccellente. Views e likes che partono quasi subito e da utenti italiani reali. I miei video poi continuano a ottenere views per diversi giorni."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Samu"
+                },
+                "reviewBody": "Comprato 1,000 visualizzazioni, consegna senza problemi e con un generoso extra. Consigliati!"
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -124,7 +301,7 @@ const Hero = () => {
               <span className="font-semibold ml-1">4.9</span>
               <span className="text-white mx-1">•</span>
               <span className="text-white">
-                <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+                <a href="#testimonials" onClick={handleScrollToTestimonials}>12 recensioni</a>
               </span>
             </div>
           </div>

@@ -15,58 +15,86 @@ const reviews: Review[] = [
   {
     id: 1,
     stars: 5,
-    text: "Absolutely amazing service! Could not be happier with the results. Highly recommend to anyone looking for quality work.",
-    name: "John Smith",
+    text: "Ho comprato 2000 visualizzazioni YouTube e sono rimasto stupito dalla qualita'. Nessun calo, consegna rapida e tutto questo nonostante i prezzi bassi, che mi rendevano un po' diffidente inizialmente.",
+    name: "Marco",
     row: 'first'
   },
   {
     id: 2,
     stars: 5,
-    text: "Professional, timely, and exceeded all expectations. Will definitely use their services again!",
-    name: "Sarah Johnson",
+    text: "Ho provato diverse agenzie, ma erano tutte piuttosto lente. Invece, le visualizzazioni YouTube che ho comprato qui mi sono arrivate nel giro di poche ore e nella quantità esatta che avevo ordinato. Top!",
+    name: "Gianni",
     row: 'first'
   },
   {
     id: 3,
-    stars: 4,
-    text: "Great experience from start to finish. The team was very responsive and delivered exactly what we needed.",
-    name: "Mike Davis",
-    row: 'first'
-  },
-  {
-    id: 4,
     stars: 5,
-    text: "Outstanding quality and customer service. The results were better than expected!",
-    name: "Emma Wilson",
+    text: "Salve, volevo raccontare la mia esperienza. Ho acquistato 10mila visualizzazioni TikTok per il profilo della mia attività e il servizio ha superato le mie aspettative. Consigliato!",
+    name: "Chris",
     row: 'first'
   },
   {
     id: 5,
-    stars: 5,
-    text: "Very impressed with the professionalism and quality of work. Would definitely recommend.",
-    name: "David Brown",
+    stars: 4,
+    text: "Ho ordinato 5000 visualizzazioni, peccato però che ne mancavano una cinquantina. Ho contattato lo Staff e nel giro di pochissimo tempo mi sono arrivate anche quelle che mancavano. Tutto sommato un buon servizio.",
+    name: "Jack84",
     row: 'second'
   },
   {
     id: 6,
     stars: 5,
-    text: "The growth in my channel's engagement has been phenomenal. Their service is worth every penny!",
-    name: "Alex Turner",
+    text: "All’inizio era scettica perché non avevo mai acquistato servizi del genere. Mi sono fidata, ho acquistato 3000 visualizzazioni YouTube e sono arrivate nei tempi previsti. Da oggi GlowLikes sarà il mio fornitore ufficiale!",
+    name: "Alessia",
     row: 'second'
   },
   {
     id: 7,
-    stars: 5,
-    text: "I was hesitant at first, but the results exceeded my expectations. My subscriber count doubled!",
-    name: "Rachel Chen",
+    stars: 4,
+    text: "Peccato per i prezzi 😔 se fossero un po’ più bassi avrei comprato sicuramente più views YouTube. Sono d’accordo che la qualità si paga, ma credo si potrebbe fare di meglio in termini di rapporto qualità/prezzo.",
+    name: "Carlos",
     row: 'second'
   },
   {
     id: 8,
-    stars: 4,
-    text: "Fast delivery and excellent customer support. They really know what they're doing.",
-    name: "Marcus Williams",
+    stars: 5,
+    text: "Ho un canale YouTube aperto da poco, ma con le visualizzazioni YouTube che ho acquistato l’altro ieri ho subito notato un miglioramento delle performance. In futuro tornerò senz’altro per dei nuovi ordini!",
+    name: "Silvio",
     row: 'second'
+  },
+  {
+    id: 9,
+    stars: 5,
+    text: "Ho provato visualizzazioni da altri siti prima, ma per me quelle di GlowViews sono le migliori. Rapide, economiche e senza cali. Inoltre supporto rapido quando serve 🙂",
+    name: "Antonio Roma",
+    row: 'first'
+  },
+  {
+    id: 10,
+    stars: 5,
+    text: "Uso le views italiane da google ads, partono un po dopo ma a parte questo, ottima qualità. Ricevo anche like e iscritti!",
+    name: "Gio Gaming",
+    row: 'second'
+  },
+  {
+    id: 11,
+    stars: 4,
+    text: "Visualizzazioni YuoTube che finalmente sono senza cali e rapide. Tuttavia una volta l’ordine non è partito e ho dovuto aspettare 12 ore perché si sbloccasse. ",
+    name: "Simone Di Luca",
+    row: 'first'
+  },
+  {
+    id: 12,
+    stars: 5,
+    text: "Uso GlowLikes per tutti i nuovi video, servizio sempre eccellente. Views e likes che partono quasi subito e da utenti italiani reali. I miei video poi continuano a ottenere views per diversi giorni.",
+    name: "Cronache Milano",
+    row: 'second'
+  },
+  {
+    id: 13,
+    stars: 4,
+    text: "Comprato 1,000 visualizzazioni, consegna senza problemi e con un generoso extra. Consigliati!",
+    name: "Samu",
+    row: 'first'
   }
 ];
 
@@ -279,45 +307,6 @@ const Testimonials = () => {
   const slideWidth = 100 / itemsPerView;
   
 
-  // Add schema markup
-  useEffect(() => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "GlowyViews",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": avgRating.toFixed(1),
-        "reviewCount": totalReviews,
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": reviews.map(review => ({
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": review.stars,
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": review.name
-        },
-        "reviewBody": review.text
-      }))
-    };
-
-    // Add schema to head
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [avgRating, totalReviews]);
 
   return (
     <section className="w-full bg-hsl(var(--background)) relative overflow-hidden" id='testimonials'>
