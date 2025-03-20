@@ -33,15 +33,15 @@ const Hero = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Ore di Visualizzazione YouTube Reali e Italiane",
-            "description": "Compra Ore di Visualizzazione YouTube reali e italiane al 100%, a partire da solo 0,47 €. Incrementa la tua popolarità senza pensieri con interazioni top qualità.",
+            "name": "Visualizzazioni e Like YouTube Shorts Reali e Italiane",
+            "description": "Compra Visualizzazioni e Like YouTube Shorts reali e italiani al 100%, a partire da solo 0,43 €. Incrementa la tua popolarità senza pensieri con interazioni di qualità. Prova ora!",
             "offers": {
               "@type": "Offer",
               "priceCurrency": "EUR",
-              "price": "0.47",
+              "price": "0.43",
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
-              "url": "https://glowlikes.it/comprare-ore-di-visualizzazione-youtube"
+              "url": "https://glowlikes.it/comprare-visualizzazioni-e-like-youtube-shorts"
             }
           })}
         </script>
@@ -62,7 +62,7 @@ const Hero = () => {
              style={{ transform: 'translateZ(0)' }}>
           
           <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
-            <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare Ore di Visualizzazione YouTube:</span>
+            <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Comprare Visualizzazioni e Like YouTube Shorts:</span>
             <span className="bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
               Italiane e Reali
               <Player
@@ -99,7 +99,7 @@ const Hero = () => {
           </div>
           
           <p className="text-[18px] md:text-[18px] text-white mb-10 max-w-3xl mx-auto">
-          Vuoi acquistare ore di visualizzazione YouTube? Bene, ma è importante farlo nel modo corretto. Noi di GlowLikes offriamo ore di visualizzazione YouTube 100% reali e da profili italiani, a prezzi più che accessibili. Acquista subito ore di visualizzazione in modo sicuro, discreto e anonimo tramite la nostra agenzia.
+          Vuoi acquistare visualizzazioni e like YouTube Shorts? Bene, ma è' importante farlo nel modo corretto. Noi di GlowLikes offriamo visualizzazioni e like YouTube Shorts 100% reali e da profili italiani, a prezzi più che accessibili. Acquista subito visualizzazioni e like YouTube Shorts in modo sicuro, discreto e anonimo tramite la nostra agenzia.
           </p>
       
           {/* Optimized button animation */}
@@ -115,7 +115,7 @@ const Hero = () => {
           {/* Rating Section */}
           <div className="mt-6 flex items-center justify-center gap-2 text-white/90">
           <span className="px-3 py-1 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-full border border-primary/30 shadow-sm">
-              A partire da 0.47 €
+              A partire da 0.43 €
             </span>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (

@@ -12,6 +12,11 @@ import TerminieCondizioni from "./pages/TerminieCondizioni";
 import YoutubeViews from "./pages/youtube-views";
 import ComprareIscritti from "./pages/comprare-iscritti-youtube";
 import ComprareOre from './pages/comprare-ore-di-visualizzazione-youtube';
+import ComprareLike from './pages/comprare-like';
+import ComprareCommenti from './pages/comprare-commenti';
+import ComprareSpettatoriDiretta from './pages/comprare-spettatori-diretta';
+import ComprareYoutubeShort from './pages/comprare-youtube-short';
+import ComprareCondivisioni from './pages/comprare-condivisioni';
 
 const queryClient = new QueryClient();
 
@@ -30,6 +35,11 @@ const App = () => (
             <Route path="/termini-di-servizio" element={<TerminieCondizioni />} />
             <Route path="/comprare-iscritti-youtube" element={<ComprareIscritti />} />
             <Route path="/comprare-ore-di-visualizzazione-youtube" element={<ComprareOre />} />
+            <Route path="/comprare-like-youtube" element={<ComprareLike />} />
+            <Route path="/comprare-commenti-youtube" element={<ComprareCommenti />} />
+            <Route path="/comprare-spettatori-diretta-youtube" element={<ComprareSpettatoriDiretta />} />
+            <Route path="/comprare-visualizzazioni-e-like-youtube-shorts" element={<ComprareYoutubeShort />} />
+            <Route path="/comprare-condivisioni-youtube" element={<ComprareCondivisioni/>} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

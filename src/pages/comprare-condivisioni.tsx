@@ -4,20 +4,19 @@ import CTA from "@/youtube-views-components/CTA";
 import FloatingButton from "@/youtube-views-components/FloatingButton";
 import Footer from "@/youtube-views-components/Footer";
 import Navigation from "@/youtube-views-components/Navigation";
-import Hero from "@/comprare-ore-di-visualizzazione-youtube/Hero";
-import Features from "@/comprare-ore-di-visualizzazione-youtube/Features";
+import Hero from "@/comprare-condivisioni/Hero";
+import Features from "@/comprare-condivisioni/Features";
 
-const ComprareOre = () => {
+const ComprareCondivisioni = () => {
   return (
     <>
       <Helmet>
         <title>
-          Comprare Ore di Visualizzazione YouTube - 100% reali e italiane - Solo
-          0,47 €
+        Comprare condivisioni YouTube - 100% reali e italiane - Solo 0,41 €
         </title>
         <meta
           name="description"
-          content="Compra Ore di Visualizzazione YouTube reali e italiane al 100%, a partire da solo 0,47 €. Incrementa la tua popolarità senza pensieri con interazioni top qualità. Prova ora!"
+          content="Compra Condivisioni YouTube reali e italiane al 100%, a partire da solo 0,41 €. Incrementa la tua popolarità senza pensieri con interazioni di qualità. Prova ora!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
@@ -36,4 +35,4 @@ const ComprareOre = () => {
   );
 };
 
-export default ComprareOre;
+export default ComprareCondivisioni;

@@ -115,7 +115,7 @@ const Hero = () => {
           {/* Rating Section */}
           <div className="mt-6 flex items-center justify-center gap-2 text-white/90">
           <span className="px-3 py-1 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-full border border-primary/30 shadow-sm">
-              A partire da 0,52 €
+              A partire da 0.53 €
             </span>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
