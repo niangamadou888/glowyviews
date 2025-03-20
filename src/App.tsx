@@ -9,6 +9,7 @@ import Privacy from "./pages/Privacy";
 import Rimborso from "./pages/Rimborso";
 import TerminieCondizioni from "./pages/TerminieCondizioni";
 import YoutubeViews from "./pages/youtube-views";
+import ComprareIscritti from "./pages/comprare-iscritti-youtube";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/informativa-sulla-privacy" element={<Privacy />} />
           <Route path="/politica-di-rimborso" element={<Rimborso />} />
           <Route path="/termini-di-servizio" element={<TerminieCondizioni />} />
+          <Route path="/comprare-iscritti-youtube" element={<ComprareIscritti />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
