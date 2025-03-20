@@ -99,7 +99,7 @@ const WhyBuyViews = () => {
             <div className="relative aspect-video rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
               <img
-                src="Comprare Visualizzazioni YouTube_per quale motivo_ no background.png"
+                src="/Comprare Visualizzazioni YouTube_per quale motivo_ no background.png"
                 alt="Comprare Visualizzazioni YouTube_per quale motivo"
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -135,7 +135,7 @@ const WhyBuyViews = () => {
                 <div className="relative aspect-video rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/20 animate-gradient" />
                   <img
-                    src="Perché comprare Visualizzazioni YouTube da noi su glowlikes no background.png"
+                    src="/Perché comprare Visualizzazioni YouTube da noi su glowlikes no background.png"
                     alt="Perché comprare Visualizzazioni YouTube da noi su glowlikes"
                     className="w-full h-full object-cover rounded-xl"
                   />
