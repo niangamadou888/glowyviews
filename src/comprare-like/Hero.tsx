@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <>
-      <Helmet>
+     <Helmet>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -42,7 +42,184 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-like-youtube"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.5",
+              "reviewCount": "12",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Francesco"
+                },
+                "reviewBody": "Chi lavora sui social sa benissimo quanto sia importante affidarsi ad un’ottima agenzia di SMM. Con GlowLikes mi sono trovato da dio! 20mila like recapitati in mezza giornata e niente cali! Grazie davvero 🙏"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Luka_34"
+                },
+                "reviewBody": "Lo ammetto senza problemi: questa non è la prima agenzia che provo. A differenza delle altre, però, questa mantiene le promesse e non ti fa trovare brutte sorprese 💪. Ho già effettuato 2 ordini e la prossima settimana vado con la terza buttata di like YouTube."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Anthony"
+                },
+                "reviewBody": "5000 Mi Piace YouTube ad un costo accettabile. L’unica pecca? Ho dovuto contattare lo staff perché ne mancavano circa 200. Fortunatamente, l’assistenza mi ha risolto il problema alla svelta. Non il top del top, ma comunque un’agenzia valida."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Marta"
+                },
+                "reviewBody": "Ho già provato a comprare Mi Piace YouTube, prendendo “bidoni”. GlowLikes, però, lavora con la massima professionalità. Come mi sono trovata con l’ultimo ordine? Benissimo! Ne farò altri? Certamente! 😉"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Davis"
+                },
+                "reviewBody": "Un servizio nella norma, tutto sommato. Nulla di speciale. Ammetto che i Mi Piace YouTube sono di ottima qualità perché non causano cali. Ad ogni modo, trovo che siano un po’ caretti data la media di mercato."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "3",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Pablo"
+                },
+                "reviewBody": "Riconosco la buona volontà di GlowLikes, però non sono super soddisfatto del servizio. La qualità è buona, ma i tempi di consegna sono troppo lunghi. C’erano problemi con il server, quindi ho dovuto sollecitare lo Staff."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Michael"
+                },
+                "reviewBody": "Non posso che lasciare il massimo! I like YouTube che ho comprato sono arrivati precisi e puntuali. Sicuramente tornerò per ordinare ancora, anche per gli altri miei social. Ottimo anche il contatore che mi permette di monitorare l’ordine in tempo reale."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Nik"
+                },
+                "reviewBody": "Soddisfatto ma si poteva fare di meglio. Su 10mila like comprati ne mancavano una ventina. Vabbè, poco male, dato che cmq me li hanno consegnati dopo aver contattato l’assistenza. Magari un po’ più di attenzione ai dettagli."
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Leo Vlog"
+                },
+                "reviewBody": " Non pensavo potessero fare la differenza, ma quei 100 like che ho acquistato hanno dato una bella spinta al mio video. Investimento ripagato alla grande!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "A Tutto Chiara"
+                },
+                "reviewBody": "Like arrivati in tempi rapidi e ben distribuiti, niente di strano nello Studio di YouTube. Servizio utile per migliorare la reputazione dei contenuti all’inizio, quando il video è ancora poco conosciuto. Sicuramente tornerò a usarli!"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Andrea Rinaldi"
+                },
+                "reviewBody": "Ordine da 500 like su un trailer del mio corto indipendente. Tutto liscio e senza scossoni, anzi, ho notato anche un piccolo aumento organico subito dopo. Forse effetto placebo? Chi lo sa, ma funziona :D"
+              },
+              {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "4",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "MarikaVibes"
+                },
+                "reviewBody": "Tutto bene ma... mi aspettavo un po’ più di rapidità. Like arrivati, ma la consegna ha richiesto un giorno e mezzo. Nulla di grave, però me lo aspettavo più veloce. "
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -125,7 +302,7 @@ const Hero = () => {
             <span className="font-semibold">4.9</span>
             <span className="text-white/70">•</span>
             <span className="text-white/70">
-              <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+              <a href="#testimonials" onClick={handleScrollToTestimonials}>12 recensioni</a>
             </span>
           </div>
         </div>

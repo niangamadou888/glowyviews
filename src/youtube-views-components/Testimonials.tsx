@@ -137,7 +137,7 @@ const TestimonialRow = ({ reviews, direction }: { reviews: Review[], direction: 
             key={`${review.id}-${idx}`}
             className="w-[280px] sm:w-[320px] md:w-[400px] flex-shrink-0"
           >
-            <div className="bg-[#262937] p-4 sm:p-5 rounded-xl border border-[#333333] h-[200px] sm:h-[215px] flex flex-col mx-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/30">
+            <div className="bg-[#262937] p-4 sm:p-5 rounded-xl border border-[#333333] h-[240px] sm:h-[255px] flex flex-col mx-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/30">
               <div className="flex justify-center mb-3 sm:mb-4">
                 {[...Array(5)].map((_, starIndex) => (
                   <FaStar

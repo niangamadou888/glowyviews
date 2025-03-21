@@ -15,116 +15,90 @@ const reviews: Review[] = [
   {
     id: 1,
     stars: 5,
-    text: "In passato ho comprato visualizzazioni e like, ma niente follower, non mi sono mai fidato. Per curiosità ne ho ordinati 500 da GlowLikes e devo ammettere che sono rimasto colpito dalla loro qualità. Sembrano veri! 👍👍",
-    name: "Luca",
+    text: "Chi lavora sui social sa benissimo quanto sia importante affidarsi ad un’ottima agenzia di SMM. Con GlowLikes mi sono trovato da dio! 20mila like recapitati in mezza giornata e niente cali! Grazie davvero 🙏",
+    name: "Francesco",
     row: 'first'
   },
   {
     id: 2,
     stars: 5,
-    text: "Bella raga! Finalmente un sito che vende roba seria e non le solite porcherie che si trovano in giro! 1000 iscritti YouTube (di ottima qualità) arrivati in meno di mezza giornata. Sto già programmando il prossimo ordine!",
-    name: "Johnny_x76",
+    text: "Lo ammetto senza problemi: questa non è la prima agenzia che provo. A differenza delle altre, però, questa mantiene le promesse e non ti fa trovare brutte sorprese 💪. Ho già effettuato 2 ordini e la prossima settimana vado con la terza buttata di like YouTube.",
+    name: "Luke_34",
     row: 'first'
   },
   {
     id: 3,
-    stars: 5,
-    text: "Buongiorno, se può essere di aiuto a qualcun altro volevo confermare che questa agenzia rispetta tutte le condizioni di vendita che propone. Ottima qualità e tempi di consegna decisamente veloci 👏.",
-    name: "Enrico",
+    stars: 4,
+    text: "5000 Mi Piace YouTube ad un costo accettabile. L’unica pecca? Ho dovuto contattare lo staff perché ne mancavano circa 200. Fortunatamente, l’assistenza mi ha risolto il problema alla svelta. Non il top del top, ma comunque un’agenzia valida.",
+    name: "Anthony",
     row: 'first'
   },
   {
     id: 4,
-    stars: 4,
-    text: "L’altro giorno ho fatto un ordine ma, controllando, notavo che la situazione era rimasta invariata. Ho contattato lo Staff e mi ha risposto che c’erano i server in aggiornamento. Poco male, hanno rimediato nel giro di un paio d’ore con 20 follower YouTube extra.",
-    name: "Giada93",
+    stars: 5,
+    text: "Ho già provato a comprare Mi Piace YouTube, prendendo “bidoni”. GlowLikes, però, lavora con la massima professionalità. Come mi sono trovata con l’ultimo ordine? Benissimo! Ne farò altri? Certamente! 😉",
+    name: "Marta",
     row: 'second'
   },
   {
     id: 5,
-    stars: 5,
-    text: "Di solito lavoro in modo organico, però ogni tanto qualche follower YouTube ci sta tutto. Niente di che, ne ho comprati 100. Beh, sicuramente di ottima qualità e in grado di ingannare anche l’occhio più attento 😉.",
-    name: "Maverick",
+    stars: 4,
+    text: "Un servizio nella norma, tutto sommato. Nulla di speciale. Ammetto che i Mi Piace YouTube sono di ottima qualità perché non causano cali. Ad ogni modo, trovo che siano un po’ caretti data la media di mercato.",
+    name: "Davis",
     row: 'second'
   },
   {
     id: 6,
-    stars: 4,
-    text: "Per quelli che sono i miei standard si potrebbe fare di meglio. Nulla da dire sulla qualità e sui tempi di consegna. Secondo me, però, il prezzo è un po’ altino. Do 3 stelle, in attesa che i costi diventino più competitivi.",
-    name: "Andrea",
+    stars: 3,
+    text: "Riconosco la buona volontà di GlowLikes, però non sono super soddisfatto del servizio. La qualità è buona, ma i tempi di consegna sono troppo lunghi. C’erano problemi con il server, quindi ho dovuto sollecitare lo Staff.",
+    name: "Pablo",
     row: 'second'
   },
   {
     id: 7,
     stars: 5,
-    text: "Non ero convinta… ho sempre pensato che comprare iscritti non fosse buono per l’algoritmo. Però devo dire che GlowLikes mi ha fatto cambiare idea. Servizio veloce e iscritti che sembrano reali. Ottimo per dare una spintarella al mio nuovo canale!",
-    name: "Vale Social",
+    text: "Non posso che lasciare il massimo! I like YouTube che ho comprato sono arrivati precisi e puntuali. Sicuramente tornerò per ordinare ancora, anche per gli altri miei social. Ottimo anche il contatore che mi permette di monitorare l’ordine in tempo reale.",
+    name: "Michael",
     row: 'third'
   },
   {
     id: 8,
-    stars: 5,
-    text: "Super professionali! Avevo bisogno di 500 iscritti per un nuovo canale e loro hanno fatto il lavoro in tempi record. Risultato? Primo video con oltre 2,000 views 🔥🔥. Consigliatissimi per chi lavora nel digitale.",
-    name: "MrTech88",
+    stars: 4,
+    text: "Soddisfatto ma si poteva fare di meglio. Su 10mila like comprati ne mancavano una ventina. Vabbè, poco male, dato che cmq me li hanno consegnati dopo aver contattato l’assistenza. Magari un po’ più di attenzione ai dettagli.",
+    name: "Nik",
     row: 'third'
   },
   {
     id: 9,
     stars: 5,
-    text: "Devo essere sincera: quando ho visto che l’ordine tardava un pochino, stavo già scrivendo una recensione negativa 😅. Poi però mi hanno ricontattata subito e hanno risolto il problema e inviato iscritti extra.",
-    name: "Carmelo",
+    text: "Non pensavo potessero fare la differenza, ma quei 100 like che ho acquistato hanno dato una bella spinta al mio video. Investimento ripagato alla grande!",
+    name: "Leo Vlog",
     row: 'third'
   },
   {
     id: 10,
     stars: 5,
-    text: "Amo quando le cose funzionano senza intoppi. Ordinati 1000 iscritti per il mio canale gaming e in 8 ore erano già tutti lì. Complimenti a GlowLikes 💪",
-    name: "Z3N_Gamer",
-    row: 'third'
+    text: "Like arrivati in tempi rapidi e ben distribuiti, niente di strano nello Studio di YouTube. Servizio utile per migliorare la reputazione dei contenuti all’inizio, quando il video è ancora poco conosciuto. Sicuramente tornerò a usarli!",
+    name: "A Tutto Chiara",
+    row: 'first'
   },
   {
     id: 11,
     stars: 5,
-    text: "Abbiamo testato diversi servizi ma GlowLikes ha una marcia in più. Ottima comunicazione, velocità e soprattutto iscritti che non scompaiono il giorno seguente…",
-    name: "Sara & Marco",
-    row: 'first'
+    text: "Ordine da 500 like su un trailer del mio corto indipendente. Tutto liscio e senza scossoni, anzi, ho notato anche un piccolo aumento organico subito dopo. Forse effetto placebo? Chi lo sa, ma funziona :D",
+    name: "Andrea Rinaldi",
+    row: 'second'
   },
   {
     id: 12,
-    stars: 5,
-    text: "Tutto perfetto, ma... ci starebbe un piccolo omaggio per i clienti affezionati 😉. Ho già fatto tre ordini e ogni volta servizio impeccabile. Se abbassate un pochino i prezzi vi sposo!",
-    name: "ManuK",
-    row: 'first'
-  },
-  {
-    id: 13,
     stars: 4,
-    text: "Soddisfatto al 90%. Ho preso like e iscritti per il canale di un mio cliente e il boost iniziale è stato ottimo. Solo una cosa: se aggiungeste un’opzione per la consegna più lenta, sarebbe perfetto!",
-    name: "Il Diario Web",
-    row: 'second'
-  },
-  {
-    id: 14,
-    stars: 5,
-    text: "Dovevo presentare un report ai miei sponsor e il mio engagement era bassino... Ho ordinato like views e iscritti e nel giro di poche ore i numeri sono migliorati. Nessuno si è accorto di nulla 😉",
-    name: "Edoardo",
-    row: 'second'
-  },
-  {
-    id: 15,
-    stars: 5,
-    text: "Sono nel marketing da anni e raramente mi sbilancio così: questi ragazzi sanno cosa fanno! Consigliati.",
-    name: "Fra",
-    row: 'third'
-  },
-  {
-    id: 16,
-    stars: 4,
-    text: "Mah… nel complesso bene, ma secondo me c’è ancora margine di miglioramento sui tempi. Però il servizio clienti è stato top e mi hanno pure omaggiato di qualche follower extra.",
-    name: "LolloY",
+    text: "Tutto bene ma... mi aspettavo un po’ più di rapidità. Like arrivati, ma la consegna ha richiesto un giorno e mezzo. Nulla di grave, però me lo aspettavo più veloce.",
+    name: "MarikaVibes",
     row: 'third'
   }
 ];
+
+
 
 
 // Add these near the other state declarations at the top of the component
