@@ -7,6 +7,7 @@ import Navigation from "@/youtube-views-components/Navigation";
 import Hero from "@/comprare-condivisioni/Hero";
 import Features from "@/comprare-condivisioni/Features";
 import Testimonials from "@/comprare-condivisioni/Testiomonials";
+import FinalConsiderations from "@/comprare-condivisioni/FinalConsiderations";
 
 const ComprareCondivisioni = () => {
   return (
@@ -27,6 +28,7 @@ const ComprareCondivisioni = () => {
           <Hero />
         </div>
         <Features />
+        <FinalConsiderations/>
         <Testimonials/>
         <CTA />
         <FloatingButton />
