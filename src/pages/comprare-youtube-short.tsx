@@ -9,6 +9,10 @@ import Features from "@/comprare-youtube-short/Features";
 import Testimonials from "@/comprare-youtube-short/Testiomonials";
 import FinalConsiderations from "@/comprare-youtube-short/FinalConsiderations";
 import BuySteps from "@/comprare-youtube-short/BuySteps";
+import WhyBuyViews from "@/comprare-youtube-short/WhyBuyViews";
+import DoveComprare from "@/comprare-youtube-short/DoveComprare";
+import YouTubeViewsInfo from "@/comprare-youtube-short/YouTubeViewsInfo";
+import OtherText from "@/comprare-youtube-short/OtherText";
 
 const ComprareYoutubeShort = () => {
   return (
@@ -29,7 +33,11 @@ const ComprareYoutubeShort = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
         <BuySteps/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials/>
         <CTA />
