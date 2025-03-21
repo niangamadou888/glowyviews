@@ -9,6 +9,10 @@ import Features from "@/comprare-commenti/Features";
 import Testimonials from "@/comprare-commenti/Testiomonials";
 import FinalConsiderations from "@/comprare-commenti/FinalConsiderations";
 import BuySteps from "@/comprare-commenti/BuySteps";
+import WhyBuyViews from "@/comprare-commenti/WhyBuyViews";
+import YouTubeViewsInfo from "@/comprare-commenti/YouTubeViewsInfo";
+import DoveComprare from "@/comprare-commenti/DoveComprare";
+import OtherText from "@/comprare-commenti/OtherText";
 
 const ComprareCommenti = () => {
   return (
@@ -29,7 +33,11 @@ const ComprareCommenti = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
         <BuySteps/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials/>
         <CTA />
