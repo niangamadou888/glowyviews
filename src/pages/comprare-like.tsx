@@ -9,6 +9,11 @@ import Features from "@/comprare-like/Features";
 import Testimonials from "@/comprare-like/Testiomonials";
 import FinalConsiderations from "@/comprare-like/FinalConsiderations";
 import BuySteps from "@/comprare-like/BuySteps";
+import WhyBuyViews from "@/comprare-like/WhyBuyViews";
+import DoveComprare from "@/comprare-like/DoveComprare";
+import YouTubeViewsInfo from "@/comprare-like/YouTubeViewsInfo";
+import FinalConsiderations2 from "@/comprare-like/FinalConsiderations2";
+import OtherText from "@/comprare-like/OtherText";
 
 const ComprareLike = () => {
   return (
@@ -29,7 +34,12 @@ const ComprareLike = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
         <BuySteps/>
+        <FinalConsiderations2/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials/>
         <CTA />
