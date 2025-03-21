@@ -9,6 +9,11 @@ import Navigation from "@/youtube-views-components/Navigation";
 import Testimonials from "@/comprare-iscritti-youtube/Testiomonials";
 import FinalConsiderations from "@/comprare-iscritti-youtube/FinalConsiderations";
 import BuySteps from "@/comprare-iscritti-youtube/BuySteps";
+import WhyBuyViews from "@/comprare-iscritti-youtube/WhyBuyViews";
+import DoveComprare from "@/comprare-iscritti-youtube/DoveComprare";
+import YouTubeViewsInfo from "@/comprare-iscritti-youtube/YouTubeViewsInfo";
+import OtherText from "@/comprare-iscritti-youtube/OtherText";
+import FinalConsiderations2 from "@/comprare-iscritti-youtube/FinalConsiderations2";
 
 const ComprareIscritti = () => {
   return (
@@ -29,7 +34,12 @@ const ComprareIscritti = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
         <BuySteps/>
+        <FinalConsiderations2/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials />
         <CTA />
