@@ -42,7 +42,86 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-visualizzazioni-e-like-youtube-shorts"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Aldo"
+      },
+      "reviewBody": "Di solito compravo da agenzie estere per via dei prezzi più bassi. Però in caso di problemi era dura interfacciarsi con l’assistenza. Poi ho scoperto questa agenzia italiana e ho deciso di fare una prova con 10mila views che sono arrivate precise."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Erik"
+      },
+      "reviewBody": "Concordo con le altre recensioni che leggo. È la terza volta compro 20mila like per gli Shorts ed è sempre andata benissimo. Provare altre agenzie? Anche no! Squadra che vince non si cambia! 😎 💪"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Nicola"
+      },
+      "reviewBody": "Salve a tutti, volevo fare i complimenti ai ragazzi di GlowLikes perché con le loro views e like non ho mai registrato nessun calo! Aspetto non scontato, visto che in passato ho avuto brutte esperienza. Continuate così! 🙏"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Louis"
+      },
+      "reviewBody": "Non per essere troppo pignolo ma se uno ordina 30mila like a uno short YouTube deve ricevere quel numero esatto. Nel mio caso ne mancavano 10, quindi nulla di grave. Però è una questione di serietà."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Giada"
+      },
+      "reviewBody": "Mi sono trovata benissimo perché ordinare visualizzazioni e like per gli Short YouTube è semplice e super veloce 🚀🚀 I prezzi più che accessibili e una vasta gamma di altri servizi niente male che sto già valutando."
+    }
+  ]
           })}
         </script>
       </Helmet>

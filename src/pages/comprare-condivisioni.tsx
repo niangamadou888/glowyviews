@@ -6,6 +6,7 @@ import Footer from "@/youtube-views-components/Footer";
 import Navigation from "@/youtube-views-components/Navigation";
 import Hero from "@/comprare-condivisioni/Hero";
 import Features from "@/comprare-condivisioni/Features";
+import Testimonials from "@/comprare-condivisioni/Testiomonials";
 
 const ComprareCondivisioni = () => {
   return (
@@ -26,6 +27,7 @@ const ComprareCondivisioni = () => {
           <Hero />
         </div>
         <Features />
+        <Testimonials/>
         <CTA />
         <FloatingButton />
         <BackToTopButton />

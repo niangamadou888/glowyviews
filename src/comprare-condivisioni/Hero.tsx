@@ -42,7 +42,86 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-condivisioni-youtube"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Jessica"
+      },
+      "reviewBody": "Cosa ne penso? Servizio fantastico!!!😍😍 Proprio ieri ho ordinato 10mila condivisioni YouTube e le ho ricevute prima del previsto! 🚀🚀 Pensavo ci volesse qualche giorno… ma dopo 3-4 ore erano già arrivate quasi tutte! Sicuramente tornerò presto per un nuovo ordine 💪"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Marco"
+      },
+      "reviewBody": "Su 5 ordini non ho mai avuto alcun problema… nemmeno su quest’ultimo da 50mila condivisioni YouTube. Ammetto anche che qui ci sono i prezzi migliori del mercato italiano… ho provato tante agenzie ma o spendi troppo, oppure ti rifilano le condivisioni da bot."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dave"
+      },
+      "reviewBody": "Senza dubbio uno dei miei migliori investimenti!! 💶💶 Ho trovato il rapporto qualità/prezzo che cercavo e sono davvero contento che l’ordine venga consegnato così rapidamente!! 👌 L’ho monitorato tramite la mia personale ed effettivamente sono stati puntualissimi! ⏱️⏱️"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Riccardo"
+      },
+      "reviewBody": "Servizio molto buono… ma non perfetto. Praticamente è successo che 15mila condivisioni YouTube avevano un ammanco di circa 10-15… potevo lasciar perdere ma le ho pagate tutte. Quindi ho contattato lo Staff e mi hanno subito spedito quello che mi mancava…"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Pier"
+      },
+      "reviewBody": "Pur essendo la mia prima volta vedo già che ottimi prodotti danno grandi risultati!!! Un paio di settimane fa ho comprato 60mila condivisioni YouTube e noto già che il mio canale sta andando alla grande!!📈📈 Non solo non ho avuto cali, ma sto pure crescendo bene!!👍👌"
+    }
+  ]
           })}
         </script>
       </Helmet>
@@ -122,10 +201,10 @@ const Hero = () => {
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="font-semibold">4.9</span>
+            <span className="font-semibold">4.8</span>
             <span className="text-white mx-1">•</span>
             <span className="text-white">
-              <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+              <a href="#testimonials" onClick={handleScrollToTestimonials}>5 recensioni</a>
             </span>
           </div>
         </div>

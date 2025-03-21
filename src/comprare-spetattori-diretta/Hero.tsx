@@ -42,7 +42,86 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-spettatori-diretta-youtube"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Walter"
+      },
+      "reviewBody": "Contentissimo dei miei primi 600 spettatori diretta YouTube! 🙂🙂 Avevo già provato altre agenzie, ma i loro servizi erano pessimi. Con GlowLikes è andata benissimo e sto già programmando il prossimo ordine."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Max"
+      },
+      "reviewBody": "Servizio super 💪 Non ci speravo più dato che gli spettatori diretta YouTube degli altri fornitori mi sono sempre arrivati verso la fine delle live. Ho visto arrivare i primi già dopo 2 minuti di diretta! A presto con il prossimo ordine! 👍👍"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Matteo"
+      },
+      "reviewBody": "1000 spettatori diretta YouTube ad un prezzo super vantaggioso e consegnati un po’ alla volta nella prima mezz’ora della live. Di questi tempi è quasi impossibile trovare di meglio. Inoltre non mi hanno dato nessun problema con gli algoritmi."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Jacopo"
+      },
+      "reviewBody": "All’altezza delle aspettative… sito abbastanza semplice da usare, prezzi nella norma e puntualità. Ho già fatto un paio di ordini e mi sono sempre trovato bene… Anch’io zero cali, quindi direi ottimo per il momento."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Alessia"
+      },
+      "reviewBody": "Mi spiace non dare al massimo, anche se cmq non posso lamentarmi. Su 1000 spettatori diretta YouTube ordinati ne mancavo 11 o 12. Cambia niente, però secondo me bisogna essere precisi e puntuali."
+    }
+  ]
           })}
         </script>
       </Helmet>
@@ -122,10 +201,10 @@ const Hero = () => {
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="font-semibold">4.9</span>
+            <span className="font-semibold">4.8</span>
             <span className="text-white mx-1">•</span>
             <span className="text-white">
-              <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+              <a href="#testimonials" onClick={handleScrollToTestimonials}>5 recensioni</a>
             </span>
           </div>
         </div>
