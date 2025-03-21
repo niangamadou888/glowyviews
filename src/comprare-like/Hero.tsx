@@ -300,8 +300,8 @@ const Hero = () => {
               ))}
             </div>
             <span className="font-semibold">4.5</span>
-            <span className="text-white/70">•</span>
-            <span className="text-white/70">
+            <span className="text-white mx-1">•</span>
+            <span className="text-white">
               <a href="#testimonials" onClick={handleScrollToTestimonials}>12 recensioni</a>
             </span>
           </div>

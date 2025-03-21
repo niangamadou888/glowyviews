@@ -247,15 +247,15 @@ const Features = () => {
         </div>
         <p className="mt-16">
         Alcuni potrebbero sorridere all'idea di 
-          <strong>comprare ore di visualizzazione YouTube </strong>perché, superficialmente, potrebbe apparire come un qualcosa da “sfigati”.<br />
+          <strong> comprare ore di visualizzazione YouTube </strong>perché, superficialmente, potrebbe apparire come un qualcosa da “sfigati”.<br />
         </p>
         <p className="mt-3">
         Può anche essere (in alcuni casi “patologici”) ma, date le numerose aziende che lavorano nel settore, 
-          <strong>le cose stanno in modo ben diverso.</strong><br />
+          <strong> le cose stanno in modo ben diverso.</strong><br />
         </p>
         <p className="mt-3">
         No, non si tratta di un basso “espediente” ma, al contrario, 
-          <strong>di una tecnica di Social Media Marketing</strong> di cui parleremo proprio in questa guida. <br />
+          <strong> di una tecnica di Social Media Marketing </strong> di cui parleremo proprio in questa guida. <br />
         </p>
       </div>
 

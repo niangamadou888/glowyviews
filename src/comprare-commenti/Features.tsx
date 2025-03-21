@@ -247,11 +247,11 @@ const Features = () => {
         </div>
         <p className="mt-16">
         È vero, siamo tutti d'accordo sul fatto che 
-          <strong>comprare commenti YouTube, seppur reali ed italiani, </strong>non risolverà magicamente tutti i tuoi problemi di visibilità.<br />
+          <strong> comprare commenti YouTube, seppur reali ed italiani, </strong>non risolverà magicamente tutti i tuoi problemi di visibilità.<br />
         </p>
         <p className="mt-3">
         Nonostante ciò, 
-          <strong>rimane sempre e comunque una di quelle tattiche di Social Media Marketing</strong> da prendere in considerazione almeno una volta.<br />
+          <strong> rimane sempre e comunque una di quelle tattiche di Social Media Marketing </strong> da prendere in considerazione almeno una volta.<br />
         </p>
         <p className="mt-3">
           <strong>Stanco di aspettare il “bacio della fortuna” </strong> che ti porterà la tanto desiderata visibilità? Se pensi che il tempo sia trascorso, allora non perderne altro e iniziamo subito.<br />

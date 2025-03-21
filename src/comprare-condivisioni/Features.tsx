@@ -247,15 +247,15 @@ const Features = () => {
         </div>
         <p className="mt-16">
         Sono settimane che ti sta frullando in mente l'idea di 
-          <strong>comprare condivisioni YouTube</strong>? Se la risposta è “sì”, nei prossimi paragrafi di questa guida all'acquisto troverai tutti i dettagli utili per prendere la fatidica decisione.<br />
+          <strong> comprare condivisioni YouTube </strong>? Se la risposta è “sì”, nei prossimi paragrafi di questa guida all'acquisto troverai tutti i dettagli utili per prendere la fatidica decisione.<br />
         </p>
         <p className="mt-3">
         Al tempo stesso, 
-          <strong>ne approfitteremo per dissipare i dubbi e le perplessità più comuni</strong>, parlando anche dei principali errori da evitare.<br />
+          <strong> ne approfitteremo per dissipare i dubbi e le perplessità più comuni </strong>, parlando anche dei principali errori da evitare.<br />
         </p>
         <p className="mt-3">
         Vedrai, al termine della lettura 
-          <strong>ti sarà tutto più chiaro </strong> e saprai già come muoverti al meglio.<br />
+          <strong> ti sarà tutto più chiaro </strong> e saprai già come muoverti al meglio.<br />
         </p>
       </div>
 

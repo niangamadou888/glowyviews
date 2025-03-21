@@ -247,11 +247,11 @@ const Features = () => {
         </div>
         <p className="mt-16">
         Quasi sicuramente, avrai già sentito della possibilità di 
-          <strong>comprare spettatori diretta YouTube </strong>, ma di cosa si tratta? È uno scherzo, oppure si tratta di un qualcosa di serio?<br />
+          <strong> comprare spettatori diretta YouTube </strong>, ma di cosa si tratta? È uno scherzo, oppure si tratta di un qualcosa di serio?<br />
         </p>
         <p className="mt-3">
         Nei prossimi paragrafi parleremo proprio di questo, ossia dell'importanza di  
-          <strong>attuare le migliori strategie di Social Media Marketing </strong>per risolvere alcune criticità legate all'andamento dei propri video e, più in generale, del proprio canale nel suo complesso.<br />
+          <strong> attuare le migliori strategie di Social Media Marketing </strong>per risolvere alcune criticità legate all'andamento dei propri video e, più in generale, del proprio canale nel suo complesso.<br />
         </p>
       </div>
 

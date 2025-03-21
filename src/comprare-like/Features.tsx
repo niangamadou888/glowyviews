@@ -247,11 +247,11 @@ const Features = () => {
         </div>
         <p className="mt-16">
         Perché mai dovresti
-          <strong>comprare Like YouTube? </strong>No, non sarebbe certo per il solo scopo di fare bella figura con i tuoi amici!<br />
+          <strong> comprare Like YouTube? </strong>No, non sarebbe certo per il solo scopo di fare bella figura con i tuoi amici!<br />
         </p>
         <p className="mt-3">
         Dalla nascita dei primi social network ad oggi, 
-          <strong>si è sviluppata attorno ad essi una disciplina conosciuta come “Social Media Marketing”</strong>e il comprare Mi Piace YouTube altro non è che una delle tante tecniche che si possono intraprendere per raggiungere determinati fini.<br />
+          <strong> si è sviluppata attorno ad essi una disciplina conosciuta come “Social Media Marketing” </strong>e il comprare Mi Piace YouTube altro non è che una delle tante tecniche che si possono intraprendere per raggiungere determinati fini.<br />
         </p>
         <p className="mt-3">
         Vuoi saperne di più? Allora non perdiamo tempo prezioso e iniziamo subito la lettura di questa guida.<br />

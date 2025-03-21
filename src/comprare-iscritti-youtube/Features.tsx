@@ -252,11 +252,11 @@ const Features = () => {
         </p>
         <p className="mt-3">
           Infatti, {" "}
-          <strong>si tratta di una “sottile” operazione di Social Media Marketing</strong> che, se condotta con il giusto criterio, può dare davvero una svolta alla tua carriera di YouTuber. <br />
+          <strong> si tratta di una “sottile” operazione di Social Media Marketing </strong> che, se condotta con il giusto criterio, può dare davvero una svolta alla tua carriera di YouTuber. <br />
         </p>
         <p className="mt-3">
         A dispetto delle apparenze, 
-          <strong>si tratta di un argomento complesso</strong> su cui c'è molto da dire. <br />
+          <strong> si tratta di un argomento complesso </strong> su cui c'è molto da dire. <br />
         </p>
         <p className="mt-3">
         Di conseguenza, non perdiamo altro tempo prezioso ed entriamo subito nel vivo dell'argomento.

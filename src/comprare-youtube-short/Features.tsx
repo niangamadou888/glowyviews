@@ -247,11 +247,11 @@ const Features = () => {
         </div>
         <p className="mt-16">
         Oggigiorno, il Social Media Marketing non conosce più confini, tanto che, qui da noi, puoi persino 
-          <strong>comprare visualizzazioni e like YouTube Shorts.</strong><br />
+          <strong> comprare visualizzazioni e like YouTube Shorts. </strong><br />
         </p>
         <p className="mt-16">
         Conviene davvero puntare su questo recente formato video adottato dalla piattaforma? Può, in qualche modo, 
-          <strong>influire sull'eventuale monetizzazione?</strong><br />
+          <strong> influire sull'eventuale monetizzazione? </strong><br />
         </p>
         <p className="mt-3">
         Come vedi, ci sono parecchie cose di cui discutere, quindi iniziamo immediatamente, senza perdere altro tempo prezioso.</p>
