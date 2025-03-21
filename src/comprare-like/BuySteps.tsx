@@ -51,17 +51,20 @@ const BuySteps = () => {
         />
       </div>
 
+      
+
       <div className="relative">
+
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
-        Come comprare Visualizzazioni YouTube italiane e reali
+        Come comprare Like YouTube italiani e reali in qualsiasi momento
         </h2>
-        
+
         <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-        <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step:
+        Ecco <strong>come comprare Mi Piace YouTube italiani e reali</strong> in 2 minuti, con la massima semplicità:
         </p>
 
         {/* Optimized progress line */}
-        <div className="absolute left-[7px] top-[120px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
             className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
             style={{
@@ -73,7 +76,7 @@ const BuySteps = () => {
         </div>
 
         <div className="space-y-20 md:space-y-28">
-          {[1, 2, 3, 4, 5, 6].map((step) => (
+          {[1, 2, 3, 4, 5].map((step) => (
             <motion.div
               key={step}
               variants={stepVariants}
@@ -108,7 +111,6 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
@@ -122,7 +124,6 @@ const getStepTitle = (step: number) => {
     2: "",
     4: "",
     5: "",
-    6: "",
   };
   return titles[step as keyof typeof titles];
 };
@@ -131,62 +132,36 @@ const getStepContent = (step: number) => {
   const content = {
     1: (
       <>
-        Per prima cosa,{" "}
-        <strong>crea la tua area personale iscrivendoti a glowlikes</strong> e
-        recati nella sezione in cui sono presenti le nostre offerte commerciali.
+      Nel caso non l'avessi ancora fatto,
+        <strong>iscriviti a GlowLikes per creare la tua area personale e, una volta dentro, apri la sezione</strong>in cui sono presenti, per l'appunto, i pacchetti che “riassumono” la nostra offerta relativa ai Like YouTube.
       </>
     ),
     2: (
       <>
-        Successivamente,{" "}
-        <strong>passa al vaglio tutti i pacchetti che ti proponiamo</strong>, in
-        modo da individuare subito quello più in linea con le tue esigenze e con
-        il tuo budget.
+        Adesso, {" "}
+        <strong>devi selezionare la quantità desiderata.  </strong>Qualche consiglio? Se hai il profilo aperto di recenti e pochi video caricati, limitati a qualche centinaio (vedi tu l'ammontare esatto, basta rimanere in quest'ordine). In caso contrario, <strong>tieni una proporzione 1:10</strong> (se un tuo video ha 10mila Like, comprane 1000) e vedi un po' come si evolve la situazione. Mal che vada, puoi sempre ridurre la proporzione.
       </>
     ),
     3: (
       <>
-        Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che{" "}
-        <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi
-        "spingere". Attenzione, però. Devi fornircelo in{" "}
-        <strong>
-          formato desktop (ossia "https://youtube.com/tuovideo) e NON in formato
-          mobile (cioè "m.youtube.com/tuovideo")
-        </strong>
-        . Inoltre, il video deve essere pubblico e non presentare alcuna
-        limitazione.
+        Fatto? Bene, allora adesso{" "}
+        <strong>è giunto il momento di fornirci l'URL del video</strong>di cui vuoi far aumentare i Mi Piace che, a scanso di equivoci, devi essere pubblico. In aggiunta a ciò, ricordati che <strong>l'URL deve avere questo formato </strong>
       </>
     ),
     4: (
       <>
-        A questo punto, <strong>procedi con il pagamento</strong> che puoi
-        effettuare scegliendo tra diversi metodi:{" "}
-        <strong>
-          carte di debito/credito, bonififi ordinari e istantanei, PayPal
-        </strong>{" "}
-        e via dicendo.
+        A questo punto, procedi il pagamento, proprio come faresti in qualunque altro sito di e-commerce. Come vedrai, <strong>accettiamo diversi metodi, incluso PayPal,</strong>quindi ci sarà sicuramente quello che ti è più comodo.
       </>
     ),
     5: (
       <>
-        Infine,{" "}
+        Infine, {" "}
         <strong>
-          devi solo attendere che il nostro Staff elabori il tuo ordine
+        devi solo attendere,
         </strong>{" "}
-        e che lo "consegni" nel giro di pochissimi giorni lavorativi. In
-        pratica, devi solo monitorare il contatore di views YouTube presente sul
-        video di cui ci hai fornito l'URL.
+        cioè dare uno sguardo – di tanto in tanto – al contatore dei Like afferito al tuo profilo.
       </>
-    ),
-    6: (
-      <>
-        Volendo, puoi {" "}
-        <strong>
-        monitorare la progressione dell’ordine dando uno sguardo all’apposito contatore 
-        </strong>{" "}
-        presente all’interno della tua area personale.
-      </>
-    ),
+    )
   };
   return content[step as keyof typeof content];
 };

@@ -51,17 +51,16 @@ const BuySteps = () => {
         />
       </div>
 
+      
+
       <div className="relative">
+
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
-        Come comprare Visualizzazioni YouTube italiane e reali
+        Tutorial: come comprare commenti YouTube italiani e reali da GlowLikes
         </h2>
-        
-        <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-        <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step:
-        </p>
 
         {/* Optimized progress line */}
-        <div className="absolute left-[7px] top-[120px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
             className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
             style={{
@@ -108,7 +107,7 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
-
+        
       </div>
     </section>
   );
@@ -131,60 +130,43 @@ const getStepContent = (step: number) => {
   const content = {
     1: (
       <>
-        Per prima cosa,{" "}
-        <strong>crea la tua area personale iscrivendoti a glowlikes</strong> e
-        recati nella sezione in cui sono presenti le nostre offerte commerciali.
+        Per accedere ai nostri servizi{" "}
+        <strong>devi iscriverti alla nostra agenzia GlowLikes, fornendo una e-mail e la password </strong>a tua scelta.
       </>
     ),
     2: (
       <>
-        Successivamente,{" "}
-        <strong>passa al vaglio tutti i pacchetti che ti proponiamo</strong>, in
-        modo da individuare subito quello più in linea con le tue esigenze e con
-        il tuo budget.
+        Successivamente, {" "}
+        <strong>devi solo recarti nella sezione dedicata alle interazioni YouTube</strong>e, nello specifico, selezionare la compravendita dei commenti.
       </>
     ),
     3: (
       <>
-        Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che{" "}
-        <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi
-        "spingere". Attenzione, però. Devi fornircelo in{" "}
-        <strong>
-          formato desktop (ossia "https://youtube.com/tuovideo) e NON in formato
-          mobile (cioè "m.youtube.com/tuovideo")
-        </strong>
-        . Inoltre, il video deve essere pubblico e non presentare alcuna
-        limitazione.
+        Noterai, senz'altro, che{" "}
+        <strong>il servizio è organizzato in pacchetti.</strong>Seleziona, dunque, quello che pensi possa andar bene nelle tue circostanze.
       </>
     ),
     4: (
       <>
-        A questo punto, <strong>procedi con il pagamento</strong> che puoi
-        effettuare scegliendo tra diversi metodi:{" "}
-        <strong>
-          carte di debito/credito, bonififi ordinari e istantanei, PayPal
-        </strong>{" "}
-        e via dicendo.
+        Fatto? Allora, adesso devi, chiaramente, <strong>inserire l'URL del video, che deve – per forza – essere in formato desktop (https://youtube.com/tuovideo) e non in formato mobile (m.youtube.com/tuovideo).</strong>
       </>
     ),
     5: (
       <>
-        Infine,{" "}
+        Terminato anche questo passaggio, devi {" "}
         <strong>
-          devi solo attendere che il nostro Staff elabori il tuo ordine
+        scrivere i commenti che vorresti vedere apparire sotto al video di cui hai condiviso l'URL.
         </strong>{" "}
-        e che lo "consegni" nel giro di pochissimi giorni lavorativi. In
-        pratica, devi solo monitorare il contatore di views YouTube presente sul
-        video di cui ci hai fornito l'URL.
+        Si tratta della fase più importante, quindi prenditi tutto il tempo che ti serve per realizzarli nel modo più efficace e coinvolgente possibile.
       </>
     ),
     6: (
       <>
-        Volendo, puoi {" "}
+        Come ultimo step, devi solo {" "}
         <strong>
-        monitorare la progressione dell’ordine dando uno sguardo all’apposito contatore 
+        provvedere al pagamento come meglio preferisci, scegliendo tra i vari metodi che ti mettiamo a disposizione, tipo PayPal, carte di debito/credito
         </strong>{" "}
-        presente all’interno della tua area personale.
+        e quant’altro.
       </>
     ),
   };

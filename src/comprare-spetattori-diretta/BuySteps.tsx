@@ -51,17 +51,20 @@ const BuySteps = () => {
         />
       </div>
 
+      
+
       <div className="relative">
+
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
-        Come comprare Visualizzazioni YouTube italiane e reali
+        Comprare spettatori diretta YouTube su GlowLikes: store online aperto 24/7
         </h2>
-        
+
         <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-        <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step:
+        Se hai deciso di  <strong>comprare spettatori diretta YouTube italiani e reali</strong> qui da noi su GlowLikes, ecco i passi da seguire:
         </p>
 
         {/* Optimized progress line */}
-        <div className="absolute left-[7px] top-[120px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
             className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
             style={{
@@ -108,7 +111,7 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
-
+        
       </div>
     </section>
   );
@@ -131,60 +134,42 @@ const getStepContent = (step: number) => {
   const content = {
     1: (
       <>
-        Per prima cosa,{" "}
-        <strong>crea la tua area personale iscrivendoti a glowlikes</strong> e
-        recati nella sezione in cui sono presenti le nostre offerte commerciali.
+        Nel caso dovessi ancora farlo, non perdere altro tempo ed{" "}
+        <strong> iscriviti subito sulla nostra piattaforma, </strong> in modo da creare la tua area personale.
       </>
     ),
     2: (
       <>
-        Successivamente,{" "}
-        <strong>passa al vaglio tutti i pacchetti che ti proponiamo</strong>, in
-        modo da individuare subito quello più in linea con le tue esigenze e con
-        il tuo budget.
+        Fatto questo, recati nello store online in cui sono presenti le interazioni e cerca, per l'appunto, la sezione dedicata agli  {" "}
+        <strong>spettatori diretta YouTube.</strong>
       </>
     ),
     3: (
       <>
-        Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che{" "}
-        <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi
-        "spingere". Attenzione, però. Devi fornircelo in{" "}
-        <strong>
-          formato desktop (ossia "https://youtube.com/tuovideo) e NON in formato
-          mobile (cioè "m.youtube.com/tuovideo")
-        </strong>
-        . Inoltre, il video deve essere pubblico e non presentare alcuna
-        limitazione.
+        A questo punto,{" "}
+        <strong>devi selezionare il pacchetto</strong>che ritieni più indicato per la tua situazione. Si va da quelli di pochi euro, fino a quelli più “impegnativi”, economicamente parlando.
       </>
     ),
     4: (
       <>
-        A questo punto, <strong>procedi con il pagamento</strong> che puoi
-        effettuare scegliendo tra diversi metodi:{" "}
-        <strong>
-          carte di debito/credito, bonififi ordinari e istantanei, PayPal
-        </strong>{" "}
-        e via dicendo.
+        Una volta individuato quello di tuo interesse, prosegui fornendo tutti i dati relativi alla diretta streaming in questione. Ad esempio, <strong> devi fornirci l'URL del video</strong>(con questo formato “https://youtube.com/tuadiretta” e non con questo “m.youtube.com/tuadiretta”),  <strong>così come l'orario della stessa </strong>(a tal proposito, devi effettuare l'ordine almeno 24 ore prima della diretta).
       </>
     ),
     5: (
       <>
-        Infine,{" "}
+        Ci siamo quasi, visto che adesso devi solo {" "}
         <strong>
-          devi solo attendere che il nostro Staff elabori il tuo ordine
+        “concretizzare” l'ordine effettuando il pagamento
         </strong>{" "}
-        e che lo "consegni" nel giro di pochissimi giorni lavorativi. In
-        pratica, devi solo monitorare il contatore di views YouTube presente sul
-        video di cui ci hai fornito l'URL.
+        tramite carta di debito/credito, PayPal, bonifico o qualsiasi altro metodo che preferisci.
       </>
     ),
     6: (
       <>
-        Volendo, puoi {" "}
+        Completato anche quest'ultimo step,  {" "}
         <strong>
-        monitorare la progressione dell’ordine dando uno sguardo all’apposito contatore 
-        </strong>{" "}
-        presente all’interno della tua area personale.
+        riceverai via e-mail la conferma dell'ordine.
+        </strong>
       </>
     ),
   };

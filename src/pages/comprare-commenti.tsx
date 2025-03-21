@@ -8,6 +8,7 @@ import Hero from "@/comprare-commenti/Hero";
 import Features from "@/comprare-commenti/Features";
 import Testimonials from "@/comprare-commenti/Testiomonials";
 import FinalConsiderations from "@/comprare-commenti/FinalConsiderations";
+import BuySteps from "@/comprare-commenti/BuySteps";
 
 const ComprareCommenti = () => {
   return (
@@ -28,6 +29,7 @@ const ComprareCommenti = () => {
           <Hero />
         </div>
         <Features />
+        <BuySteps/>
         <FinalConsiderations/>
         <Testimonials/>
         <CTA />

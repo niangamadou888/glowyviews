@@ -51,17 +51,20 @@ const BuySteps = () => {
         />
       </div>
 
+      
+
       <div className="relative">
+
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
-        Come comprare Visualizzazioni YouTube italiane e reali
+        Come comprare iscritti YouTube italiani e reali in 2 minuti tramite la nostra Agenzia
         </h2>
-        
+
         <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-        <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step:
+        Nel caso non l'avessi mai fatto prima d'ora, <strong>acquista follower YouTube facendo come segue:</strong>
         </p>
 
         {/* Optimized progress line */}
-        <div className="absolute left-[7px] top-[120px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
             className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
             style={{
@@ -73,7 +76,7 @@ const BuySteps = () => {
         </div>
 
         <div className="space-y-20 md:space-y-28">
-          {[1, 2, 3, 4, 5, 6].map((step) => (
+          {[1, 2, 3, 4, 5].map((step) => (
             <motion.div
               key={step}
               variants={stepVariants}
@@ -108,7 +111,6 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
@@ -122,7 +124,6 @@ const getStepTitle = (step: number) => {
     2: "",
     4: "",
     5: "",
-    6: "",
   };
   return titles[step as keyof typeof titles];
 };
@@ -131,62 +132,35 @@ const getStepContent = (step: number) => {
   const content = {
     1: (
       <>
-        Per prima cosa,{" "}
-        <strong>crea la tua area personale iscrivendoti a glowlikes</strong> e
-        recati nella sezione in cui sono presenti le nostre offerte commerciali.
+        <strong>Inizia iscrivendoti a GlowLikes e, una volta entrato nella tua area personale, </strong>recati nella sezione del nostro sito riguardante, per l'appunto, il <strong>comprare iscritti YouTube italiani e reali.</strong>
       </>
     ),
     2: (
       <>
-        Successivamente,{" "}
-        <strong>passa al vaglio tutti i pacchetti che ti proponiamo</strong>, in
-        modo da individuare subito quello più in linea con le tue esigenze e con
-        il tuo budget.
+        Come noti tu stessi, {" "}
+        <strong>la nostra offerta si articola su più pacchetti che vanno in ordine progressivo. </strong>C'è il più “scarno”, così come quello più “completo” e, nel mezzo, diverse altre quantità prestabilite.
       </>
     ),
     3: (
       <>
-        Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che{" "}
-        <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi
-        "spingere". Attenzione, però. Devi fornircelo in{" "}
-        <strong>
-          formato desktop (ossia "https://youtube.com/tuovideo) e NON in formato
-          mobile (cioè "m.youtube.com/tuovideo")
-        </strong>
-        . Inoltre, il video deve essere pubblico e non presentare alcuna
-        limitazione.
+        Procedi, dunque,{" "}
+        <strong>scegliendo proprio il pacchetto</strong>che ritieni più valido e, cosa molto importante, fornendo <strong>l'URL del tuo canale YouTube in formato desktop: https://www.youtube.com/@TuoCanale. </strong> Non Possiamo erogare il nostro ordine su URL in formato mobile, ossia m.youtube.com/@TuoCanale.
       </>
     ),
     4: (
       <>
-        A questo punto, <strong>procedi con il pagamento</strong> che puoi
-        effettuare scegliendo tra diversi metodi:{" "}
-        <strong>
-          carte di debito/credito, bonififi ordinari e istantanei, PayPal
-        </strong>{" "}
-        e via dicendo.
+        A questo punto, dunque,<strong>procedi con il pagamento che puoi effettuare tramite PayPal</strong>, carta di debito/credito, oppure bonifico.
       </>
     ),
     5: (
       <>
-        Infine,{" "}
+        Come ultima cosa, tira pure un sospiro di sollievo perché, arrivato a questa fase, {" "}
         <strong>
-          devi solo attendere che il nostro Staff elabori il tuo ordine
+        devi solo attendere che il sistema automatico della nostra agenzia ti “consegni” i follower
         </strong>{" "}
-        e che lo "consegni" nel giro di pochissimi giorni lavorativi. In
-        pratica, devi solo monitorare il contatore di views YouTube presente sul
-        video di cui ci hai fornito l'URL.
+        acquistati. Naturalmente, puoi tenere traccia delle acquisizioni monitorando il contatore degli iscritti presente sul tuo canale, ma anche quello che trovi nella tua area personale.
       </>
-    ),
-    6: (
-      <>
-        Volendo, puoi {" "}
-        <strong>
-        monitorare la progressione dell’ordine dando uno sguardo all’apposito contatore 
-        </strong>{" "}
-        presente all’interno della tua area personale.
-      </>
-    ),
+    )
   };
   return content[step as keyof typeof content];
 };

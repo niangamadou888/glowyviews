@@ -130,12 +130,12 @@ const BuySteps = () => {
 // Helper functions
 const getStepTitle = (step: number) => {
   const titles = {
-    1: "Crea il tuo account",
-    3: "comprare visualizzazioni",
-    2: "Loggati il tuo account",
-    4: "Scegli il pacchetto",
-    5: "Inserisci l'URL",
-    6: "Effettua il pagamento",
+    1: "",
+    3: "",
+    2: "",
+    4: "",
+    5: "",
+    6: "",
   };
   return titles[step as keyof typeof titles];
 };

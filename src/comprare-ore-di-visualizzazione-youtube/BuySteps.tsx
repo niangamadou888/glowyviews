@@ -51,17 +51,16 @@ const BuySteps = () => {
         />
       </div>
 
+      
+
       <div className="relative">
+
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
-        Come comprare Visualizzazioni YouTube italiane e reali
+        Ecco come comprare ore di visualizzazione YouTube
         </h2>
-        
-        <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
-        <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step:
-        </p>
 
         {/* Optimized progress line */}
-        <div className="absolute left-[7px] top-[120px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
             className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
             style={{
@@ -73,7 +72,7 @@ const BuySteps = () => {
         </div>
 
         <div className="space-y-20 md:space-y-28">
-          {[1, 2, 3, 4, 5, 6].map((step) => (
+          {[1, 2, 3, 4, 5, 6, 7].map((step) => (
             <motion.div
               key={step}
               variants={stepVariants}
@@ -108,7 +107,7 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
-
+        
       </div>
     </section>
   );
@@ -123,6 +122,7 @@ const getStepTitle = (step: number) => {
     4: "",
     5: "",
     6: "",
+    7: "",
   };
   return titles[step as keyof typeof titles];
 };
@@ -131,60 +131,50 @@ const getStepContent = (step: number) => {
   const content = {
     1: (
       <>
-        Per prima cosa,{" "}
-        <strong>crea la tua area personale iscrivendoti a glowlikes</strong> e
-        recati nella sezione in cui sono presenti le nostre offerte commerciali.
+        <strong>Tutto inizia con l'iscrizione a GlowLikes, </strong>per cui devi fornire una e-mail e impostare una password a tua scelta.
       </>
     ),
     2: (
       <>
-        Successivamente,{" "}
-        <strong>passa al vaglio tutti i pacchetti che ti proponiamo</strong>, in
-        modo da individuare subito quello più in linea con le tue esigenze e con
-        il tuo budget.
+        Dopodiché, una volta dentro alla tua area personale,  {" "}
+        <strong>recati nella sezione in cui è presente lo store online</strong>con tutte le interazioni social disponibili per l'acquisto.
       </>
     ),
     3: (
       <>
-        Hai trovato il pacchetto che fa per te? Allora, non devi fare altro che{" "}
-        <strong>selezionarlo e fornirci l'URL del video</strong> che vuoi
-        "spingere". Attenzione, però. Devi fornircelo in{" "}
-        <strong>
-          formato desktop (ossia "https://youtube.com/tuovideo) e NON in formato
-          mobile (cioè "m.youtube.com/tuovideo")
-        </strong>
-        . Inoltre, il video deve essere pubblico e non presentare alcuna
-        limitazione.
+        Arrivato fino a qui, dunque, dovrai {" "}
+        <strong>selezionare proprio “comprare ore di visualizzazione YouTube”</strong>e fornire i parametri di tuo gradimento. Devi, quindi, impostare il numero di visualizzazioni, così come la durata espressa in minuti.
       </>
     ),
     4: (
       <>
-        A questo punto, <strong>procedi con il pagamento</strong> che puoi
-        effettuare scegliendo tra diversi metodi:{" "}
-        <strong>
-          carte di debito/credito, bonififi ordinari e istantanei, PayPal
-        </strong>{" "}
-        e via dicendo.
+        Il più è stato fatto, quindi adesso<strong>devi solo fornire l'URL del video di cui vuoi che salgano proprio le ore di visualizzazione.</strong> Ovviamente, può essere anche più di un video alla volta. L'unica cosa che ti chiediamo, però, è di <strong>inserire l'URL con questo formato “https://youtube.com/tuovideo” e non con questo “m.youtube.com/tuovideo”.</strong>
       </>
     ),
     5: (
       <>
-        Infine,{" "}
         <strong>
-          devi solo attendere che il nostro Staff elabori il tuo ordine
+        Adesso, devi solo effettuare il pagamento, 
         </strong>{" "}
-        e che lo "consegni" nel giro di pochissimi giorni lavorativi. In
-        pratica, devi solo monitorare il contatore di views YouTube presente sul
-        video di cui ci hai fornito l'URL.
+        scegliendo il metodo che ti è più congeniale. Puoi farlo tramite carte di debito/credito, PayPal, ma anche bonifico SEPA.
       </>
     ),
     6: (
       <>
-        Volendo, puoi {" "}
+        La tua parte l'hai fatta, quindi, da adesso in poi,  {" "}
         <strong>
-        monitorare la progressione dell’ordine dando uno sguardo all’apposito contatore 
+        andiamo avanti noi, “recapitandoti” le ore acquistate nel giro di pochissimi giorni 
         </strong>{" "}
-        presente all’interno della tua area personale.
+        lavorativi.
+      </>
+    ),
+    7: (
+      <>
+        Se vuoi,  {" "}
+        <strong>
+        puoi monitorare la lavorazione dell’ordine in tempo reale, 
+        </strong>{" "}
+        semplicemente dando uno sguardo al contatore presente nella tua area personale.
       </>
     ),
   };
