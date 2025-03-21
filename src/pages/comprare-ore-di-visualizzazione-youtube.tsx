@@ -9,6 +9,10 @@ import Features from "@/comprare-ore-di-visualizzazione-youtube/Features";
 import Testimonials from "@/comprare-ore-di-visualizzazione-youtube/Testiomonials";
 import FinalConsiderations from "@/comprare-ore-di-visualizzazione-youtube/FinalConsiderations";
 import BuySteps from "@/comprare-ore-di-visualizzazione-youtube/BuySteps";
+import WhyBuyViews from "@/comprare-ore-di-visualizzazione-youtube/WhyBuyViews";
+import DoveComprare from "@/comprare-ore-di-visualizzazione-youtube/DoveComprare";
+import YouTubeViewsInfo from "@/comprare-ore-di-visualizzazione-youtube/YouTubeViewsInfo";
+import OtherText from "@/comprare-ore-di-visualizzazione-youtube/OtherText";
 
 const ComprareOre = () => {
   return (
@@ -30,7 +34,11 @@ const ComprareOre = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
         <BuySteps/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials />
         <CTA />
