@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import BackToTopButton from "@/youtube-views-components/BackToTopButton";
-import CTA from "@/youtube-views-components/CTA";
 import FloatingButton from "@/youtube-views-components/FloatingButton";
 import Footer from "@/youtube-views-components/Footer";
 import Navigation from "@/youtube-views-components/Navigation";
@@ -12,6 +11,7 @@ import WhyBuyViews from "@/comprare-condivisioni/WhyBuyViews";
 import DoveComprare from "@/comprare-condivisioni/DoveComprare";
 import YouTubeViewsInfo from "@/comprare-condivisioni/YouTubeViewsInfo";
 import OtherText from "@/comprare-condivisioni/OtherText";
+import CTA from "@/comprare-condivisioni/CTA";
 
 const ComprareCondivisioni = () => {
   return (

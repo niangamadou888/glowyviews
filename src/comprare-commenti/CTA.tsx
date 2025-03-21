@@ -5,6 +5,11 @@ const CTA = () => {
   const [activeButton, setActiveButton] = useState(null);
   const buttons = [
     { 
+      text: 'Compra Visualizzazioni YouTube', 
+      icon: <Eye size={20} />,
+      link: '/comprare-visualizzazioni-youtube/'
+    },
+    { 
       text: 'Compra Iscritti YouTube', 
       icon: <UserPlus size={20} />,
       link: '/comprare-iscritti-youtube/'
@@ -18,11 +23,6 @@ const CTA = () => {
       text: 'Compra Ore Di Visualizzazione YouTube', 
       icon: <Clock size={20} />,
       link: '/comprare-ore-di-visualizzazione-youtube/'
-    },
-    { 
-      text: 'Compra Commenti YouTube', 
-      icon: <MessageCircle size={20} />,
-      link: '/comprare-commenti-youtube/'
     },
     { 
       text: 'Compra Condivisioni YouTube', 

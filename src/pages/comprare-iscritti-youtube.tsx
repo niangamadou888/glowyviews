@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Features from "@/comprare-iscritti-youtube/Features";
 import Hero from "@/comprare-iscritti-youtube/Hero";
 import BackToTopButton from "@/youtube-views-components/BackToTopButton";
-import CTA from "@/youtube-views-components/CTA";
 import FloatingButton from "@/youtube-views-components/FloatingButton";
 import Footer from "@/youtube-views-components/Footer";
 import Navigation from "@/youtube-views-components/Navigation";
@@ -14,6 +13,7 @@ import DoveComprare from "@/comprare-iscritti-youtube/DoveComprare";
 import YouTubeViewsInfo from "@/comprare-iscritti-youtube/YouTubeViewsInfo";
 import OtherText from "@/comprare-iscritti-youtube/OtherText";
 import FinalConsiderations2 from "@/comprare-iscritti-youtube/FinalConsiderations2";
+import CTA from "@/comprare-iscritti-youtube/CTA";
 
 const ComprareIscritti = () => {
   return (
