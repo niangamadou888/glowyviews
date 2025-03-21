@@ -298,7 +298,7 @@ const Hero = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="font-semibold ml-1">4.9</span>
+              <span className="font-semibold ml-1">4.7</span>
               <span className="text-white mx-1">•</span>
               <span className="text-white">
                 <a href="#testimonials" onClick={handleScrollToTestimonials}>12 recensioni</a>

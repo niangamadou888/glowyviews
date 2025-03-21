@@ -257,7 +257,7 @@ const Hero = () => {
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="font-semibold">4.9</span>
+            <span className="font-semibold">4.6</span>
             <span className="text-white/70">•</span>
             <span className="text-white/70">
               <a href="#testimonials" onClick={handleScrollToTestimonials}>9 recensioni</a>
