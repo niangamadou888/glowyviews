@@ -8,6 +8,10 @@ import Hero from "@/comprare-condivisioni/Hero";
 import Features from "@/comprare-condivisioni/Features";
 import Testimonials from "@/comprare-condivisioni/Testiomonials";
 import FinalConsiderations from "@/comprare-condivisioni/FinalConsiderations";
+import WhyBuyViews from "@/comprare-condivisioni/WhyBuyViews";
+import DoveComprare from "@/comprare-condivisioni/DoveComprare";
+import YouTubeViewsInfo from "@/comprare-condivisioni/YouTubeViewsInfo";
+import OtherText from "@/comprare-condivisioni/OtherText";
 
 const ComprareCondivisioni = () => {
   return (
@@ -28,6 +32,10 @@ const ComprareCondivisioni = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials/>
         <CTA />
