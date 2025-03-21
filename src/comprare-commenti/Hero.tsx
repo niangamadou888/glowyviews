@@ -42,7 +42,86 @@ const Hero = () => {
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://glowlikes.it/comprare-commenti-youtube"
-            }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "TonyZ"
+      },
+      "reviewBody": "Oggi è difficile trovare un servizio decente, ma i commenti YouTube che ho comprato non mi stanno dando alcun problema. Me li hanno consegnati esattamente come li avevo scritti e li hanno consegnati in modo 'non sgamo' 😎"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Claudio"
+      },
+      "reviewBody": "Un mio amico mi ha consigliato GlowLikes, così ho deciso di comprare 50 commenti YouTube per testare il servizio. Molto più conveniente e puntuale di quello degli altri miei fornitori. Tornerò senz’altro."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Enzo"
+      },
+      "reviewBody": "Dai, nn male! Su 20 commenti YouTube, 19 erano perfetti, nel senso che erano come li avevo scritti io, emoji incluse. Uno però era impreciso perché avevano incollato male un pezzo di frase. L’ho fatto presente allo Staff che ha risolto subito il problema."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sara"
+      },
+      "reviewBody": "Non sono molto pratica con queste cose e pensavo fosse più complicato. In ogni caso, per ordinare 30 commenti YouTube ci ho messo 3 minuti 💪 Pensavo ci volesse un po’ per la consegna, ma i primi sono arrivati già dopo un paio d’ore. Grandi!😘"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Steve"
+      },
+      "reviewBody": "Ho già fatto 10 ordini, di conseguenza non mi interessano altre agenzie. Qui compro di tutto, non solo i commenti. Gli ordini arrivano sempre puntuale e data l’ottima qualità i prezzi sono super convenienti."
+    }
+  ]
           })}
         </script>
       </Helmet>
@@ -122,10 +201,10 @@ const Hero = () => {
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="font-semibold">4.9</span>
+            <span className="font-semibold">4.8</span>
             <span className="text-white mx-1">•</span>
             <span className="text-white">
-              <a href="#testimonials" onClick={handleScrollToTestimonials}>8 recensioni</a>
+              <a href="#testimonials" onClick={handleScrollToTestimonials}>5 recensioni</a>
             </span>
           </div>
         </div>
