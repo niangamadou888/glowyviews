@@ -8,6 +8,11 @@ import Hero from "@/comprare-spetattori-diretta/Hero";
 import Features from "@/comprare-spetattori-diretta/Features";
 import Testimonials from "@/comprare-spetattori-diretta/Testiomonials";
 import FinalConsiderations from "@/comprare-spetattori-diretta/FinalConsiderations";
+import WhyBuyViews from "@/comprare-spetattori-diretta/WhyBuyViews";
+import DoveComprare from "@/comprare-spetattori-diretta/DoveComprare";
+import YouTubeViewsInfo from "@/comprare-spetattori-diretta/YouTubeViewsInfo";
+import BuySteps from "@/comprare-spetattori-diretta/BuySteps";
+import OtherText from "@/comprare-spetattori-diretta/OtherText";
 
 const ComprareSpetattoriDiretta = () => {
   return (
@@ -28,6 +33,11 @@ const ComprareSpetattoriDiretta = () => {
           <Hero />
         </div>
         <Features />
+        <WhyBuyViews/>
+        <DoveComprare/>
+        <YouTubeViewsInfo/>
+        <BuySteps/>
+        <OtherText/>
         <FinalConsiderations/>
         <Testimonials/>
         <CTA />

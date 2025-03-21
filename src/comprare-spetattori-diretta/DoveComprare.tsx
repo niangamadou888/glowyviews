@@ -24,7 +24,8 @@ const DoveComprare = () => {
             </h2>
             <div className="space-y-6">
               <p className="text-lg text-white/90 leading-relaxed">
-              In rete ci sono diverse agenzie che vendono interazioni social, ma sono davvero poche quelle da cui puoi <strong>comprare spettatori diretta YouTube italiani e reali.</strong><br />
+              In rete ci sono diverse agenzie che vendono interazioni social, ma sono davvero poche quelle da cui puoi <strong>comprare spettatori diretta YouTube italiani e reali</strong>.
+<br />
               </p>
               <p className="text-lg text-white/90 leading-relaxed">
               Non a caso, produrre tale tipo di interazioni richiede, comunque, uno sforzo maggiore.
