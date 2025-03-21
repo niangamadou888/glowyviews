@@ -7,6 +7,8 @@ import Navigation from "@/youtube-views-components/Navigation";
 import Hero from "@/comprare-youtube-short/Hero";
 import Features from "@/comprare-youtube-short/Features";
 import Testimonials from "@/comprare-youtube-short/Testiomonials";
+import FinalConsiderations from "@/comprare-youtube-short/FinalConsiderations";
+import BuySteps from "@/comprare-youtube-short/BuySteps";
 
 const ComprareYoutubeShort = () => {
   return (
@@ -27,6 +29,8 @@ const ComprareYoutubeShort = () => {
           <Hero />
         </div>
         <Features />
+        <BuySteps/>
+        <FinalConsiderations/>
         <Testimonials/>
         <CTA />
         <FloatingButton />

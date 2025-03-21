@@ -7,6 +7,7 @@ import Navigation from "@/youtube-views-components/Navigation";
 import Hero from "@/comprare-like/Hero";
 import Features from "@/comprare-like/Features";
 import Testimonials from "@/comprare-like/Testiomonials";
+import FinalConsiderations from "@/comprare-like/FinalConsiderations";
 
 const ComprareLike = () => {
   return (
@@ -27,6 +28,7 @@ const ComprareLike = () => {
           <Hero />
         </div>
         <Features />
+        <FinalConsiderations/>
         <Testimonials/>
         <CTA />
         <FloatingButton />
