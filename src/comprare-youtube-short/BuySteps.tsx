@@ -51,7 +51,22 @@ const BuySteps = () => {
         />
       </div>
 
+      
+
       <div className="relative">
+
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
+        GlowLikes per comprare Visualizzazioni e Like YouTube Shorts italiani e reali
+        </h2>
+        
+        <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+        Scusaci per la “mattonata” dei paragrafi precedenti, ma ci sembrava doveroso fare un minimo di chiarezza, in modo da <strong>evitarti possibili errori o “sbandate”</strong>.
+        </p>
+
+        <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+        Ecco, dunque, il tutorial per <strong>comprare visualizzazioni e like YouTube Shorts italiani e reali</strong> qui da noi:
+        </p>
+
         {/* Optimized progress line */}
         <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
@@ -100,6 +115,13 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
+        
+        <p className="text-lg md:text-xl text-muted-foreground text-center mt-16 max-w-3xl mx-auto">
+        A scanso di equivoci, lo ribadiamo ancora una volta. La <strong>procedura sopra elencata è valida per i soli Shorts.</strong>
+        </p>
+        <p className="text-lg md:text-xl text-muted-foreground text-center mt-16 max-w-3xl mx-auto">
+        Se, invece, fossi alla ricerca di interazioni destinate ai video normali, <strong>allora considera di</strong> <a href="https://glowlikes.it/comprare-visualizzazioni-youtube/" className='mystyle'>comprare visualizzazioni YouTube</a> <strong>“standard” leggendo la nostra rispettiva guida</strong> di approfondimento.
+        </p>
       </div>
     </section>
   );

@@ -52,8 +52,16 @@ const BuySteps = () => {
       </div>
 
       <div className="relative">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-glow text-center">
+        Come comprare Visualizzazioni YouTube italiane e reali
+        </h2>
+        
+        <p className="text-lg md:text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+        <strong>Comprare views YouTube italiane e reali</strong> è semplicissimo, dal momento che devi solo seguire questi step:
+        </p>
+
         {/* Optimized progress line */}
-        <div className="absolute left-[7px] top-[0px] bottom-0 w-[3px] md:w-1 bg-primary/10">
+        <div className="absolute left-[7px] top-[120px] bottom-0 w-[3px] md:w-1 bg-primary/10">
           <motion.div
             className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-primary/30"
             style={{
@@ -65,7 +73,7 @@ const BuySteps = () => {
         </div>
 
         <div className="space-y-20 md:space-y-28">
-          {[1, 2, 3, 4, 5].map((step) => (
+          {[1, 2, 3, 4, 5, 6].map((step) => (
             <motion.div
               key={step}
               variants={stepVariants}
@@ -100,6 +108,7 @@ const BuySteps = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
@@ -109,10 +118,11 @@ const BuySteps = () => {
 const getStepTitle = (step: number) => {
   const titles = {
     1: "Crea il tuo account",
-    2: "Scegli il pacchetto",
-    3: "Inserisci l'URL",
-    4: "Effettua il pagamento",
-    5: "Monitora i risultati",
+    3: "comprare visualizzazioni",
+    2: "Loggati il tuo account",
+    4: "Scegli il pacchetto",
+    5: "Inserisci l'URL",
+    6: "Effettua il pagamento",
   };
   return titles[step as keyof typeof titles];
 };
@@ -166,6 +176,15 @@ const getStepContent = (step: number) => {
         e che lo "consegni" nel giro di pochissimi giorni lavorativi. In
         pratica, devi solo monitorare il contatore di views YouTube presente sul
         video di cui ci hai fornito l'URL.
+      </>
+    ),
+    6: (
+      <>
+        Volendo, puoi {" "}
+        <strong>
+        monitorare la progressione dell’ordine dando uno sguardo all’apposito contatore 
+        </strong>{" "}
+        presente all’interno della tua area personale.
       </>
     ),
   };
