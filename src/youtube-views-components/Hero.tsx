@@ -291,7 +291,7 @@ const Hero = () => {
           </Link>
           {/* Rating Section */}
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 text-white/90">
-            <span className="px-3 mx-3 py-2 mt-4 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-md border border-primary/30 shadow-sm flex items-center">
+            <span className="px-3 mx-3 py-2 mt-4 sm:mt-0 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-md border border-primary/30 shadow-sm flex items-center">
               <Tag className="h-4 w-4 mr-1" />
               A partire da 0,52 €
             </span>

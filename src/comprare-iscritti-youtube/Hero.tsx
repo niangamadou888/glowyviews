@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Player } from "@lordicon/react";
 import "lord-icon-element";
 import qualityIcon from "../assets/icons/wired-flat-489-rocket-space-hover-flying.json";
-import { Star } from "lucide-react";
+import { Star, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -347,7 +347,8 @@ const Hero = () => {
           </Link>
           {/* Rating Section */}
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 text-white/90">
-          <span className="px-3 mx-3 py-1 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-md border border-primary/30 shadow-sm">
+          <span className="px-3 mx-3 py-2 mt-4 sm:mt-0 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-md border border-primary/30 shadow-sm flex items-center">
+          <Tag className="h-4 w-4 mr-1" />
               A partire da 0.53 €
             </span>
             <div className="flex items-center gap-1 mt-2 sm:mt-0">
@@ -357,7 +358,7 @@ const Hero = () => {
             
             <span className="font-semibold">4.8</span>
             <span className="text-white mx-1">•</span>
-            <span className="text-white">
+            <span className="text-white/70 font-normal">
               <a href="#testimonials" onClick={handleScrollToTestimonials}>16 recensioni</a>
             </span>
           </div>
