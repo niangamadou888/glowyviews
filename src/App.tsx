@@ -17,6 +17,8 @@ import ComprareCommenti from './pages/comprare-commenti';
 import ComprareSpettatoriDiretta from './pages/comprare-spettatori-diretta';
 import ComprareYoutubeShort from './pages/comprare-youtube-short';
 import ComprareCondivisioni from './pages/comprare-condivisioni';
+import Homepage from './pages/homepage';
+import Recensioni from './pages/recensioni';
 
 const queryClient = new QueryClient();
 
@@ -28,8 +30,10 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
+          <Route path="/" element={<Homepage />} />
             <Route path="/comprare-visualizzazioni-youtube" element={<YoutubeViews />} />
             <Route path="/contattaci" element={<Contact />} />
+            <Route path="/recensioni" element={<Recensioni />} />
             <Route path="/informativa-sulla-privacy" element={<Privacy />} />
             <Route path="/politica-di-rimborso" element={<Rimborso />} />
             <Route path="/termini-di-servizio" element={<TerminieCondizioni />} />
