@@ -12,6 +12,7 @@ import BuySteps from '@/homepage/BuySteps';
 import WhyBuyViews from '@/homepage/WhyBuyViews';
 import YouTubeViewsInfo from '@/homepage/YouTubeViewsInfo';
 import DoveComprare from '@/homepage/DoveComprare';
+import OtherText from '@/homepage/OtherText';
 
 const Homepage = () => {
   return (
@@ -33,6 +34,7 @@ const Homepage = () => {
         <DoveComprare/>
         <YouTubeViewsInfo/>
         <BuySteps/>
+        <OtherText/>
         <FAQIntro/>
         <FAQ/>
         <CTA />
