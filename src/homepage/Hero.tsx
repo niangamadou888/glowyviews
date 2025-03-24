@@ -223,84 +223,78 @@ const Hero = () => {
           })}
         </script>
       </Helmet>
-      <div className="relative min-h-[94vh] flex items-center justify-center overflow-hidden pt-32 pb-20 md:py-20">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
-        
-        {/* Optimized animated circles */}
-        <div className={`absolute transition-all duration-700 ease-out will-change-transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} md:transition-all md:duration-700 hidden md:block`}
-             style={{ transform: 'translateZ(0)' }}>
-          <div className="absolute top-1/4 -left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-[pulse_3s_ease-in-out_infinite]" />
-          <div className="absolute bottom-1/4 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-[pulse_3s_ease-in-out_infinite_0.5s]" />
+      <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-transparent to-cyan-500/30 animate-pulse" />
         </div>
-        
-        {/* Optimized content animations */}
-        <div className={`relative z-10 max-w-4xl mx-auto px-6 text-center md:transition-all md:duration-700 md:ease-out will-change-transform ${isVisible ? 'opacity-100 md:translate-y-0' : 'opacity-0 md:translate-y-8'}`}
-             style={{ transform: 'translateZ(0)' }}>
-          
-          <h1 className="flex flex-col items-center justify-center text-4xl md:text-6xl font-bold mb-4 text-glow">
-            <span className="mb-2 text-center whitespace-normal md:whitespace-nowrap">Acquista Follower e Like:</span>
-            <span className="bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent inline-flex items-center gap-2 transform hover:scale-105 transition-transform text-center">
+
+        {/* Main content */}
+        <div className={`relative z-10 max-w-5xl mx-auto px-6 py-32 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700 ease-out`}>
+          <h1 className="text-center">
+            <span className="block text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
+              Acquista Follower e Like
+            </span>
+            <span className="block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
               Italiane e Reali
-              <Player
-                ref={playerRef}
-                icon={qualityIcon}
-                size={50}
-                onComplete={() => playerRef.current?.playFromBeginning()}
-              />
+              <div className="inline-block ml-2">
+                <Player
+                  ref={playerRef}
+                  icon={qualityIcon}
+                  size={60}
+                />
+              </div>
             </span>
           </h1>
-        
-          {/* Micro Labels */}
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
+
+          {/* Feature labels */}
+          <div className="flex flex-wrap justify-center gap-4 mt-12 mb-8">
             {labels.map((label, index) => (
               <span
                 key={index}
-                className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md 
-                rounded-full border border-white/20 text-white/90 
-                shadow-[0_0_15px_rgba(255,255,255,0.1)] 
-                hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] 
-                hover:border-white/30 
+                className="px-6 py-2.5 text-base font-medium bg-white/10 backdrop-blur-xl 
+                rounded-xl border border-white/20 text-white 
+                shadow-[0_0_30px_rgba(124,58,237,0.2)] 
+                hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] 
+                hover:border-purple-500/50 
                 hover:scale-105 
-                hover:text-white 
-                transition-all duration-300 ease-out
-                flex items-center gap-2"
+                transition-all duration-300"
               >
-                <Star className="w-3.5 h-3.5 text-primary/80" />
+                <Star className="w-4 h-4 inline-block mr-2 text-purple-400" />
                 {label}
               </span>
             ))}
           </div>
-        
-          <div className="flex justify-center mb-8">
-          </div>
-          
-          <p className="text-[18px] md:text-[18px] text-white mb-10 max-w-3xl mx-auto">
-          Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
-          <br />
-          Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
+
+          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+            Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
+            <br />
+            Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
           </p>
-        
-          {/* Optimized button animation */}
-          <Link to="https://app.glowlikes.it/" className='mr-2'>
-            <Button 
-              size="lg" 
-              className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
-              style={{ transform: 'translateZ(0)' }}
-            >
-              Iscriviti gratis
-            </Button>
-          </Link>
-          {/* Optimized button animation */}
-          <Link to="https://app.glowlikes.it/">
-            <Button 
-              size="lg" 
-              className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
-              style={{ transform: 'translateZ(0)' }}
-            >
-              Accedi
-            </Button>
-          </Link>
+
+          {/* Buttons container with centering styles */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <Link to="https://app.glowlikes.it/">
+              <Button 
+                size="lg" 
+                className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
+                style={{ transform: 'translateZ(0)' }}
+              >
+                Iscriviti gratis
+              </Button>
+            </Link>
+            <Link to="https://app.glowlikes.it/">
+              <Button 
+                size="lg" 
+                className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
+                style={{ transform: 'translateZ(0)' }}
+              >
+                Accedi
+              </Button>
+            </Link>
+          </div>
+
           {/* Rating Section */}
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 text-white/90">
             <span className="px-3 mx-3 py-2 mt-4 sm:mt-0 text-sm font-semibold bg-gradient-to-r from-primary/20 to-primary/10 rounded-md border border-primary/30 shadow-sm flex items-center">
