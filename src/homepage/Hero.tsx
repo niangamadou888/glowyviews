@@ -313,7 +313,7 @@ const Hero = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="font-semibold ml-1">4.7</span>
+              <span className="font-semibold ml-1">4.8</span>
               <span className="text-white mx-1">•</span>
               <span className="text-white/70 font-normal">
                 <a href="/recensioni">100+ recensioni</a>
