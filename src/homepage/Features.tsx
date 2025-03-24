@@ -138,21 +138,22 @@ const Features = () => {
 
   return (
     <section
-      className="pt-16 md:pt-32 pb-20 px-6 relative overflow-hidden"
+      className="py-20 px-4 md:px-8 relative bg-gradient-to-b from-background to-background/80"
       id="features"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <Card
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className={`p-8 backdrop-blur-sm transition-all duration-300 ease-in-out relative
+              className={`group p-8 rounded-2xl border-none transition-all duration-500 ease-out
                 ${
                   hoveredIndex === index
-                    ? "bg-primary/5 border-primary/50 shadow-2xl shadow-primary/30 scale-105 before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/0 before:via-primary/5 before:to-primary/0 before:animate-glow"
-                    : "bg-secondary/50 border-primary/20 hover:border-primary/40"
-                }`}
+                    ? "bg-gradient-to-br from-primary/10 via-primary/5 to-transparent transform -translate-y-2"
+                    : "bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10"
+                }
+                backdrop-blur-lg hover:shadow-xl hover:shadow-primary/20`}
               onMouseEnter={() => {
                 if (!isMobile) {
                   setHoveredIndex(index);
@@ -165,47 +166,50 @@ const Features = () => {
                 }
               }}
             >
-              <div
-                className={`relative z-10 transition-all duration-300 ${
-                  hoveredIndex === index
-                    ? "scale-110 drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]"
-                    : ""
-                }`}
-              >
-                <Player
-                  ref={(el) => (playerRefs.current[index] = el)}
-                  icon={feature.icon || feature.iconUrl}
-                  size={48}
-                />
+              <div className="flex flex-col space-y-6">
+                <div
+                  className={`relative transition-transform duration-300 group-hover:scale-110
+                    ${hoveredIndex === index ? "animate-float" : ""}`}
+                >
+                  <Player
+                    ref={(el) => (playerRefs.current[index] = el)}
+                    icon={feature.icon || feature.iconUrl}
+                    size={64}
+                  />
+                </div>
+                <div className="space-y-4">
+                  <h3
+                    className={`text-2xl font-bold tracking-tight transition-colors duration-300
+                      ${
+                        hoveredIndex === index
+                          ? "text-primary"
+                          : "text-foreground"
+                      }`}
+                  >
+                    {feature.title}
+                  </h3>
+                  <p
+                    className={`leading-relaxed transition-colors duration-300
+                      ${
+                        hoveredIndex === index
+                          ? "text-foreground"
+                          : "text-muted-foreground"
+                      }`}
+                  >
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <h3
-                className={`relative z-10 text-xl font-semibold mb-4 transition-all duration-300
-                ${
-                  hoveredIndex === index
-                    ? "text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.5)]"
-                    : ""
-                }`}
-              >
-                {feature.title}
-              </h3>
-              <p
-                className={`relative z-10 transition-all duration-300
-                ${
-                  hoveredIndex === index
-                    ? "text-primary/90 drop-shadow-[0_0_4px_rgba(var(--primary),0.3)]"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {feature.description}
-              </p>
             </Card>
           ))}
         </div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-x-1/2" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl translate-x-1/2" />
+      {/* Updated decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-x-1/2" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] translate-x-1/2" />
+      </div>
     </section>
   );
 };

@@ -233,120 +233,75 @@ const ContentSection = ({
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-
-  const { scrollYProgress: sectionProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start center", "end center"],
-  });
-
-  // Always use useSpring, but configure it differently for mobile
-  const smoothSectionProgress = useSpring(sectionProgress, {
-    damping: isMobile ? 100 : 20,
-    stiffness: isMobile ? 300 : 80,
-    mass: isMobile ? 0.1 : 0.2,
-    restDelta: isMobile ? 0.01 : 0.001
-  });
 
   return (
     <motion.div
       ref={sectionRef}
-      initial={{ opacity: 1, y: 0 }}
-      className={`flex flex-col md:flex-row items-start gap-8 md:gap-16 relative ${
-        isEven ? "pl-8" : "pr-8"
-      }`}
-      style={{
-        transform: 'translateZ(0)',
-        willChange: 'transform, opacity'
-      }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative backdrop-blur-xl bg-gradient-to-r from-purple-900/20 to-indigo-900/20 
+                 rounded-2xl p-8 border border-white/10 shadow-xl"
     >
-      {/* Path animation optimization */}
-      <div className={`absolute ${isEven ? "left-0" : "right-0"} top-0 h-[104%] w-full`}>
-        <motion.svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 50 103"
-          preserveAspectRatio="none"
-          className={`absolute ${isEven ? "left-0" : "right-0"} top-0`}
-          style={{ transform: 'translateZ(0)', willChange: 'transform' }}
-        >
-          <motion.path
-            d={
-              typeof window !== "undefined" && window.innerWidth < 768
-                ? `M${isEven ? "0" : "50"} 0 L${isEven ? "0" : "50"} 103 L${
-                    isEven ? "25" : "25"
-                  } 103`
-                : `M${isEven ? "0" : "50"} 0 L${isEven ? "0" : "50"} 101 L${
-                    isEven ? "25" : "25"
-                  } 101`
-            }
-            fill="none"
-            strokeWidth="0.5"
-            stroke="url(#gradient)"
-            strokeLinecap="round"
-            strokeMiterlimit="1"
-            strokeLinejoin="round"
-            style={{
-              opacity: smoothSectionProgress,
-              pathLength: smoothSectionProgress,
-              transform: 'translateZ(0)',
-              willChange: 'opacity, strokeDashoffset'
-            }}
-          />
-          <defs>
-            <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#A855F7" />
-              <stop offset="50%" stopColor="#9333EA" />
-              <stop offset="100%" stopColor="#7E22CE" />
-            </linearGradient>
-          </defs>
-        </motion.svg>
-      </div>
+      <motion.h2
+        className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-300 
+                   bg-clip-text text-transparent text-center"
+      >
+        {section.title}
+      </motion.h2>
 
-      {/* Content sections with optimized image loading */}
-      <div className={`flex-1 ${!isEven ? "md:order-2" : ""}`}>
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="text-3xl md:text-4xl font-bold text-center mb-8 text-glow"
-          style={{ transform: 'translateZ(0)', willChange: 'transform' }}
-        >
-          {section.title}
-        </motion.h2>
-        
-        {/* Add service labels */}
-        {SERVICE_LABELS[section.title] && (
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {SERVICE_LABELS[section.title].map((service, idx) => (
-              <a
-                key={idx}
-                href={service.link}
-                className="px-4 py-2 bg-purple-600/20 hover:bg-purple-600/30 
-                         rounded-full text-sm font-medium text-white/90 
-                         transition-all duration-300 ease-in-out
-                         border border-purple-500/30 hover:border-purple-500/50
-                         backdrop-blur-sm"
-              >
-                {service.label}
-              </a>
-            ))}
+      {SERVICE_LABELS[section.title] && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {SERVICE_LABELS[section.title].map((service, idx) => (
+            <a
+              key={idx}
+              href={service.link}
+              className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-800/40 to-indigo-800/40 
+                       p-px transition-all duration-300 hover:scale-[1.02]"
+            >
+              <div className="relative rounded-xl bg-black/30 px-4 py-3 transition-all duration-300
+                            group-hover:bg-black/40">
+                <span className="block text-sm font-medium text-white/90 text-center">
+                  {service.label}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+
+      <div className="flex flex-col md:flex-row gap-12 items-center">
+        <div className={`flex-1 space-y-6 ${!isEven ? "md:order-2" : ""}`}>
+          {section.content.map((paragraph, idx) => {
+            const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+            const rendered = parts.map((part, i) => {
+              if (part.startsWith("**") && part.endsWith("**")) {
+                return <strong key={i} className="text-purple-300">{part.slice(2, -2)}</strong>;
+              }
+              return part;
+            });
+
+            return (
+              <p key={idx} className="text-lg text-white/80 leading-relaxed">
+                {rendered}
+              </p>
+            );
+          })}
+        </div>
+
+        <div className={`flex-1 ${!isEven ? "md:order-1" : ""}`}>
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl 
+                          blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
+            <img
+              src={section.image.src}
+              alt={section.image.alt}
+              className="relative rounded-xl w-full object-cover shadow-2xl"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
-        )}
-
-        {renderContent(section.content)}
-      </div>
-
-      <div className={`flex-1 ${!isEven ? "md:order-1" : ""}`}>
-        <div className="relative aspect-video rounded-xl overflow-hidden">
-          <img
-            src={section.image.src}
-            alt={section.image.alt}
-            className="w-full h-full object-cover rounded-xl"
-            loading="lazy"
-            decoding="async"
-          />
         </div>
       </div>
     </motion.div>
@@ -354,17 +309,15 @@ const ContentSection = ({
 };
 
 const OtherText = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   return (
-    <section ref={containerRef} className="w-full max-w-7xl mx-auto px-4 py-16">
-      <div className="space-y-24">
+    <section className="w-full max-w-7xl mx-auto px-4 py-16 bg-gradient-to-b from-[#1b1e2c] to-purple-900/20">
+      <div className="space-y-16">
         {SECTIONS.map((section, index) => (
           <ContentSection
             key={index}
             section={section}
             index={index}
-            progress={new MotionValue()} // Placeholder since we're not using the global progress anymore
+            progress={new MotionValue()}
           />
         ))}
       </div>
