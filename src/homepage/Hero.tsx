@@ -3,13 +3,20 @@ import { Button } from "@/youtube-views-components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { Player } from "@lordicon/react";
 import "lord-icon-element";
-import qualityIcon from "../assets/icons/wired-flat-489-rocket-space-hover-flying.json";
 import { Star, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import icon2 from "../assets/icons/wired-outline-1027-marketing-campaign-hover-pinch.json";
+import icon3 from "../assets/icons/wired-flat-457-shield-security-hover-pinch.json";
+import icon5 from "../assets/icons/wired-flat-2601-speed-hover-pinch.json";
+import icon7 from "../assets/icons/wired-flat-1368-best-seller-hover-pinch.json";
+import iconLogin from "../assets/icons/wired-flat-2129-login-hover-pinch.json";
+import iconRegister from "../assets/icons/wired-outline-1142-form-sheet-questionnaire-hover-pinch.json";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const playerRef = useRef<Player | null>(null);
+
+  const labelIcons = [icon5, icon3, icon7, icon2];
 
   const handleScrollToTestimonials = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -25,6 +32,13 @@ const Hero = () => {
   }, []);
 
   const labels = ["Consefna instantanea", "100% Sicuro", "Prezzi imbattibili", "Marketing italiano "];
+  const playerRefs = useRef<Array<Player | null>>(labels.map(() => null));
+
+  useEffect(() => {
+    playerRefs.current.forEach((ref) => {
+      ref?.playFromBeginning();
+    });
+  }, []);
 
   return (
     <>
@@ -231,65 +245,59 @@ const Hero = () => {
         </div>
 
         {/* Main content */}
-        <div className={`relative z-10 max-w-5xl mx-auto px-6 py-32 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700 ease-out`}>
+        <div className={`relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-32 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700 ease-out`}>
           <h1 className="text-center">
-            <span className="block text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
-              Acquista Follower e Like
+            <span className="block text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
+            Acquista Follower e Like per Instagram, TikTok e YouTube e molto altro. Consegnati in pochi minuti!
             </span>
             <span className="block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
-              Italiane e Reali
-              <div className="inline-block ml-2">
-                <Player
-                  ref={playerRef}
-                  icon={qualityIcon}
-                  size={60}
-                />
-              </div>
             </span>
           </h1>
 
           {/* Feature labels */}
-          <div className="flex flex-wrap justify-center gap-4 mt-12 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 mb-6 sm:mb-8">
             {labels.map((label, index) => (
               <span
                 key={index}
-                className="px-6 py-2.5 text-base font-medium bg-white/10 backdrop-blur-xl 
+                className="px-4 sm:px-6 py-2 text-sm sm:text-base font-medium bg-white/10 backdrop-blur-xl 
                 rounded-xl border border-white/20 text-white 
                 shadow-[0_0_30px_rgba(124,58,237,0.2)] 
                 hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] 
                 hover:border-purple-500/50 
                 hover:scale-105 
-                transition-all duration-300"
+                transition-all duration-300 flex items-center"
               >
-                <Star className="w-4 h-4 inline-block mr-2 text-purple-400" />
+                <div className="inline-flex items-center mr-2 scale-75 sm:scale-100">
+                  <Player
+                    ref={(el) => (playerRefs.current[index] = el)}
+                    icon={labelIcons[index]}
+                    size={24}
+                  />
+                </div>
                 {label}
               </span>
             ))}
           </div>
 
-          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
-            Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
-            <br />
-            Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
-          </p>
-
-          {/* Buttons container with centering styles */}
-          <div className="flex justify-center items-center gap-4 mb-8">
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <Link to="https://app.glowlikes.it/">
               <Button 
                 size="lg" 
-                className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
+                className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite] flex items-center gap-2"
                 style={{ transform: 'translateZ(0)' }}
               >
+                  <Player icon={iconRegister} size={28} />
                 Iscriviti gratis
               </Button>
             </Link>
             <Link to="https://app.glowlikes.it/">
               <Button 
                 size="lg" 
-                className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_2s_ease-in-out_infinite]"
+                className="glow bg-primary hover:bg-primary/90 text-white text-[20px] md:animate-[bounce_1s_ease-in-out_infinite] flex items-center gap-2"
                 style={{ transform: 'translateZ(0)' }}
               >
+                <Player icon={iconLogin} size={28} />
                 Accedi
               </Button>
             </Link>

@@ -83,30 +83,31 @@ const BuySteps = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="relative p-4 md:p-8 rounded-lg backdrop-blur-sm border border-primary/20 group"
+              className="relative p-6 md:p-10 rounded-2xl bg-black/40 border border-primary/20 group hover:border-primary/40 transition-all duration-300"
               style={{
                 transform: 'translateZ(0)',
                 willChange: 'transform',
+                boxShadow: '0 0 40px -10px rgba(var(--primary), 0.1)',
               }}
             >
-              <div className="absolute -left-[10px] md:-left-4 -top-4 w-8 md:w-12 h-8 md:h-12 bg-primary rounded-full flex items-center justify-center text-base md:text-xl font-bold glow z-10">
+              <div className="absolute -left-[15px] md:-left-6 -top-6 w-12 md:w-16 h-12 md:h-16 bg-gradient-to-br from-primary to-primary/70 rounded-2xl flex items-center justify-center text-lg md:text-2xl font-bold shadow-xl rotate-12 group-hover:rotate-0 transition-all duration-300">
                 {step}
               </div>
 
-              <div className="ml-4 md:ml-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-primary mb-4 group-hover:text-glow transition-all">
+              <div className="ml-6 md:ml-10">
+                <h3 className="text-2xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 mb-4 group-hover:scale-105 transition-transform">
                   {getStepTitle(step)}
                 </h3>
-                <p className="text-base md:text-lg text-muted-foreground">
+                <p className="text-base md:text-lg text-muted-foreground/90 leading-relaxed">
                   {getStepContent(step)}
                 </p>
               </div>
 
               <motion.div
-                className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 blur-xl"
+                className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/5 via-primary/20 to-primary/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: window.innerWidth > 768 ? 1 : 0.3 }}
-                transition={{ duration: window.innerWidth > 768 ? 0.6 : 0 }}
+                whileInView={{ opacity: window.innerWidth > 768 ? 0.5 : 0.2 }}
+                transition={{ duration: 0.8 }}
               />
             </motion.div>
           ))}

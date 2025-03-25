@@ -1430,7 +1430,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 pb-16 relative z-10">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-bold text-center mb-8 text-white glow">
-          Recensioni GlowLikes generiche
+          Recensioni GlowLikes
           </h2>
           
           {/* Average Rating Display */}
@@ -1500,6 +1500,95 @@ const Testimonials = () => {
           </div>
         </div>
 
+        {/* Add Review Form Section */}
+      <div className="container mx-auto px-4 mt-16 relative z-10">
+        <div className="max-w-2xl mx-auto bg-[#262937] p-8 rounded-xl border border-[#333333] hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-primary/20">
+          <h3 className="text-2xl font-bold text-white text-center mb-8 glow">
+            Lascia una Recensione
+          </h3>
+          
+          <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Rating Selection */}
+            <div className="flex flex-col items-center gap-3">
+              <label className="text-gray-300 text-sm font-medium">Il Tuo Voto</label>
+              <div className="flex gap-3">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    type="button"
+                    onClick={() => setRating(star)}
+                    className="transition-all duration-200 hover:scale-110"
+                  >
+                    <FaStar
+                      className={star <= rating ? "text-primary filter drop-shadow-glow" : "text-gray-600"}
+                      size={28}
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Review Text */}
+            <div>
+              <label htmlFor="review" className="block text-gray-300 text-sm font-medium mb-2">
+                La Tua Recensione
+              </label>
+              <textarea
+                id="review"
+                value={reviewText}
+                onChange={(e) => setReviewText(e.target.value)}
+                className="w-full px-4 py-3 bg-[#1a1b23] border border-[#333333] rounded-lg text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 resize-none"
+                rows={4}
+                placeholder="Scrivi la tua recensione qui..."
+              />
+            </div>
+
+            {/* Name Input */}
+            <div>
+              <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
+                Il Tuo Nome
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-3 bg-[#1a1b23] border border-[#333333] rounded-lg text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
+                placeholder="Inserisci il tuo nome"
+              />
+            </div>
+
+            {/* ReCAPTCHA */}
+            <div className="flex justify-center">
+              <div className="transform transition-all duration-200 hover:scale-[1.02]">
+                <ReCAPTCHA
+                  sitekey="6LfNVNsqAAAAAF7SXwMAwz4V4Oh7ziha-nl5rKpy"
+                  onChange={handleCaptchaChange}
+                  theme="dark"
+                />
+              </div>
+            </div>
+
+            {/* Error and Success Messages */}
+            {errorMessage && (
+              <p className="text-red-500 text-center text-sm bg-red-500/10 py-2 px-4 rounded-lg">{errorMessage}</p>
+            )}
+            {confirmationMessage && (
+              <p className="text-green-500 text-center text-sm bg-green-500/10 py-2 px-4 rounded-lg">{confirmationMessage}</p>
+            )}
+
+            {/* Submit Button */}
+            <div className="flex justify-center pt-2">
+              <button
+                type="submit"
+                className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-300 font-medium hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+              >
+                Invia Recensione
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
       </div>
     </section>
   );

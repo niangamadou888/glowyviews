@@ -1,17 +1,37 @@
 import { motion, useScroll, useSpring, MotionValue } from "framer-motion";
+import React from "react";
 import { useRef } from "react";
 
 // Add service labels configuration
-const SERVICE_LABELS: { [key: string]: { label: string, link: string }[] } = {
+import {
+  FaYoutube,
+  FaInstagram,
+  FaSpotify,
+  FaFacebook,
+  FaTiktok,
+  FaTelegram,
+  FaLinkedin,
+} from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+
+
+type ServiceConfig = {
+  label: string;
+  link: string;
+  icon?: React.ComponentType<{ size?: number }>;  // Add size prop type
+  color?: string;
+};
+
+const SERVICE_LABELS: { [key: string]: ServiceConfig[] } = {
   "Tutti i servizi della nostra Agenzia": [
-    { label: "Youtube", link: "" },
-    { label: "Instagram", link: "" },
-    { label: "Spotify", link: "" },
-    { label: "X", link: "" },
-    { label: "Facebook", link: "" },
-    { label: "TikTok", link: "" },
-    { label: "Telegram", link: "" },
-    { label: "LinkedIn", link: "" },
+    { label: "Youtube", link: "", icon: FaYoutube, color: "#FF0000" },
+    { label: "Instagram", link: "", icon: FaInstagram, color: "#E4405F" },
+    { label: "Spotify", link: "", icon: FaSpotify, color: "#1DB954" },
+    { label: "X", link: "", icon: BsTwitterX, color: "#1DA1F2" },
+    { label: "Facebook", link: "", icon: FaFacebook, color: "#1877F2" },
+    { label: "TikTok", link: "", icon: FaTiktok, color: "#000000" },
+    { label: "Telegram", link: "", icon: FaTelegram, color: "#0088cc" },
+    { label: "LinkedIn", link: "", icon: FaLinkedin, color: "#0A66C2" },
   ],
   "YouTube": [
     { label: "Visualizzazioni YouTube", link: "/comprare-visualizzazioni-youtube" },
@@ -259,10 +279,20 @@ const ContentSection = ({
               href={service.link}
               className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-800/40 to-indigo-800/40 
                        p-px transition-all duration-300 hover:scale-[1.02]"
+              style={{
+                '--hover-color': service.color || '#6366f1'
+              } as React.CSSProperties}
             >
               <div className="relative rounded-xl bg-black/30 px-4 py-3 transition-all duration-300
-                            group-hover:bg-black/40">
-                <span className="block text-sm font-medium text-white/90 text-center">
+                           group-hover:bg-black/40 flex flex-col items-center gap-2">
+                {service.icon && (
+                  <div className="text-white/90 group-hover:text-[var(--hover-color)] transition-colors">
+                    {React.createElement(service.icon, {
+                      size: 24
+                    })}
+                  </div>
+                )}
+                <span className="block text-sm font-medium text-white/90 text-center group-hover:text-[var(--hover-color)] transition-colors">
                   {service.label}
                 </span>
               </div>

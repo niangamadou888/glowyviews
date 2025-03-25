@@ -141,6 +141,12 @@ const Features = () => {
       className="py-20 px-4 md:px-8 relative bg-gradient-to-b from-background to-background/80"
       id="features"
     >
+      <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+            Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
+            <br />
+            Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
+          </p>
+
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
