@@ -86,7 +86,7 @@ const FAQ = () => {
           "name": "Diventerò più popolare dopo aver comprato visualizzazioni YouTube?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se compri visualizzazioni YouTube reali e italiane in modo mirato, nel giro di poco tempo vedrai la tua popolarità aumentare. Perché si verifica tutto ciò? I crawler della piattaforma social sfruttano complessi algoritmi che, in linea di massima, tendono a premiare i canali più “attivi”. Con “attivi”, intendiamo contenuti di qualità e pubblicati con costanza, seguendo un piano editoriale redatto con tutti i crismi. Non solo, l'attività di un canale è data proprio anche dalle interazioni social ricevute. Per certi versi, più alti sono i numeri dei tuoi contatori, più verrai “premiato” dai crawler di YouTube. Attenzione, però, non basta comprare views YouTube “una tantum” e aspettare passivamente, “tirando i remi in barca”."
+            "text": "Se compri visualizzazioni YouTube reali e italiane in modo mirato, nel giro di poco tempo vedrai la tua popolarità aumentare. Perché si verifica tutto ciò? I crawler della piattaforma social sfruttano complessi algoritmi che, in linea di massima, tendendo a premiare i canali più “attivi”. Con “attivi”, intendiamo contenuti di qualità e pubblicati con costanza, seguendo un piano editoriale redatto con tutti i crismi. Non solo, l'attività di un canale è data proprio anche dalle interazioni social ricevute. Per certi versi, più alti sono i numeri dei tuoi contatori, più verrai “premiato” dai crawler di YouTube. Attenzione, però, non basta comprare views YouTube “una tantum” e aspettare passivamente, “tirando i remi in barca”."
           }
         },
         {
@@ -124,145 +124,169 @@ const FAQ = () => {
   };
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-16" id='faq'>
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-glow hover:animate-glow">
+    <section className="w-full max-w-6xl mx-auto px-4 py-24" id='faq'>
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-primary/80 to-purple-500 bg-clip-text text-transparent">
         Domande Frequenti
       </h2>
-      <div className="space-y-6">
+      <div className="space-y-4">
+        {/* Example of one FAQ item - repeat pattern for others */}
         <div 
-          className={`bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
-            transition-all md:duration-300 cursor-pointer
-            ${openIndex === 0 ? 'border-glow shadow-[0_0_30px_rgba(147,51,234,0.3)]' : 'hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]'}
+          className={`bg-gradient-to-r from-secondary/30 to-secondary/50 rounded-xl p-6 
+            backdrop-blur-lg border-l-4 transition-all duration-500 ease-in-out cursor-pointer
+            ${openIndex === 0 ? 'border-l-primary shadow-lg' : 'border-l-transparent hover:border-l-primary/50'}
             group`}
           onClick={() => handleToggle(0)}
         >
-          <div className="flex justify-between items-center">
-            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 0 ? 'text-glow' : 'group-hover:text-glow'} md:transition-all md:duration-300`}>
+          <div className="flex justify-between items-center gap-4">
+            <h3 className={`text-xl md:text-2xl font-medium 
+              ${openIndex === 0 ? 'text-primary' : 'text-white/90'} 
+              group-hover:text-primary transition-colors duration-300`}>
               1. È legale comprare like YouTube, Facebook, ecc.?
             </h3>
-            <span className={`transform md:transition-transform md:duration-300 ${openIndex === 0 ? 'rotate-180' : ''}`}>
-              ▼
+            <span className={`text-primary text-2xl transition-transform duration-500 
+              ${openIndex === 0 ? 'rotate-45' : ''}`}>
+              +
             </span>
           </div>
-          <div className={`mt-6 space-y-4 overflow-hidden md:transition-all md:duration-300 ${openIndex === 0 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Sì, a dispetto di quello che puoi leggere in rete, <strong>acquistare interazioni social è un'attività perfettamente legale.</strong>.
-            </p>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
+          <div className={`grid transition-all duration-500 ease-in-out
+            ${openIndex === 0 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+            <div className="overflow-hidden">
+            <p className="text-white/70 leading-relaxed">
+              Sì, a dispetto di quello che puoi leggere in rete, <strong>acquistare interazioni social è un'attività perfettamente legale.</strong>.
+              </p>
+              <p className="text-white/70 leading-relaxed">
               <strong><a href="https://glowlikes.it/comprare-like-facebook/">Comprare like Facebook</a>, YouTube e via dicendo non comporta alcun tipo di problema, </strong> né da parte delle autorità italiane, né da quelle internazionali.
             </p>
+              {/* Rest of the answer content */}
+            </div>
           </div>
         </div>
 
         <div 
-          className={`bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
-            transition-all duration-300 cursor-pointer
-            ${openIndex === 1 ? 'border-glow shadow-[0_0_30px_rgba(147,51,234,0.3)]' : 'hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]'}
+          className={`bg-gradient-to-r from-secondary/30 to-secondary/50 rounded-xl p-6 
+            backdrop-blur-lg border-l-4 transition-all duration-500 ease-in-out cursor-pointer
+            ${openIndex === 1 ? 'border-l-primary shadow-lg' : 'border-l-transparent hover:border-l-primary/50'}
             group`}
           onClick={() => handleToggle(1)}
         >
-          <div className="flex justify-between items-center">
-            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 1 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+          <div className="flex justify-between items-center gap-4">
+            <h3 className={`text-xl md:text-2xl font-medium 
+              ${openIndex === 1 ? 'text-primary' : 'text-white/90'} 
+              group-hover:text-primary transition-colors duration-300`}>
               2. Quanto costa mediamente comprare visualizzazioni Instagram, piuttosto che TikTok o quant'altro?
             </h3>
-            <span className={`transform transition-transform duration-300 ${openIndex === 1 ? 'rotate-180' : ''}`}>
-              ▼
+            <span className={`text-primary text-2xl transition-transform duration-500 
+              ${openIndex === 1 ? 'rotate-45' : ''}`}>
+              +
             </span>
           </div>
-          <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 1 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Nel nostro store online, <strong>puoi <a href="https://glowlikes.it/comprare-visualizzazioni-tiktok/">comprare visualizzazioni TikTok</a>, piuttosto che per Instagram o altri social media a partire da 0,43 €.</strong>
+          <div className={`grid transition-all duration-500 ease-in-out
+            ${openIndex === 1 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+            <div className="overflow-hidden">
+              <p className="text-white/70 leading-relaxed">
+              Nel nostro store online, <strong>puoi <a href="https://glowlikes.it/comprare-visualizzazioni-tiktok/">comprare visualizzazioni TikTok</a>, piuttosto che per Instagram o altri social media a partire da 0,43 €.</strong>
             </p>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
+            <p className="text-white/70 leading-relaxed">
             In pratica, stiamo parlando di un investimento che è alla portata di chiunque. Naturalmente, il  <strong> prezzo unitario scende man mano che si aumentano le quantità.</strong>
             </p>
+            </div>
           </div>
         </div>
 
         <div 
-          className={`bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
-            transition-all duration-300 cursor-pointer
-            ${openIndex === 2 ? 'border-glow shadow-[0_0_30px_rgba(147,51,234,0.3)]' : 'hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]'}
+          className={`bg-gradient-to-r from-secondary/30 to-secondary/50 rounded-xl p-6 
+            backdrop-blur-lg border-l-4 transition-all duration-500 ease-in-out cursor-pointer
+            ${openIndex === 2 ? 'border-l-primary shadow-lg' : 'border-l-transparent hover:border-l-primary/50'}
             group`}
           onClick={() => handleToggle(2)}
         >
-          <div className="flex justify-between items-center">
-            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 2 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
+          <div className="flex justify-between items-center gap-4">
+            <h3 className={`text-xl md:text-2xl font-medium 
+              ${openIndex === 2 ? 'text-primary' : 'text-white/90'} 
+              group-hover:text-primary transition-colors duration-300`}>
               3. Come comprare interazioni social senza rischiare cali o penalizzazioni?
             </h3>
-            <span className={`transform transition-transform duration-300 ${openIndex === 2 ? 'rotate-180' : ''}`}>
-              ▼
+            <span className={`text-primary text-2xl transition-transform duration-500 
+              ${openIndex === 2 ? 'rotate-45' : ''}`}>
+              +
             </span>
           </div>
-          <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 2 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Con le nostre interazioni social puoi stare tranquillo, visto che <strong> sono di altissima qualità e non vengono quasi mai rilevate dagli algoritmi </strong> delle piattaforme.
+          <div className={`grid transition-all duration-500 ease-in-out
+            ${openIndex === 2 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+            <div className="overflow-hidden">
+              <p className="text-white/70 leading-relaxed">
+              Con le nostre interazioni social puoi stare tranquillo, visto che <strong> sono di altissima qualità e non vengono quasi mai rilevate dagli algoritmi </strong> delle piattaforme.
             </p>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
+            <p className="text-white/70 leading-relaxed">
             Nonostante ciò, per eliminare ogni possibile rischio, ti consigliamo di <strong> elaborare una strategia che “ricalchi” la tua crescita organica </strong> e di evitare quantità eccessive, del tutto incompatibili con la tua reale situazione.
             </p>
+            </div>
           </div>
         </div>
 
-
         <div 
-          className={`bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
-            transition-all duration-300 cursor-pointer
-            ${openIndex === 3 ? 'border-glow shadow-[0_0_30px_rgba(147,51,234,0.3)]' : 'hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]'}
+          className={`bg-gradient-to-r from-secondary/30 to-secondary/50 rounded-xl p-6 
+            backdrop-blur-lg border-l-4 transition-all duration-500 ease-in-out cursor-pointer
+            ${openIndex === 3 ? 'border-l-primary shadow-lg' : 'border-l-transparent hover:border-l-primary/50'}
             group`}
           onClick={() => handleToggle(3)}
         >
-          <div className="flex justify-between items-center">
-            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 3 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
-            4. Cosa faccio se ho un problema con l'ordine?
+          <div className="flex justify-between items-center gap-4">
+            <h3 className={`text-xl md:text-2xl font-medium 
+              ${openIndex === 3 ? 'text-primary' : 'text-white/90'} 
+              group-hover:text-primary transition-colors duration-300`}>
+              4. Cosa faccio se ho un problema con l'ordine?
             </h3>
-            <span className={`transform transition-transform duration-300 ${openIndex === 3 ? 'rotate-180' : ''}`}>
-              ▼
+            <span className={`text-primary text-2xl transition-transform duration-500 
+              ${openIndex === 3 ? 'rotate-45' : ''}`}>
+              +
             </span>
           </div>
-          <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 3 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Prima di tutto, <strong> mantieni la calma, non c'è nulla di cui preoccuparsi! </strong> Se noti che c'è un problema, apri pure un ticket direttamente dalla tua area personale.
+          <div className={`grid transition-all duration-500 ease-in-out
+            ${openIndex === 3 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+            <div className="overflow-hidden">
+              <p className="text-white/70 leading-relaxed">
+              Prima di tutto, <strong> mantieni la calma, non c'è nulla di cui preoccuparsi! </strong> Se noti che c'è un problema, apri pure un ticket direttamente dalla tua area personale.
             </p>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
+            <p className="text-white/70 leading-relaxed">
             Inoltre, <strong> comunicaci il numero univoco, così come giorno ed orario dell'ordine. </strong> Dopodiché, saremo noi a pensare a tutto il resto, fino alla completa risoluzione che ti comunicheremo nel giro di pochissimo tempo.
             </p>
+            </div>
           </div>
         </div>
+
         <div 
-          className={`bg-secondary/50 rounded-lg p-8 backdrop-blur-sm border border-primary/20 
-            transition-all duration-300 cursor-pointer
-            ${openIndex === 4 ? 'border-glow shadow-[0_0_30px_rgba(147,51,234,0.3)]' : 'hover:border-glow hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]'}
+          className={`bg-gradient-to-r from-secondary/30 to-secondary/50 rounded-xl p-6 
+            backdrop-blur-lg border-l-4 transition-all duration-500 ease-in-out cursor-pointer
+            ${openIndex === 4 ? 'border-l-primary shadow-lg' : 'border-l-transparent hover:border-l-primary/50'}
             group`}
           onClick={() => handleToggle(4)}
         >
-          <div className="flex justify-between items-center">
-            <h3 className={`text-[22px] font-semibold text-primary ${openIndex === 4 ? 'text-glow' : 'group-hover:text-glow'} transition-all duration-300`}>
-            5. Posso chiedere il rimborso se qualcosa non va come previsto?
+          <div className="flex justify-between items-center gap-4">
+            <h3 className={`text-xl md:text-2xl font-medium 
+              ${openIndex === 4 ? 'text-primary' : 'text-white/90'} 
+              group-hover:text-primary transition-colors duration-300`}>
+              5. Posso chiedere il rimborso se qualcosa non va come previsto?
             </h3>
-            <span className={`transform transition-transform duration-300 ${openIndex === 4 ? 'rotate-180' : ''}`}>
-              ▼
+            <span className={`text-primary text-2xl transition-transform duration-500 
+              ${openIndex === 4 ? 'rotate-45' : ''}`}>
+              +
             </span>
           </div>
-          <div className={`mt-6 space-y-4 overflow-hidden transition-all duration-300 ${openIndex === 4 ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
-            Certo,  <strong> offriamo ai nostri clienti tutte le garanzie del caso, </strong> sebbene siamo perfettamente consapevoli che i nostri servizi sono sempre erogati in modo eccellente.
+          <div className={`grid transition-all duration-500 ease-in-out
+            ${openIndex === 4 ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+            <div className="overflow-hidden">
+              <p className="text-white/70 leading-relaxed">
+              Certo,  <strong> offriamo ai nostri clienti tutte le garanzie del caso, </strong> sebbene siamo perfettamente consapevoli che i nostri servizi sono sempre erogati in modo eccellente.
             </p>
-            <p className="text-muted-foreground leading-relaxed group-hover:text-white transition-all duration-300">
+            <p className="text-white/70 leading-relaxed">
             Ad ogni modo,  <strong> tutto ciò che devi fare è contattarci </strong> – sempre tramite la tua area personale, non prima di aver letto i termini della politica di rimborso che trovi nella rispettiva pagina.
             </p>
+            </div>
           </div>
         </div>
-        
 
-
-
-
-
-
-
-
-
+        {/* ... Repeat the same pattern for other FAQ items ... */}
       </div>
     </section>
   );
