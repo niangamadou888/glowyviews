@@ -176,7 +176,7 @@ const SECTIONS: Section[] = [
   {
     title: "Spotify",
     content: [
-    "Sei un artista? Allora **sai benissimo quanto difficile sia promuoversi** al giorno d'oggi, specie quando si parte zero e senza alcun aiuto da parte di manager, etichette discografiche e via dicendo.",
+    "Sei un artista? Allora **sai benissimo quanto difficile sia promuoversi** al giorno d'oggiò, specie quando si parte zero e senza alcun aiuto da parte di manager, etichette discografiche e via dicendo.",
     "Ecco perché abbiamo **deciso di includere anche i servizi destinati a Spotify.** Vogliamo dare a tutti l'opportunità di crescere e di acquisire la popolarità che meritano.",
     "Anche in questo caso, chiaramente, **puoi contare sulle nostre interazioni social geo-targettizzate,** pensate appositamente per il nostro mercato italiano."
   ],
@@ -212,7 +212,7 @@ const SECTIONS: Section[] = [
   {
     title: "LinkedIn",
     content: [
-    "**Al giorno d'oggi non puoi non avere un account LinkedIn!** Poco importa che tu sia un lavoratore dipendente, piuttosto che un libero professionista (anche freelancer) o il titolare di un'attività.",
+    "**Al giorno d'oggiò non puoi non avere un account LinkedIn!** Poco importa che tu sia un lavoratore dipendente, piuttosto che un libero professionista (anche freelancer) o il titolare di un'attività.",
     "Il tuo account professionale **otrebbe aprirti nuove ed interessanti opportunità,** a patto che risulti visibile.",
     "Stai cercando lavoro o hai bisogno di trovare collaboratori? **Espandi la tua rete di contatti ed incrementa la tua autorevolezza grazie ai nostri servizi mirati** che eroghiamo nel giro di qualche ora."
   ],
@@ -296,27 +296,27 @@ const ContentSection = ({
       </motion.h2>
 
       {SERVICE_LABELS[section.title] && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
           {SERVICE_LABELS[section.title].map((service, idx) => (
             <a
               key={idx}
               href={service.link}
-              className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-800/40 to-indigo-800/40 
-                       p-px transition-all duration-300 hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-xl min-h-[50px] 
+                       p-px transition-all duration-300 hover:scale-[1.02] shadow-none flex items-stretch"
               style={{
                 '--hover-color': service.color || '#6366f1'
               } as React.CSSProperties}
             >
-              <div className="relative rounded-xl bg-black/30 px-4 py-3 transition-all duration-300
-                           group-hover:bg-black/40 flex flex-col items-center gap-2">
+              <div className="relative rounded-xl bg-black/30 px-3 py-2.5 transition-all duration-300
+                           group-hover:bg-black/40 flex flex-col items-center justify-center gap-1.5 w-full">
                 {service.icon && (
                   <div className="text-white/90 group-hover:text-[var(--hover-color)] transition-colors">
                     {React.createElement(service.icon, {
-                      size: 24
+                      size: 20
                     })}
                   </div>
                 )}
-                <span className="block text-sm font-medium text-white/90 text-center group-hover:text-[var(--hover-color)] transition-colors">
+                <span className="block text-xs sm:text-sm font-medium text-white/90 text-center group-hover:text-[var(--hover-color)] transition-colors">
                   {service.label}
                 </span>
               </div>
