@@ -5,12 +5,13 @@ import { Player } from "@lordicon/react";
 import "lord-icon-element";
 import { Star, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
-import icon2 from "../assets/icons/wired-outline-1027-marketing-campaign-hover-pinch.json";
+import icon2 from "../assets/icons/wired-outline-458-goal-target-hover-hit.json";
 import icon3 from "../assets/icons/wired-flat-457-shield-security-hover-pinch.json";
 import icon5 from "../assets/icons/wired-flat-2601-speed-hover-pinch.json";
+import qualityIcon from "../assets/icons/wired-flat-489-rocket-space-hover-flying.json";
 import icon7 from "../assets/icons/wired-flat-1368-best-seller-hover-pinch.json";
-import iconLogin from "../assets/icons/wired-flat-2129-login-hover-pinch.json";
-import iconRegister from "../assets/icons/wired-outline-1142-form-sheet-questionnaire-hover-pinch.json";
+import iconLogin from "../assets/icons/wired-outline-2129-login-hover-pinch.json";
+import iconRegister from "../assets/icons/wired-outline-307-avatar-icon-calm-plus-hover-click.json";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -248,10 +249,20 @@ const Hero = () => {
         <div className={`relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-32 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700 ease-out`}>
           <h1 className="text-center">
             <span className="block text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
-            Acquista Follower e Like per Instagram, TikTok e YouTube e molto altro. Consegnati in pochi minuti!
+            Acquista Follower e Like per Instagram, TikTok e YouTube e molto altro. {" "}
+            <span className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
+             Consegnati in pochi minuti!
+             <div className="inline-block ml-2">
+                <Player
+                  ref={playerRef}
+                  icon={qualityIcon}
+                  size={60}
+                  onComplete={() => playerRef.current?.playFromBeginning()}
+                />
+              </div>
             </span>
-            <span className="block text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
             </span>
+            
           </h1>
 
           {/* Feature labels */}
@@ -266,6 +277,8 @@ const Hero = () => {
                 hover:border-purple-500/50 
                 hover:scale-105 
                 transition-all duration-300 flex items-center"
+                onMouseEnter={() => playerRefs.current[index]?.playFromBeginning()}
+                onMouseLeave={() => playerRefs.current[index]?.pause()}
               >
                 <div className="inline-flex items-center mr-2 scale-75 sm:scale-100">
                   <Player
@@ -278,6 +291,10 @@ const Hero = () => {
               </span>
             ))}
           </div>
+
+          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+          Non accontentarti di interazioni bot. GlowLikes ti offre follower, like e visualizzazioni da utenti reali, consegnati all'istante. Ai prezzi più bassi sul mercato.
+          </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
