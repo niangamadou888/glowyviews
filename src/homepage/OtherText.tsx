@@ -254,6 +254,30 @@ const ContentSection = ({
   const sectionRef = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
 
+  // Add platform-specific gradient backgrounds
+  const getGradientColors = (title: string) => {
+    switch (title) {
+      case "YouTube":
+        return "from-red-900/20 to-red-800/20";
+      case "Instagram":
+        return "from-pink-600/20 to-purple-600/20";
+      case "TikTok":
+        return "from-gray-900/20 to-black/20";
+      case "Telegram":
+        return "from-blue-900/20 to-cyan-800/20";
+      case "Spotify":
+        return "from-green-900/20 to-emerald-800/20";
+      case "X (ex Twitter)":
+        return "from-gray-900/20 to-slate-800/20";
+      case "Facebook":
+        return "from-blue-800/20 to-indigo-700/20";
+      case "LinkedIn":
+        return "from-blue-900/20 to-sky-800/20";
+      default:
+        return "from-purple-900/20 to-indigo-900/20";
+    }
+  };
+
   return (
     <motion.div
       ref={sectionRef}
@@ -261,8 +285,8 @@ const ContentSection = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative backdrop-blur-xl bg-gradient-to-r from-purple-900/20 to-indigo-900/20 
-                 rounded-2xl p-8 border border-white/10 shadow-xl"
+      className={`relative backdrop-blur-xl bg-gradient-to-r ${getGradientColors(section.title)} 
+                 rounded-2xl p-8 border border-white/10 shadow-xl`}
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-300 
