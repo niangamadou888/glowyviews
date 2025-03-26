@@ -181,15 +181,16 @@ const Features = () => {
           </div>
 
           {/* Desktop image section */}
-          <div className="flex-1 hidden md:block">
+          <div className="flex-1 md:block">
             <div className="relative p-6 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl ring-1 ring-white/10 bg-black/20 backdrop-blur-lg">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-primary/30 animate-gradient" />
               <div className="relative z-10">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-primary"></h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
-            <br />
-            Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
+                  Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
                 </p>
               </div>
             </div>
