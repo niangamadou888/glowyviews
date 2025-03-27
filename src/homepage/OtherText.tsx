@@ -307,8 +307,16 @@ const ContentSection = ({
                 '--hover-color': service.color || '#6366f1'
               } as React.CSSProperties}
             >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-[var(--hover-color)] blur-[100px]" />
+                <div className="absolute inset-0 bg-gradient-radial from-[var(--hover-color)] via-[var(--hover-color)]/80 to-transparent" />
+                <div className="absolute inset-0 bg-[var(--hover-color)]/20 blur-3xl" />
+              </div>
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                   bg-gradient-to-r from-[var(--hover-color)]/50 to-[var(--hover-color)]/50 blur-md" />
               <div className="relative rounded-xl bg-black/30 px-3 py-2.5 transition-all duration-300
-                           group-hover:bg-black/40 flex flex-col items-center justify-center gap-1.5 w-full">
+                 group-hover:bg-black/40 flex flex-col items-center justify-center gap-1.5 w-full
+                 border border-[var(--hover-color)]/50 group-hover:border-[var(--hover-color)]">
                 {service.icon && (
                   <div className="text-[var(--hover-color)] transition-colors">
                     {React.createElement(service.icon, {
