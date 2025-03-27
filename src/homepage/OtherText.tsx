@@ -307,7 +307,7 @@ const ContentSection = ({
                 '--hover-color': service.color || '#6366f1'
               } as React.CSSProperties}
             >
-              <div className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
+              <div className="absolute inset-0 opacity-40 group-hover:opacity-100 transition-all duration-300">
                 <div className="absolute inset-0 bg-[var(--hover-color)] blur-[180px] group-hover:blur-[250px]" />
                 <div className="absolute inset-0 bg-gradient-radial from-[var(--hover-color)] via-[var(--hover-color)] to-transparent opacity-90" />
                 <div className="absolute inset-0 bg-[var(--hover-color)]/70 blur-3xl group-hover:blur-[7xl]" />
