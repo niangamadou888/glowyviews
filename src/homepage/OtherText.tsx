@@ -29,7 +29,7 @@ const SERVICE_LABELS: { [key: string]: ServiceConfig[] } = {
     { label: "Spotify", link: "", icon: FaSpotify, color: "#1DB954" },
     { label: "X", link: "", icon: BsTwitterX, color: "#FFFFFF" },
     { label: "Facebook", link: "", icon: FaFacebook, color: "#1877F2" },
-    { label: "TikTok", link: "", icon: FaTiktok, color: "#000000" },
+    { label: "TikTok", link: "", icon: FaTiktok, color: "#9C27B0" },
     { label: "Telegram", link: "", icon: FaTelegram, color: "#0088cc" },
     { label: "LinkedIn", link: "", icon: FaLinkedin, color: "#0A66C2" },
   ],
@@ -307,12 +307,12 @@ const ContentSection = ({
                 '--hover-color': service.color || '#6366f1'
               } as React.CSSProperties}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300">
+              <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
                 <div className="absolute inset-0 bg-[var(--hover-color)] blur-[100px]" />
                 <div className="absolute inset-0 bg-gradient-radial from-[var(--hover-color)] via-[var(--hover-color)]/80 to-transparent" />
                 <div className="absolute inset-0 bg-[var(--hover-color)]/20 blur-3xl" />
               </div>
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300
+              <div className="absolute inset-0 rounded-xl opacity-40 group-hover:opacity-100 transition-opacity duration-300
                    bg-gradient-to-r from-[var(--hover-color)]/50 to-[var(--hover-color)]/50 blur-md" />
               <div className="relative rounded-xl bg-black/30 px-3 py-2.5 transition-all duration-300
                  group-hover:bg-black/40 flex flex-col items-center justify-center gap-1.5 w-full
