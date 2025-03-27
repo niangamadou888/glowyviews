@@ -307,16 +307,18 @@ const ContentSection = ({
                 '--hover-color': service.color || '#6366f1'
               } as React.CSSProperties}
             >
-              <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-300">
-                <div className="absolute inset-0 bg-[var(--hover-color)] blur-[100px]" />
-                <div className="absolute inset-0 bg-gradient-radial from-[var(--hover-color)] via-[var(--hover-color)]/80 to-transparent" />
-                <div className="absolute inset-0 bg-[var(--hover-color)]/20 blur-3xl" />
+              <div className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute inset-0 bg-[var(--hover-color)] blur-[180px] group-hover:blur-[250px]" />
+                <div className="absolute inset-0 bg-gradient-radial from-[var(--hover-color)] via-[var(--hover-color)] to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-[var(--hover-color)]/70 blur-3xl group-hover:blur-[7xl]" />
               </div>
-              <div className="absolute inset-0 rounded-xl opacity-40 group-hover:opacity-100 transition-opacity duration-300
-                   bg-gradient-to-r from-[var(--hover-color)]/50 to-[var(--hover-color)]/50 blur-md" />
-              <div className="relative rounded-xl bg-black/30 px-3 py-2.5 transition-all duration-300
-                 group-hover:bg-black/40 flex flex-col items-center justify-center gap-1.5 w-full
-                 border border-[var(--hover-color)]/50 group-hover:border-[var(--hover-color)]">
+              <div className="absolute inset-0 rounded-xl opacity-75 group-hover:opacity-100 transition-all duration-300
+                   bg-gradient-to-r from-[var(--hover-color)]/90 to-[var(--hover-color)]/90 blur-3xl" />
+              <div className="relative rounded-xl bg-black/20 px-3 py-2.5 transition-all duration-300
+                 group-hover:bg-[var(--hover-color)]/50 flex flex-col items-center justify-center gap-1.5 w-full
+                 border-2 border-[var(--hover-color)]/80 group-hover:border-[var(--hover-color)] 
+                 group-hover:shadow-[0_0_60px_rgba(var(--hover-color),0.8),inset_0_0_30px_rgba(var(--hover-color),0.6)] 
+                 backdrop-blur-sm">
                 {service.icon && (
                   <div className="text-[var(--hover-color)] transition-colors">
                     {React.createElement(service.icon, {
