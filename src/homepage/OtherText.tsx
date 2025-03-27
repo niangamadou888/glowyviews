@@ -27,7 +27,7 @@ const SERVICE_LABELS: { [key: string]: ServiceConfig[] } = {
     { label: "Youtube", link: "", icon: FaYoutube, color: "#FF0000" },
     { label: "Instagram", link: "", icon: FaInstagram, color: "#E4405F" },
     { label: "Spotify", link: "", icon: FaSpotify, color: "#1DB954" },
-    { label: "X", link: "", icon: BsTwitterX, color: "#1DA1F2" },
+    { label: "X", link: "", icon: BsTwitterX, color: "#FFFFFF" },
     { label: "Facebook", link: "", icon: FaFacebook, color: "#1877F2" },
     { label: "TikTok", link: "", icon: FaTiktok, color: "#000000" },
     { label: "Telegram", link: "", icon: FaTelegram, color: "#0088cc" },
@@ -310,13 +310,13 @@ const ContentSection = ({
               <div className="relative rounded-xl bg-black/30 px-3 py-2.5 transition-all duration-300
                            group-hover:bg-black/40 flex flex-col items-center justify-center gap-1.5 w-full">
                 {service.icon && (
-                  <div className="text-white/90 group-hover:text-[var(--hover-color)] transition-colors">
+                  <div className="text-[var(--hover-color)] transition-colors">
                     {React.createElement(service.icon, {
                       size: 20
                     })}
                   </div>
                 )}
-                <span className="block text-xs sm:text-sm font-medium text-white/90 text-center group-hover:text-[var(--hover-color)] transition-colors">
+                <span className="block text-xs sm:text-sm font-medium text-[var(--hover-color)] text-center transition-colors">
                   {service.label}
                 </span>
               </div>

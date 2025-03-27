@@ -248,21 +248,12 @@ const Hero = () => {
         {/* Main content */}
         <div className={`relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-32 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700 ease-out`}>
           <h1 className="text-center">
-            <span className="block text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
-            Acquista Follower e Like per Instagram, TikTok e YouTube e molto altro. {" "}
-            <span className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
-             Consegnati in pochi minuti!
-             <div className="inline-block ml-2">
-                <Player
-                  ref={playerRef}
-                  icon={qualityIcon}
-                  size={60}
-                  onComplete={() => playerRef.current?.playFromBeginning()}
-                />
+            <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight inline-flex items-center justify-center">
+              Acquista Follower e Like per Instagram, TikTok e YouTube e molto altro. <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">Consegnati in pochi minuti!</span>
+              <div className="ml-2">
+                <Player ref={playerRef} icon={qualityIcon} size={60} onComplete={() => playerRef.current?.playFromBeginning()} />
               </div>
             </span>
-            </span>
-            
           </h1>
 
           {/* Feature labels */}

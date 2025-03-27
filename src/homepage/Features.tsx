@@ -147,10 +147,32 @@ const Features = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-24 group mb-10"
+          className="flex flex-col md:flex-row items-start gap-8 sm:gap-12 md:gap-24 group mb-10 md:mt-40" // Changed items-center to items-start
         >
-          <div className="flex-1 relative p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl bg-black/20 backdrop-blur-lg border border-white/10 shadow-2xl w-full">
+          {/* Desktop image section */}
+          <div className="flex-1 md:block relative z-20 md:transform md:-translate-y-32"> {/* Removed margin, added transform */}
+            <div className="relative p-6 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl ring-1 ring-white/10 bg-black/20 backdrop-blur-lg">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-primary/30 animate-gradient" />
+              <div className="relative z-10">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-primary"></h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 relative p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl bg-black/20 backdrop-blur-lg border border-white/10 shadow-2xl w-full md:mt-20 md:mb-16 z-10">
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/20 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl" />
+            {/* Add arrow */}
+            <div className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
+              <div className="w-6 h-24 relative">
+                <div className="absolute w-0.5 h-full bg-gradient-to-b from-primary/50 to-primary/20 left-1/2 -translate-x-1/2" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-x-8 border-x-transparent border-t-[12px] border-t-primary/50" />
+              </div>
+            </div>
             <div className="relative z-10">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-16 text-glow hover:animate-glow">
               Perché i nostri Like, Follower e Views sono i migliori
@@ -180,21 +202,7 @@ const Features = () => {
             </div>
           </div>
 
-          {/* Desktop image section */}
-          <div className="flex-1 md:block">
-            <div className="relative p-6 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl ring-1 ring-white/10 bg-black/20 backdrop-blur-lg">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-primary/30 animate-gradient" />
-              <div className="relative z-10">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-primary"></h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Benvenuto nel nostro store online in cui troverai <strong>Like, Follower, Views</strong> e molti altri servizi ancora per i tuoi canali social su <strong>YouTube, Instagram, TikTok, Facebook, Telegram, Spotify, X e LinkedIn.</strong>
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                  Siamo l'agenzia italiana numero 1 specializzata nella fornitura di <strong>interazioni social di alta qualità e specificatamente ideate per il nostro mercato nazionale.</strong>
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </motion.div>
 
       <div className="max-w-7xl mx-auto">
@@ -229,7 +237,7 @@ const Features = () => {
                 >
                   <Player
                     ref={(el) => (playerRefs.current[index] = el)}
-                    icon={feature.icon || feature.iconUrl}
+                    icon={feature.iconUrl}
                     size={64}
                   />
                 </div>
