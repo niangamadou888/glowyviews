@@ -250,16 +250,8 @@ const Hero = () => {
           <h1 className="text-center">
             <span className="block text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
             Acquista Follower e Like per Instagram, TikTok e YouTube e molto altro. {" "}
-            <span className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
+            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
              Consegnati in pochi minuti!
-             <div className="inline-block ml-2">
-                <Player
-                  ref={playerRef}
-                  icon={qualityIcon}
-                  size={60}
-                  onComplete={() => playerRef.current?.playFromBeginning()}
-                />
-              </div>
             </span>
             </span>
             
